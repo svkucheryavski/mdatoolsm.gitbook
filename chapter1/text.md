@@ -169,23 +169,30 @@ Peter  23.5
 
 ## Simple plots
 
-The mdadata also overrides several plotting methods, including scatter(), plot(), bar() and several others, plus statistical plots, such as hist(), boxplot() and qqplot(). It means that if one provided an mdadata object as a first argument for these functions, a specially written version will be used instead of conventional MATLAB method. Thus to make a scatter plot one has to provide a dataset with one or two columns. If more than two are available, scatter() method will ignore them.
+The `mdadata` also overrides several plotting methods, including `scatter()`, `plot()`, `bar()` and several others, plus statistical plots, such as `hist()`, `boxplot()` and `qqplot()`. It means that if one provided an `mdadata` object as a first argument for these functions, a specially written version will be used instead of conventional MATLAB method. Thus to make a scatter plot one has to provide a dataset with one or two columns. If more than two are available, `scatter()` method will ignore them.
 
-   figure('Position', [100 100 800 300])
-   subplot(1, 2, 1)
-   scatter(d)
-   subplot(1, 2, 2)
-   plot(d)
+```matlab
+figure
+subplot(1, 2, 1)
+scatter(d)
+subplot(1, 2, 2)
+plot(d)
+```
 
-As you can see the labels for axes, ticks, as well as title for the plot were set using dataset names. Color of data points, lines and bars are selected automatically but one can specify these and several other most important parameters for each plot. There are also additional options, allowing, for example, color groupping of data points and lines according to a vector of values. Look at description of plotting methods for the mdadata class for details. One of the most useful option is a possibility to show labels for data points or bars. Labels can be names ('names'), numbers ('numbers') or values ('values', this can be used only with bar plot).
+![Example of simple plots for dataset objects.](figures/fig1.png)
 
-   figure('Position', [100 100 800 300])
-   subplot(1, 2, 1)
-   scatter(d, 'Marker', 'd', 'Color', 'g', 'Labels', 'names')
-   subplot(1, 2, 2)
-   bar(d('Mike', :), 'FaceColor', 'b', 'Labels', 'values')
+As you can see the labels for axes, ticks, as well as title for the plot were set using dataset names. Color of data points, lines and bars are selected automatically but one can specify these and several other most important parameters for each plot. There are also additional options, allowing, for example, color grouping of data points and lines according to a vector of values. Look at description of plotting methods for the `mdadata` class for details. One of the most useful option is a possibility to show labels for data points or bars. Labels can be names (`'names'`), numbers (`'numbers'`) or values (`'values'`, this can be used only with bar plot).
 
-Univariate statistics
+```matlab
+figure
+subplot(1, 2, 1)
+scatter(d, 'Marker', 'd', 'Color', 'g', 'Labels', 'names')
+subplot(1, 2, 2)
+bar(d('Mike', :), 'FaceColor', 'b', 'Labels', 'values')
+```
+
+## Univariate statistics
+
 There are several statistic methods also available for the mdadata datasets. To demonstrate this we will use a subset of dataset 'people', which is provided with the toolbox. In the dataset there are values for 32 persons from scandinavian and medditeranian regions (50% males, 50% females). Here are some examples.
 
    load('people')
