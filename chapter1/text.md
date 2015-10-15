@@ -151,7 +151,7 @@ Mike     180
 Anna     165
 ```
 
-The `mdadata` class has most of the standard mathematical and statistical methods overrided. This means that you can work with datasets just as with conventinal matrices in MATLAB. Result of any operation is also a dataset (object of class `mdadata`). For example, let's calculate BMI index for our data values.
+The `mdadata` class has most of the standard mathematical and statistical methods overridden. This means that you can work with datasets just as with conventional matrices in MATLAB. Result of any operation is also a dataset (object of class `mdadata`). For example, let's calculate BMI index for our data values.
 
 ```matlab
 bmi = d(:, 'Weight') ./ (d(:, 'Height') / 100) .^ 2;
