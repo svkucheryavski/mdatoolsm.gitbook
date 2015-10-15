@@ -30,13 +30,15 @@ show(d)
 
 Function `show()` displays data values as a table. By default it uses three significant figures but this can be changed by providing extra argument, e.g. `show(d, 5)`.
 
-To specify names for rows and objects one can provide them as a second and third arguments of the mdadata() method. The names can be either cell arrays with text values or numeric vectors (vectors). Numbers will be converted to text automatically.
+To specify names for rows and objects one can provide them as a second and third arguments of the `mdadata()` method. The names can be either cell arrays with text values or numeric vectors. Numbers will be converted to text automatically.
 
-   values = [180 84; 170 68; 165 71; 172 75];
-   d = mdadata(values, 1:4, {'Height', 'Weight'});
+```matlab
+values = [180 84; 170 68; 165 71; 172 75];
+d = mdadata(values, 1:4, {'Height', 'Weight'});
+show(d)
+```
 
-   show(d)
-
+```
      Variables
    Height  Weight
   ------- -------
@@ -44,13 +46,18 @@ To specify names for rows and objects one can provide them as a second and third
 2     170      68
 3     165      71
 4     172      75
+```
 
 It is mandatory that row and column names are unique. It is recommended also not to use spaces and other special symbols, especially for column names, to avoid ambiguity. Actually the names may have two forms: full, with spaces and special symbols and short, with only letters and numbers. If one provides names with spaces and special symbols they will be converted to the short form automatically. More on that can be found in the User Guide.
 
-The mdadata is a MATLAB object which has several properties and many methods. You can see some of the properties by using disp().
+The `mdadata` is a MATLAB object which has several properties and many methods. You can see some of the properties by using `disp()`.
 
-   disp(d)
-  mdadata handle
+```matlab
+disp(d)
+```
+
+```
+mdadata handle
 
   Properties:
             name: ''
@@ -64,7 +71,7 @@ The mdadata is a MATLAB object which has several properties and many methods. Yo
         colNames: {'Height'  'Weight'}
     rowFullNames: {4x1 cell}
     colFullNames: {'Height'  'Weight'}
-
+```
 
 The most important ones are values, which is a matrix with data values, rowNames - cell array with row names and colNames - cell array with column names. All three can be changed manually for the whole object or for particular rows or columns. You can also specify name of the dataset, short information text and labels for each of the two dimensions
 
