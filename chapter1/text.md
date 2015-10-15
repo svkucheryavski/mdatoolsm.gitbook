@@ -73,7 +73,7 @@ mdadata handle
     colFullNames: {'Height'  'Weight'}
 ```
 
-The most important ones are `values`, which is a matrix with data values, `rowNames` - cell array with row names and `colNames` - cell array with column names. All three can be changed manually for the whole object or for particular rows or columns. You can also specify a name for the dataset, short information text and labels for each of the two dimensions
+The most important ones are `values`, which is a matrix with data values, `rowNames` - cell array with row names and `colNames` - cell array with column names. All three can be changed manually for the whole object or for particular rows or columns. You can also specify a name for the dataset, short information text and labels for each of the two dimensions. Here are some examples:
 
 ```matlab
 d.rowNames = {'Lars', 'Peter', 'Anna', 'Kim'};
