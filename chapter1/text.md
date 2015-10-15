@@ -125,9 +125,10 @@ Peter     170      68
 ```
 You can subset datasets using the same way as with matrices: by specifying indices for rows and columns. All special names and symbols, like : and end will work properly. Alternatively column and row names can be used for the same purpose.
 
-   show(d(1:2, :))
-   show(d({'Mike', 'Anna'}, 'Height'))
-
+```matlab
+show(d(1:2, :))
+```
+```
 People:
 People data for quick start guide
 
@@ -136,30 +137,38 @@ People data for quick start guide
       ------- -------
  Mike     180      84
 Peter     170      68
+```
 
-
-
+```matlab
+show(d({'Mike', 'Anna'}, 'Height'))
+```
+```
 People:
 People data for quick start guide
       Height
      -------
 Mike     180
 Anna     165
+```
 
-The mdadata class has most of the standard mathematical and statistical methods overrided. This means that you can work with datasets just as with conventinal matrices in MATLAB. Result of any operation is also a dataset (object of class mdadata). For example, let's calculate BMI index for our data values.
+The `mdadata` class has most of the standard mathematical and statistical methods overrided. This means that you can work with datasets just as with conventinal matrices in MATLAB. Result of any operation is also a dataset (object of class `mdadata`). For example, let's calculate BMI index for our data values.
 
+```matlab
 bmi = d(:, 'Weight') ./ (d(:, 'Height') / 100) .^ 2;
 bmi.colNames = 'BMI';
-
 show(bmi)
+```
+```
         BMI
       -----
  Mike  25.9
 Peter  23.5
  Anna  26.1
   Kim  25.4
+```
 
-Simple plots
+## Simple plots
+
 The mdadata also overrides several plotting methods, including scatter(), plot(), bar() and several others, plus statistical plots, such as hist(), boxplot() and qqplot(). It means that if one provided an mdadata object as a first argument for these functions, a specially written version will be used instead of conventional MATLAB method. Thus to make a scatter plot one has to provide a dataset with one or two columns. If more than two are available, scatter() method will ignore them.
 
    figure('Position', [100 100 800 300])
