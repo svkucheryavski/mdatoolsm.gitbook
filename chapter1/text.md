@@ -73,19 +73,13 @@ mdadata handle
     colFullNames: {'Height'  'Weight'}
 ```
 
-The most important ones are values, which is a matrix with data values, rowNames - cell array with row names and colNames - cell array with column names. All three can be changed manually for the whole object or for particular rows or columns. You can also specify name of the dataset, short information text and labels for each of the two dimensions
+The most important ones are `values`, which is a matrix with data values, `rowNames` - cell array with row names and `colNames` - cell array with column names. All three can be changed manually for the whole object or for particular rows or columns. You can also specify a name for the dataset, short information text and labels for each of the two dimensions
 
-   d.rowNames = {'Lars', 'Peter', 'Anna', 'Kim'};
-   show(d)
-
-   d(1, :).rowNames = 'Mike';
-   show(d)
-
-   d.name = 'People';
-   d.info = 'People data for quick start guide';
-   d.dimNames  = {'Persons', 'Parameters'};
-   show(d)
-
+```matlab
+d.rowNames = {'Lars', 'Peter', 'Anna', 'Kim'};
+show(d)
+```
+```
          Variables
        Height  Weight
       ------- -------
@@ -93,9 +87,14 @@ The most important ones are values, which is a matrix with data values, rowNames
 Peter     170      68
  Anna     165      71
   Kim     172      75
+```
 
 
-
+```matlab
+d(1, :).rowNames = 'Mike';
+show(d)
+```
+```
          Variables
        Height  Weight
       ------- -------
@@ -103,9 +102,16 @@ Peter     170      68
 Peter     170      68
  Anna     165      71
   Kim     172      75
+```
 
 
-
+```matlab
+d.name = 'People';
+d.info = 'People data for quick start guide';
+d.dimNames  = {'Persons', 'Parameters'};
+show(d)
+```
+```
 People:
 People data for quick start guide
 
@@ -116,7 +122,7 @@ People data for quick start guide
 Peter     170      68
  Anna     165      71
   Kim     172      75
-
+```
 You can subset datasets using the same way as with matrices: by specifying indices for rows and columns. All special names and symbols, like : and end will work properly. Alternatively column and row names can be used for the same purpose.
 
    show(d(1:2, :))
