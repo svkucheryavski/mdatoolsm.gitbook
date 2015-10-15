@@ -191,6 +191,9 @@ subplot(1, 2, 2)
 bar(d('Mike', :), 'FaceColor', 'b', 'Labels', 'values')
 ```
 
+![Use of labels in plots.](figures/fig2.png)
+
+
 ## Univariate statistics
 
 There are several statistic methods also available for the mdadata datasets. To demonstrate this we will use a subset of dataset 'people', which is provided with the toolbox. In the dataset there are values for 32 persons from scandinavian and medditeranian regions (50% males, 50% females). Here are some examples.
