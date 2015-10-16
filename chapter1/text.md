@@ -293,7 +293,7 @@ We hope that this brief overview of `mdadata` class gave an overall impression o
 
 ## Principal component analysis
 
-The next step is to learn how to build and use models in mdatools. We will employ PCA to demonstrate the most important things, as we believe it is most known, and then will show some pecularities and issues on how this methodology works with regression models.
+The next step is to learn how to build and use models in `mdatools`. We will employ PCA to demonstrate the most important things, as we believe it is most known, and then will show some pecularities and issues on how this methodology works with regression models.
 
 The basic idea behind creating and using any model is following. For most of the methods, mdatools has two classes (objects). One for model, that can be calibrated using this method, and one for result of applying this model to any dataset(s). The first (model) object has properties related to the model only. The second (result) object, contains properties related to the results. Thus for PCA model contains: loadings and their eigenvalues, number of components, which preprocessing methods to use and so on. The PCA result object mainly contains: scores, variance, and Q2/T2 residuals.
 
