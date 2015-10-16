@@ -179,7 +179,8 @@ subplot(1, 2, 2)
 plot(d)
 ```
 
-![Example of simple plots for dataset objects.](figures/fig1.png)
+
+
 
 As you can see the labels for axes, ticks, as well as title for the plot were set using dataset names. Color of data points, lines and bars are selected automatically but one can specify these and several other most important parameters for each plot. There are also additional options, allowing, for example, color grouping of data points and lines according to a vector of values. Look at description of plotting methods for the `mdadata` class for details. One of the most useful option is a possibility to show labels for data points or bars. Labels can be names (`'names'`), numbers (`'numbers'`) or values (`'values'`, this can be used only with bar plot).
 
