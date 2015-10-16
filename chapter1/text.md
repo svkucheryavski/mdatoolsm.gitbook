@@ -283,7 +283,7 @@ As well as several statistic plots.
    boxplot( d )
 ```
 
-We hope that this brief overview of mdadata class gave an overall impression on how it works and how to use it for storing and visualisation of data values. To learn more, please, look at the User Guide and full description of the mdadata class and its metods.
+We hope that this brief overview of `mdadata` class gave an overall impression on how it works and how to use it for storing and visualisation of data values. To learn more, please, look at the User Guide and full description of the `mdadata` class and its methods.
 
 ## Principal component analysis
 
