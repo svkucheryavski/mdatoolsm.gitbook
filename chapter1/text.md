@@ -488,16 +488,17 @@ More details about PCA model and result objects and methods can be found in clas
 
 ## Working with images
 
-The mdatools may work naturally with images. Image can be represented as a 2-way dataset by unfolding 3-way cube, so all pixels become rows (objects) and all channels — columns (variables). In mdatools there is a specific object to work with images, mdaimage. It is based on mdadata class and inherits all its properties and methods. So all examples above will also work with mdaimage obects.
+The *mdatools* may work naturally with images. Image can be represented as a 2-way dataset by unfolding 3-way cube, so all pixels become rows (objects) and all channels — columns (variables). In *mdatools* there is a specific object to work with images, `mdaimage`. It is based on `mdadata` class and inherits all its properties and methods. So all examples above will also work with `mdaimage` obects.
 
-However there are also some important things to know. First of all image has no row names, since number of pixels is very large, it would slow manipulations with such objects if we used names. Second difference is when you subset an mdaimage you have to use three indices: width, height and channels. Finally mdaimage has a method imagesc() allowing to show an image for any channel. Let's play with that:
+However there are also some important things to know. First of all, image has no row names, since number of pixels is very large, it would slow manipulations with such objects down if we used names. Second difference is when you subset an `mdaimage` you have to use three indices: width, height and channels. Finally `mdaimage` has an extra method `imagesc()` allowing to show an image for any channel. Let's play with that:
 
-   img = imread('test.jpg');
-   img = mdaimage(img, {'Red', 'Green', 'Blue'});
-   disp(img)
+```matlab
+img = imread('test.jpg');
+img = mdaimage(img, {'Red', 'Green', 'Blue'});
+disp(img)
+```
 
-   % show color values for 3x3 pixels from left top corner
-   show(img(1:3, 1:3, :))
+```
   mdaimage handle
 
   Properties:
@@ -515,10 +516,14 @@ However there are also some important things to know. First of all image has no 
         colNames: {'Red'  'Green'  'Blue'}
     rowFullNames: {}
     colFullNames: {'Red'  'Green'  'Blue'}
+``
 
+Show color values for 3x3 pixels from left top corner:
 
-
-
+```matlab
+show(img(1:3, 1:3, :))
+```
+```
       Channels
   Red  Green  Blue
  ---- ------ -----
@@ -531,6 +536,7 @@ However there are also some important things to know. First of all image has no 
   183     73   100
   182     72    97
   223    119   142
+```
 
 Method imagesc shows images for separate channels. If it is needed to show a color image, use .image property, but do not forget to scale intensities, since all values of mdaimage are double.
 
