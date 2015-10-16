@@ -592,3 +592,8 @@ subplot(1, 2, 2)
 imagesc(m.calres.scores(:, :, 2));
 ```
 
+![Scatter density plot and score images for PCA model](fig12.png)
+
+
+
+
