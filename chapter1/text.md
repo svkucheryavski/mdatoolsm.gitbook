@@ -295,18 +295,20 @@ We hope that this brief overview of `mdadata` class gave an overall impression o
 
 The next step is to learn how to build and use models in `mdatools`. We will employ PCA to demonstrate the most important things, as we believe it is most known, and then will show some peculiarities and issues on how this methodology works with regression models.
 
-The basic idea behind creating and using any model is following. For most of the methods, mdatools has two classes (objects). One for model, that can be calibrated using this method, and one for result of applying this model to any dataset(s). The first (model) object has properties related to the model only. The second (result) object, contains properties related to the results. Thus for PCA model contains: loadings and their eigenvalues, number of components, which preprocessing methods to use and so on. The PCA result object mainly contains: scores, variance, and Q2/T2 residuals.
+The basic idea behind creating and using any model is following. For most of the methods, `mdatools` has two classes (objects). One for model, that can be calibrated using this method, and one for result of applying this model to any dataset(s). The first (model) object has properties related to the model only. The second (result) object, contains properties related to the results. Thus for PCA model contains: loadings and their eigenvalues, number of components, which preprocessing methods to use and so on. The PCA result object mainly contains: scores, variance, and Q2/T2 residuals.
 
-Of course the results of calibration, cross-validation or test-set validation are also part of a model. Therefore any model may have three result objects, as the model properties. One for calibration set (calres) is always exist, since it is not possible to make a model without calibration set. The other two, cvres and testres, are optional and are empty if none of the validation methods is used.
+Of course the results of calibration, cross-validation or test-set validation are also part of a model. Therefore any model may have three result objects, as the model properties. One for calibration set (`calres`) is always exist, since it is not possible to make a model without calibration set. The other two, `cvres` and `testres`, are optional and are empty if none of the validation methods is used.
 
-Any model and result object has also methods for making various plots and showing statistics. Thus method plotscores() for result object shows scores only for particular results. But the same plotscores() method being called for a model will show scores for each of the results available. The same for, e.g. explained variance. Method plotexpvar() shows explained variance for each component either for particular result or for the whole model (calibration, test and cross-validation if last two are available).
+Any model and result object has also methods for making various plots and showing statistics. Thus method `plotscores()` for result object shows scores only for particular results. But the same `plotscores()` method being called for a model will show scores for each of the results available. The same for, e.g. explained variance. Method `plotexpvar()` shows explained variance for each component either for particular result or for the whole model (calibration, test and cross-validation if last two are available).
 
 Let's look how to make and explore PCA model and results using the People data.
 
-   load('people')
-   m = mdapca(people, 6, 'Scale', 'on');
-   disp(m)
-   disp(m.calres)
+```matlab
+load('people')
+m = mdapca(people, 6, 'Scale', 'on');
+disp(m)
+```
+```
   mdapca handle
 
   Properties:
@@ -322,8 +324,12 @@ Let's look how to make and explore PCA model and results using the People data.
         testres: []
          limits: [2x6 mdadata]
          method: 'svd'
+```
 
-
+```matlab
+disp(m.calres)
+``` 
+```
   pcares handle
 
   Properties:
@@ -333,7 +339,7 @@ Let's look how to make and explore PCA model and results using the People data.
     modpower: [32x6 mdadata]
           T2: [32x6 mdadata]
           Q2: [32x6 mdadata]
-
+```
 
 As you can see, indeed the m object has mdapca class and containes, among others, loadings of the principal component space. It also has three objects with results: calres, cvres and testrest but the last two are empty, since we did not use any validation here.
 
