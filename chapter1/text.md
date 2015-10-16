@@ -341,13 +341,16 @@ disp(m.calres)
           Q2: [32x6 mdadata]
 ```
 
-As you can see, indeed the m object has mdapca class and containes, among others, loadings of the principal component space. It also has three objects with results: calres, cvres and testrest but the last two are empty, since we did not use any validation here.
+As you can see, indeed the m object has `mdapca` class and contains, among others, loadings of the principal component space. It also has three objects with results: `calres`, `cvres` and `testrest` but the last two are empty, since we did not use any validation here.
 
-For cross-validation one need to specify parameter 'CV' with cell array as a value. The first element of the cell array is how to split data. Possible values are 'rand' for random splits, 'ven' for systematic (venetian blinds) splits and 'full' for full cross-validation (leave-one-out). For the first two one can specify a second value which is number of segments to split the data into. Finally, for the random splits, we can also specify a number of repetitions. Thus the following example will make cross-validation with random splits to eight segments and four repetitions.
+For cross-validation one need to specify parameter `'CV'` with cell array as a value. The first element of the cell array is how to split data. Possible values are `'rand'` for random splits, `'ven'` for systematic (venetian blinds) splits and `'full'` for full cross-validation (leave-one-out). For the first two one can specify a second value which is number of segments to split the data into. Finally, for the random splits, we can also specify a number of repetitions. Thus the following example will make cross-validation with random splits to eight segments and four repetitions.
 
-   load('people')
-   m = mdapca(people, 6, 'Scale', 'on', 'CV', {'rand', 8, 4});
-   disp(m)
+```matlab
+load('people')
+m = mdapca(people, 6, 'Scale', 'on', 'CV', {'rand', 8, 4});
+disp(m)
+```
+```
   mdapca handle
 
   Properties:
@@ -363,14 +366,16 @@ For cross-validation one need to specify parameter 'CV' with cell array as a val
         testres: []
          limits: [2x6 mdadata]
          method: 'svd'
+```
 
+Now model contains two types of results which are not empty - `calres` and `cvres`.
 
-Now model contains two types of results which are not emplty - calres and cvres.
+How to explore models and results? All numerical values are available as `mdadata` objects, so if you want to look at e.g. scores for the first five rows of calibration set, just use
 
-How to explore models and results? All numerical values are available as mdadata objects, so if you want to look at e.g. scores for the first five rows of calibration set, just use
-
-   show(m.calres.scores(1:5, :))
-
+```matlab
+show(m.calres.scores(1:5, :))
+```
+```
 Scores:
 
                           Components
@@ -381,12 +386,16 @@ Scores:
 Rasmus      -3   -0.36  -0.212   -1.12  -0.204  0.0166
   Lene    1.08   -1.84  -0.409  -0.123    1.32  -0.872
  Mette   0.981   -1.43   -1.65   0.526  -0.714  0.0346
+```
 
 However it is much easier with plots. Here is how to show summary and plot overview for a PCA model:
 
-   summary(m)
-   figure('Position', [100 100 800 500])
-   plot(m)
+```
+summary(m)
+figure('Position', [100 100 800 500])
+plot(m)
+```
+```
         Eigenvalues  Expvar  Cumexpvar  Expvar (CV)  Cumexpvar (CV)
        ------------ ------- ---------- ------------ ---------------
 Comp 1         6.43    53.6       53.6         45.5            45.5
@@ -395,28 +404,34 @@ Comp 3         1.62    13.5       85.7         14.4            77.7
 Comp 4        0.998    8.32       94.1         13.3              91
 Comp 5        0.319    2.66       96.7         3.36            94.3
 Comp 6        0.165    1.38       98.1         1.87            96.2
+```
 
+![Plots for a PCA model](fig4.png)
 
 If one need to look at the scores and loadings for other set of components, just specify this as a second argument:
 
-   figure('Position', [100 100 800 500])
-   plot(m, [1 3])
+```matlab
+figure
+plot(m, [1 3])
+```
 
 Examples of how to use scores and loadings with additional options
 
-   figure('Position', [100 100 800 500])
+```matlab
+figure
 
-   subplot(2, 2, 1)
-   plotscores(m, 1, 'Labels', 'names')
+subplot(2, 2, 1)
+plotscores(m, 1, 'Labels', 'names')
 
-   subplot(2, 2, 2)
-   plotscores(m, [1 3], 'Marker', 's', 'Color', 'g')
+subplot(2, 2, 2)
+plotscores(m, [1 3], 'Marker', 's', 'Color', 'g')
 
-   subplot(2, 2, 3)
-   plotloadings(m)
+subplot(2, 2, 3)
+plotloadings(m)
 
-   subplot(2, 2, 4)
-   plotloadings(m, [1 3], 'Labels', 'names')
+subplot(2, 2, 4)
+plotloadings(m, [1 3], 'Labels', 'names')
+```
 
 Scores are not calculated for the cross-validated results, so they are not shown on the plot. In the current version scores for model can be plotted as scatter or density scatter plot. Loadings can be shown as scatter, line and bar plot.
 
