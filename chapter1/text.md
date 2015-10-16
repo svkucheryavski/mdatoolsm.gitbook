@@ -275,7 +275,7 @@ Median     174    64.5        40
    Max     198      92        48
 ```
 
-As well as several statistic plots.
+As well as several statistical plots.
 
 ```matlab
 figure
