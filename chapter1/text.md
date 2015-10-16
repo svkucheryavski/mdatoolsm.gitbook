@@ -484,10 +484,11 @@ plotscores(m.calres, 'Labels', 'names', 'Colorby', people(:, 'Beer'))
 
 Thus in the second plot data points are colorised according to annual beer consumption by the persons and one can also see a colobar with legend.
 
-More details about PCA model and result objects and methods can be found in class descriptions (mdapca and pcares).
+More details about PCA model and result objects and methods can be found in class descriptions (`mdapca` and `pcares`).
 
-Working with images
-The mdatools may work naturally with images. Image can be represented as a 2-way dataset by unfolding 3-way cube, so all pixels become rows (objects) and all channels - columns (variables). In mdatools there is a specific object to work with images, mdaimage. It is based on mdadata class and inherits all its properties and methods. So all examples above will also work with mdaimage obects.
+## Working with images
+
+The mdatools may work naturally with images. Image can be represented as a 2-way dataset by unfolding 3-way cube, so all pixels become rows (objects) and all channels — columns (variables). In mdatools there is a specific object to work with images, mdaimage. It is based on mdadata class and inherits all its properties and methods. So all examples above will also work with mdaimage obects.
 
 However there are also some important things to know. First of all image has no row names, since number of pixels is very large, it would slow manipulations with such objects if we used names. Second difference is when you subset an mdaimage you have to use three indices: width, height and channels. Finally mdaimage has a method imagesc() allowing to show an image for any channel. Let's play with that:
 
