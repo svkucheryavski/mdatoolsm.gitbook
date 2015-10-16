@@ -193,21 +193,32 @@ bar(d('Mike', :), 'FaceColor', 'b', 'Labels', 'values')
 
 ![Use of labels in plots.](fig2.png)
 
-
 ## Univariate statistics
 
 There are several statistic methods also available for the mdadata datasets. To demonstrate this we will use a subset of dataset 'people', which is provided with the toolbox. In the dataset there are values for 32 persons from scandinavian and medditeranian regions (50% males, 50% females). Here are some examples.
 
-   load('people')
-   d = people(:, {'Height', 'Weight', 'Shoesize'});
-   show( d(1:5, :) )
+```matlab
+load('people')
+d = people(:, {'Height', 'Weight', 'Shoesize'});
+show( d(1:5, :) )
+```
+```matlab
+show( mean(d) )
+```
+```matlab
+show( std(d) )
+```
+```matlab
+show( se(d) )
+```
+```matlab
+show( percentile(d, 25) )
+```
+```matlab
+show( summary(d) )
+```
 
-   show( mean(d) )
-   show( std(d) )
-   show( se(d) )
-   show( percentile(d, 25) )
-   show( summary(d) )
-
+```
 People:
 People dataset
 
@@ -219,39 +230,34 @@ People dataset
 Rasmus     183      83        44
   Lene     166      47        36
  Mette     170      60        38
-
-
-
+```
+```
              Variables
       Height  Weight  Shoesize
      ------- ------- ---------
 Mean     173    64.5      39.9
-
-
-
-              Variables
+```
+```
+             Variables
        Height  Weight  Shoesize
       ------- ------- ---------
 Stdev    10.1    15.2       3.9
-
-
-
+```
+```
                    Variables
             Height  Weight  Shoesize
            ------- ------- ---------
 Std. error    1.78    2.69     0.689
-
-
-
+```
+```
 Percentiles:
 
             Variables
      Height  Weight  Shoesize
     ------- ------- ---------
 25%     164      50        36
-
-
-
+```
+```
 Summary statistics:
 
                Variables
@@ -263,20 +269,24 @@ Median     174    64.5        40
   Mean     173    64.5      39.9
     Q3     180    80.5        43
    Max     198      92        48
+```
 
 As well as several statistic plots.
 
-   figure('Position', [100 100 800 500])
+```matlab
+   figure
    subplot(2, 2, 1)
    hist( d(:, 'Height') )
    subplot(2, 2, 2)
    qqplot( d(:, 'Height') )
    subplot(2, 2, 3)
    boxplot( d )
+```
 
 We hope that this brief overview of mdadata class gave an overall impression on how it works and how to use it for storing and visualisation of data values. To learn more, please, look at the User Guide and full description of the mdadata class and its metods.
 
-Principal component analysis
+## Principal component analysis
+
 The next step is to learn how to build and use models in mdatools. We will employ PCA to demonstrate the most important things, as we believe it is most known, and then will show some pecularities and issues on how this methodology works with regression models.
 
 The basic idea behind creating and using any model is following. For most of the methods, mdatools has two classes (objects). One for model, that can be calibrated using this method, and one for result of applying this model to any dataset(s). The first (model) object has properties related to the model only. The second (result) object, contains properties related to the results. Thus for PCA model contains: loadings and their eigenvalues, number of components, which preprocessing methods to use and so on. The PCA result object mainly contains: scores, variance, and Q2/T2 residuals.
