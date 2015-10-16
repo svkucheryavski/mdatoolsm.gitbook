@@ -516,7 +516,7 @@ disp(img)
         colNames: {'Red'  'Green'  'Blue'}
     rowFullNames: {}
     colFullNames: {'Red'  'Green'  'Blue'}
-``
+```
 
 Show color values for 3x3 pixels from left top corner:
 
@@ -538,32 +538,45 @@ show(img(1:3, 1:3, :))
   223    119   142
 ```
 
-Method imagesc shows images for separate channels. If it is needed to show a color image, use .image property, but do not forget to scale intensities, since all values of mdaimage are double.
+Method `imagesc` shows images for separate channels. If it is needed to show a color image, use `.image` property, but do not forget to scale intensities, since all values of `mdaimage` are double.
 
-   figure
+```matlab
+figure
 
-   subplot(2, 2, 1)
-   imagesc(img(:, :, 'Red'))
-   title('Red')
+subplot(2, 2, 1)
+imagesc(img(:, :, 'Red'))
+title('Red')
 
-   subplot(2, 2, 2)
-   imagesc(img(:, :, 'Green'))
-   title('Green')
+subplot(2, 2, 2)
+imagesc(img(:, :, 'Green'))
+title('Green')
 
-   subplot(2, 2, 3)
-   imagesc(img(:, :, 'Blue'))
-   title('Blue')
+subplot(2, 2, 3)
+imagesc(img(:, :, 'Blue'))
+title('Blue')
 
-   subplot(2, 2, 4)
-   imshow(img.image/255)
-   title('Color image')
+subplot(2, 2, 4)
+imshow(img.image/255)
+title('Color image')
 
-   colormap(gray)
+colormap(gray)
+```
 
-Since image is just an extension of mdadata it can be treated as a just a dataset, e.g. here is how to make a density scatter plot.
+![Separate channels and the RGB image](fig10.png)
 
-   figure
-   densscatter( img(:, :, {'Red', 'Blue'}));
+Since image is just an extension of `mdadata` it can be treated as a just a dataset, e.g. here is how to make a conventional and density scatter plot.
+
+```matlab
+figure
+
+subplot 121
+scatter( img(:, :, {'Red', 'Blue'}));
+
+subplot 122
+densscatter( img(:, :, {'Red', 'Blue'}));
+```
+
+
 
 When one make a PCA model for an object of mdaimage class, all results for objects (pixels), such as scores and residuals will be automatically converted to mdaimage objects as well. It means, we can make scatter image for particular component.
 
