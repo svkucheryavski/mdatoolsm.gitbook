@@ -578,14 +578,17 @@ densscatter( img(:, :, {'Red', 'Blue'}));
 
 ![Conventional (left) and density (right) scatter plots for pixels](fig11.png)
 
-When one make a PCA model for an object of mdaimage class, all results for objects (pixels), such as scores and residuals will be automatically converted to mdaimage objects as well. It means, we can make scatter image for particular component.
+When one make a PCA model for an object of `mdaimage` class, all results for objects (pixels), such as scores and residuals will be automatically converted to `mdaimage` objects as well. It means, we can make scatter image for particular component.
 
-   m = mdapca(img);
+```matlab
+m = mdapca(img);
 
-   figure('Position', [100 100 800 300])
+figure
 
-   subplot(1, 2, 1)
-   plotscores(m.calres, 'Type', 'densscatter');
+subplot(1, 2, 1)
+plotscores(m.calres, 'Type', 'densscatter');
 
-   subplot(1, 2, 2)
-   imagesc(m.calres.scores(:, :, 2));
+subplot(1, 2, 2)
+imagesc(m.calres.scores(:, :, 2));
+```
+
