@@ -435,25 +435,32 @@ subplot(2, 2, 4)
 plotloadings(m, [1 3], 'Labels', 'names')
 ```
 
+![Examples of score and loading plots with different options](fig6.png)
+
 Scores are not calculated for the cross-validated results, so they are not shown on the plot. In the current version scores for model can be plotted as scatter or density scatter plot. Loadings can be shown as scatter, line and bar plot.
 
-   figure('Position', [100 100 800 500])
+```matlab
+figure
 
-   subplot(2, 1, 1)
-   plotloadings(m, 1, 'Type', 'line', 'Marker', '.')
+subplot(2, 1, 1)
+plotloadings(m, 1, 'Type', 'line', 'Marker', '.')
 
-   subplot(2, 1, 2)
-   plotloadings(m, [1 2], 'Type', 'bar')
+subplot(2, 1, 2)
+plotloadings(m, [1 2], 'Type', 'bar')
+```
 
 Examples for residuals:
 
-   figure('Position', [100 100 800 300])
+```matlab
+figure
 
-   subplot(1, 2, 1)
-   plotresiduals(m, 'Labels', 'names', 'Marker', 's')
+subplot(1, 2, 1)
+plotresiduals(m, 'Labels', 'names', 'Marker', 's')
 
-   subplot(1, 2, 2)
-   plotresiduals(m, 2, 'Labels', 'names', 'Marker', 'sdo', 'Color', 'rgb')
+subplot(1, 2, 2)
+plotresiduals(m, 2, 'Labels', 'names', 'Marker', 'sdo', 'Color', 'rgb')
+```
+
 
 Since cross-validated values can be shown on residuals plot (as well as test set results) here we need to specify color or/and marker either one for all results, as it is done in first plot, or three (one for each type) as in the second plot.
 
