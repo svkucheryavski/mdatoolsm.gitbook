@@ -169,7 +169,7 @@ Peter  23.5
 
 ## Simple plots
 
-The `mdadata` also overrides several plotting methods, including `scatter()`, `plot()`, `bar()` and several others, besides that, statistical plots, such as `hist()`, `boxplot()` and `qqplot()`. It means that if one provided an `mdadata` object as a first argument for these functions, a specially written version will be used instead of conventional MATLAB method. Thus to make a scatter plot one has to provide a dataset with one or two columns. If more than two are available, `scatter()` method will ignore them.
+The `mdadata` also overrides several plotting methods, including `scatter()`, `plot()`, `bar()` and several others, besides that statistical plots, such as `hist()`, `boxplot()` and `qqplot()`. It means that if one provided an `mdadata` object as a first argument for these functions, a specially written version will be used instead of conventional MATLAB method. Thus to make a scatter plot one has to provide a dataset with one or two columns. If more than two are available, `scatter()` method will ignore them.
 
 ```matlab
 figure
