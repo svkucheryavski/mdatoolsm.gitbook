@@ -392,7 +392,7 @@ However it is much easier with plots. Here is how to show summary and plot overv
 
 ```
 summary(m)
-figure('Position', [100 100 800 500])
+figure
 plot(m)
 ```
 ```
