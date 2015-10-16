@@ -169,7 +169,7 @@ Peter  23.5
 
 ## Simple plots
 
-The `mdadata` also overrides several plotting methods, including `scatter()`, `plot()`, `bar()` and several others, besides that statistical plots, such as `hist()`, `boxplot()` and `qqplot()`. It means that if one provided an `mdadata` object as a first argument for these functions, a specially written version will be used instead of conventional MATLAB method. Thus to make a scatter plot one has to provide a dataset with one or two columns. If more than two are available, `scatter()` method will ignore them.
+The `mdadata` also overrides some plotting methods, including `scatter()`, `plot()`, `bar()` and several others. Besides that, statistical plots, such as `hist()`, `boxplot()` and `qqplot()`. It means that if one provided an `mdadata` object as a first argument for these functions, a specially written version will be used instead of conventional MATLAB method. Thus to make a scatter plot one has to provide a dataset with one or two columns. If more than two are available, `scatter()` method will ignore them.
 
 ```matlab
 figure
@@ -178,8 +178,6 @@ scatter(d)
 subplot(1, 2, 2)
 plot(d)
 ```
-
-
 
 
 As you can see the labels for axes, ticks, as well as title for the plot were set using dataset names. Color of data points, lines and bars are selected automatically but one can specify these and several other most important parameters for each plot. There are also additional options, allowing, for example, color grouping of data points and lines according to a vector of values. Look at description of plotting methods for the `mdadata` class for details. One of the most useful option is a possibility to show labels for data points or bars. Labels can be names (`'names'`), numbers (`'numbers'`) or values (`'values'`, this can be used only with bar plot).
