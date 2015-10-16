@@ -191,7 +191,7 @@ subplot(1, 2, 2)
 bar(d('Mike', :), 'FaceColor', 'b', 'Labels', 'values')
 ```
 
-![Use of labels in plots.](figures/fig2.png)
+![Use of labels in plots.](fig2.png)
 
 
 ## Univariate statistics
