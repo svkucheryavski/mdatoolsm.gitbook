@@ -195,7 +195,7 @@ bar(d('Mike', :), 'FaceColor', 'b', 'Labels', 'values')
 
 ## Univariate statistics
 
-There are several statistic methods also available for the mdadata datasets. To demonstrate this we will use a subset of dataset 'people', which is provided with the toolbox. In the dataset there are values for 32 persons from scandinavian and medditeranian regions (50% males, 50% females). Here are some examples.
+There are several statistic methods also available for the mdadata datasets. To demonstrate this we will use a subset of dataset *People*, which is provided with the toolbox. In the dataset there are values for 32 persons from scandinavian and medditeranian regions (50% males, 50% females). Here are some examples.
 
 ```matlab
 load('people')
@@ -278,14 +278,16 @@ Median     174    64.5        40
 As well as several statistic plots.
 
 ```matlab
-   figure
-   subplot(2, 2, 1)
-   hist( d(:, 'Height') )
-   subplot(2, 2, 2)
-   qqplot( d(:, 'Height') )
-   subplot(2, 2, 3)
-   boxplot( d )
+figure
+subplot(2, 2, 1)
+hist( d(:, 'Height') )
+subplot(2, 2, 2)
+qqplot( d(:, 'Height') )
+subplot(2, 2, 3)
+boxplot( d )
 ```
+
+![Examples of statistical plots](fig3.png)
 
 We hope that this brief overview of `mdadata` class gave an overall impression on how it works and how to use it for storing and visualisation of data values. To learn more, please, look at the User Guide and full description of the `mdadata` class and its methods.
 
