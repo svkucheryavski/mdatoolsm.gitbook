@@ -449,6 +449,8 @@ subplot(2, 1, 2)
 plotloadings(m, [1 2], 'Type', 'bar')
 ```
 
+![Loading plots](fig7.png)
+
 Examples for residuals:
 
 ```matlab
@@ -461,18 +463,24 @@ subplot(1, 2, 2)
 plotresiduals(m, 2, 'Labels', 'names', 'Marker', 'sdo', 'Color', 'rgb')
 ```
 
+![Residuals plots](fig8.png)
+
 
 Since cross-validated values can be shown on residuals plot (as well as test set results) here we need to specify color or/and marker either one for all results, as it is done in first plot, or three (one for each type) as in the second plot.
 
-One can also make similar plots for any results. One important feature of e.g. scores and residuals plots for the results is that they can be colorised by any vector of values. For model plots this option is not available, since color is used to separate type of results, but here we can do it easily using specific options.
+One can also make similar plots for any results. One important feature of e.g. scores and residuals plots for a particular type of results is that they can be colorised by any vector of values. For model plots this option is not available, since color is used to separate type of results, but here we can do it easily using specific options.
 
-   figure('Position', [100 100 800 300])
+```matlab
+figure
 
-   subplot(1, 2, 1)
-   plotscores(m.calres, 'Labels', 'names')
+subplot(1, 2, 1)
+plotscores(m.calres, 'Labels', 'names')
 
-   subplot(1, 2, 2)
-   plotscores(m.calres, 'Labels', 'names', 'Colorby', people(:, 'Beer'))
+subplot(1, 2, 2)
+plotscores(m.calres, 'Labels', 'names', 'Colorby', people(:, 'Beer'))
+```
+
+![Normal scores plot (left) and one with color groups (right)](fig9.png)
 
 Thus in the second plot data points are colorised according to annual beer consumption by the persons and one can also see a colobar with legend.
 
