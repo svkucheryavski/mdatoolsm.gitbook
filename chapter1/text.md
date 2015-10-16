@@ -202,22 +202,6 @@ load('people')
 d = people(:, {'Height', 'Weight', 'Shoesize'});
 show( d(1:5, :) )
 ```
-```matlab
-show( mean(d) )
-```
-```matlab
-show( std(d) )
-```
-```matlab
-show( se(d) )
-```
-```matlab
-show( percentile(d, 25) )
-```
-```matlab
-show( summary(d) )
-```
-
 ```
 People:
 People dataset
@@ -231,11 +215,19 @@ Rasmus     183      83        44
   Lene     166      47        36
  Mette     170      60        38
 ```
+
+```matlab
+show( mean(d) )
+```
 ```
              Variables
       Height  Weight  Shoesize
      ------- ------- ---------
 Mean     173    64.5      39.9
+```
+
+```matlab
+show( std(d) )
 ```
 ```
              Variables
@@ -243,11 +235,19 @@ Mean     173    64.5      39.9
       ------- ------- ---------
 Stdev    10.1    15.2       3.9
 ```
+
+```matlab
+show( se(d) )
+```
 ```
                    Variables
             Height  Weight  Shoesize
            ------- ------- ---------
 Std. error    1.78    2.69     0.689
+```
+
+```matlab
+show( percentile(d, 25) )
 ```
 ```
 Percentiles:
@@ -256,6 +256,10 @@ Percentiles:
      Height  Weight  Shoesize
     ------- ------- ---------
 25%     164      50        36
+```
+
+```matlab
+show( summary(d) )
 ```
 ```
 Summary statistics:
