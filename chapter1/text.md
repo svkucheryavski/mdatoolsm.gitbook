@@ -415,7 +415,9 @@ figure
 plot(m, [1 3])
 ```
 
-Examples of how to use scores and loadings with additional options
+![PCA model overview for PC1 vs. PC3](fig5.png)
+
+Examples of how to use scores and loadings with extra options
 
 ```matlab
 figure
