@@ -576,7 +576,7 @@ subplot 122
 densscatter( img(:, :, {'Red', 'Blue'}));
 ```
 
-
+![Conventional (left) and density (right) scatter plots for pixels](fig11.png)
 
 When one make a PCA model for an object of mdaimage class, all results for objects (pixels), such as scores and residuals will be automatically converted to mdaimage objects as well. It means, we can make scatter image for particular component.
 
@@ -589,32 +589,3 @@ When one make a PCA model for an object of mdaimage class, all results for objec
 
    subplot(1, 2, 2)
    imagesc(m.calres.scores(:, :, 2));
-
-GUI Tools
-The toolbox has also GUI for interactive exploration of data and models. Currently it is in alpha version and can only work with datasets. To run the GUI (it is called explorer in mdatools) just use:
-
-   explore(people);
-
-The window is split into several parts with three plots and panels with parameters on right side. The parameters include settings for the current plot (plot type and various options) and preprocessing. Background of a panel with current plot is highlighted with light bage color. To change the current plot just click on a panel (gray area outside axes) of the plot you want to change to.
-
-For any dataset there are two designated variables (columns). The first is used to make one-variable plots like histogram, QQ-plot, etc. The second is used to make scatter plot. The designated variables are shown with gray dashed lines on a line plot. Their position can be changed using arrows (left/right for first and up/down for second).
-
-For scatter, line and image plots it is possible to select objects or variables, exclude them, show excluded variables and include them back. The procedure is similar for all plots, so only selecting objects on scatter plot will be explained below.
-
-To select points on scatter plot do:
-
-Select panel with scatter plot.
-Push "s" button on keyboard, so a cursor looks like a cross.
-Make a closed polygon around points you need to select.
-If needed change polygon shape using nodes.
-Double click inside polygon to make selection.
-The selected points are highlighted with color. All other plots, like e.g. line plot or histogram will be shown only for selected objects. To unselect objects use "Esc" button. It also can be used if you started selection but would like to stop without selecting objects.
-
-Other important shortcuts are:
-
-"e" to exclude selected objects
-"a" to add excluded objects back
-"i" invert current selection
-If you want to add some of the excluded objects back, you need to make them visible using plot options (e.g. "Excluded rows"), then select them and push key "a". All operations with selected objects, e.g. inverting selection, excluding, including, etc. are also available from context menu (use right mous button with cursor on selected objects or variables).
-
-Data can be also preprocessed directly in the explorer. To define a sequence of preprocessed methods select method from a list and click "Add". Icons with errors (up/down) can be used to change the position of a method in the sequence and cross icon removes the method. Names of methods, which have additional settings (e.g. Savitzky-Golay) are shown as blue hyperlinks. By clicking on the link one can get a modal window with the settings, change and save them. Finally two buttons at the bottom of this section allow to apply the preprocessing sequence to the data and reset data to original state.
