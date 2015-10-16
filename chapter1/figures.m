@@ -1,0 +1,208 @@
+figw = 400;
+figh = 275;
+figfolder = '.';
+
+%% Introduction to datasets
+
+values = [180 84; 170 68; 165 71; 172 75];
+d = mdadata(values, 1:4, {'Height', 'Weight'});
+show(d)
+
+disp(d)
+
+d.rowNames = {'Lars', 'Peter', 'Anna', 'Kim'};
+show(d)
+
+d(1, :).rowNames = 'Mike';
+show(d)
+
+d.name = 'People';
+d.info = 'People data for quick start guide';
+d.dimNames  = {'Persons', 'Parameters'};
+show(d)
+
+show(d(1:2, :))
+
+show(d({'Mike', 'Anna'}, 'Height'))
+
+bmi = d(:, 'Weight') ./ (d(:, 'Height') / 100) .^ 2;
+bmi.colNames = 'BMI';
+show(bmi)
+
+%% Simple plots
+
+nfig = 1;
+figure
+subplot(1, 2, 1)
+scatter(d)
+subplot(1, 2, 2)
+plot(d)
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
+
+nfig = 2;
+figure
+subplot(1, 2, 1)
+scatter(d, 'Marker', 'd', 'Color', 'g', 'Labels', 'names')
+subplot(1, 2, 2)
+bar(d('Mike', :), 'FaceColor', 'b', 'Labels', 'values')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
+
+%% Univariate statistics
+
+load('people')
+d = people(:, {'Height', 'Weight', 'Shoesize'});
+show( d(1:5, :) )
+
+nfig = 3;
+figure
+subplot(1, 3, 1)
+hist( d(:, 'Height') )
+subplot(1, 3, 2)
+qqplot( d(:, 'Height') )
+subplot(1, 3, 3)
+boxplot( d )
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 3, figh], 'png', '-r150')
+
+%% PCA
+
+load('people')
+m = mdapca(people, 6, 'Scale', 'on');
+disp(m)
+
+disp(m.calres)
+
+load('people')
+m = mdapca(people, 6, 'Scale', 'on', 'CV', {'rand', 8, 4});
+disp(m)
+
+
+show(m.calres.scores(1:5, :))
+
+
+summary(m)
+figure
+plot(m)
+
+nfig = 4;
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
+
+
+
+figure
+plot(m, [1 3])
+
+nfig = 5;
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
+
+
+figure
+
+subplot(2, 2, 1)
+plotscores(m, 1, 'Labels', 'names')
+
+subplot(2, 2, 2)
+plotscores(m, [1 3], 'Marker', 's', 'Color', 'g')
+
+subplot(2, 2, 3)
+plotloadings(m)
+
+subplot(2, 2, 4)
+plotloadings(m, [1 3], 'Labels', 'names')
+
+
+nfig = 6;
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
+
+
+figure
+
+subplot(2, 1, 1)
+plotloadings(m, 1, 'Type', 'line', 'Marker', '.')
+
+subplot(2, 1, 2)
+plotloadings(m, [1 2], 'Type', 'bar')
+
+nfig = 7;
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
+
+
+
+figure
+
+subplot(1, 2, 1)
+plotresiduals(m, 'Labels', 'names', 'Marker', 's')
+
+subplot(1, 2, 2)
+plotresiduals(m, 2, 'Labels', 'names', 'Marker', 'sdo', 'Color', 'rgb')
+
+nfig = 8;
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
+
+
+
+
+figure
+
+subplot(1, 2, 1)
+plotscores(m.calres, 'Labels', 'names')
+
+subplot(1, 2, 2)
+plotscores(m.calres, 'Labels', 'names', 'Colorby', people(:, 'Beer'))
+
+nfig = 9;
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
+
+%% Working with images
+
+img = imread('test.jpg');
+img = mdaimage(img, {'Red', 'Green', 'Blue'});
+disp(img)
+
+figure
+
+subplot(2, 2, 1)
+imagesc(img(:, :, 'Red'))
+title('Red')
+
+subplot(2, 2, 2)
+imagesc(img(:, :, 'Green'))
+title('Green')
+
+subplot(2, 2, 3)
+imagesc(img(:, :, 'Blue'))
+title('Blue')
+
+subplot(2, 2, 4)
+imshow(img.image/255)
+title('Color image')
+
+colormap(gray)
+
+nfig = 10;
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
+
+
+figure
+
+subplot 121
+scatter( img(:, :, {'Red', 'Blue'}));
+
+subplot 122
+densscatter( img(:, :, {'Red', 'Blue'}));
+
+nfig = 11;
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
+
+
+m = mdapca(img);
+
+figure
+
+subplot(1, 2, 1)
+plotscores(m.calres, 'Type', 'densscatter');
+
+subplot(1, 2, 2)
+imagesc(m.calres.scores(:, :, 1));
+
+nfig = 12;
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
