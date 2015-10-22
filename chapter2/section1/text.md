@@ -22,7 +22,7 @@ Most of the properties are optional, they will be generated automatically or rem
 % Create a dataset with default property values:
 d = mdadata([180 85; 172 68; 156 50]);
 show(d)
-````
+```
 
 ```matlab
 disp('Dim names are:')
