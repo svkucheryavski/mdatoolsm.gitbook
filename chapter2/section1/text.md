@@ -1,23 +1,30 @@
 # Introduction to mdadata class
 
-Class mdadata extends usability of conventional matrices, allowing to keep row and column names with data values and use them when show or plot the data. The mdadata can be used only with numerical values.
+Class `mdadata` extends usability of conventional matrices, allowing to keep row and column names with data values and use them when show or plot the data. The `mdadata` can be used only with numerical values.
 
-Every object of mdadata class has following properties, which can be set by a user when creating:
+Every object of `mdadata` class has following properties, which can be set by a user when creating:
 
-values data values, a matrix with numbers
-rowNames a cell array with row names (optional)
-colNames a cell array with column names (optional)
-dimNames a cell array with names for each of the two dimensions (optional)
-name a text string with short name of the dataset (optional)
+`values` — data values, a matrix with numbers
+`rowNames` a cell array with row names (optional)
+`colNames` a cell array with column names (optional)
+`dimNames` a cell array with names for each of the two dimensions (optional)
+`name` a text string with short name of the dataset (optional)
+
 The default syntax for creating the dataset object is:
 
+```matlab
 data = mdadata(values, objNames, colNames, dimNames, name);
+```
+
 Most of the properties are optional, they will be generated automatically or remain empty if user does not provide the proper values:
 
+```matlab
 % Create a dataset with default property values:
 d = mdadata([180 85; 172 68; 156 50]);
 show(d)
+````
 
+```matlab
 disp('Dim names are:')
 disp(d.dimNames)
 
@@ -30,6 +37,7 @@ disp(d.dimNames)
 
 Dim names are:
     'Objects'    'Variables'
+```
 
 Function show() shows dataset values as a table with column and row names. As one can see column names were generated as '1', '2' and so on and row names remain empty. Default dimnames values are 'Objects' and 'Variables' and dataset name remains empty. The row names and column names must be unique!
 
