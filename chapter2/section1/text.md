@@ -137,15 +137,11 @@ show(d)
 
 Rows and columns can be removed using specific methods.
 
+```matlab
 d = mdadata([180 85 20; 172 68 20; 156 50 21; 161 51 22]);
 show(d)
-
-d.removecols(1);
-show(d)
-
-d.removerows(2:3);
-show(d)
-
+```
+```
    Variables
     1   2   3
  ---- --- ---
@@ -153,6 +149,16 @@ show(d)
   172  68  20
   156  50  21
   161  51  22
+```
+
+```matlab
+d.removecols(1);
+show(d)
+```
+
+d.removerows(2:3);
+show(d)
+
 
 
 
