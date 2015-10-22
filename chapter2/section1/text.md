@@ -101,16 +101,19 @@ Row names are:
 
 If it is needed to specify only selected parameters, the others should be provided as empty arrays:
 
+```matlab
 % create a dataset with variable and dimension names provided
 d = mdadata([180 85; 172 68; 156 50], [], {'Height', 'Weight'}, {'People', 'Parameters'});
 show(d)
-
+```
+```
     Parameters
   Height  Weight
  ------- -------
      180      85
      172      68
      156      50
+```
 
 Names and values can be changed for existent object:
 
