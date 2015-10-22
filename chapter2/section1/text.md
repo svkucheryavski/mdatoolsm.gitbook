@@ -155,13 +155,7 @@ show(d)
 d.removecols(1);
 show(d)
 ```
-
-d.removerows(2:3);
-show(d)
-
-
-
-
+```
 Variables
    2   3
  --- ---
@@ -169,14 +163,19 @@ Variables
   68  20
   50  21
   51  22
+```
 
-
-
+```matlab
+d.removerows(2:3);
+show(d)
+```
+```
 Variables
    2   3
  --- ---
   85  20
   51  22
+```
 
 You already know about function show(), it has an additional parameter, which defines how many significant digits to show (default value is 3):
 
