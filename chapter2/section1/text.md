@@ -43,15 +43,17 @@ Dim names are:
     'Objects'    'Variables'
 ```
 
-Function show() shows dataset values as a table with column and row names. As one can see column names were generated as '1', '2' and so on and row names remain empty. Default dimnames values are 'Objects' and 'Variables' and dataset name remains empty. The row names and column names must be unique!
+Function `show()` shows dataset values as a table with column and row names. As one can see column names were generated as `'1'`, `'2'` and so on and row names remain empty. Default `dimnames` values are `'Objects'` and `'Variables'` and dataset name is not defined. The row names and column names must be unique!
 
 Here is an example with all options.
 
+```matlab
 % create a dataset with all properties provided
 d = mdadata([180 85; 172 68; 156 50], {'Lars', 'Peter', 'Lena'}, ...
    {'Height', 'Weight'}, {'People', 'Parameters'}, 'People data');
 show(d)
-
+```
+```
 People data:
 
          Parameters
@@ -60,6 +62,7 @@ People data:
  Lars     180      85
 Peter     172      68
  Lena     156      50
+```
 
 Column and row names should consist only of latin letters and numbers. However you can provide them in a free form (e.g. ('Height of person, cm') and the name will be converted as following: spaces will be removed and every word capitalised, if there are punctuation marks or parentheses they will be also removed as well as the part of the name after the first punctuation symbol (for the example above it will become 'HeightOfPerson').
 
