@@ -64,7 +64,7 @@ Peter     172      68
  Lena     156      50
 ```
 
-Column and row names should consist only of latin letters and numbers. However you can provide them in a free form (e.g. ('Height of person, cm') and the name will be converted as following: spaces will be removed and every word capitalised, if there are punctuation marks or parentheses they will be also removed as well as the part of the name after the first punctuation symbol (for the example above it will become 'HeightOfPerson').
+Column and row names should consist only of latin letters and/or numbers. However you can provide them in a free form (e.g. (`'Height of person, cm'`) and the name will be converted as following: spaces will be removed and every word capitalized, if there are punctuation marks or parentheses they will be also removed as well as the part of the name after the first punctuation symbol (for the example above it will become 'HeightOfPerson').
 
 This is needed to identify the names correctly when subset the datasets with logical expressions. The original (user provided) names will be also kept and used as labels when you print or plot the data.
 
