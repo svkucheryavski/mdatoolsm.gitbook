@@ -67,30 +67,36 @@ Peter     172      68
 Column and row names should consist only of Latin letters and/or numbers. However you can provide them in a free form (e.g. (`'Height of person, cm'`) and the name will be converted as following: spaces will be removed and every word capitalized, if there are punctuation marks or parentheses they will be also removed as well as the part of the name after the first punctuation symbol (for the example above it will become `'HeightOfPerson'`).
 
 This is needed to identify the names correctly when subset the datasets with logical expressions. The original (user provided) names will be also kept and used as labels when you print or plot the data.
-
+```matlab
 d = mdadata([180 81; 172 66; 156 48], {'Lars Larsen', 'Peter from room 22', 'Lena'}, ...
    {'Height', 'Body mass (kg)'});
-
 show(d)
-
-disp('Column names are:')
-disp(d.colNames)
-
-disp('Row names are:')
-disp(d.rowNames)
-
+```
+```
                           Variables
                     Height  Body mass (kg)
                    ------- ---------------
        Lars Larsen     180              81
 Peter from room 22     172              66
               Lena     156              48
+```
 
+```matlab              
+disp('Column names are:')
+disp(d.colNames)
+```
+```              
 Column names are:
     'Height'    'Bodymass'
+```
 
+```matlab              
+disp('Row names are:')
+disp(d.rowNames)
+```
 Row names are:
     'LarsLarsen'    'Peterfromroom22'    'Lena'
+```
 
 If it is needed to specify only selected parameters, the others should be provided as empty arrays:
 
