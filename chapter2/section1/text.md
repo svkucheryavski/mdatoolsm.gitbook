@@ -179,30 +179,36 @@ Variables
 
 You already know about function show(), it has an additional parameter, which defines how many significant digits to show (default value is 3):
 
+```matlab
 d = mdadata([180 0.02345; 175 0.00123]);
-
 show(d)
-show(d, 2)
-show(d, 5)
-
+```
+```
    Variables
     1        2
  ---- --------
   180   0.0234
   175  0.00123
+```
 
-
-
+```matlab
+show(d, 2)
+```
+```
      Variables
         1       2
  -------- -------
   1.8e+02   0.023
   1.8e+02  0.0012
+```
 
-
-
+```matlab
+show(d, 5)
+```
+```
    Variables
     1        2
  ---- --------
   180  0.02345
   175  0.00123
+```
