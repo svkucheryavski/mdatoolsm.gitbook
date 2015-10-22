@@ -25,8 +25,6 @@ show(d)
 ```
 
 ```matlab
-disp('Dim names are:')
-disp(d.dimNames)
 
  Variables
     1   2
@@ -34,7 +32,12 @@ disp(d.dimNames)
   180  85
   172  68
   156  50
-
+```
+  
+```matlab
+```
+disp('Dim names are:')
+disp(d.dimNames)
 Dim names are:
     'Objects'    'Variables'
 ```
