@@ -35,9 +35,10 @@ show(d)
 ```
   
 ```matlab
-```
 disp('Dim names are:')
 disp(d.dimNames)
+```
+```
 Dim names are:
     'Objects'    'Variables'
 ```
