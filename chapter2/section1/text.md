@@ -4,11 +4,11 @@ Class `mdadata` extends usability of conventional matrices, allowing to keep row
 
 Every object of `mdadata` class has following properties, which can be set by a user when creating:
 
-`values` — data values, a matrix with numbers
-`rowNames` a cell array with row names (optional)
-`colNames` a cell array with column names (optional)
-`dimNames` a cell array with names for each of the two dimensions (optional)
-`name` a text string with short name of the dataset (optional)
+    'values' — data values, a matrix with numbers
+    `rowNames` a cell array with row names (optional)
+    `colNames` a cell array with column names (optional)
+    `dimNames` a cell array with names for each of the two dimensions (optional)
+    `name` a text string with short name of the dataset (optional)
 
 The default syntax for creating the dataset object is:
 
