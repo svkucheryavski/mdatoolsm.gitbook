@@ -94,6 +94,7 @@ Column names are:
 disp('Row names are:')
 disp(d.rowNames)
 ```
+```
 Row names are:
     'LarsLarsen'    'Peterfromroom22'    'Lena'
 ```
