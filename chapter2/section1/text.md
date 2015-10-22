@@ -117,6 +117,7 @@ show(d)
 
 Names and values can be changed for existent object:
 
+```matlab
 d = mdadata([180 85; 172 68; 156 50]);
 
 d(:, 1).colNames =  {'Height'};
@@ -124,13 +125,15 @@ d.dimNames = {'People', 'Parameters'};
 d(1, :).values = [181 88];
 
 show(d)
-
+````
+```
   Parameters
   Height   2
  ------- ---
      181  88
      172  68
      156  50
+```
 
 Rows and columns can be removed using specific methods.
 
