@@ -177,7 +177,7 @@ Variables
   51  22
 ```
 
-You already know about function show(), it has an additional parameter, which defines how many significant digits to show (default value is 3):
+You already know about function `show()`, it has an additional parameter, which defines how many significant digits to show (default value is 3):
 
 ```matlab
 d = mdadata([180 0.02345; 175 0.00123]);
