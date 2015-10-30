@@ -76,7 +76,7 @@ Correlation:
 Shoesize   0.961         1
 ```
 
-The additional methods include calculation of percentiles, standard error, confidence intervals, one-sample t-test and summary statistics for a dataset.
+The additional methods include calculation of percentiles:
 
 ```matlab
 show(percentile(data, 5))
@@ -90,6 +90,8 @@ Percentiles:
 5%     158    46.5      34.5   19  1.12e+04
 ```
 
+standard errors:
+
 ```matlab
 show(se(data))
 ```
@@ -99,6 +101,8 @@ show(se(data))
            ------- ------- --------- ----- ---------
 Std. error    1.78    2.69     0.689  1.68  1.58e+03
 ```
+
+confidence intervals:
 
 ```matlab
 show(ci(data))
@@ -126,6 +130,8 @@ Lower     168    57.1        38  29.8  2.31e+04
 Upper     178    71.8      41.8  39.1  3.18e+04
 ```
 
+one-sample t-test:
+
 ```matlab
 show(ttest(data))
 ```
@@ -151,6 +157,8 @@ P-values for t-test (mu = 170):
 Both tails  0.0887
 Right tail  0.0443
 ```
+
+and summary statistics for a dataset:
 
 ```matlab
 show(summary(data))
