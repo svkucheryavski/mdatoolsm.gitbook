@@ -357,7 +357,7 @@ Giovanni     176      68        -1        42
    Romeo     178      75        -1        42
 ```
 
-function `find()` can be used to get indices of rows, which meet logical conditions.
+Function `find()` can be used to get indices of rows, which meet logical conditions.
 
 ```matlab
 i = find(people, 'Sex == 1 & Region == -1');
