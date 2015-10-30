@@ -298,7 +298,7 @@ Column names are:
 Wrong values for column indices!
 ```
 
-Last but not least, one can use logical expressions with columns to make subsets. In this case the logical expression must be written as a text string and be used instead of row indices. In the expression you can use column names or numbers, in the latter case they should be specified with leading dollar sign: `'$1'`, `'$15'` and so on. Here are some examples:
+Last but not least, one can use logical expressions with columns to make subsets. In this case the logical expression must be written as a text string and be used instead of row indices. In the expression you can use column names or numbers. Here are some examples:
 
 ```matlab
 show(people('Sex == 1', 1:4));
