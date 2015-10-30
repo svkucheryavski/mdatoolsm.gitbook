@@ -295,6 +295,7 @@ Warning: Complex values were obtained, converted to real.
 
 As an extra example we will calculate an BMI (Body Mass Index) of the persons in our *People* data and add it as an extra column to the original dataset. As one can see all names remain correct after the calculations.
 
+```matlab
 load people
 
 bmi = people(:, 'Weight') ./ (people(:, 'Height') / 100).^2;
@@ -302,7 +303,8 @@ bmi.colNames = {'BMI'};
 newdata = [people bmi];
 
 show(bmi(1:5));
-show(newdata(1:5, :));
+```
+```
          BMI
        -----
   Lars  23.5
@@ -310,9 +312,12 @@ show(newdata(1:5, :));
 Rasmus  24.8
   Lene  17.1
  Mette  20.8
+```
 
-
-
+```matlab
+show(newdata(1:5, :));
+```
+```
                                                 Variables
         Height  Weight  Hairleng  Shoesize  Age   Income  Beer  Wine  Sex  Swim  Region   IQ   BMI
        ------- ------- --------- --------- ---- -------- ----- ----- ---- ----- ------- ---- -----
@@ -321,6 +326,7 @@ Rasmus  24.8
 Rasmus     183      83        -1        44   37  3.4e+04   320    98   -1    91      -1  127  24.8
   Lene     166      47        -1        36   32  2.8e+04   270    78    1    75      -1  112  17.1
  Mette     170      60         1        38   23    2e+04   312    99    1    81      -1  110  20.8
+```
 
 Calculation of size and length can be done using the same way as with matrices, plus there are two properties nrow and ncol. Function numel() was not overrided due to some technical reasons, so it will return 1 instead of number of values (use numel(d.values) if needed):
 
