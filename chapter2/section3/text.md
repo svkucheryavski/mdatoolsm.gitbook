@@ -330,11 +330,14 @@ Rasmus     183      83        -1        44   37  3.4e+04   320    98   -1    91 
 
 Calculation of size and length can be done using the same way as with matrices, plus there are two properties nrow and ncol. Function numel() was not overrided due to some technical reasons, so it will return 1 instead of number of values (use numel(d.values) if needed):
 
+```matlab
 disp(people.nRows)
 disp(people.nCols)
 disp(size(people))
 disp(length(people))
 disp(numel(people))
+```
+```
     32
 
     12
