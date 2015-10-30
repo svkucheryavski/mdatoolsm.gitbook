@@ -1,9 +1,10 @@
-## Sorting data and making subsets
+# Sorting data and making subsets
 
-In this section and onwards we will use a People dataset instead of generating numbers. The dataset consists of measurements of 12 variables done for 32 persons (16 males and 16 females, half from Scandinavia, half from Mediterranian region). The variables include height, weight, shoesize, income, beer and wine consumption and so on. For details, please, see K. Esbensen. Multivariate data analysis in practice. Camo, 2005.
+In this section and onward we will use a *People* dataset instead of generating numbers. The dataset consists of measurements of 12 variables done for 32 persons (16 males and 16 females, half from Scandinavia, half from Mediterranean region). The variables include height, weight, shoe size, income, beer and wine consumption and so on. For details, please, see K. Esbensen. *Multivariate data analysis in practice.* Camo, 2005.
 
 The data can be sorted using one or several columns:
 
+```matlab
 load people
 
 show(people)
