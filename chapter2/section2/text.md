@@ -6,15 +6,9 @@ The data can be sorted using one or several columns:
 
 ```matlab
 load people
-
 show(people)
-
-people.sort('Sex')
-show(people)
-
-people.sort({'Sex', 'Region'}, 'descend')
-show(people)
-
+```
+```
 People:
 People dataset
 
@@ -53,9 +47,14 @@ Alessandro     181      75        -1        43   42   3.1e+04   198   161   -1  
    Rosetta     161      48         1        35   41  3.15e+04   116   196    1    75       1  120
      Romeo     178      75        -1        42   30   2.4e+04   203   208   -1    81       1  118
     Romina     160      48         1        35   40   3.1e+04   118   198    1    74       1  129
+```
 
 
-
+```matlab
+people.sort('Sex')
+show(people)
+```
+```
 People:
 People dataset
 
@@ -95,8 +94,13 @@ Alessandro     164      50         1        38   41   3.4e+04   255   134    1  
      Marta     161      48         1        35   41  3.15e+04   116   196    1    75       1  120
     Romina     160      48         1        35   40   3.1e+04   118   198    1    74       1  129
 
+```
 
-
+```matlab
+people.sort({'Sex', 'Region'}, 'descend')
+show(people)
+```
+```
 People:
 People dataset
 
