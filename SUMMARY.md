@@ -12,6 +12,7 @@
     * [Group plots](chapter2/section7/text.md)
     * [Hiding rows and columns](chapter2/section8/text.md)
 * [Working with images](chapter3/text.md)
+<!---
 * [Data preprocessing](chapter4/text.md)
 * [Principal Component Analysis](chapter5/text.md)
 * [Multiple Linear Regression](chapter6/text.md)
@@ -19,4 +20,4 @@
 * [Variable selection](chapter8/text.md)
 * [SIMCA classification](chapter9/text.md)
 * [PLS discriminant analysis](chapter10/text.md)
-
+-->
