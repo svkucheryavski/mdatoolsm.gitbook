@@ -341,6 +341,8 @@ People dataset
 Gitte     172      64         1        39
 ```
 
+If you want to use column numbers, they should be specified with leading dollar sign: `'$1'`, `'$15'` and so on.
+
 ```matlab
 show(people('$1 < 180 & $3 == -1', 1:4));
 ```
