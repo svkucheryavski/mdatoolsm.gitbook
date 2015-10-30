@@ -53,19 +53,16 @@ ORasmus     183      83        -1        44   37
   OLene     166      47        -1        36   32
 ```
 
-The `mdadata` objects supports most of the basic arithmetic operations as well as some fuctions directly, converting all names automatically:
+The `mdadata` objects supports most of the basic arithmetic operations as well as some functions directly, converting all names automatically:
 
 
+```matlab
 a = mdadata(reshape(1:15, 5, 3));
 b = mdadata(reshape(15:-1:1, 5, 3));
 
 show(a + b)
-show(a - b)
-show(a * 5)
-show(a * b')
-show(a .* b)
-show(a ./ b)
-
+```
+```
   Variables
    1   2   3
  --- --- ---
@@ -74,9 +71,12 @@ show(a ./ b)
   16  16  16
   16  16  16
   16  16  16
+```
 
-
-
+```matlab
+show(a - b)
+```
+```
    Variables
     1   2   3
  ---- --- ---
@@ -85,9 +85,12 @@ show(a ./ b)
   -10   0  10
    -8   2  12
    -6   4  14
+```
 
-
-
+```matlab
+show(a * 5)
+```
+```
   Variables
    1   2   3
  --- --- ---
@@ -96,9 +99,12 @@ show(a ./ b)
   15  40  65
   20  45  70
   25  50  75
+```
 
-
-
+```matlab
+show(a * b')
+```
+```
          Variables
     1    2    3    4    5
  ---- ---- ---- ---- ----
@@ -107,9 +113,12 @@ show(a ./ b)
   190  166  142  118   94
   220  193  166  139  112
   250  220  190  160  130
+```
 
-
-
+```matlab
+show(a .* b)
+```
+```
   Variables
    1   2   3
  --- --- ---
@@ -118,9 +127,12 @@ show(a ./ b)
   39  64  39
   48  63  28
   55  60  15
+```
 
-
-
+```matlab
+show(a ./ b)
+```
+```
        Variables
        1      2     3
  ------- ------ -----
@@ -129,9 +141,11 @@ show(a ./ b)
    0.231      1  4.33
    0.333   1.29     7
    0.455   1.67    15
+```
 
 Linear equations can be solved directly for mdadata objects.
 
+```matlab
 load people
 
 X = people(:, {'Weight', 'Beer', 'Swim'});
@@ -139,14 +153,19 @@ y = people(:, 'Height');
 
 b = X\y;
 show(b)
-show(X * b)
+```
+```
          Height
        --------
 Weight   -0.342
   Beer  -0.0147
   Swim     2.44
+```
 
-
+```matlab
+show(X * b)
+```
+```
             Height
            -------
       Lars     201
@@ -181,15 +200,16 @@ Alessandro     174
    Rosetta     165
      Romeo     169
     Romina     162
+```
 
-The full list of the functions include: plus(), minus(), uminus(), times(), mtimes(), rdivide(), mrdivide(), ldivide(), mldivide(), round(), abs(), power(), sqrt(), log(), and exp().
+The full list of the functions includes: `plus()`, `minus()`, `uminus()`, `times()`, `mtimes()`, `rdivide()`, `mrdivide()`, `ldivide()`, `mldivide()`, `round()`, `abs()`, `power()`, `sqrt()`, `log()`, and `exp()`.
 
+```matlab
 a = mdadata(reshape(1:15, 5, 3));
 show(log(a))
-show(exp(a))
-show(power(a, 0.5))
-show(round(a/2))
+```
 
+```
       Variables
       1     2     3
  ------ ----- -----
@@ -198,9 +218,12 @@ show(round(a/2))
     1.1  2.08  2.56
    1.39   2.2  2.64
    1.61   2.3  2.71
+```
 
-
-
+```matlab
+show(exp(a))
+```
+```
          Variables
      1         2         3
  ----- --------- ---------
@@ -209,9 +232,12 @@ show(round(a/2))
   20.1  2.98e+03  4.42e+05
   54.6   8.1e+03   1.2e+06
    148   2.2e+04  3.27e+06
+```
 
-
-
+```matlab
+show(power(a, 0.5))
+```
+```
      Variables
      1     2     3
  ----- ----- -----
@@ -220,9 +246,12 @@ show(round(a/2))
   1.73  2.83  3.61
      2     3  3.74
   2.24  3.16  3.87
+```
 
-
-
+```matlab
+show(round(a/2))
+```
+```
  Variables
   1  2  3
  -- -- --
@@ -231,12 +260,15 @@ show(round(a/2))
   2  4  7
   2  5  7
   3  5  8
+```
 
 Please, be aware that if a calculation results in a complex number, it will be converted to real and method will show a warning:
 
+```matlab
 d = mdadata([-1 0.5; 1 0]);
 show(log(d))
-show(sqrt(d))
+```
+```
 Warning: Complex values were obtained, converted to real. 
 
 
@@ -245,7 +277,12 @@ Warning: Complex values were obtained, converted to real.
  -- -------
   0  -0.693
   0    -Inf
+```
 
+```matlab
+show(sqrt(d))
+```
+```
 Warning: Complex values were obtained, converted to real. 
 
 
@@ -254,8 +291,9 @@ Warning: Complex values were obtained, converted to real.
  -- ------
   0  0.707
   1      0
+```
 
-As an extra example we will calculate an BMI (Body Mass Index) of the persons in our People data and add it as an extra column to the original dataset. As one can see all names remain correct after the calculations.
+As an extra example we will calculate an BMI (Body Mass Index) of the persons in our *People* data and add it as an extra column to the original dataset. As one can see all names remain correct after the calculations.
 
 load people
 
