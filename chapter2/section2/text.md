@@ -139,14 +139,14 @@ Alessandro     168      52         1        37   27  2.35e+04   260    86    1  
      Marta     183      81        -1        42   37   3.5e+04   345    45   -1    90      -1  105
    Rosetta     180      82        -1        44   43   3.7e+04   355    82   -1    88      -1  109
     Romina     180      81        -1        44   46   4.2e+04   362    90   -1    86      -1  113
+```
 
 Making subsets is as easy as with matrices, just specify indices for rows and columns:
 
-load people
-
+```matlab
 show(people([1, 2], :))
-show(people(1:3, 1:2:end-2))
-
+```
+```
 People:
 People dataset
 
@@ -156,8 +156,12 @@ People dataset
  Lars     198      92        -1        48   48  4.5e+04   420   115   -1    98      -1  100
 Peter     184      84        -1        44   33  3.3e+04   350   102   -1    92      -1  130
 
+```
 
-
+```matlab
+show(people(1:3, 1:2:end-2))
+```
+```
 People:
 People dataset
 
@@ -167,13 +171,14 @@ People dataset
   Lars     198        -1   48   420   -1
  Peter     184        -1   33   350   -1
 Rasmus     183        -1   37   320   -1
+```
 
-In addition to that, mdadata objects can be also subset by using column and row names, either one or several, combined to a cell array.
+In addition to that, `mdadata` objects can be also subset by using column and row names, either one or several, combined to a cell array.
 
+```matlab
 show(people(1:5, 'Height'))
-show(people('Lars', :))
-show(people({'Lars', 'Lene'}, {'Height', 'Weight'}))
-
+```
+```
 People:
 People dataset
         Height
@@ -183,9 +188,12 @@ People dataset
 Rasmus     183
   Lene     166
  Mette     170
+```
 
-
-
+```matlab
+show(people('Lars', :))
+```
+```
 People:
 People dataset
 
@@ -194,8 +202,12 @@ People dataset
      ------- ------- --------- --------- ---- -------- ----- ----- ---- ----- ------- ----
 Lars     198      92        -1        48   48  4.5e+04   420   115   -1    98      -1  100
 
+```
 
-
+```matlab
+show(people({'Lars', 'Lene'}, {'Height', 'Weight'}))
+```
+```
 People:
 People dataset
 
@@ -204,13 +216,14 @@ People dataset
      ------- -------
 Lars     198      92
 Lene     166      47
+```
 
 Names can also be used to specify a sequence of columns or rows:
 
+```matlab 
 show(people(1:3, 'Height:Income'))
-show(people('Lars:Lene', :))
-show(people('Lars:Lene', 'Height:Income'))
-
+```
+```
 People:
 People dataset
 
@@ -220,9 +233,12 @@ People dataset
   Lars     198      92        -1        48   48  4.5e+04
  Peter     184      84        -1        44   33  3.3e+04
 Rasmus     183      83        -1        44   37  3.4e+04
+```
 
-
-
+```matlab
+show(people('Lars:Lene', :))
+```
+```
 People:
 People dataset
 
@@ -233,9 +249,12 @@ People dataset
  Peter     184      84        -1        44   33  3.3e+04   350   102   -1    92      -1  130
 Rasmus     183      83        -1        44   37  3.4e+04   320    98   -1    91      -1  127
   Lene     166      47        -1        36   32  2.8e+04   270    78    1    75      -1  112
+```
 
-
-
+```matlab
+show(people('Lars:Lene', 'Height:Income'))
+```
+```
 People:
 People dataset
 
@@ -246,9 +265,11 @@ People dataset
  Peter     184      84        -1        44   33  3.3e+04
 Rasmus     183      83        -1        44   37  3.4e+04
   Lene     166      47        -1        36   32  2.8e+04
+```
 
-Be sure that you use correct column names, not the ones that were specified for printing or plotting. Check data.colNames if you have doubts.
+Be sure that you use correct column names, not the ones that were specified for printing or plotting. Check `data.colNames` if you have doubts.
 
+```matlab
 d = mdadata([180 85; 165 55], {}, {'Height (cm)', 'Body mass (kg)'});
 
 disp('Column names are:')
@@ -263,6 +284,8 @@ try
 catch e
    disp(e.message)
 end
+```
+```
 Column names are:
     'Height'    'Bodymass'
 
@@ -273,12 +296,14 @@ Column names are:
               55
 
 Wrong values for column indices!
-Last but not least, one can use logical expressions with columns to make subsets. In this case the logical expression must be written as a text string and be used instead of row indices. In the expression you can use column names or numbers, in the latter case they should be specified with leading dollar sign: '$1', '$15' and so on. Here are some examples:
+```
 
+Last but not least, one can use logical expressions with columns to make subsets. In this case the logical expression must be written as a text string and be used instead of row indices. In the expression you can use column names or numbers, in the latter case they should be specified with leading dollar sign: `'$1'`, `'$15'` and so on. Here are some examples:
+
+```matlab
 show(people('Sex == 1', 1:4));
-show(people('Sex == 1 & Weight > 60', 1:4));
-show(people('$1 < 180 & $3 == -1', 1:4));
-
+```
+```
 People:
 People dataset
 
@@ -301,9 +326,12 @@ Giuliana     162      50         1        36
    Marta     165      51         1        36
  Rosetta     161      48         1        35
   Romina     160      48         1        35
+```
 
-
-
+```matlab
+show(people('Sex == 1 & Weight > 60', 1:4));
+```
+```
 People:
 People dataset
 
@@ -311,9 +339,12 @@ People dataset
        Height  Weight  Hairleng  Shoesize
       ------- ------- --------- ---------
 Gitte     172      64         1        39
+```
 
-
-
+```matlab
+show(people('$1 < 180 & $3 == -1', 1:4));
+```
+```
 People:
 People dataset
 
@@ -324,11 +355,15 @@ People dataset
   Benito     177      65        -1        41
 Giovanni     176      68        -1        42
    Romeo     178      75        -1        42
+```
 
-function find() can be used to get indices of rows, which meet logical conditions.
+function `find()` can be used to get indices of rows, which meet logical conditions.
 
+```matlab
 i = find(people, 'Sex == 1 & Region == -1');
 disp(people.rowNames(i)');
+```
+```
   Columns 1 through 7
 
     'Lene'    'Mette'    'Gitte'    'Lotte'    'Heidi'    'Gerda'    'Anne'
@@ -336,3 +371,4 @@ disp(people.rowNames(i)');
   Column 8
 
     'Britta'
+```
