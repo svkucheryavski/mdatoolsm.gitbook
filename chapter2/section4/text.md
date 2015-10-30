@@ -80,26 +80,30 @@ The additional methods include calculation of percentiles, standard error, confi
 
 ```matlab
 show(percentile(data, 5))
-show(se(data))
-show(ci(data))
-show(ci(data, 0.01))
-
+```
+```
 Percentiles:
 
                    Variables
     Height  Weight  Shoesize  Age    Income
    ------- ------- --------- ---- ---------
 5%     158    46.5      34.5   19  1.12e+04
+```
 
-
-
+```matlab
+show(se(data))
+```
+```
                            Variables
             Height  Weight  Shoesize   Age    Income
            ------- ------- --------- ----- ---------
 Std. error    1.78    2.69     0.689  1.68  1.58e+03
+```
 
-
-
+```matlab
+show(ci(data))
+```
+```
 Confidence intervals (95%):
 
                       Variables
@@ -107,9 +111,12 @@ Confidence intervals (95%):
       ------- ------- --------- ----- ---------
 Lower     169      59      38.5    31  2.42e+04
 Upper     177    69.9      41.3  37.9  3.07e+04
+```
 
-
-
+```matlab
+show(ci(data, 0.01))
+```
+```
 Confidence intervals (99%):
 
                       Variables
@@ -117,12 +124,12 @@ Confidence intervals (99%):
       ------- ------- --------- ----- ---------
 Lower     168    57.1        38  29.8  2.31e+04
 Upper     178    71.8      41.8  39.1  3.18e+04
+```
 
+```matlab
 show(ttest(data))
-show(ttest(data(:, 'Height'), 170))
-
-show(summary(data))
-
+```
+```
 P-values for t-test (mu = 0):
 
                           Variables
@@ -131,18 +138,24 @@ P-values for t-test (mu = 0):
  Left tail       1       1         1    1       1
 Both tails       0       0         0    0       0
 Right tail       0       0         0    0       0
+```
 
-
-
+```matlab
+show(ttest(data(:, 'Height'), 170))
+```
+```
 P-values for t-test (mu = 170):
             Height
            -------
  Left tail   0.956
 Both tails  0.0887
 Right tail  0.0443
+```
 
-
-
+```matlab
+show(summary(data))
+```
+```
 Summary statistics:
 
                        Variables
@@ -154,3 +167,4 @@ Median     174    64.5        40    34     3e+04
   Mean     173    64.5      39.9  34.4  2.74e+04
     Q3     180    80.5        43    41   3.4e+04
    Max     198      92        48    55   4.5e+04
+```   
