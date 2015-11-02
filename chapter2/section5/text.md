@@ -31,22 +31,26 @@ scatter(people(:, 1:2), 'Labels', 'numbers');
 
 ![Scatter plot with labels](fig1.png)
 
-Besides that the scatter() method allows grouping the data points by colors. Parameter 'Colorby' allows to make a color grouping using a vector with numeric values or one of the columns of the dataset. Column name or number should be specified as the parameter value in latter case.
+Besides that, the `scatter()` method allows grouping the data points by colors. Parameter `'Colorby'` allows making a color grouping by a vector with numeric values or one of the columns of the dataset. Column name or number should be specified as the parameter value in latter case.
 
-   figure('Position', [0 0 800 300])
+```matlab
+figure
 
-   % group by numeric values
-   v = people(:, 'Beer').values;
-   subplot(1, 3, 1)
-   scatter(people(:, 1:2), 'Colorby', v);
+% group by numeric values
+v = people(:, 'Beer').values;
+subplot(1, 3, 1)
+scatter(people(:, 1:2), 'Colorby', v);
 
-   % group by logical values
-   subplot(1, 3, 2)
-   scatter(people(:, 1:2), 'Colorby', v > 300);
+% group by logical values
+subplot(1, 3, 2)
+scatter(people(:, 1:2), 'Colorby', v > 300);
 
-   % group by one-column mdadata object
-   subplot(1, 3, 3)
-   scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'));
+% group by one-column mdadata object
+subplot(1, 3, 3)
+scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'));
+```
+
+![Color grouping on scatter plots](fig1.png)
 
 The grouping can be tuned by setting another color map (parameter 'Colormap'), adding a colorbar legend ('Colorbar') and title for the color bar ('ColorbarTitle'):
 
