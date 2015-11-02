@@ -215,7 +215,7 @@ colorbar
 
 ![Level plot with colorbar and alternative colormap](fig13.png)
  
-The matrix plot does almost the same, but shows values as a 3D surface instead of flat set of rectangles. The method uses standard function mesh() to make the plot.
+The matrix plot does almost the same, but shows values as a 3D surface instead of flat set of rectangles. The method uses standard function `mesh()` to make the plot.
 
 ```matlab
 figure
@@ -223,7 +223,7 @@ matrixplot(people(1:5, 1:5), 'Colormap', @jet)
 colorbar
 ```
 
-![Matrix plot](fig12.png)
+![Matrix plot](fig14.png)
 
 
 # Statistics plots
