@@ -42,19 +42,19 @@ figure
 
 % group by numeric values
 v = people(:, 'Beer').values;
-subplot(1, 3, 1)
+subplot 221
 scatter(people(:, 1:2), 'Colorby', v);
 
 % group by logical values
-subplot(1, 3, 2)
+subplot 222
 scatter(people(:, 1:2), 'Colorby', v > 300);
 
 % group by one-column mdadata object
-subplot(1, 3, 3)
+subplot 223
 scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'));
 
 % group by another column of the dataset
-subplot(1, 3, 3)
+subplot 224
 scatter(people(:, 1:2), 'Colorby', people(:, 'Wine'));
 
 ```
