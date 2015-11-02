@@ -65,7 +65,7 @@ scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'), 'Colormap', @gray,...
       'Colorbar', 'on', 'ColorbarTitle', 'Beer consumption (L/year)');
 ```
 
-![Color bar legend and title](fig3.png)
+![Color bar legend and title](fig4.png)
 
 # Density scatter plots
 
@@ -78,7 +78,7 @@ figure
 densscatter(data);
 ```
 
-![Density scatter plot](fig4.png)
+![Density scatter plot](fig5.png)
 
 Additional parameters allow to change area of neighborhood the density is calculated for and change color map as it can be done with `scatter()`.
 
