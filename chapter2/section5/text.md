@@ -52,6 +52,11 @@ scatter(people(:, 1:2), 'Colorby', v > 300);
 % group by one-column mdadata object
 subplot(1, 3, 3)
 scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'));
+
+% group by another column of the dataset
+subplot(1, 3, 3)
+scatter(people(:, 1:2), 'Colorby', people(:, 'Wine'));
+
 ```
 
 ![Color grouping on scatter plots](fig3.png)
