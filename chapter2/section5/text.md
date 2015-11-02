@@ -213,7 +213,7 @@ levelplot(corr(people(1:5, 1:5)), 'Colormap', @jet)
 colorbar
 ````
 
-![Level plot](fig12.png)
+![Level plot with colorbar and alternative colormap](fig13.png)
  
 The matrix plot does almost the same, but shows values as a 3D surface instead of flat set of rectangles. The method uses standard function mesh() to make the plot.
 
