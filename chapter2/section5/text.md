@@ -67,13 +67,16 @@ scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'), 'Colormap', @gray,...
 
 ![Color bar legend and title](fig1.png)
 
-Density scatter plots
-The dnesity scatter plot is an extension of scatter plot, where data poits are colored according to density of area around them (how many neighbors they have. The plot is useful when it is needed to dectect patterns in a data with thousands of objects.
+# Density scatter plots
 
-   data = mdadata(randn(50000, 2));
+The density scatter plot is an extension of scatter plot, where data points are colored according to density of area around them (how many neighbors they have. The plot is useful when it is needed to detect patterns in a data with thousands of objects.
 
-   figure('Position', [0 0 400 300])
-   densscatter(data);
+```matlab
+data = mdadata(randn(50000, 2));
+
+figure
+densscatter(data);
+```
 
 Additional parameters allow to change area of neighborhood the density is calculated for and change color map as it can be done with scatter().
 
