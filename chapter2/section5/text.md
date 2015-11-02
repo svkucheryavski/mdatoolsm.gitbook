@@ -110,6 +110,8 @@ figure
 plot(spectra, 'Color', 'r')
 ```
 
+![Simple line plot](fig6.png)
+
 If it is needed to use specific values for the x, they can be provided as a second argument and can be either a numeric vector or `mdadata` object with one column and the same values as number of columns in original dataset.
 
 ```matlab
@@ -128,6 +130,8 @@ subplot(2, 1, 2)
 plot(spectra, invcm, 'Color', 'r')
 xlabel('Wavelength, cm-1')
 ```
+
+![Line plot with manual x-values](fig5.png)
 
 Finally, the method allows to make color grouping of the lines, using the same way and parameters as `scatter()`. Below we will colorize the spectra according to the concentration of first component of the mixtures.
 
