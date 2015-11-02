@@ -95,7 +95,7 @@ subplot(1, 3, 3)
 densscatter(data, 'Colormap', @spring);
 ```
 
-![Density scatter plot with extra options](fig5.png)
+![Density scatter plot with extra options](fig6.png)
 
 # Line plots
 
