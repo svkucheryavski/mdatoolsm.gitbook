@@ -7,6 +7,6 @@
     * [Sorting data and making subsets](chapter2/section2/text.md)
     * [Mathematical operations and functions](chapter2/section3/text.md)
     * [Quantitative statistics](chapter2/section4/text.md)
-* [Working with images](chapter3/text.md)
+    * [Plots](chapter2/section5/text.md)
 
 
