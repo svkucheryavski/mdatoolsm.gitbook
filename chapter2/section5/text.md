@@ -131,7 +131,7 @@ plot(spectra, invcm, 'Color', 'r')
 xlabel('Wavelength, cm-1')
 ```
 
-![Line plot with manual x-values](fig5.png)
+![Line plot with manual x-values](fig7.png)
 
 Finally, the method allows to make color grouping of the lines, using the same way and parameters as `scatter()`. Below we will colorize the spectra according to the concentration of first component of the mixtures.
 
