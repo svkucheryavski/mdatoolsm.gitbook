@@ -18,6 +18,7 @@ subplot 121
 scatter(people);
 subplot 122
 scatter(people(:, 1:2), 'Marker', 's', 'MarkerFaceColor', 'c');
+
 ```
 
 ![A simple scatter plot](fig1.png)
