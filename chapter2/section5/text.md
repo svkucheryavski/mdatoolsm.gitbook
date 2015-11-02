@@ -184,9 +184,9 @@ Labels can be show on the top of each bar, the actual y values are used for the 
 
 ```matlab
 figure
-subplot(1, 2, 1)
+subplot 121
 bar(expvar('Test', :), 'Labels', 'values')
-subplot(1, 2, 2)
+subplot 122
 bar(expvar('Test', :), 'Labels', 'values', 'LabelsSigfig', 2)
 ```
 
@@ -198,14 +198,16 @@ These two simple plots can be used to overview of all values at the same time. T
 
 ```matlab
 figure
+
+subplot 121
 levelplot(people(1:5, 1:5))
 
-figure
+subplot 122
 levelplot(corr(people(1:5, 1:5)), 'Colormap', @jet)
 colorbar
 ````
 
-![Level plot](fig11.png)
+![Level plot](fig12.png)
  
 The matrix plot does almost the same, but shows values as a 3D surface instead of flat set of rectangles. The method uses standard function mesh() to make the plot.
 
