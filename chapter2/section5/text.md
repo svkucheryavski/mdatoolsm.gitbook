@@ -52,16 +52,20 @@ scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'));
 
 ![Color grouping on scatter plots](fig1.png)
 
-The grouping can be tuned by setting another color map (parameter 'Colormap'), adding a colorbar legend ('Colorbar') and title for the color bar ('ColorbarTitle'):
+The grouping can be tuned by setting another color map (parameter `'Colormap'`), adding a color bar legend (`'Colorbar'`) and title for the color bar (`'ColorbarTitle'`):
 
-   figure('Position', [0 0 800 300])
+```matlab
+figure
 
-   subplot(1, 2, 1)
-   scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'), 'Colorbar', 'on');
+subplot(1, 2, 1)
+scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'), 'Colorbar', 'on');
 
-   subplot(1, 2, 2)
-   scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'), 'Colormap', @gray,...
+subplot(1, 2, 2)
+scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'), 'Colormap', @gray,...
       'Colorbar', 'on', 'ColorbarTitle', 'Beer consumption (L/year)');
+```
+
+![Color bar legend and title](fig1.png)
 
 Density scatter plots
 The dnesity scatter plot is an extension of scatter plot, where data poits are colored according to density of area around them (how many neighbors they have. The plot is useful when it is needed to dectect patterns in a data with thousands of objects.
