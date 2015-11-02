@@ -15,7 +15,7 @@ load people
 
 figure
 subplot 121
-scatter(people(:, 1:2), 'Marker', 's', 'MarkerFaceColor', 'c');
+scatter(people);
 subplot 122
 scatter(people(:, 1:2), 'Marker', 's', 'MarkerFaceColor', 'c');
 ```
