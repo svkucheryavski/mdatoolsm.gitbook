@@ -233,6 +233,8 @@ subplot(1, 2, 2)
 hist(people(:, 'Height'), 5, 'Density', 'on', 'ShowNormal', 'on', 'Color', 'r')
 ```
 
+![Distribution histogram](fig12.png)
+
 The errobar plot shows average values and error bars for each of the dataset columns. The error bars are calculated by default as 95% confidence intervals for mean values, based on Student's t-distribution, but this can be changed to standard error, standard deviation or one of these with a factor of desired probability. Most of the parameters for standard plot() function can be used.
 
    d = people(:, {'Height', 'Weight', 'Beer', 'Wine'});
