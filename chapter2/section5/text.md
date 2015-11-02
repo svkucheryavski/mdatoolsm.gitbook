@@ -17,18 +17,19 @@ figure
 scatter(people(:, 1:2), 'Marker', 's', 'MarkerFaceColor', 'c');
 ```
 
-If more than two columns are provided, the method will show the plot for the first two and ignore the other columns.
+![A simple scatter plot](fig1.png)
 
-   figure('Position', [0 0 400 300])
-   scatter(people(:, {'Height', 'Weight', 'Beer', 'Swim'}), 'Color', 'r');
+If more than two columns are provided, the method will show the plot for the first two and ignore the other columns. Labels of objects can be shown either as names (if provided) or as numbers:
 
-Labels of objects can be shown either as names (if provided) or as numbers:
+```matlab
+figure
+subplot(1, 2, 1)
+scatter(people(:, 1:2), 'Labels', 'names');
+subplot(1, 2, 2)
+scatter(people(:, 1:2), 'Labels', 'numbers');
+```
 
-   figure('Position', [0 0 800 300])
-   subplot(1, 2, 1)
-   scatter(people(:, 1:2), 'Labels', 'names');
-   subplot(1, 2, 2)
-   scatter(people(:, 1:2), 'Labels', 'numbers');
+![Scatter plot with labels](fig1.png)
 
 Besides that the scatter() method allows grouping the data points by colors. Parameter 'Colorby' allows to make a color grouping using a vector with numeric values or one of the columns of the dataset. Column name or number should be specified as the parameter value in latter case.
 
