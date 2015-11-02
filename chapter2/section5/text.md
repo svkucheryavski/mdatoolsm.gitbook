@@ -183,6 +183,7 @@ bar(expvar('Test', :), 'Labels', 'values', 'LabelsSigfig', 2)
 ```
 
 # Level and matrix plots
+
 These two simple plots can be used to overview of all values at the same time. The level plot shows values as a set of rectangles, color of each correspond to a value it represents. A color pallette can be changed by the standard colormap() function and colorbar can be added to see the color map to the values. The method can be particularly useful for visualising data of the same origin (unites) or pairwise data, for example correlation matrix.
 
    figure('Position', [0 0 400 300]);
