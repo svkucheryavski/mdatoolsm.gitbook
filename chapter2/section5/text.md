@@ -283,16 +283,20 @@ subplot(1, 3, 3)
 boxplot(d, 'Whisker', 1, 'Labels', 'names')
 ```
 
-![Boxplots](fig12.png)
+![Box and whiskers plots](fig15.png)
 
 Quantile-quantile plot for normal distribution calculates real and theoretical quantiles of each data point as if the values are distributed normally. The calculated values are shown as a scatter plot and can be used to evaluate if data is distributed normally or deviates from normal distribution.
 
-As e.g. hist() method it shows plots for the first 12 columns in the dataset.
 
-   figure('Position', [0 0 900 300])
+```matlab
+figure
 
-   subplot(1, 2, 1)
-   qqplot(people(:, 'Height'))
+subplot(1, 2, 1)
+qqplot(people(:, 'Height'))
 
-   subplot(1, 2, 2)
-   qqplot(people(:, 'Height'), 'Labels', 'on', 'ShowNormal', 'off')
+subplot(1, 2, 2)
+qqplot(people(:, 'Height'), 'Labels', 'on', 'ShowNormal', 'off')
+```
+
+![QQ-plot](fig16.png)
+
