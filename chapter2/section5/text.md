@@ -29,7 +29,7 @@ subplot(1, 2, 2)
 scatter(people(:, 1:2), 'Labels', 'numbers');
 ```
 
-![Scatter plot with labels](fig1.png)
+![Scatter plot with labels](fig2.png)
 
 Besides that, the `scatter()` method allows grouping the data points by colors. Parameter `'Colorby'` allows making a color grouping by a vector with numeric values or one of the columns of the dataset. Column name or number should be specified as the parameter value in latter case.
 
