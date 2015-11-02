@@ -190,18 +190,22 @@ subplot(1, 2, 2)
 bar(expvar('Test', :), 'Labels', 'values', 'LabelsSigfig', 2)
 ```
 
-![Bar plots with labels](fig8.png)
+![Bar plots with labels](fig10.png)
 
 # Level and matrix plots
 
-These two simple plots can be used to overview of all values at the same time. The level plot shows values as a set of rectangles, color of each correspond to a value it represents. A color pallette can be changed by the standard colormap() function and colorbar can be added to see the color map to the values. The method can be particularly useful for visualising data of the same origin (unites) or pairwise data, for example correlation matrix.
+These two simple plots can be used to overview of all values at the same time. The level plot shows values as a set of rectangles, color of each correspond to a value it represents. A color pallette can be changed by the standard `colormap()` function and colorbar can be added to see the color map to the values. The method can be particularly useful for visualising data of the same origin (unites) or pairwise data, for example correlation matrix.
 
-   figure('Position', [0 0 400 300]);
-   levelplot(people(1:5, 1:5))
+```matlab
+figure
+levelplot(people(1:5, 1:5))
 
-   figure('Position', [0 0 400 300]);
-   levelplot(corr(people(1:5, 1:5)), 'Colormap', @jet)
-   colorbar
+figure
+levelplot(corr(people(1:5, 1:5)), 'Colormap', @jet)
+colorbar
+````
+
+![Level plot](fig11.png)
  
 The matrix plot does almost the same, but shows values as a 3D surface instead of flat set of rectangles. The method uses standard function mesh() to make the plot.
 
