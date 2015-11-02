@@ -177,6 +177,7 @@ This code will show the bar plot for selected row:
 figure
 bar(expvar('Test', :), 'FaceColor', 'r')
 ```
+![Simple bar plot](fig9.png)
 
 Labels can be show on the top of each bar, the actual y values are used for the labels. You can specify significant figures for the label values using parameter `'LabelsSigfig'`.
 
