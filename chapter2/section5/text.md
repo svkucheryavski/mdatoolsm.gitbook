@@ -78,20 +78,26 @@ figure
 densscatter(data);
 ```
 
-Additional parameters allow to change area of neighborhood the density is calculated for and change color map as it can be done with scatter().
+![Density scatter plot](fig1.png)
 
-   figure('Position', [0 0 800 300])
+Additional parameters allow to change area of neighborhood the density is calculated for and change color map as it can be done with `scatter()`.
 
-   subplot(1, 3, 1)
-   densscatter(data);
+```matlab
+figure
 
-   subplot(1, 3, 2)
-   densscatter(data, 'NBins', 30);
+subplot(1, 3, 1)
+densscatter(data);
 
-   subplot(1, 3, 3)
-   densscatter(data, 'Colormap', @spring);
+subplot(1, 3, 2)
+densscatter(data, 'NBins', 30);
 
-Line plots
+subplot(1, 3, 3)
+densscatter(data, 'Colormap', @spring);
+```
+
+![Density scatter plot with extra options](fig1.png)
+
+# Line plots
 Method plot() is used to make line plots, very much similar to how it works with standard Matlab function. By default the values for x axis are generated as a sequence from 1 to N, where N is number of columns (variables) in the dataset. Every observation is shown as a line.
 
 In the example below we will be using another data, 'simdata', which includes UV/Vis spectra and concentration map of mixings of three polyaromatic hydrocarbons. There are two datasets: 'spectra' with spectral values, and 'conc' with concetrations.
