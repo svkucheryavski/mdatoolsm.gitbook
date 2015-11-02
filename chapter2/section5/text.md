@@ -230,13 +230,13 @@ colorbar
 
 There is also a family of plots for statistical analysis, including distribution histogram (`hist()`), error bar plot (`errorbar()`], box and whiskers plot (`boxplot()`) and quantile-quantile normal plot (`qqplot()`).
 
-The histogram plot shows density or frequency distribution for a selected column of a dataset. All parameters from standard `bar()` function can be used. The histogram bars are made partly transparent to be in contrast with normal distribution curve (if shown), this can be changes using parameter `'FaceAlpha'`. The parameters of the curve, such as `'Color'`, `'LineStyle'` and `'LineWidth'` can be also changed.
+The histogram plot shows density or frequency distribution for a selected column of a dataset. All parameters from standard `bar()` function can be used. The histogram can also be shown with normal distribution curve. Parameters of the curve, such as `'Color'`, `'LineStyle'` and `'LineWidth'` can be also changed.
 
 ```matlab
 figure
 
 subplot(1, 2, 1)
-hist(people(:, 'Height'), 'FaceColor', 'r', 'FaceAlpha', 1)
+hist(people(:, 'Height'), 'FaceColor', 'r')
 
 subplot(1, 2, 2)
 hist(people(:, 'Height'), 5, 'Density', 'on', 'ShowNormal', 'on', 'Color', 'r')
