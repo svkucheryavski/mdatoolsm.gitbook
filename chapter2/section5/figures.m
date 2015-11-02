@@ -8,11 +8,13 @@ nfig = 1;
 
 figure
 load people
-subplot (1, 3, 2)
+subplot 121
+scatter(people);
+subplot 122
 scatter(people(:, 1:2), 'Marker', 's', 'MarkerFaceColor', 'c');
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 3, figh], 'png', '-r150')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
 
-%%
+
 nfig = 2;
 
 figure
@@ -29,14 +31,16 @@ nfig = 3;
 
 figure
 v = people(:, 'Beer').values;
-subplot(1, 3, 1)
+subplot 221
 scatter(people(:, 1:2), 'Colorby', v);
-subplot(1, 3, 2)
+subplot 222
 scatter(people(:, 1:2), 'Colorby', v > 300);
-subplot(1, 3, 3)
+subplot 223
 scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'));
+subplot 224
+scatter(people(:, 1:2), 'Colorby', people(:, 'Wine'));
 
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 3, figh], 'png', '-r150')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
 
 
 
