@@ -14,6 +14,9 @@ To make the scatter plot for pairs *(x, y)* user should provide a dataset with a
 load people
 
 figure
+subplot 121
+scatter(people(:, 1:2), 'Marker', 's', 'MarkerFaceColor', 'c');
+subplot 122
 scatter(people(:, 1:2), 'Marker', 's', 'MarkerFaceColor', 'c');
 ```
 
