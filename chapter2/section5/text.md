@@ -266,20 +266,24 @@ errorbar(d, 'Type', 'std', 'Alpha', 0.10)
 
 ![Errorbar plots](fig14.png)
 
-The box and whiskers plot shows quartiles of the dataset columns as well as minimal and maximal values for outliers free data. The outliers are detected as values exceeding *q3 + w(q3 - q1)* or beneath *q1 - w(q3 - q1)*. Here *q1* is first quartile, *q3* is the third quartile and *w* is a parameter, which can be changed using `'Whisker'` option. The default value for *w* is 1.5 which gives interval about *±2.7* standard deviations for normally distributed data. The detected outliers are shown as separate points. Option ShowLabels let the method show labels (object names) for the outliers.
+The box and whiskers plot shows quartiles of the dataset columns as well as minimal and maximal values for outliers free data. The outliers are detected as values exceeding *q3 + w(q3 - q1)* or beneath *q1 - w(q3 - q1)*. Here *q1* is first quartile, *q3* is the third quartile and *w* is a parameter, which can be changed using `'Whisker'` option. The default value for *w* is 1.5 which gives interval about *±2.7* standard deviations for normally distributed data. The detected outliers are shown as separate points. Option `ShowLabels` let the method show labels (object names) for the outliers.
 
-   d = people(:, {'Height', 'Weight', 'Swim'});
+```matlab
+d = people(:, {'Height', 'Weight', 'Swim'});
 
-   figure('Position', [0 0 900 300])
+figure
 
-   subplot(1, 3, 1)
-   boxplot(d)
+subplot(1, 3, 1)
+boxplot(d)
 
-   subplot(1, 3, 2)
-   boxplot(d, 'Whisker', 1, 'Color', 'r', 'EdgeColor', 'k')
+subplot(1, 3, 2)
+boxplot(d, 'Whisker', 1, 'Color', 'r', 'EdgeColor', 'k')
 
-   subplot(1, 3, 3)
-   boxplot(d, 'Whisker', 1, 'Labels', 'names')
+subplot(1, 3, 3)
+boxplot(d, 'Whisker', 1, 'Labels', 'names')
+```
+
+![Boxplots](fig12.png)
 
 Quantile-quantile plot for normal distribution calculates real and theoretical quantiles of each data point as if the values are distributed normally. The calculated values are shown as a scatter plot and can be used to evaluate if data is distributed normally or deviates from normal distribution.
 
