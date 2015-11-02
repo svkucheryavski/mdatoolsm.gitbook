@@ -146,6 +146,8 @@ plot(spectra, 'Colorby', conc(:, 1), 'Colorbar', 'on', ...
     'ColorbarTitle', 'Concentration of C1')
 ```
 
+![Line plots with color groups](fig8.png)
+
 # Bar plots
 
 Bar plots are used to show the values for a particular row of a dataset. Let us imagine that we have a explained variance values for PCA decomposition:
