@@ -50,7 +50,7 @@ subplot(1, 3, 3)
 scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'));
 ```
 
-![Color grouping on scatter plots](fig2.png)
+![Color grouping on scatter plots](fig3.png)
 
 The grouping can be tuned by setting another color map (parameter `'Colormap'`), adding a color bar legend (`'Colorbar'`) and title for the color bar (`'ColorbarTitle'`):
 
