@@ -50,7 +50,7 @@ subplot(1, 3, 3)
 scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'));
 ```
 
-![Color grouping on scatter plots](fig1.png)
+![Color grouping on scatter plots](fig2.png)
 
 The grouping can be tuned by setting another color map (parameter `'Colormap'`), adding a color bar legend (`'Colorbar'`) and title for the color bar (`'ColorbarTitle'`):
 
@@ -65,7 +65,7 @@ scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'), 'Colormap', @gray,...
       'Colorbar', 'on', 'ColorbarTitle', 'Beer consumption (L/year)');
 ```
 
-![Color bar legend and title](fig1.png)
+![Color bar legend and title](fig3.png)
 
 # Density scatter plots
 
@@ -78,7 +78,7 @@ figure
 densscatter(data);
 ```
 
-![Density scatter plot](fig1.png)
+![Density scatter plot](fig4.png)
 
 Additional parameters allow to change area of neighborhood the density is calculated for and change color map as it can be done with `scatter()`.
 
@@ -95,10 +95,11 @@ subplot(1, 3, 3)
 densscatter(data, 'Colormap', @spring);
 ```
 
-![Density scatter plot with extra options](fig1.png)
+![Density scatter plot with extra options](fig5.png)
 
 # Line plots
-Method plot() is used to make line plots, very much similar to how it works with standard Matlab function. By default the values for x axis are generated as a sequence from 1 to N, where N is number of columns (variables) in the dataset. Every observation is shown as a line.
+
+Method `plot()` is used to make line plots, very much similar to how it works with standard Matlab function. By default the values for x axis are generated as a sequence from 1 to N, where N is number of columns (variables) in the dataset. Every observation is shown as a line.
 
 In the example below we will be using another data, 'simdata', which includes UV/Vis spectra and concentration map of mixings of three polyaromatic hydrocarbons. There are two datasets: 'spectra' with spectral values, and 'conc' with concetrations.
 
