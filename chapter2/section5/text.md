@@ -101,31 +101,35 @@ densscatter(data, 'Colormap', @spring);
 
 Method `plot()` is used to make line plots, very much similar to how it works with standard Matlab function. By default the values for x axis are generated as a sequence from 1 to N, where N is number of columns (variables) in the dataset. Every observation is shown as a line.
 
-In the example below we will be using another data, 'simdata', which includes UV/Vis spectra and concentration map of mixings of three polyaromatic hydrocarbons. There are two datasets: 'spectra' with spectral values, and 'conc' with concetrations.
+In the example below we will be using another data set, `'simdata'`, which includes UV/Vis spectra and concentration map of mixings of three polyaromatic hydrocarbons. There are two data items: `'spectra'` with spectral values, and `'conc'` with concentrations.
 
-   load simdata
+```matlab
+load simdata
 
-   figure('Position', [0 0 800 300]);
-   plot(spectra, 'Color', 'r')
+figure
+plot(spectra, 'Color', 'r')
+```
 
-If it is needed to use specific values for the x, they can be provided as a second argument and can be either a numeric vector or mdadata object with one column and the same values as number of columns in original dataset.
+If it is needed to use specific values for the x, they can be provided as a second argument and can be either a numeric vector or `mdadata` object with one column and the same values as number of columns in original dataset.
 
-   figure('Position', [0 0 800 600]);
+```matlab
+figure
 
-   % use channel numbers
-   subplot(2, 1, 1)
-   plot(spectra, 1:151, 'Color', 'b')
-   xlabel('Wavenumbers')
+% use channel numbers
+subplot(2, 1, 1)
+plot(spectra, 1:151, 'Color', 'b')
+xlabel('Wavenumbers')
 
-   % convert nm to cm-1
-   nm = str2num(cell2mat(spectra.colNames'));
-   invcm = 10^7 ./ nm;
+% convert nm to cm-1
+nm = str2num(cell2mat(spectra.colNames'));
+invcm = 10^7 ./ nm;
 
-   subplot(2, 1, 2)
-   plot(spectra, invcm, 'Color', 'r')
-   xlabel('Wavelength, cm-1')
+subplot(2, 1, 2)
+plot(spectra, invcm, 'Color', 'r')
+xlabel('Wavelength, cm-1')
+```
 
-Finally the method allows to make color grouping of the lines, using the same way and parameters as scatter(). Below we will colorise the spectra accoring to the concentration of first component of the mixings.
+Finally, the method allows to make color grouping of the lines, using the same way and parameters as `scatter()`. Below we will colorize the spectra according to the concentration of first component of the mixtures.
 
    figure('Position', [0 0 800 600]);
 
