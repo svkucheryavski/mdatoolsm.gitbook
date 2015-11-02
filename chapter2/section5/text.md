@@ -146,12 +146,16 @@ plot(spectra, 'Colorby', conc(:, 1), 'Colorbar', 'on', ...
 
 Bar plots are used to show the values for a particular row of a dataset. Let us imagine that we have a explained variance values for PCA decomposition:
 
-   expvar = mdadata([45.6 24.1 9.71 5.63 3.1; 43.4 21.1 9.63 4.12 2.2], ...
-      {'Calibration', 'Test'}, 1:5, {'Results', 'Components'}, ...
-      'Explained variance, %');
+```matlab
+expvar = mdadata([45.6 24.1 9.71 5.63 3.1; 43.4 21.1 9.63 4.12 2.2]);
+expvar.rowNames = {'Calibration', 'Test'};
+expvar.colNames = 1:5
+expvar.dimNames = {'Results', 'Components'};
+expvar.name = 'Explained variance, %';
 
-   show(expvar)
-
+show(expvar)
+```
+```
 Explained variance, %:
 
                      Components
@@ -159,22 +163,26 @@ Explained variance, %:
             ----- ----- ----- ----- ----
 Calibration  45.6  24.1  9.71  5.63  3.1
        Test  43.4  21.1  9.63  4.12  2.2
+```
 
 This code will show the bar plot for selected row:
 
-   % show plot for one row and change bar color
-   figure('Position', [0 0 400 300]);
-   bar(expvar('Test', :), 'FaceColor', 'r')
+```matlab
+figure
+bar(expvar('Test', :), 'FaceColor', 'r')
+```
 
-Labels can be show on the top of each bar, the actual y values are used for the labels. You can specify significant figures for the label values using parameter 'LabelsSigfig'.
+Labels can be show on the top of each bar, the actual y values are used for the labels. You can specify significant figures for the label values using parameter `'LabelsSigfig'`.
 
-   figure('Position', [0 0 600 300]);
-   subplot(1, 2, 1)
-   bar(expvar('Test', :), 'Labels', 'values')
-   subplot(1, 2, 2)
-   bar(expvar('Test', :), 'Labels', 'values', 'LabelsSigfig', 2)
+```matlab
+figure
+subplot(1, 2, 1)
+bar(expvar('Test', :), 'Labels', 'values')
+subplot(1, 2, 2)
+bar(expvar('Test', :), 'Labels', 'values', 'LabelsSigfig', 2)
+```
 
-Level and matrix plots
+# Level and matrix plots
 These two simple plots can be used to overview of all values at the same time. The level plot shows values as a set of rectangles, color of each correspond to a value it represents. A color pallette can be changed by the standard colormap() function and colorbar can be added to see the color map to the values. The method can be particularly useful for visualising data of the same origin (unites) or pairwise data, for example correlation matrix.
 
    figure('Position', [0 0 400 300]);
