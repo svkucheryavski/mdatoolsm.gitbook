@@ -131,7 +131,7 @@ plot(spectra, invcm, 'Color', 'r')
 xlabel('Wavelength, cm-1')
 ```
 
-![Line plot with manual x-values](fig7.png)
+![Line plot with manual x-values](fig8.png)
 
 Finally, the method allows to make color grouping of the lines, using the same way and parameters as `scatter()`. Below we will colorize the spectra according to the concentration of first component of the mixtures.
 
@@ -146,7 +146,7 @@ plot(spectra, 'Colorby', conc(:, 1), 'Colorbar', 'on', ...
     'ColorbarTitle', 'Concentration of C1')
 ```
 
-![Line plots with color groups](fig8.png)
+![Line plots with color groups](fig9.png)
 
 # Bar plots
 
@@ -155,7 +155,7 @@ Bar plots are used to show the values for a particular row of a dataset. Let us 
 ```matlab
 expvar = mdadata([45.6 24.1 9.71 5.63 3.1; 43.4 21.1 9.63 4.12 2.2]);
 expvar.rowNames = {'Calibration', 'Test'};
-expvar.colNames = 1:5
+expvar.colNames = 1:5;
 expvar.dimNames = {'Results', 'Components'};
 expvar.name = 'Explained variance, %';
 
