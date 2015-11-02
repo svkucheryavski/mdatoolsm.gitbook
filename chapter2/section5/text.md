@@ -143,6 +143,7 @@ plot(spectra, 'Colorby', conc(:, 1), 'Colorbar', 'on', ...
 ```
 
 # Bar plots
+
 Bar plots are used to show the values for a particular row of a dataset. Let us imagine that we have a explained variance values for PCA decomposition:
 
    expvar = mdadata([45.6 24.1 9.71 5.63 3.1; 43.4 21.1 9.63 4.12 2.2], ...
