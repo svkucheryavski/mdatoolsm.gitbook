@@ -8,11 +8,11 @@ nfig = 1;
 
 figure
 load people
+subplot (1, 3, 2)
 scatter(people(:, 1:2), 'Marker', 's', 'MarkerFaceColor', 'c');
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 3, figh], 'png', '-r150')
 
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw/2, figh/2], 'png', '-r150')
-
-
+%%
 nfig = 2;
 
 figure
