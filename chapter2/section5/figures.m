@@ -10,7 +10,7 @@ figure
 load people
 scatter(people(:, 1:2), 'Marker', 's', 'MarkerFaceColor', 'c');
 
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw, figh], 'png', '-r150')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw/2, figh/2], 'png', '-r150')
 
 
 nfig = 2;
