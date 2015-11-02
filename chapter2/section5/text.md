@@ -217,18 +217,20 @@ colorbar
 
 ![Matrix plot](fig8.png)
 
-Statistics plots
-There is also a family of plots for statistical analysis, including distribution histogram (hist()), error bar plot (errorbar()], box and whiskers plot (boxplot()) and quantile-quantile normal plot (qqplot()).
+# Statistics plots
+There is also a family of plots for statistical analysis, including distribution histogram (`hist()`), error bar plot (`errorbar()`], box and whiskers plot (`boxplot()`) and quantile-quantile normal plot (`qqplot()`).
 
-The histogram plot shows density or frequency distribution for a selected column of a dataset. All parameters from standard bar() function can be used. The histogram bars are made partly transparent to be in contrast with normal distribution curve (if shown), this can be changes using parameter 'FaceAlpha'. The parameters of the curve, such as 'Color', 'LineStyle' and 'LineWidth' can be also changed.
+The histogram plot shows density or frequency distribution for a selected column of a dataset. All parameters from standard `bar()` function can be used. The histogram bars are made partly transparent to be in contrast with normal distribution curve (if shown), this can be changes using parameter `'FaceAlpha'`. The parameters of the curve, such as `'Color'`, `'LineStyle'` and `'LineWidth'` can be also changed.
 
-   figure('Position', [0 0 800 300])
+```matlab
+figure
 
-   subplot(1, 2, 1)
-   hist(people(:, 'Height'), 'FaceColor', 'r', 'FaceAlpha', 1)
+subplot(1, 2, 1)
+hist(people(:, 'Height'), 'FaceColor', 'r', 'FaceAlpha', 1)
 
-   subplot(1, 2, 2)
-   hist(people(:, 'Height'), 5, 'Density', 'on', 'ShowNormal', 'on', 'Color', 'r')
+subplot(1, 2, 2)
+hist(people(:, 'Height'), 5, 'Density', 'on', 'ShowNormal', 'on', 'Color', 'r')
+```
 
 The errobar plot shows average values and error bars for each of the dataset columns. The error bars are calculated by default as 95% confidence intervals for mean values, based on Student's t-distribution, but this can be changed to standard error, standard deviation or one of these with a factor of desired probability. Most of the parameters for standard plot() function can be used.
 
