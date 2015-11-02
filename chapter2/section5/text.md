@@ -110,7 +110,7 @@ figure
 plot(spectra, 'Color', 'r')
 ```
 
-![Simple line plot](fig6.png)
+![Simple line plot](fig7.png)
 
 If it is needed to use specific values for the x, they can be provided as a second argument and can be either a numeric vector or `mdadata` object with one column and the same values as number of columns in original dataset.
 
