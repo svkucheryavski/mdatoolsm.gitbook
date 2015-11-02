@@ -131,16 +131,18 @@ xlabel('Wavelength, cm-1')
 
 Finally, the method allows to make color grouping of the lines, using the same way and parameters as `scatter()`. Below we will colorize the spectra according to the concentration of first component of the mixtures.
 
-   figure('Position', [0 0 800 600]);
+```matlab
+figure
 
-   subplot(2, 1, 1)
-   plot(spectra, 'Colorby', conc(:, 1))
+subplot(2, 1, 1)
+plot(spectra, 'Colorby', conc(:, 1))
 
-   subplot(2, 1, 2)
-   plot(spectra, 'Colorby', conc(:, 1), 'Colorbar', 'on', ...
-      'ColorbarTitle', 'Concentration of C1')
+subplot(2, 1, 2)
+plot(spectra, 'Colorby', conc(:, 1), 'Colorbar', 'on', ...
+    'ColorbarTitle', 'Concentration of C1')
+```
 
-Bar plots
+# Bar plots
 Bar plots are used to show the values for a particular row of a dataset. Let us imagine that we have a explained variance values for PCA decomposition:
 
    expvar = mdadata([45.6 24.1 9.71 5.63 3.1; 43.4 21.1 9.63 4.12 2.2], ...
