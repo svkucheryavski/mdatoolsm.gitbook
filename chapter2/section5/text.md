@@ -235,31 +235,36 @@ hist(people(:, 'Height'), 5, 'Density', 'on', 'ShowNormal', 'on', 'Color', 'r')
 
 ![Distribution histogram](fig13.png)
 
-The errobar plot shows average values and error bars for each of the dataset columns. The error bars are calculated by default as 95% confidence intervals for mean values, based on Student's t-distribution, but this can be changed to standard error, standard deviation or one of these with a factor of desired probability. Most of the parameters for standard plot() function can be used.
+The errobar plot shows average values and error bars for each of the dataset columns. The error bars are calculated by default as 95% confidence intervals for mean values, based on Student's t-distribution, but this can be changed to standard error, standard deviation or one of these with a factor of desired probability. Most of the parameters for standard `plot()` function can be used.
 
-   d = people(:, {'Height', 'Weight', 'Beer', 'Wine'});
+```matlab
 
-   figure('Position', [0 0 900 600])
+d = people(:, {'Height', 'Weight', 'Beer', 'Wine'});
 
-   % error bars show 95% confidence interval for mean
-   subplot(3, 2, 1)
-   errorbar(d, 'Color', 'r')
+figure
 
-   % error bars show 90% confidence interval for mean
-   subplot(3, 2, 2)
-   errorbar(d, 'Alpha', 0.10)
+% error bars show 95% confidence interval for mean
+subplot(3, 2, 1)
+errorbar(d, 'Color', 'r')
 
-   % error bars show one standard error (+/-)
-   subplot(3, 2, 3)
-   errorbar(d, 'Type', 'se')
+% error bars show 90% confidence interval for mean
+subplot(3, 2, 2)
+errorbar(d, 'Alpha', 0.10)
 
-   % error bars show one standard deviation (+/-)
-   subplot(3, 2, 4)
-   errorbar(d, 'Type', 'std')
+% error bars show one standard error (+/-)
+subplot(3, 2, 3)
+errorbar(d, 'Type', 'se')
 
-   % error bars show interval for 90% of most common values
-   subplot(3, 2, 5)
-   errorbar(d, 'Type', 'std', 'Alpha', 0.10)
+% error bars show one standard deviation (+/-)
+subplot(3, 2, 4)
+errorbar(d, 'Type', 'std')
+
+% error bars show interval for 90% of most common values
+subplot(3, 2, 5)
+errorbar(d, 'Type', 'std', 'Alpha', 0.10)
+```
+
+![Errorbar plots](fig14.png)
 
 The box and whiskers plot shows quartiles of the dataset columns as well as minimal and maximal values for outliers free data. The outliers are detected as values exceeding q3 + w(q3 - q1) or beneath q1 - w(q3 - q1). Here q1 is first quartile, q3 is the third quartile and w is a parameter, which can be changed using 'Whisker' option. The default value for w is 1.5 which gives interval about +/- 2.7 standard deviations for normally distributed data. The detected outliers are shown as separate points. Option ShowLabels let the method show labels (object names) for the outliers.
 
