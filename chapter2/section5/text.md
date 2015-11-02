@@ -215,7 +215,8 @@ matrixplot(people(1:5, 1:5), 'Colormap', @jet)
 colorbar
 ```
 
-![Matrix plot](fig8.png)
+![Matrix plot](fig12.png)
+
 
 # Statistics plots
 There is also a family of plots for statistical analysis, including distribution histogram (`hist()`), error bar plot (`errorbar()`], box and whiskers plot (`boxplot()`) and quantile-quantile normal plot (`qqplot()`).
