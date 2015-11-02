@@ -23,9 +23,9 @@ If more than two columns are provided, the method will show the plot for the fir
 
 ```matlab
 figure
-subplot(1, 2, 1)
+subplot 121
 scatter(people(:, 1:2), 'Labels', 'names');
-subplot(1, 2, 2)
+subplot 122
 scatter(people(:, 1:2), 'Labels', 'numbers');
 ```
 
