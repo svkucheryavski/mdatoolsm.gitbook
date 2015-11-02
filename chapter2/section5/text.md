@@ -190,7 +190,7 @@ subplot(1, 2, 2)
 bar(expvar('Test', :), 'Labels', 'values', 'LabelsSigfig', 2)
 ```
 
-![Bar plots with labels](fig10.png)
+![Bar plots with labels](fig11.png)
 
 # Level and matrix plots
 
