@@ -311,10 +311,10 @@ Quantile-quantile plot for normal distribution calculates real and theoretical q
 ```matlab
 figure
 
-subplot(1, 2, 1)
+subplot 121
 qqplot(people(:, 'Height'))
 
-subplot(1, 2, 2)
+subplot 122
 qqplot(people(:, 'Height'), 'Labels', 'on', 'ShowNormal', 'off')
 ```
 
