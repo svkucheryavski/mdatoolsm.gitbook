@@ -153,7 +153,7 @@ figure
 gplot(data, factors, 'LineStyle', {'-', '--', ':', '-.'}, 'LineWidth', 2)
 ```
 
-![Box and whiskers plots with groups.](fig10.png)
+![Change parameters for a line plot with groups.](fig10.png)
 
 Group scatter plot works similar to the normal one. To introduce groups, you just need to specify a dataset with factors as a second argument.
 
