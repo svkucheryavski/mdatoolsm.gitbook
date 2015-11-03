@@ -116,8 +116,12 @@ gbar(data);
 
 Parameters for the group plots are the same as for conventional analogues, but if one want to change color settings, separate color for each group has to be specified. Other properties (e.g. line style) can have one value (same for all groups) or also as many values as many groups. Here is how it works for bar plot.
 
-figure('Position', [0 0 400 300])
+```matlab
+figure
 gbar(data, 'FaceColor', 'yc', 'EdgeColor', 'rb', 'Labels', 'names');
+```
+
+![Change parameters of the group bar plot.](fig7.png)
 
 To make a group line plot there are two possibilities. First of all it can work the same way as the bar plot: every row is a group.
 
