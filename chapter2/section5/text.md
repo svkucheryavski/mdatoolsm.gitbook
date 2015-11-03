@@ -298,11 +298,9 @@ figure
 subplot 121
 boxplot(d)
 
-subplot(1, 3, 2)
+subplot 122
 boxplot(d, 'Whisker', 1, 'Color', 'r', 'EdgeColor', 'k', 'Labels', 'names')
 
-subplot(1, 3, 3)
-boxplot(d, 'Whisker', 1, 'Labels', 'names')
 ```
 
 ![Box and whiskers plots](fig15.png)
