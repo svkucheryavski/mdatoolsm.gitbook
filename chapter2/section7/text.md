@@ -162,6 +162,8 @@ figure
 gscatter(data(:, {'Wine', 'Beer'}), factors);
 ```
 
+![Box and whiskers plots with groups.](fig11.png)
+
 And similar to gplot() one can specify color and marker settings: either for each group or one for all of them.
 
 figure('Position', [0 0 400 300])
