@@ -66,10 +66,10 @@ The grouping can be tuned by setting another color map (parameter `'Colormap'`),
 ```matlab
 figure
 
-subplot(1, 2, 1)
+subplot 121
 scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'), 'Colorbar', 'on');
 
-subplot(1, 2, 2)
+subplot 122
 scatter(people(:, 1:2), 'Colorby', people(:, 'Beer'), 'Colormap', @gray,...
       'Colorbar', 'on', 'ColorbarTitle', 'Beer consumption (L/year)');
 ```
