@@ -274,7 +274,7 @@ Lower      179      180        159        161
 Upper      183      192        169        173
 ```
 
-# Qualitative statistics
+## Qualitative statistics
 
 Factors can be also used for calculation of qualitative statistics, including frequencies and relative frequencies (proportions) of factor levels, confidence interval for proportions, contingency tables for combination of two factors, chi square test for association of two factors, standardized residuals for observed and expected frequencies.
 
