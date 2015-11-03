@@ -78,14 +78,17 @@ boxplot(people(:, 'Height'), people(:, {'Sex'}), 'Whisker', 1);
 
 Quantile-Quantile normal plot.
 
-figure('Position', [0 0 800 300])
-subplot(1, 2, 1)
+```matlab
+figure
+subplot 121
 qqplot(people(:, 'Height'), people(:, {'Sex', 'Region'}), 'Labels', 'names');
 
-subplot(1, 2, 2)
+subplot 122
 qqplot(people(:, 'Height'), people(:, {'Sex'}));
+```
 
-Conventional group plots
+## Conventional group plots
+
 The basic conventional plots scatter(), plot() and bar() also can work with factors and groups. However in contrast to statistical plots here it was decided to use separate methods in order to extend their functionality. The methods for group plots have a leading 'g': gscatter(), gplot() and gbar(). One can think about group plots as following: if a plot needs a legend, it is a group plot.
 
 The groups on these plots are separated first of all using different colors. Because of that color grouping is not available for group plots. Besides that one can change marker and line properties for each group. However in this case you need to specify as many values, as many groups you have. Let's look at some examples.
