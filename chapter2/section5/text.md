@@ -248,10 +248,10 @@ The histogram plot shows density or frequency distribution for a selected column
 ```matlab
 figure
 
-subplot(1, 2, 1)
+subplot 121
 hist(people(:, 'Height'), 'FaceColor', 'r')
 
-subplot(1, 2, 2)
+subplot 122
 hist(people(:, 'Height'), 5, 'Density', 'on', 'ShowNormal', 'on', 'Color', 'r')
 ```
 
