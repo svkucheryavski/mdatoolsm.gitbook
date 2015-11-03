@@ -130,7 +130,7 @@ figure
 gplot(data, 'Marker', '.')
 ```
 
-![Box and whiskers plots with groups.](fig8.png)
+![Line plot with groups.](fig8.png)
 
 Alternatively one can provide a dataset with factors as a second argument for the plotting methods. In this case the rows of original data will be shown in groups.
 
