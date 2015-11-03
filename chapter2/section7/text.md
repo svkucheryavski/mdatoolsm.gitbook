@@ -40,7 +40,7 @@ subplot 121
 hist(data, data(:, 3), 25, 'ShowNormal', 'on', 'FaceColor', 'rb');
 ```
 
-![Define colors for bar sets..](fig1.png)
+![Define colors for bar sets.](fig2.png)
 
 Now let us get back to the *People* data and set up some factors.
 
