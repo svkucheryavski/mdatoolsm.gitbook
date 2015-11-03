@@ -8,5 +8,5 @@
     * [Mathematical operations and functions](chapter2/section3/text.md)
     * [Quantitative statistics](chapter2/section4/text.md)
     * [Simple plots](chapter2/section5/text.md)
-
+    * [Factors and groups](chapter2/section6/text.md)
 
