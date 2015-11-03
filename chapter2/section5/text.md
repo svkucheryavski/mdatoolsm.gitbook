@@ -303,7 +303,7 @@ boxplot(d, 'Whisker', 1, 'Color', 'r', 'EdgeColor', 'k', 'Labels', 'names')
 
 ```
 
-![Box and whiskers plots](fig15.png)
+![Box and whiskers plots](fig17.png)
 
 Quantile-quantile plot for normal distribution calculates real and theoretical quantiles of each data point as if the values are distributed normally. The calculated values are shown as a scatter plot and can be used to evaluate if data is distributed normally or deviates from normal distribution.
 
@@ -318,5 +318,5 @@ subplot 122
 qqplot(people(:, 'Height'), 'Labels', 'on', 'ShowNormal', 'off')
 ```
 
-![QQ-plot](fig16.png)
+![QQ-plot](fig18.png)
 
