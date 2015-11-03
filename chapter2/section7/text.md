@@ -91,21 +91,28 @@ qqplot(people(:, 'Height'), people(:, {'Sex'}));
 
 ## Conventional group plots
 
-The basic conventional plots scatter(), plot() and bar() also can work with factors and groups. However in contrast to statistical plots here it was decided to use separate methods in order to extend their functionality. The methods for group plots have a leading 'g': gscatter(), gplot() and gbar(). One can think about group plots as following: if a plot needs a legend, it is a group plot.
+The basic conventional plots `scatter()`, `plot()` and `bar()` also can work with factors and groups. However in contrast to statistical plots here it was decided to use separate methods in order to extend their functionality. The methods for group plots have a leading `'g'` in the function name: `gscatter()`, `gplot()` and `gbar()`. One can think about group plots as following: if a plot needs a legend, it is a group plot.
 
-The groups on these plots are separated first of all using different colors. Because of that color grouping is not available for group plots. Besides that one can change marker and line properties for each group. However in this case you need to specify as many values, as many groups you have. Let's look at some examples.
+The groups on these plots are separated first of all using different colors. Because of that, color gradient (option `Colorby`) is not available for group plots. Besides that, one can change marker and line properties for each group. However in this case you need to specify as many values, as many groups you have. Let's look at some examples.
 
-The bar plot is a specific one, the only possibility to make a group bar plot is to provide a dataset with several rows. While bar() makes separate plot for each row, the gbar() method will make a single plot with several bar series separated by colors as it is shown below.
+The bar plot is a specific one, the only possibility to make a group bar plot is to provide a dataset with several rows. While `bar()` makes separate plot for each row, the `gbar()` method will make a single plot with several bar series separated by colors as it is shown below.
 
+```matlab
 % set up a data with explained variance for PCA model
 expvarcal = [0.54 0.25 0.13 0.09];
 expvarcv = [0.49 0.19 0.15 0.12];
-data = mdadata([expvarcal; expvarcv], {'Cal', 'CV'}, {'PC1', 'PC2', 'PC3', 'PC4'},...
-   {'Results', 'Components'}, 'Explained variance');
+data = mdadata([expvarcal; expvarcv]);
+data.rowNames = {'Cal', 'CV'};
+data.colNames = {'PC1', 'PC2', 'PC3', 'PC4'};
+data.dimNames = {'Results', 'Components'};
+data.name = 'Explained variance';
 
 % show group bar plot
-figure('Position', [0 0 400 300])
+figure
 gbar(data);
+```
+
+![Bar plot with groups.](fig6.png)
 
 Parameters for the group plots are the same as for conventional analogues, but if one want to change color settings, separate color for each group has to be specified. Other properties (e.g. line style) can have one value (same for all groups) or also as many values as many groups. Here is how it works for bar plot.
 
