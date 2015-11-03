@@ -299,7 +299,7 @@ subplot 121
 boxplot(d)
 
 subplot 122
-boxplot(d, 'Whisker', 1, 'Color', 'r', 'EdgeColor', 'k', 'Labels', 'names')
+boxplot(d, 'Whisker', 1, 'Color', 'g', 'EdgeColor', 'k', 'Labels', 'names')
 
 ```
 
