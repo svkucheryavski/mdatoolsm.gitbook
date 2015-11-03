@@ -74,6 +74,8 @@ subplot 122
 boxplot(people(:, 'Height'), people(:, {'Sex'}), 'Whisker', 1);
 ```
 
+![Box and whiskers plots with groups.](fig1.png)
+
 Quantile-Quantile normal plot.
 
 figure('Position', [0 0 800 300])
