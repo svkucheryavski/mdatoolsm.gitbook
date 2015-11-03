@@ -221,7 +221,7 @@ levelplot(people(1:5, 1:5))
 The method can be particularly useful for visualisation data of the same origin (unites) or pairwise data, for example correlation matrix.
 
 ```matlab
-subplot 122
+figure
 levelplot(corr(people(1:5, 1:5)), 'Colormap', @jet)
 colorbar
 ````
