@@ -49,14 +49,20 @@ load people
 
 people.factor('Sex', {'Male', 'Female'});
 people.factor('Region', {'A', 'B'});
+```
+
 Error bar plot for one variable is made in the same way, just use syntax and parameters as usual, but second argument should be a dataset with factors.
 
-figure('Position', [0 0 800 300])
-subplot(1, 2, 1)
+```matlab
+figure
+subplot 121
 errorbar(people(:, 'Height'), people(:, {'Sex', 'Region'}), 'Type', 'std', 'Alpha', 0.1);
 
-subplot(1, 2, 2)
+subplot 122
 errorbar(people(:, 'Height'), people(:, {'Sex', 'Region'}), 'Alpha', 0.1);
+```
+
+![Errorbar plots with groups.](fig3.png)
 
 Box and whiskers plot.
 
