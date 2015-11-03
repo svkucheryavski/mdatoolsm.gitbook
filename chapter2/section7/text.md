@@ -36,7 +36,6 @@ If one uses more than one quantitative variable, the method will take the first 
 
 ```matlab
 figure
-subplot 121
 hist(data, data(:, 3), 25, 'ShowNormal', 'on', 'FaceColor', 'rb');
 ```
 
