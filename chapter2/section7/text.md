@@ -72,6 +72,7 @@ boxplot(people(:, 'Height'), people(:, {'Sex', 'Region'}), 'Labels', 'names');
 
 subplot 122
 boxplot(people(:, 'Height'), people(:, {'Sex'}), 'Whisker', 1);
+```
 
 Quantile-Quantile normal plot.
 
