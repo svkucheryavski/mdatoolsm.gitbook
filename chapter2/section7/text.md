@@ -141,7 +141,7 @@ groups.factor('Sex', {'Male', 'Female'});
 groups.factor('Region', {'A', 'B'});
 
 figure
-gplot(data, factors)
+gplot(data, groups)
 ```
 
 ![Line plot with groups.](fig9.png)
