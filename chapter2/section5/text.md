@@ -150,10 +150,10 @@ Finally, the method allows to make color grouping of the lines, using the same w
 ```matlab
 figure
 
-subplot(2, 1, 1)
+subplot 211
 plot(spectra, 'Colorby', conc(:, 1))
 
-subplot(2, 1, 2)
+subplot 212
 plot(spectra, 'Colorby', conc(:, 1), 'Colorbar', 'on', ...
     'ColorbarTitle', 'Concentration of C1')
 ```
