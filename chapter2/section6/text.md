@@ -275,22 +275,28 @@ Upper      183      192        169        173
 ```
 
 # Qualitative statistics
+
 Factors can be also used for calculation of qualitative statistics, including frequencies and relative frequencies (proportions) of factor levels, confidence interval for proportions, contingency tables for combination of two factors, chi square test for association of two factors, standardized residuals for observed and expected frequencies.
 
 Let's take a part people data, so number of males and females, is different.
 
+```matlab
 load people
 data = people(6:20, {'Sex', 'Region'});
 data.factor('Sex', {'Male', 'Female'})
 data.factor('Region', {'A', 'B'})
-Here how to calculate frequency table, which includes the observed frequencies for each level, relative frequencies (proportions), and confidence interval for the proportions. Optional second argument is significance level (alpha) for the interval.
+```
+Here is an example on how to calculate frequency table, which includes the observed frequencies for each level, relative frequencies (proportions), and confidence interval for the proportions. Optional second argument is significance level (alpha) for the interval.
 
+```matlab
 f = freq(data(:, 'Sex'));
 show(f)
-
+```
+```matlab
 f = freq(data(:, 'Sex'), 0.1);
 show(f)
-
+```
+```
 Observed frequencies:
 
                   Sex
@@ -300,9 +306,13 @@ Observed frequencies:
   Rel. Freq  0.467   0.533
 Lower (95%)  0.214   0.281
 Upper (95%)  0.719   0.786
+```
 
-
-
+```matlab
+f = freq(data(:, 'Sex'), 0.1);
+show(f)
+```
+```
 Observed frequencies:
 
                   Sex
@@ -312,12 +322,15 @@ Observed frequencies:
   Rel. Freq  0.467   0.533
 Lower (90%)  0.255   0.321
 Upper (90%)  0.679   0.745
+```
 
 For investigation of association between two factors one can calculate the contingency table.
 
+```matlab
 ct = crosstable(data);
 show(ct)
-
+```
+```
 Contingency table (Region, Sex):
 
             Sex
@@ -326,23 +339,27 @@ Contingency table (Region, Sex):
   A     5       6   11
   B     2       2    4
 Sum     7       8   15
+```
 
-And use chi-square test for association and standardized residuals.
+As well as to use the chi-square test for association and calculate standardized residuals.
 
+```matlab
 ch = chi2test(data);
 show(ch)
-
-res = crossresid(data);
-show(res)
-
+```
+```
 Chi2 test (Sex, Region):
       Statistics
      -----------
    p        0.56
 chi2      0.0244
+```
 
-
-
+```matlab
+res = crossresid(data);
+show(res)
+```
+```
 Standardized residuals (Region, Sex):
 
         Sex
@@ -350,4 +367,4 @@ Standardized residuals (Region, Sex):
   ------- -------
 A  -0.156   0.156
 B   0.156  -0.156
-
+```
