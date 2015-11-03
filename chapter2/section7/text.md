@@ -171,3 +171,4 @@ figure
 gscatter(data, factors, 'Marker', 'ssoo', 'MarkerFaceColor', 'rbrb', 'Labels', 'names')
 ```
 
+![Change parameters for a scatter plot with groups.](fig12.png)
