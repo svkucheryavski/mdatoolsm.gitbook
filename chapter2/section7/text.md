@@ -74,7 +74,7 @@ subplot 122
 boxplot(people(:, 'Height'), people(:, {'Sex'}), 'Whisker', 1);
 ```
 
-![Box and whiskers plots with groups.](fig1.png)
+![Box and whiskers plots with groups.](fig4.png)
 
 Quantile-Quantile normal plot.
 
@@ -87,7 +87,7 @@ subplot 122
 qqplot(people(:, 'Height'), people(:, {'Sex'}));
 ```
 
-![Quantile-quantile plots with groups.](fig1.png)
+![Quantile-quantile plots with groups.](fig5.png)
 
 ## Conventional group plots
 
