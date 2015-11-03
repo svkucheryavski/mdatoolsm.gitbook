@@ -143,7 +143,7 @@ d = people(1:10, :);
 d.factor('Sex', {'Male', 'Female'})
 d.factor('Hairleng', {'Short', 'Long'})
 
-show(d.getgroups({'Sex', 'Hairleng'}))
+show(d(:, {'Sex', 'Hairleng'}).getgroups())
 ```
 ```
                  Groups (Sex, Hairleng)
