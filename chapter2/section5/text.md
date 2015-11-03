@@ -213,8 +213,6 @@ These two simple plots can be used to overview of all values at the same time. T
 
 ```matlab
 figure
-
-subplot 121
 levelplot(people(1:5, 1:5))
 ```
 
