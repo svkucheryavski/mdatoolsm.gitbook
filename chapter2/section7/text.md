@@ -65,11 +65,12 @@ errorbar(people(:, 'Height'), people(:, {'Sex', 'Region'}), 'Alpha', 0.1);
 
 Box and whiskers plot.
 
-figure('Position', [0 0 800 300])
-subplot(1, 2, 1)
+```matlab
+figure
+subplot 121
 boxplot(people(:, 'Height'), people(:, {'Sex', 'Region'}), 'Labels', 'names');
 
-subplot(1, 2, 2)
+subplot 122
 boxplot(people(:, 'Height'), people(:, {'Sex'}), 'Whisker', 1);
 
 Quantile-Quantile normal plot.
