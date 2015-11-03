@@ -30,6 +30,8 @@ subplot 122
 hist(data(:, 1), data(:, 3), 15, 'ShowNormal', 'on', 'FaceAlpha', 0.3);
 ```
 
+![Histogram plot with groups.](fig1.png)
+
 If one uses more than one quantitative variable, the method will take the first and ingore the others. Since in histogram plot color is used to separate the distribution of the groups, the color parameters such as, for example, `'FaceColor'` should contain as many color values as many groups.
 
 ```matlab
