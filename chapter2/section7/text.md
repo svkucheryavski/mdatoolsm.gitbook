@@ -159,7 +159,7 @@ Group scatter plot works similar to the normal one. To introduce groups, you jus
 
 ```matlab
 figure
-gscatter(data(:, {'Wine', 'Beer'}), factors);
+gscatter(data(:, {'Wine', 'Beer'}), groups);
 ```
 
 ![Scatter plot with groups.](fig11.png)
