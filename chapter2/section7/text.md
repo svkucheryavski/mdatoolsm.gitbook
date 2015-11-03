@@ -168,7 +168,7 @@ And similar to `gplot()` one can specify color and marker settings: either for e
 
 ```matlab
 figure
-gscatter(data, factors, 'Marker', 'ssoo', 'MarkerFaceColor', 'rbrb', 'Labels', 'names')
+gscatter(data, groups, 'Marker', 'ssoo', 'MarkerFaceColor', 'rbrb', 'Labels', 'names')
 ```
 
 ![Change parameters for a scatter plot with groups.](fig12.png)
