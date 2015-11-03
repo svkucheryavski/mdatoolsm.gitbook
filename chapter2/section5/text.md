@@ -187,7 +187,10 @@ This code will show the bar plot for selected row:
 
 ```matlab
 figure
-bar(expvar('Test', :), 'FaceColor', 'r')
+subplot 121
+bar(expvar('Test', :))
+subplot 122
+bar(expvar('Test', :), 'EdgeColor', 'k', 'FaceColor', 'r')
 ```
 
 ![Simple bar plot](fig10.png)
