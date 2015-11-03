@@ -62,9 +62,10 @@ nfig = 5;
 data = mdadata(randn(50000, 2));
 
 figure
+subplot 121
 densscatter(data);
 
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw, figh], 'png', '-r150')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
 
 
 
@@ -221,6 +222,17 @@ subplot 121
 boxplot(d)
 subplot 122
 boxplot(d, 'Whisker', 1, 'Color', 'g', 'EdgeColor', 'k', 'Labels', 'names')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
+
+
+nfig = 18;
+
+d = people(:, {'Height', 'Weight', 'Swim'});
+figure
+subplot 121
+qqplot(people(:, 'Height'))
+subplot 122
+qqplot(people(:, 'Height'), 'Labels', 'on', 'ShowNormal', 'off')
 printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
 
 
