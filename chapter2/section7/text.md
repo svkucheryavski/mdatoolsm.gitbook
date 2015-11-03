@@ -130,6 +130,8 @@ figure
 gplot(data, 'Marker', '.')
 ```
 
+![Box and whiskers plots with groups.](fig8.png)
+
 Alternatively one can provide a dataset with factors as a second argument for the plotting methods. In this case the rows of original data will be shown in groups.
 
 ```matlab
@@ -142,12 +144,16 @@ figure
 gplot(data, factors)
 ```
 
+![Box and whiskers plots with groups.](fig9.png)
+
 In group line plot, one can specify line and marker settings for each group separately or use one value for all.
 
 ```matlab
 figure
 gplot(data, factors, 'LineStyle', {'-', '--', ':', '-.'}, 'LineWidth', 2)
 ```
+
+![Box and whiskers plots with groups.](fig10.png)
 
 Group scatter plot works similar to the normal one. To introduce groups, you just need to specify a dataset with factors as a second argument.
 
