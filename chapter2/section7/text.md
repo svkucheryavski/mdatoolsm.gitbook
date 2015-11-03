@@ -144,7 +144,7 @@ figure
 gplot(data, factors)
 ```
 
-![Box and whiskers plots with groups.](fig9.png)
+![Line plot with groups.](fig9.png)
 
 In group line plot, one can specify line and marker settings for each group separately or use one value for all.
 
