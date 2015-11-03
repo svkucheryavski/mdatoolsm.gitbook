@@ -71,14 +71,16 @@ printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw, figh], 'png', '-
 nfig = 6;
 
 figure
-subplot(1, 3, 1)
+subplot 221
 densscatter(data);
-subplot(1, 3, 2)
+subplot 222
 densscatter(data, 'NBins', 30);
-subplot(1, 3, 3)
+subplot 224
+densscatter(data, 'Colormap', @jet);
+subplot 223
 densscatter(data, 'Colormap', @spring);
 
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 3, figh], 'png', '-r150')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
 
 %% Line plot
 
@@ -130,9 +132,12 @@ show(expvar)
 nfig = 10;
 
 figure
-bar(expvar('Test', :), 'FaceColor', 'r')
+subplot 121
+bar(expvar('Test', :))
+subplot 122
+bar(expvar('Test', :), 'EdgeColor', 'k', 'FaceColor', 'r')
 
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw, figh], 'png', '-r150')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
 
 
 
@@ -151,27 +156,30 @@ printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png'
 nfig = 12;
 
 figure
+subplot 121
 levelplot(people(1:5, 1:5))
 
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw, figh], 'png', '-r150')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
 
 
 nfig = 13;
 
 figure
+subplot 121
 levelplot(corr(people(1:5, 1:5)), 'Colormap', @jet)
 colorbar
 
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw, figh], 'png', '-r150')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
 
 
 nfig = 14;
 
 figure
+subplot 121
 matrixplot(people(1:5, 1:5), 'Colormap', @jet)
 colorbar
 
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw, figh], 'png', '-r150')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
 
 %% Statistical plots
 
@@ -209,12 +217,10 @@ nfig = 17;
 
 d = people(:, {'Height', 'Weight', 'Swim'});
 figure
-subplot(1, 3, 1)
+subplot 121
 boxplot(d)
-subplot(1, 3, 2)
-boxplot(d, 'Whisker', 1, 'Color', 'r', 'EdgeColor', 'k')
-subplot(1, 3, 3)
-boxplot(d, 'Whisker', 1, 'Labels', 'names')
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 3, figh], 'png', '-r150')
+subplot 122
+boxplot(d, 'Whisker', 1, 'Color', 'g', 'EdgeColor', 'k', 'Labels', 'names')
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
 
 
