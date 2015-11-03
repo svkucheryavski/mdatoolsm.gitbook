@@ -125,28 +125,36 @@ gbar(data, 'FaceColor', 'yc', 'EdgeColor', 'rb', 'Labels', 'names');
 
 To make a group line plot there are two possibilities. First of all it can work the same way as the bar plot: every row is a group.
 
-figure('Position', [0 0 400 300])
+```matlab
+figure
 gplot(data, 'Marker', '.')
+```
 
 Alternatively one can provide a dataset with factors as a second argument for the plotting methods. In this case the rows of original data will be shown in groups.
 
+```matlab
 data = people(:, {'Height', 'Weight', 'Wine', 'Beer'});
-factors = people(:, {'Sex', 'Region'});
-factors.factor('Sex', {'Male', 'Female'});
-factors.factor('Region', {'A', 'B'});
+groups = people(:, {'Sex', 'Region'});
+groups.factor('Sex', {'Male', 'Female'});
+groups.factor('Region', {'A', 'B'});
 
-figure('Position', [0 0 400 300])
+figure
 gplot(data, factors)
+```
 
-In group line plot, one can specify line and marker settings for each group separately or use one value for all. It should be noticed that since color in group plots is used for separation of the groups, it is not possibile to use parameter 'Colorby' and related.
+In group line plot, one can specify line and marker settings for each group separately or use one value for all.
 
-figure('Position', [0 0 400 300])
+```matlab
+figure
 gplot(data, factors, 'LineStyle', {'-', '--', ':', '-.'}, 'LineWidth', 2)
+```
 
 Group scatter plot works similar to the normal one. To introduce groups, you just need to specify a dataset with factors as a second argument.
 
-figure('Position', [0 0 400 300])
+```matlab
+figure
 gscatter(data(:, {'Wine', 'Beer'}), factors);
+```
 
 And similar to gplot() one can specify color and marker settings: either for each group or one for all of them.
 
