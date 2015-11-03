@@ -97,10 +97,13 @@ figure
 subplot 221
 densscatter(data);
 
-subplot(1, 3, 2)
+subplot 222
 densscatter(data, 'NBins', 30);
 
-subplot(1, 3, 3)
+subplot 223
+densscatter(data, 'Colormap', @jet);
+
+subplot 224
 densscatter(data, 'Colormap', @spring);
 ```
 
