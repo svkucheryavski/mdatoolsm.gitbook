@@ -150,7 +150,7 @@ In group line plot, one can specify line and marker settings for each group sepa
 
 ```matlab
 figure
-gplot(data, factors, 'LineStyle', {'-', '--', ':', '-.'}, 'LineWidth', 2)
+gplot(data, groups, 'LineStyle', {'-', '--', ':', '-.'}, 'LineWidth', 2)
 ```
 
 ![Change parameters for a line plot with groups.](fig10.png)
