@@ -295,11 +295,11 @@ d = people(:, {'Height', 'Weight', 'Swim'});
 
 figure
 
-subplot(1, 3, 1)
+subplot 121
 boxplot(d)
 
 subplot(1, 3, 2)
-boxplot(d, 'Whisker', 1, 'Color', 'r', 'EdgeColor', 'k')
+boxplot(d, 'Whisker', 1, 'Color', 'r', 'EdgeColor', 'k', 'Labels', 'names')
 
 subplot(1, 3, 3)
 boxplot(d, 'Whisker', 1, 'Labels', 'names')
