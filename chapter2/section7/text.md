@@ -87,6 +87,8 @@ subplot 122
 qqplot(people(:, 'Height'), people(:, {'Sex'}));
 ```
 
+![Quantile-quantile plots with groups.](fig1.png)
+
 ## Conventional group plots
 
 The basic conventional plots scatter(), plot() and bar() also can work with factors and groups. However in contrast to statistical plots here it was decided to use separate methods in order to extend their functionality. The methods for group plots have a leading 'g': gscatter(), gplot() and gbar(). One can think about group plots as following: if a plot needs a legend, it is a group plot.
