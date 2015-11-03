@@ -94,7 +94,7 @@ Additional parameters allow to change area of neighborhood the density is calcul
 ```matlab
 figure
 
-subplot(1, 3, 1)
+subplot 221
 densscatter(data);
 
 subplot(1, 3, 2)
