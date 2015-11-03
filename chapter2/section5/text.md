@@ -130,7 +130,7 @@ If it is needed to use specific values for the x, they can be provided as a seco
 figure
 
 % use channel numbers
-subplot(2, 1, 1)
+subplot 211
 plot(spectra, 1:151, 'Color', 'b')
 xlabel('Wavenumbers')
 
@@ -138,7 +138,7 @@ xlabel('Wavenumbers')
 nm = str2num(cell2mat(spectra.colNames'));
 invcm = 10^7 ./ nm;
 
-subplot(2, 1, 2)
+subplot 212
 plot(spectra, invcm, 'Color', 'r')
 xlabel('Wavelength, cm-1')
 ```
