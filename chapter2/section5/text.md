@@ -266,23 +266,23 @@ d = people(:, {'Height', 'Weight', 'Beer', 'Wine'});
 figure
 
 % error bars show 95% confidence interval for mean
-subplot(3, 2, 1)
+subplot 321
 errorbar(d, 'Color', 'r')
 
 % error bars show 90% confidence interval for mean
-subplot(3, 2, 2)
+subplot 322
 errorbar(d, 'Alpha', 0.10)
 
 % error bars show one standard error (+/-)
-subplot(3, 2, 3)
+subplot 323
 errorbar(d, 'Type', 'se')
 
 % error bars show one standard deviation (+/-)
-subplot(3, 2, 4)
+subplot 324
 errorbar(d, 'Type', 'std')
 
 % error bars show interval for 90% of most common values
-subplot(3, 2, 5)
+subplot 325
 errorbar(d, 'Type', 'std', 'Alpha', 0.10)
 ```
 
