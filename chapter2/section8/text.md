@@ -90,7 +90,7 @@ Excluded rows:
    1	                  'Lars'
 ```
 
-The excluded values can be unhidden as easily as hide.
+The excluded values can be unhidden as easily as be hidden.
 
 ```matlab
 people.includecols('IQ')
