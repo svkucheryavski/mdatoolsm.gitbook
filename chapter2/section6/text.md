@@ -161,25 +161,18 @@ Rasmus            1              0             0
  Heidi            0              0             1
 ```
 
-The getgroups() is widely used in statistic and graphical methods. Here we will show how to use groups for calculation of quantitative statistics and in the next section graphical methods will be discussed.
+The `getgroups()` is widely used in statistic and graphical methods. Here we will show how to use groups for calculation of quantitative statistics and in the next section graphical methods will be discussed.
 
 The idea is rather simple, if one provide a dataset with one or several factors as a second argument of any statistical method, the statistics will be calculated for first column of original data and the values from this column will be split into the groups according to combination of the factor levels. Here is an example:
 
-clc
 
+```matlab
 people.factor('Sex', {'Male', 'Female'});
 people.factor('Region', {'A', 'B'});
 d = people(8:20, :);
 show(d)
-
-% just a normal use of mean for a column
-m = mean(d(:, 'Height'));
-show(m)
-
-% grouping factors are provided
-m = mean(d(:, 'Height'), d(:, {'Sex'}));
-show(m)
-
+```
+```
 People:
 People dataset
 
@@ -199,7 +192,18 @@ People dataset
 Federico     187      84        -1        46   27  1.65e+04   299   178    Male    95         B  119
     Dona     168      50         1        37   49   3.4e+04   170   162  Female    76         B  135
 Fabrizia     166      49         1        36   21   1.4e+04   150   245  Female    75         B  123
+```
 
+```matlab
+% just a normal use of mean for a column
+m = mean(d(:, 'Height'));
+show(m)
+
+% grouping factors are provided
+m = mean(d(:, 'Height'), d(:, {'Sex'}));
+show(m)
+```
+```
 
       Height
      -------
@@ -213,20 +217,22 @@ Height:
       Male  Female
      ----- -------
 Mean   182     165
+```
 
 If a method requires additional parameters, they should be specified after dataset with factors.
 
+```matlab
 p = percentile(d(:, 'Height'), 25);
 show(p)
 
 p = percentile(d(:, 'Height'), d(:, 'Sex'), 25);
 show(p)
-
+```
+```
 Percentiles:
      Height
     -------
 25%     165
-
 
 
 Percentiles for Height:
@@ -235,15 +241,15 @@ Percentiles for Height:
      Male  Female
     ----- -------
 25%   180     162
+```
 
 Several factors can be used at the same time.
 
+```matlab
 s = ci(d(:, 'Height'), d(:, {'Sex', 'Region'}));
 show(s)
-
-s = ci(d(:, 'Height'), d(:, {'Sex', 'Region'}), 0.10);
-show(s)
-
+```
+```
 Confidence intervals (95%) for Height:
 
                 Groups (Sex, Region)
@@ -251,9 +257,14 @@ Confidence intervals (95%) for Height:
       -------- -------- ---------- ----------
 Lower      178      173        158        154
 Upper      183      199        170        180
+```
 
 
-
+```matlab
+s = ci(d(:, 'Height'), d(:, {'Sex', 'Region'}), 0.10);
+show(s)
+```
+```
 Confidence intervals (90%) for Height:
 
                 Groups (Sex, Region)
@@ -261,8 +272,9 @@ Confidence intervals (90%) for Height:
       -------- -------- ---------- ----------
 Lower      179      180        159        161
 Upper      183      192        169        173
+```
 
-Qualitative statistics
+# Qualitative statistics
 Factors can be also used for calculation of qualitative statistics, including frequencies and relative frequencies (proportions) of factor levels, confidence interval for proportions, contingency tables for combination of two factors, chi square test for association of two factors, standardized residuals for observed and expected frequencies.
 
 Let's take a part people data, so number of males and females, is different.
