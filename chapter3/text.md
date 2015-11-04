@@ -17,6 +17,9 @@ Here are some examples how apply these two operations in *mdatools* (in all plot
 ```matlab
 load(people)
 
+% we will use variables Wine and Height
+data = people(:, {'Wine', 'Height'});
+
 % create a preprocessing object only for centering
 p = prep();
 p.add('center');
@@ -72,7 +75,15 @@ p.add('scale');
 show(p);
 ```
 ```
-j
+Preprocessing ("prep") object
+methods included: 2
+1. center (mean centering)
+2. scale (standardization)
+
+Use "obj.add(name, properties)" to add a new method.
+Use "obj.remove(n)" to remove a method from the list.
+
+See "help prep" for list of available methods.
 ```
 
 And apply the methods to the original data.
