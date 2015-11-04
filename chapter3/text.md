@@ -184,7 +184,7 @@ The prep.msc() function returns a list for corrected spectra and the mean spectr
 res = prep.msc(ospectra)
 pspectra = res$cspectra;
 
-# show the result
+% show the result
 par(mfrow = c(2, 1))
 matplot(t(ospectra), type = 'l', col = 'blue', lty = 1, main = 'Original')
 matplot(t(pspectra), type = 'l', col = 'blue', lty = 1, main = 'After MSC')
