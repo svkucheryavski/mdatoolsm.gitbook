@@ -170,7 +170,7 @@ p = prep();
 p.add('snv')
 
 % create a copy of spectra and apply preprocessing
-pspectra = copy(spectra)
+pspectra = copy(spectra);
 p.apply(pspectra)
 
 % show the results
@@ -183,7 +183,6 @@ title('Original spectra')
 subplot 212
 plot(pspectra)
 title('After SNV correction')
-
 ```
 
 ![Original (left) and SNV processed (right) spectra.](fig3.png)
