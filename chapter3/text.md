@@ -190,6 +190,7 @@ matplot(t(ospectra), type = 'l', col = 'blue', lty = 1, main = 'Original')
 matplot(t(pspectra), type = 'l', col = 'blue', lty = 1, main = 'After MSC')
 Original (left) and MSC processed (right) spectra.
 ```
+## Normalization of spectra
 
 ## Smoothing and derivatives
 
