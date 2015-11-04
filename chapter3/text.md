@@ -76,6 +76,8 @@ And apply the methods to the original data.
 pdata2 = copy(data)
 p.apply(pdata2)
 
+figure 
+
 subplot 121
 scatter(pdata1)
 title('After centering')
