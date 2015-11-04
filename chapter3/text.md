@@ -98,9 +98,14 @@ axis([-5 5 -5 5])
 
 One can also use arbitrary values to center or/and scale the data, in this case use sequence or vector with these values should be provided as an argument for center or scale. Here is an example for median centering:
 
-# median centering
-mcdata = prep.autoscale(odata, center = apply(odata, 2, median))
-Correction of spectral baseline
+```
+p = prep();
+p.add('center', medean(data));
+
+show(p)
+```
+
+## Correction of spectral baseline
 
 Baseline correction methods so far include Standard Normal Variate (SNV) and Multiplicative Scatter Correction (MSC).
 
