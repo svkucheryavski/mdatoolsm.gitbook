@@ -31,6 +31,7 @@ Use "obj.remove(n)" to remove a method from the list.
 See "help prep" for list of available methods.
 ```
 Method `show()`displays the list of added preprocessing methods, their order as well as some help information. Now we can apply the preprocessing methods of the created object to the data. In order to compare the original and preprocessed data we create a copy for the dataset.
+
 ```matlab
 
 pdata = copy(data);
