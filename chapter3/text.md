@@ -100,7 +100,7 @@ One can also use arbitrary values to center or/and scale the data, in this case 
 
 ```
 p = prep();
-p.add('center', medean(data));
+p.add('center', median(data));
 
 show(p)
 ```
