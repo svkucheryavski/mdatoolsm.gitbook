@@ -174,6 +174,16 @@ pspectra = copy(spectra)
 p.apply(pspectra)
 
 % show the results
+figure
+
+subplot 211
+plot(spectra)
+title('Original spectra')
+
+subplot 212
+plot(pspectra)
+title('After SNV correction')
+
 ```
 
 ![Original (left) and SNV processed (right) spectra.](fig3.png)
