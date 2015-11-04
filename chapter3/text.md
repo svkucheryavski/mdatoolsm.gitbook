@@ -21,7 +21,14 @@ p.add('center');
 show(p);
 ```
 ```
+Preprocessing ("prep") object
+methods included: 1
+1. center (mean centering)
 
+Use "obj.add(name, properties)" to add a new method.
+Use "obj.remove(n)" to remove a method from the list.
+
+See "help prep" for list of available methods.
 ```
 
 Now we can apply the preprocessing methods from the object to the data. In order to compare the original and preprocessed data we create a copy for the dataset.
