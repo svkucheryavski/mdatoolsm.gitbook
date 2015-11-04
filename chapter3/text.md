@@ -213,6 +213,7 @@ title('After MSC transformation')
 
 ![Original (left) and MSC transformed (right) spectra.](fig4.png)
 
+The ALS baseline correction is very useful for removing baseline issues in spectroscopic data with relatively narrow peaks, such as Raman, IR and similar. The method has two parameters — 
 
 ## Normalization of spectra
 
