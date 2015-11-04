@@ -105,6 +105,9 @@ p.add('center', median(data));
 show(p)
 ```
 
+Any method can be removed from the sequence by using its number.
+
+
 ## Correction of spectral baseline
 
 Baseline correction methods so far include Standard Normal Variate (SNV) and Multiplicative Scatter Correction (MSC).
