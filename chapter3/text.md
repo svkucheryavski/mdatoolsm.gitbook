@@ -265,7 +265,6 @@ ylim([-100 500])
 
 ![ALS baseline correction with different settings.](fig5.png)
 
-## Normalization of spectra
 
 ## Smoothing and derivatives
 
