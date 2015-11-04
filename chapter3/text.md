@@ -187,9 +187,8 @@ title('After SNV correction')
 
 ![Original (left) and SNV processed (right) spectra.](fig3.png)
 
-Multiplicative Scatter Correction does the same as SNV but in a different way. First it calculates a mean spectrum for the whole set (mean spectrum can be also provided as an extra argument). Then for each individual spectrum it makes a line fit for the spectral values and the mean spectrum. The coefficients of the line, intercept and slope, are used to correct the additive and multiplicative effects correspondingly.
+Multiplicative Scatter Correction does the same as SNV but in a different way. First it calculates a mean spectrum for the whole set (mean spectrum can be also provided as an extra argument). Then, for each individual spectrum, it makes a line fit for the spectral values and the mean spectrum. The coefficients of the line, intercept and slope, are used to correct the additive and multiplicative effects correspondingly.
 
-The prep.msc() function returns a list for corrected spectra and the mean spectrum calculated for the original spectral data, so it can be reused later.
 
 ```matlab
 % apply MSC and and get the preprocessed spectra
