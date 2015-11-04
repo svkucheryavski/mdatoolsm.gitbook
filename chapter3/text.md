@@ -98,13 +98,13 @@ subplot 121
 scatter(pdata1)
 title('After centering')
 grid on
-axis([-50 50 -50 50])
+axis([-100 100 -100 100])
 
 subplot 122
 scatter(pdata2)
 title('After autoscaling')
 grid on
-axis([-5 5 -5 5])
+axis([-2 2 -2 2])
 
 ```
 
