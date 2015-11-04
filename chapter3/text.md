@@ -163,17 +163,20 @@ SNV is a very simple procedure aiming first of all to remove additive and multip
 
 ```matlab
 % load UV/Vis spectra from Simdata
-data(simdata)
-ospectra = simdata$spectra.c
+load(simdata)
 
-% apply SNV and show the spectra
-pspectra = prep.snv(ospectra)
+% create a preprocessing object
+p = prep();
+p.add('snv')
 
-par(mfrow = c(2, 1))
-matplot(t(ospectra), type = 'l', col = 'blue', lty = 1, main = 'Original')
-matplot(t(pspectra), type = 'l', col = 'blue', lty = 1, main = 'after SNV')
-Original (left) and SNV processed (right) spectra.
+% create a copy of spectra and apply preprocessing
+pspectra = copy(spectra)
+p.apply(pspectra)
+
+% show the results
 ```
+
+![Original (left) and SNV processed (right) spectra.](fig3.png)
 
 Multiplicative Scatter Correction does the same as SNV but in a different way. First it calculates a mean spectrum for the whole set (mean spectrum can be also provided as an extra argument). Then for each individual spectrum it makes a line fit for the spectral values and the mean spectrum. The coefficients of the line, intercept and slope, are used to correct the additive and multiplicative effects correspondingly.
 
