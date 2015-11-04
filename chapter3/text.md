@@ -210,6 +210,9 @@ subplot 212
 plot(pspectra)
 title('After MSC transformation')
 ```
+
+![Original (left) and MSC processed (right) spectra.](fig4.png)
+
 ## Normalization of spectra
 
 ## Smoothing and derivatives
