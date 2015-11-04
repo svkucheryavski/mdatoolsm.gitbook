@@ -34,8 +34,8 @@ Method `show()`displays the list of added preprocessing methods, their order as 
 
 ```matlab
 % create a copy of dataset and apply preprocessing
-pdata = copy(data);
-p.apply(pdata);
+pdata1 = copy(data);
+p.apply(pdata1);
 
 
 % show the results
@@ -49,7 +49,7 @@ grid on
 axis([-lim lim -lim lim])
 
 subplot 122
-scatter(pdata)
+scatter(pdata1)
 title('After centering')
 grid on
 axis([-lim lim -lim lim])
@@ -58,6 +58,37 @@ axis([-lim lim -lim lim])
 
 ![Original (left) and centered (right) data.](fig1.png)
 
+Now let us create a reprocessing object for autoscaling by adding both centering and scaling (standardization) to the object.
+
+```matlab
+p = prep();
+p.add('center');
+p.add('scale');
+
+show(p);
+```
+```
+```
+
+And apply the methods to the original data.
+
+```matlab
+pdata2 = copy(data)
+p.apply(pdata2)
+
+subplot 121
+scatter(pdata1)
+title('After centering')
+grid on
+axis([-50 50 -50 50])
+
+subplot 122
+scatter(pdata2)
+title('After autoscaling')
+grid on
+axis([-5 5 -5 5])
+
+```
 
 One can also use arbitrary values to center or/and scale the data, in this case use sequence or vector with these values should be provided as an argument for center or scale. Here is an example for median centering:
 
