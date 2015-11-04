@@ -72,6 +72,7 @@ p.add('scale');
 show(p);
 ```
 ```
+j
 ```
 
 And apply the methods to the original data.
