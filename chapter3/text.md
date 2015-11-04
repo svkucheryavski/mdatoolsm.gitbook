@@ -6,7 +6,7 @@ The general syntax is following. First one creates and empty preprocessing objec
 
 
 
-Let us show how all these work using two simple preprocessing methods — centering and standardization.
+Let us show how all these work starting with two simple preprocessing methods, centering and standardization, and later show details for several other.
 
 ## Autoscaling
 
