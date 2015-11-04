@@ -2,7 +2,9 @@
 
 The toolbox has a special object, which can be used to build a sequence of preprocessing methods and then use it either for preprocessing of original data or provide it as a preprocessing module to a model. In the latter case, every time the model is applied to a new data the data will be preprocessed first. In this chapter a brief description of the methods with several examples will be shown.
 
-The general syntax is following. First one creates and empty preprocessing object. Then add or remove methods by using methods `add('name', param1, param2, ...)` or `remove('name', param1, param2, ...`). Let us start with simple preprocessing, which include centering and standardization.
+The general syntax is following. First one creates and empty preprocessing object. Then add or remove methods by using methods `add('name', param1, param2, ...)` or `remove('name', param1, param2, ...`). 
+
+Let us show how all these work using two simple preprocessing methods — centering and standardization.
 
 ## Autoscaling
 
