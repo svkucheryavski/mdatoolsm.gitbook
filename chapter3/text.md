@@ -213,7 +213,7 @@ title('After MSC transformation')
 
 ![Original (left) and MSC transformed (right) spectra.](fig4.png)
 
-The ALS baseline correction is very useful for removing baseline issues in spectroscopic data with relatively narrow peaks, such as Raman, IR and similar. The method has two parameters — *smoothness* (*s*, default 100000) and *penalty* (*p*, default 0.1). In the code below we generate a signal with four narrow peaks and baseline shape as a quadratic polynomial and use the preprocessing to "correct" the baseline. 
+The ALS baseline correction is very useful for removing baseline issues in spectroscopic data with relatively narrow peaks, such as Raman, IR and similar. The method has two parameters — *smoothness* (*s*, default 100000) and *penalty* (*p*, default 0.1). In the code below we generate a signal with four narrow peaks and baseline shape as a quadratic polynomial and use the ALS approach to "correct" the baseline. 
 
 ```matlab
 
