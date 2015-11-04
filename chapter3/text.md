@@ -56,7 +56,7 @@ axis([-lim lim -lim lim])
 
 ```
 
-!(Original (left) and centered (right) data.)[fig1.png]
+![Original (left) and centered (right) data.](fig1.png)
 
 
 One can also use arbitrary values to center or/and scale the data, in this case use sequence or vector with these values should be provided as an argument for center or scale. Here is an example for median centering:
