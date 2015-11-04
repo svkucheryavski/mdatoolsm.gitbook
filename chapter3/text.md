@@ -30,16 +30,16 @@ Use "obj.remove(n)" to remove a method from the list.
 
 See "help prep" for list of available methods.
 ```
-Method `show()`displays the list of added preprocessing methods, their order as well as some help information. Now we can apply the preprocessing methods of the created object to the data. In order to compare the original and preprocessed data we create a copy for the dataset and use the same scale for axes on both plots.
+Method `show()`displays the list of added preprocessing methods, their order as well as some help information. Now we can apply the preprocessing methods of the created object to the data. In order to compare the original and preprocessed data we create a copy for the dataset and use the same scale (–200, 200) for axes on both plots.
 
 ```matlab
 
+% create a copy of dataset and apply preprocessing
 pdata = copy(data);
-
 p.apply(pdata);
 
-figure
 
+lim = 200;
 figure
 
 subplot 121
@@ -47,16 +47,13 @@ scatter(data)
 title('Original data')
 grid on
 axis([-lim lim -lim lim])
-line([0 0], [-lim lim], 'Color', 'k')
-line([-lim lim], [0 0], 'Color', 'k')
 
 subplot 122
 scatter(pdata)
 title('After centering')
 grid on
 axis([-lim lim -lim lim])
-line([0 0], [-lim lim], 'Color', 'k')
-line([-lim lim], [0 0], 'Color', 'k')
+
 ```
 
 
