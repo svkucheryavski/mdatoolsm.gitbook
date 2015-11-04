@@ -127,11 +127,11 @@ Baseline correction methods so far include Standard Normal Variate (SNV) and Mul
 
 SNV is a very simple procedure aiming first of all to remove additive and multiplicative scatter effects from Vis/NIR spectra. It is applied to every individual spectrum by subtracting its average and dividing its standard deviation from all spectral values. Here is an example:
 
-# load UV/Vis spectra from Simdata
+% load UV/Vis spectra from Simdata
 data(simdata)
 ospectra = simdata$spectra.c
 
-# apply SNV and show the spectra
+% apply SNV and show the spectra
 pspectra = prep.snv(ospectra)
 
 par(mfrow = c(2, 1))
