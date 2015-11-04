@@ -102,7 +102,7 @@ axis([-5 5 -5 5])
 
 One can also use arbitrary values to center or/and scale the data, in this case use sequence or vector with these values should be provided as an argument for center or scale. Here is an example for median centering:
 
-```
+```matlab
 p = prep();
 p.add('center', median(data));
 
