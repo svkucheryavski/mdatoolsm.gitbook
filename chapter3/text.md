@@ -4,6 +4,11 @@ The toolbox has a special object, which can be used to build a sequence of prepr
 
 The general syntax is following. First one creates and empty preprocessing object. Then add or remove methods by using methods `obj.add('name', param1, param2, ...)` and `obj.remove(n)`. Below shown a table with all currently available methods and their parameters.
 
+| Method    |   Syntax | Description |
+| ----------|----------|-------------|
+| Centering | `add('center', [values])`| Center the data columns, if values are not provided, mean will be used|
+| Scaling | `add('scale', [values])`| Scaling data columns, if values are not provided, values will be scaled using standard deviation of the columns.|
+|||
 
 
 Let us show how all these work starting with two simple preprocessing methods, centering and standardization, and later show details for several other.
