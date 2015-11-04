@@ -196,20 +196,21 @@ Original (left) and MSC processed (right) spectra.
 
 Savitzky-Golay filter is used to smooth signals and calculate derivatives. The filter has three arguments: a width of the filter (width), a polynomial order (porder) and the derivative order (dorder). If the derivative order is zero (default value) then only smoothing will be performed.
 
-
-# add random noise to the spectra
+```matlab
+% add random noise to the spectra
 nspectra = ospectra + 0.025 * matrix(rnorm(length(ospectra)), dim(ospectra))
 
-# apply SG filter for smoothing
+% apply SG filter for smoothing
 pspectra = prep.savgol(nspectra, width = 15, porder = 1)
 
-# apply SG filter for smoothing and take a first derivative
+% apply SG filter for smoothing and take a first derivative
 dpspectra = prep.savgol(nspectra, width = 15, porder = 1, dorder = 1)
 
-# show results
+% show results
 par(mfrow = c(2, 2))
 matplot(t(ospectra), type = 'l', col = 'blue', lty = 1, main = 'Original')
 matplot(t(nspectra), type = 'l', col = 'blue', lty = 1, main = 'Noise added')
 matplot(t(pspectra), type = 'l', col = 'blue', lty = 1, main = 'SG smoothing')
 matplot(t(dpspectra), type = 'l', col = 'blue', lty = 1, main = '1st derivative')
 Original and noisy spectra (top) and results of SG preprocessing (bottom).
+```
