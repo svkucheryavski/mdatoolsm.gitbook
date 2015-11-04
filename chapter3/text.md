@@ -163,7 +163,7 @@ SNV is a very simple procedure aiming first of all to remove additive and multip
 
 ```matlab
 % load UV/Vis spectra from Simdata
-load(simdata)
+load('simdata')
 
 % create a preprocessing object
 p = prep();
