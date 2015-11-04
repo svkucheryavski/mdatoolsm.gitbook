@@ -33,7 +33,6 @@ See "help prep" for list of available methods.
 Method `show()`displays the list of added preprocessing methods, their order as well as some help information. Now we can apply the preprocessing methods of the created object to the data. In order to compare the original and preprocessed data we create a copy for the dataset and use the same scale (–200, 200) for axes on both plots.
 
 ```matlab
-
 % create a copy of dataset and apply preprocessing
 pdata = copy(data);
 p.apply(pdata);
@@ -57,8 +56,8 @@ axis([-lim lim -lim lim])
 
 ```
 
+!("Original (left) and centered (right) data.")[fig1.png]
 
-Centered (left) and autoscaled (right) data.
 
 One can also use arbitrary values to center or/and scale the data, in this case use sequence or vector with these values should be provided as an argument for center or scale. Here is an example for median centering:
 
