@@ -213,7 +213,57 @@ title('After MSC transformation')
 
 ![Original (left) and MSC transformed (right) spectra.](fig4.png)
 
-The ALS baseline correction is very useful for removing baseline issues in spectroscopic data with relatively narrow peaks, such as Raman, IR and similar. The method has two parameters — *smoothness* and *penalty*. 
+The ALS baseline correction is very useful for removing baseline issues in spectroscopic data with relatively narrow peaks, such as Raman, IR and similar. The method has two parameters — *smoothness* (default 100000) and *penalty* (default 0.1). In the code below we generate a signal with four narrow peaks and baseline shape as a quadratic polynomial and use the preprocessing to "correct" the baseline. 
+
+```matlab
+
+% function for normal distribution PDF 
+npdf = @(x, m, s)(1/sqrt(2 * pi * s^2) * exp(-(x - m).^2/(2 * s^2)));
+
+% generate signal
+x = 1:3000;
+y = -((x - 1500) / 100).^2 + 200;
+y = y + npdf(x, 150, 10) * 10000;
+y = y + npdf(x, 550, 20) * 10000;
+y = y + npdf(x, 1550, 30) * 10000;
+y = y + npdf(x, 2000, 20) * 10000;
+y = mdadata(y);
+
+% create three preprocessing objects
+p1 = prep(); p1.add('alsbasecorr', 100000, 0.1);
+p2 = prep(); p2.add('alsbasecorr', 100000, 0.01);
+p3 = prep(); p3.add('alsbasecorr', 1000000, 0.01);
+
+% apply preprocessing to copies of the signal
+py1 = copy(y);
+p1.apply(py1);
+py2 = copy(y);
+p2.apply(py2);
+py3 = copy(y);
+p3.apply(py3);
+
+% show results
+figure
+
+subplot 221
+plot(y)
+ylim([-100 500])
+title('Original data')
+
+subplot 222
+plot(py1)
+ylim([-100 500])
+
+subplot 223
+plot(py2)
+ylim([-100 500])
+
+subplot 224
+plot(py3)
+ylim([-100 500])
+```
+
+![ALS baseline correction with different settings.](fig5.png)
 
 ## Normalization of spectra
 
