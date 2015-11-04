@@ -78,8 +78,8 @@ j
 And apply the methods to the original data.
 
 ```matlab
-pdata2 = copy(data)
-p.apply(pdata2)
+pdata2 = copy(data);
+p.apply(pdata2);
 
 figure 
 
