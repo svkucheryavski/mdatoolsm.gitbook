@@ -191,15 +191,24 @@ Multiplicative Scatter Correction does the same as SNV but in a different way. F
 
 
 ```matlab
-% apply MSC and and get the preprocessed spectra
-res = prep.msc(ospectra)
-pspectra = res$cspectra;
+% create a preprocessing object 
+p = prep();
+p.add('msc');
+
+% create a copy of spectra and apply preprocessing
+pspectra = copy(spectra);
+p.apply(pspectra);
 
 % show the result
-par(mfrow = c(2, 1))
-matplot(t(ospectra), type = 'l', col = 'blue', lty = 1, main = 'Original')
-matplot(t(pspectra), type = 'l', col = 'blue', lty = 1, main = 'After MSC')
-Original (left) and MSC processed (right) spectra.
+figure
+
+subplot 211
+plot(spectra)
+title('Original spectra')
+
+subplot 212
+plot(pspectra)
+title('After MSC transformation')
 ```
 ## Normalization of spectra
 
