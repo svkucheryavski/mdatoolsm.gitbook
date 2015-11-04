@@ -2,7 +2,7 @@
 
 The toolbox has a special object, which can be used to build a sequence of preprocessing methods and then use it either for preprocessing of original data or provide it as a preprocessing module to a model. In the latter case, every time the model is applied to a new data the data will be preprocessed first. In this chapter a brief description of the methods with several examples will be shown.
 
-The general syntax is following. First one creates and empty preprocessing object. Then add or remove methods by using methods `add('name', param1, param2, ...)` or `remove('name', param1, param2, ...`). Below shown a table with all currently available methods and their parameters.
+The general syntax is following. First one creates and empty preprocessing object. Then add or remove methods by using methods `add('name', param1, param2, ...)` or `remove(n)`. Below shown a table with all currently available methods and their parameters.
 
 
 
@@ -116,8 +116,6 @@ One can also use arbitrary values to center or/and scale the data, in this case 
 ```matlab
 p = prep();
 p.add('center', median(data));
-
-show(p)
 ```
 
 Any method can be removed from the sequence by using its number.
