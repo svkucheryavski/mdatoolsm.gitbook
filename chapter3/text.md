@@ -39,6 +39,7 @@ pdata = copy(data);
 p.apply(pdata);
 
 
+% show the results
 lim = 200;
 figure
 
