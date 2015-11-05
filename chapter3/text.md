@@ -227,7 +227,7 @@ Mean     182    78.2    -0.875      43.4  37.8
 Mean    17.4    27.4     -1.75      7.06  6.62```
 ```
 
-We can see that the data values for the males was not centered correctly, because when we applied the preprocessing first time, the object calculated mean values for female objects and save them. So when we applied the object to the male data, the saved values were used, which are of course different from the mean values of the male persons in the dataset.
+We can see that the data values for the males were not centered correctly, because when we applied the preprocessing first time, the object calculated mean values for female objects and save them. So when we applied the object to the male data, the saved values were used, which are of course different from the mean values of the male persons in the dataset.
 
 If you want to "reset" all settings without creating a new preprocessing object manually just create a copy of the existent one:
 
