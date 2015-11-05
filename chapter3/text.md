@@ -367,23 +367,30 @@ ylim([-100 500])
 
 ## Smoothing and derivatives
 
-Savitzky-Golay filter is used to smooth signals and calculate derivatives. The filter has three arguments: a derivative order (`d`), a width of the filter (`w`), and a polynomial degree (`p`). If the derivative order is zero (default value) then only smoothing will be performed. Belowe are the examples of using this filter for the *Simdata* spectra with added random noise.
+Savitzky-Golay filter is used to smooth signals and calculate derivatives. The filter has three arguments: a derivative order (`d`), a width of the filter (`w`), and a polynomial degree (`p`). If the derivative order is zero (default value) then only smoothing will be performed. Below are some examples of using this filter for the *Simdata* spectra with added random noise.
 
 ```matlab
+
+load('simdata)
+
 % add random noise to the spectra
-nspectra = ospectra + 0.025 * matrix(rnorm(length(ospectra)), dim(ospectra))
+nspectra = spectra + 0.025 * randn(size(spectra))
 
-% apply SG filter for smoothing
-pspectra = prep.savgol(nspectra, width = 15, porder = 1)
+% create two objects for preprocessing
+p1 = prep();
+p1.add('savgol', 0, 15, 1);
 
-% apply SG filter for smoothing and take a first derivative
-dpspectra = prep.savgol(nspectra, width = 15, porder = 1, dorder = 1)
+p2 = prep();
+p2.add('savgol', 1, 15, 1)
+
+% apply the preprocessing
+sspectra = copy(nspectra);
+p1.apply(sspectra);
+
+dspectra = copy(nspectra);
+p2.apply(dspectra);
 
 % show results
-par(mfrow = c(2, 2))
-matplot(t(ospectra), type = 'l', col = 'blue', lty = 1, main = 'Original')
-matplot(t(nspectra), type = 'l', col = 'blue', lty = 1, main = 'Noise added')
-matplot(t(pspectra), type = 'l', col = 'blue', lty = 1, main = 'SG smoothing')
-matplot(t(dpspectra), type = 'l', col = 'blue', lty = 1, main = '1st derivative')
-Original and noisy spectra (top) and results of SG preprocessing (bottom).
 ```
+
+![Original and noisy spectra (top) and results of SG preprocessing (bottom).](fig.png)
