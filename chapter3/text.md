@@ -408,4 +408,4 @@ title('Smoothing and 1st derivative')
 
 ```
 
-![Original and noisy spectra (top) and results of SG preprocessing (bottom).](fig.png)
+![Original and noisy spectra (top) and results of SG preprocessing (bottom).](fig6.png)
