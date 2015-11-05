@@ -374,14 +374,14 @@ Savitzky-Golay filter is used to smooth signals and calculate derivatives. The f
 load('simdata')
 
 % add random noise to the spectra
-nspectra = spectra + 0.025 * randn(size(spectra))
+nspectra = spectra + 0.025 * randn(size(spectra));
 
 % create two objects for preprocessing
 p1 = prep();
 p1.add('savgol', 0, 15, 1);
 
 p2 = prep();
-p2.add('savgol', 1, 15, 1)
+p2.add('savgol', 1, 15, 1);
 
 % apply the preprocessing
 sspectra = copy(nspectra);
