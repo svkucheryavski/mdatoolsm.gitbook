@@ -11,9 +11,9 @@ The general syntax is following. First one creates and empty preprocessing objec
 |Normalization|`obj.add('norm', type`)|Normalization of spectra either to a unit area (type is `'area'`) or to a unit length (type is `'length'`)|
 |SNV|`obj.add('snv')`|Standard normal variate transformation|
 |MSC|`obj.add('msc', [mean])`|Multiplicative scatter correction, the optional argument `mean` is a vector with mean spectrum values (will be calculated from the data values if not provided)| 
-|||
-|||
-
+|ALS baseline correction|`obj.add('alsbasecorr', s, p)`|Baseline correction with Alternating Least Squares. The paramater `s`is a smoothness (default is 100000), and `p`is a penalty (default is 0.1).|
+|Savitzky-Golay transformation|`obj.add('savgol', d, w, p)`|Savitzky-Golay transformation, `d`is a derivative (use 0 for no derivative), `w`is a size of the filter (3, 5, 7, ...) and `p` is a polynomial degree.|
+|Whitening|`prep.add('whitening')`|
 
 Let us show how all these work starting with two simple preprocessing methods, centering and standardization, and later show details for several other.
 
