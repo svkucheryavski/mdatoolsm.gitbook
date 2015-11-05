@@ -13,7 +13,8 @@ The general syntax is following. First one creates and empty preprocessing objec
 |MSC|`obj.add('msc', [mean])`|Multiplicative scatter correction, the optional argument `mean` is a vector with mean spectrum values (will be calculated from the data values if not provided)| 
 |ALS baseline correction|`obj.add('alsbasecorr', s, p)`|Baseline correction with Alternating Least Squares. The paramater `s`is a smoothness (default is 100000), and `p`is a penalty (default is 0.1).|
 |Savitzky-Golay transformation|`obj.add('savgol', d, w, p)`|Savitzky-Golay transformation, `d`is a derivative (use 0 for no derivative), `w`is a size of the filter (3, 5, 7, ...) and `p` is a polynomial degree.|
-|Whitening|`prep.add('whitening')`|
+|Whitening|`obj.add('whitening')`|Whitening transformation to make observations uncorrelated and with unit variance (useful for Independent Component Analysis).|
+|Reflectance to absorbance|`obj.add('ref2abs')`|Transforms reflectance spectra to absorbance spectra with *log(1/R)* transformation.| 
 
 Let us show how all these work starting with two simple preprocessing methods, centering and standardization, and later show details for several other.
 
@@ -163,6 +164,66 @@ Use "obj.remove(n)" to remove a method from the list.
 
 See "help prep" for list of available methods.
 ```
+
+## Parameters of preprocessing
+
+Some of the methods have one or several parameters, either provided by a user, or calculated automatically when apply a particular method for the first time. After this, the method "remembers" the calculated values and if we apply it again to another data it will use the saved values. Here is an example of this behavior for centering.
+
+First we split people data for males and females:
+
+```matlab
+load('people')
+
+m = people(people(:, 'Sex') == -1, :);
+f = people(people(:, 'Sex') ==  1, :);
+```
+
+Then we create a preprocessing object for centering and apply it to females:
+
+```matlab
+p = prep();
+p.add('center');
+
+fp = copy(f);
+p.apply(fp);
+
+figure
+
+subplot 121
+scatter(f)
+title('Original data, females')
+grid on
+
+scatter 122
+scatter(fp)
+title('Centered data, females')
+grid on
+```
+
+![Centering of female data.](figx.png)
+
+As one can notice, the data is perfectly centered. However if we use the same preprocessing object for centering the male data we will get the following:
+
+```matlab
+mp = copy(m);
+p.apply(mp);
+
+figure
+
+subplot 121
+scatter(f)
+title('Original data, males')
+grid on
+
+scatter 122
+scatter(fp)
+title('Centered data, males')
+grid on
+```
+
+![Centering of male data with the same preprocessing object.](figx.png)
+
+We can see that the data cloud was not centered correctly, because when we applied the preprocessing first time, the object calculated mean values for female objects and save them. So when we applied the object to the male data, the saved values were used, which are of course different from the mean values of the male persons in the dataset.
 
 ## Correction of spectral baseline
 
