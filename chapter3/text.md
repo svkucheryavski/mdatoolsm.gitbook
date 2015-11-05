@@ -167,9 +167,9 @@ See "help prep" for list of available methods.
 
 ## Parameters of preprocessing
 
-Some of the methods have one or several parameters, either provided by a user, or calculated automatically when apply a particular method for the first time. After this, the method "remembers" the calculated values and if we apply it again to another data it will use the saved values. Here is an example of this behavior for centering.
+Some of the methods (e.g. scaling, centering, MSC transformation) have one or several parameters, either provided by a user, or calculated automatically when apply a particular method for the first time. After this, the method "remembers" the calculated values and if we apply it again to another data it will use the saved values instead of calculating the new ones. Here is an example of this behavior for centering.
 
-First we split people data for males and females and take only first five variables:
+First we split *People* data for males and females and take only first five variables:
 
 ```matlab
 load('people')
@@ -225,8 +225,9 @@ Mean     182    78.2    -0.875      43.4  37.8
       Height  Weight  Hairleng  Shoesize   Age
      ------- ------- --------- --------- -----
 Mean    17.4    27.4     -1.75      7.06  6.62```
+```
 
-We can see that the data cloud was not centered correctly, because when we applied the preprocessing first time, the object calculated mean values for female objects and save them. So when we applied the object to the male data, the saved values were used, which are of course different from the mean values of the male persons in the dataset.
+We can see that the data values for the males was not centered correctly, because when we applied the preprocessing first time, the object calculated mean values for female objects and save them. So when we applied the object to the male data, the saved values were used, which are of course different from the mean values of the male persons in the dataset.
 
 If you want to "reset" all settings without creating a new preprocessing object manually just create a copy of the existent one:
 
