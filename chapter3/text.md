@@ -6,8 +6,12 @@ The general syntax is following. First one creates and empty preprocessing objec
 
 | Method    |   Syntax | Description |
 | ----------|----------|-------------|
-| Centering | `add('center', [values])`| Center the data columns, if values are not provided, mean will be used|
-| Scaling | `add('scale', [values])`| Scaling data columns, if values are not provided, values will be scaled using standard deviation of the columns.|
+| Centering | `obj.add('center', [values])`| Center the data columns, if values are not provided, mean will be used|
+| Scaling | `obj.add('scale', [values])`| Scaling data columns, if values are not provided, values will be scaled using standard deviation of the columns.|
+|Normalization|`obj.add('norm', type`)|Normalization of spectra either to a unit area (type is `'area'`) or to a unit length (type is `'length'`)|
+|SNV|`obj.add('snv')`|Standard normal variate transformation|
+|MSC|`obj.add('msc', [mean])`|Multiplicative scatter correction, the optional argument `mean` is a vector with mean spectrum values (will be calculated from the data values if not provided)| 
+|||
 |||
 
 
