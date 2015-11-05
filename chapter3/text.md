@@ -228,7 +228,7 @@ Mean    17.4    27.4     -1.75      7.06  6.62
 ```
 
 
-We can see that the data values for the males were not centered correctly, because when we applied the preprocessing first time, the object calculated mean values for female objects and save them. So when we applied the object to the male data, the saved values were used, which are of course different from the mean values of the male persons in the dataset.
+We can see that the data values for the males were not centered correctly, because when we applied the preprocessing first time, the preprocessing object has calculated mean values for female objects and saved them. So when we applied the object to the male data, the saved values were used, which are of course different from the mean values of the male persons in the dataset.
 
 If you want to "reset" all settings without creating a new preprocessing object manually just create a copy of the existent one:
 
@@ -367,7 +367,7 @@ ylim([-100 500])
 
 ## Smoothing and derivatives
 
-Savitzky-Golay filter is used to smooth signals and calculate derivatives. The filter has three arguments: a width of the filter (width), a polynomial order (porder) and the derivative order (dorder). If the derivative order is zero (default value) then only smoothing will be performed.
+Savitzky-Golay filter is used to smooth signals and calculate derivatives. The filter has three arguments: a derivative order (`d`), a width of the filter (`w`), and a polynomial degree (`p`). If the derivative order is zero (default value) then only smoothing will be performed. Belowe are the examples of using this filter for the *Simdata* spectra with added random noise.
 
 ```matlab
 % add random noise to the spectra
