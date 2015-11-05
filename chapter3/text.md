@@ -169,13 +169,13 @@ See "help prep" for list of available methods.
 
 Some of the methods have one or several parameters, either provided by a user, or calculated automatically when apply a particular method for the first time. After this, the method "remembers" the calculated values and if we apply it again to another data it will use the saved values. Here is an example of this behavior for centering.
 
-First we split people data for males and females:
+First we split people data for males and females and take only first five variables:
 
 ```matlab
 load('people')
 
-m = people(people(:, 'Sex') == -1, :);
-f = people(people(:, 'Sex') ==  1, :);
+m = people(people(:, 'Sex') == -1, 1:5);
+f = people(people(:, 'Sex') ==  1, 1:5);
 ```
 
 Then we create a preprocessing object for centering and apply it to females:
@@ -187,43 +187,70 @@ p.add('center');
 fp = copy(f);
 p.apply(fp);
 
-figure
+show(mean(f))
+show(mean(fp))
+```
+```
+                     Variables
+      Height  Weight  Hairleng  Shoesize   Age
+     ------- ------- --------- --------- -----
+Mean     164    50.8     0.875      36.4  31.1
 
-subplot 121
-scatter(f)
-title('Original data, females')
-grid on
 
-scatter 122
-scatter(fp)
-title('Centered data, females')
-grid on
+
+                     Variables
+      Height  Weight  Hairleng  Shoesize  Age
+     ------- ------- --------- --------- ----
+Mean       0       0         0         0    0
 ```
 
-![Centering of female data.](figx.png)
-
-As one can notice, the data is perfectly centered. However if we use the same preprocessing object for centering the male data we will get the following:
+As one can notice, the data is perfectly centered. However, if we use the same preprocessing object for centering the male data, we will get the following:
 
 ```matlab
 mp = copy(m);
 p.apply(mp);
 
-figure
-
-subplot 121
-scatter(f)
-title('Original data, males')
-grid on
-
-scatter 122
-scatter(fp)
-title('Centered data, males')
-grid on
+show(mean(m))
+show(mean(mp))
 ```
+```
+                     Variables
+      Height  Weight  Hairleng  Shoesize   Age
+     ------- ------- --------- --------- -----
+Mean     182    78.2    -0.875      43.4  37.8
 
-![Centering of male data with the same preprocessing object.](figx.png)
+
+
+                     Variables
+      Height  Weight  Hairleng  Shoesize   Age
+     ------- ------- --------- --------- -----
+Mean    17.4    27.4     -1.75      7.06  6.62```
 
 We can see that the data cloud was not centered correctly, because when we applied the preprocessing first time, the object calculated mean values for female objects and save them. So when we applied the object to the male data, the saved values were used, which are of course different from the mean values of the male persons in the dataset.
+
+If you want to "reset" all settings without creating a new preprocessing object manually just create a copy of the existent one:
+
+```matlab
+p2 = copy(p);
+mp = copy(m);
+p2.apply(mp)
+
+show(mean(m))
+show(mean(mp))
+```
+```
+                     Variables
+      Height  Weight  Hairleng  Shoesize   Age
+     ------- ------- --------- --------- -----
+Mean     182    78.2    -0.875      43.4  37.8
+
+
+
+                     Variables
+      Height  Weight  Hairleng  Shoesize  Age
+     ------- ------- --------- --------- ----
+Mean       0       0         0         0    0
+```
 
 ## Correction of spectral baseline
 
