@@ -371,7 +371,7 @@ Savitzky-Golay filter is used to smooth signals and calculate derivatives. The f
 
 ```matlab
 
-load('simdata)
+load('simdata')
 
 % add random noise to the spectra
 nspectra = spectra + 0.025 * randn(size(spectra))
@@ -391,6 +391,21 @@ dspectra = copy(nspectra);
 p2.apply(dspectra);
 
 % show results
+figure
+
+subplot 221
+plot(spectra)
+title('Original')
+subplot 222
+plot(npectra)
+title('With nose added')
+subplot 223
+plot(sspectra)
+title('After smoothing')
+subplot 224
+plot(dspectra)
+title('Smoothing and 1st derivative')
+
 ```
 
 ![Original and noisy spectra (top) and results of SG preprocessing (bottom).](fig.png)
