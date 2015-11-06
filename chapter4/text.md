@@ -176,6 +176,31 @@ disp(res)
 
 ## Exploring the model 
 
+Any model object in `mdatools` has at least two methods for exploring the model as well as the calibration and validation results. First is `summary` which shows model performance and the second is `plot` which shows a set of plots for a quick overview of the model.
+
+```matlab
+summary(m)
+```
+```
+        Eigenvalues  Expvar  Cumexpvar
+       ------------ ------- ----------
+Comp 1         6.25    52.1       52.1
+Comp 2         2.31    19.2       71.3
+Comp 3         1.84    15.3       86.6
+Comp 4        0.922    7.69       94.3
+Comp 5        0.309    2.57       96.9
+```
+
+The output for summary as well as the plots in the set depends on a model/method.
+
+```matlab
+figure
+plot(m)
+```
+
+
+
+
 ## Exploring the results
 
 ## Validation
