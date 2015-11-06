@@ -294,6 +294,8 @@ figure
 plot(m.calres)
 ```
 
+![Set of plots for PCA results overview.](fig1.png)
+
 
 ## Exploring the models 
 
@@ -320,7 +322,6 @@ figure
 plot(m)
 ```
 
-![Set of plots for PCA model overview.](fig1.png)
 
 User can change number of components for the scores and loadings plots as well as turn off the labels on the plots.
 
