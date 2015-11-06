@@ -268,7 +268,8 @@ disp(mcvt)
 ```
 
 ## Exploring the results
-Any model object in `mdatools` has at least two methods for exploring the model as well as the calibration and validation results. First is `summary` which shows model performance and the second is `plot` which shows a set of plots for a quick overview of the model.
+
+Any result object in `mdatools` has at least two methods for exploring the results. First is `summary`, which shows statistics on how model performs on a particular data set, and the second is `plot` which shows a set of plots for a quick overview of the results.
 
 ## Exploring the models 
 
