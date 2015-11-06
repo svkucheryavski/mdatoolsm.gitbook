@@ -142,6 +142,20 @@ Both model and result objects also have a certain amount of methods, first of al
 
 The result object is also created every time you apply a model to a new data. To do this one shall use a method `predict`. The first argument of the method is always an object with a model. The second argument is dataset with new values. Here is a PCA example (assuming we have already built the model above):
 
+```matlab
+res = m.predict(dtest);
+disp(res)
+```
+```
+  pcares with properties:
+
+        info: []
+      scores: [8x5 mdadata]
+    variance: [5x2 mdadata]
+    modpower: [8x5 mdadata]
+          T2: [8x5 mdadata]
+          Q2: [8x5 mdadata]
+```
 
 ## Exploring the model 
 
