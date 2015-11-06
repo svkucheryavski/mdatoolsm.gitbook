@@ -176,6 +176,32 @@ disp(res)
 
 ## Validation
 
+Any model can be validated in two ways — validation with a test set or/and cross-validation. To validate model with a test set one just need to provide the set using proper parameter.
+
+```matlab
+mt = mdapca(dcal, 5, 'Scale', 'on', 'TestSet', dtest);
+disp(mr)
+```
+```
+  mdapca with properties:
+
+           info: []
+          nComp: 5
+       loadings: [12x5 mdadata]
+    eigenvalues: [5x1 mdadata]
+           prep: [1x1 prep]
+          alpha: 0.0500
+             cv: []
+         calres: [1x1 pcares]
+          cvres: []
+        testres: [1x1 pcares]
+         limits: [2x5 mdadata]
+         method: 'svd'
+```
+
+As one can see now both `calres` and `testres` properties are `pcares` objects, while the `cvres` remains empty. 
+To perform cross-validation we need to specify a cell array with cross-validation settings. The cell array has a following structure: `{'name', nseg, niter}`. Here `name` is a type of cross-validation, which can be `'full'` for full cross-validation, aka "leave-one-out"), `'rand'` is random segmented cross-validation and `'ven'` for systematic cros-validation using "venetian blinds" method. For the last two methods one has to specify a number of segments, `nseg`. For random cross-validation 
+
 ## Exploring the models 
 
 Any model object in `mdatools` has at least two methods for exploring the model as well as the calibration and validation results. First is `summary` which shows model performance and the second is `plot` which shows a set of plots for a quick overview of the model.
@@ -191,6 +217,15 @@ Comp 2         2.31    19.2       71.3
 Comp 3         1.84    15.3       86.6
 Comp 4        0.922    7.69       94.3
 Comp 5        0.309    2.57       96.9
+```
+
+If any validation method was used the `summary` will show the statistics for each type of the available results.
+
+
+```matlab
+summary(mcv)
+```
+```
 ```
 
 The output for summary as well as the plots in the set depends on a model/method. For PCA the set includes scores plot, loadings plot, explained variance plot and the residuals plot. 
