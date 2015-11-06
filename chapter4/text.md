@@ -17,6 +17,22 @@ In *mdatools*, any method for data analysis, such as PCA, PLS regression, SIMCA 
 
 Each *object* includes properties (e.g. loadings for model, scores and explained variance for result) and provides a number of methods for using the object and exploring its properties).
 
+To calibrate a PCA model the following syntax is used:
+```matlab
+m = mdapca(data, ncomp, 'Param1', value1, 'Param2', value2, ...);
+```
+The full list of parameters is given below: 
+
+|Parameter|Description|
+|---------|-----------|
+|`'Center'`|Center or not the data values (`'on'`/`'off'`, by default is on)|
+|`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off)|
+|`'Prep'`|A preprocessing object, if provided will be used to transform the data values before creating the model or before applying the model to a new dataset|
+|`'Alpha'`||
+|`'Info'`||
+|`''`||
+|`''`||
+
 Let us see how this works using a simple example — Principal Component Analysis of *People* data. We will first load the dataset and split it into two subsets as following:
 
 ```matlab
@@ -24,6 +40,44 @@ load(people);
 
 dcal = people(1:2:end, :);
 dtest = people(2:2:end, :);
+```
+So `dcal` is our calibration subset, which we are going to use for creating a PCA model and `dtest` is a subset we will apply the created model to. Now let's build the model and show an information about the model object:
+
+```matlab
+m = mdapca(dcal, 7, 'Scale', 'on')
+
+disp(m)
+```
+```
+  mdapca with properties:
+
+           info: []
+          nComp: 7
+       loadings: [12x7 mdadata]
+    eigenvalues: [7x1 mdadata]
+           prep: [1x1 prep]
+          alpha: 0.0500
+             cv: []
+         calres: [1x1 pcares]
+          cvres: []
+        testres: []
+         limits: [2x7 mdadata]
+         method: 'svd'
+```
+As one can see, the variable `m` is an object of `mdapca` class with many properties. The short explanation for each is given below:
+
+|Property|Description|
+|----|------------------------------------|
+|`info`|A short information about the object (text)|
+|`nComp`|Number of components in the model|
+|`loadings`|A dataset with calculated loadings|
+|`prep`|Preprocessing used to transform the data before model calibration|
+|`alpha`|A significance level for calculation of statistical limits for residuals|
+|``||
+|``||
+|``||
+|``||
+|``||
 
 ## Plots
 
