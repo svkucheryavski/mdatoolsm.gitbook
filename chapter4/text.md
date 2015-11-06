@@ -322,7 +322,15 @@ plotscores(m.calres, 2, 'Type', 'bar')
 In this case, second argument for the plotting method should always be the componets to show the scores for. One can also change corresponding plot parameters easily.
 
 ```matlab
-
+figure
+subplot 221
+plotscores(m.calres, [1 2], 'Labels', 'names', 'Marker', 's', 'Color', 'r')
+subplot 222
+plotresiduals(m.calres, 2, 'Marker', '^', 'MarkerSize', 10)
+subplot 223
+plotexpvar(m.calres, 'Type', 'bar', 'FaceColor', 'g')
+subplot 224
+plotcumexpvar(m.calres, 'Type', 'line', 'Marker', 'o', 'MarkerSize', 10)
 ```
 
 ![Change parameters for PCA plots.](fig3.png)
