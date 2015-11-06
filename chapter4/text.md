@@ -159,7 +159,20 @@ disp(res)
 
 The parameter `info` both for model and for result objects can be changed manually after the object is created:
 
+```matlab
+res.info = 'New predictions';
+disp(res)
+```
+```
+  pcares with properties:
 
+        info: 'New predictions'
+      scores: [8x5 mdadata]
+    variance: [5x2 mdadata]
+    modpower: [8x5 mdadata]
+          T2: [8x5 mdadata]
+          Q2: [8x5 mdadata]
+```          
 
 ## Exploring the model 
 
