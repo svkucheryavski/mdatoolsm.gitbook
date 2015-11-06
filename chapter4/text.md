@@ -371,10 +371,11 @@ figure
 plot(mt)
 ```
 
+First of all, it must be noted, that most of the plots for a model object are group plots. It is assumed that model may have more, than one type of results (e.g. calibration and cross-validation). Therefore, the model plots use colors and legend to differentiate the results visually. 
 
-Now let us look at each plot closer. First of all, it must be noted, that most of the plots for a model object are group plots. It is assumed that model may have more, than one type of results (e.g. calibration and cross-validation). Therefore, the model plots use colors and legend to differentiate the results visually. 
+Some of the plots (exactly the ones, which either depend on number of components or on the number of results, but not on both) can be shown using different ways, e.g. as a scatter, a line, or a bar plot similar to how it works for the result object. 
 
-Some of the plots (exactly the ones, which either depend on number of components or on the number of results, but not on both) can be shown using different ways, e.g. as a scatter, a line, or a bar plot. To switch between them there is a parameter `Type`, which can in general have the following values: `'scatter'`, `'densscatter'`, `'line'`, `'bar'`. Here is an example for the loadings plot:
+Let us start with the loadings plot, since it does not depends on number of avaliable results tuning the plot as easy as any other group plot:
 
 ```matlab
 figure
@@ -390,7 +391,7 @@ plotloadings(m, 1:3, 'Type', 'bar', 'FaceColor', 'rgb')
 
 ![Loadings plot with different parameters.](fig3.png)
 
-The loadings do not depend whether use usedvalidation or not and changing parameters for the loaings plot is as easy as for a usual group plots. The explained variance 
+The explained variance plot for the model 
 
 
 
