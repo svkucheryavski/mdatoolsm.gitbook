@@ -201,7 +201,50 @@ disp(mr)
 
 As one can see now both `calres` and `testres` properties are `pcares` objects, while the `cvres` remains empty. 
 
-To perform cross-validation user needs to specify a cell array with cross-validation settings. The cell array has a following structure: `{'name', nseg, niter}`. Here `name` is a type of cross-validation, which can be `'full'` for full cross-validation, aka "leave-one-out"), `'rand'` is random segmented cross-validation and `'ven'` for systematic cros-validation using "venetian blinds" method. For the last two methods one has also to specify a number of segments, `nseg`. For random cross-validation 
+To perform cross-validation user needs to specify a cell array with cross-validation settings. The cell array has a following structure: `{'name', nseg, niter}`. Here `name` is a type of cross-validation, which can be `'full'` for full cross-validation, aka "leave-one-out"), `'rand'` is random segmented cross-validation and `'ven'` for systematic cros-validation using "venetian blinds" method. For the last two methods one has also to specify a number of segments, `nseg`. 
+
+For random cross-validation it is also possible to define a number of iterations (repetitions), `niter`. In this case the cross-validation will be performed `niter` times and the results will be averaged.
+
+```matlab
+% random cross-validation with 10 splits
+mcv = mdapca(dcal, 7, 'Scale', 'on', 'CV', {'rand', 10});
+disp(mcv)
+```
+```
+  mdapca with properties:
+
+           info: []
+          nComp: 7
+       loadings: [12x7 mdadata]
+    eigenvalues: [7x1 mdadata]
+           prep: [1x1 prep]
+          alpha: 0.0500
+             cv: {'rand'  [10]}
+         calres: [1x1 pcares]
+          cvres: [1x1 pcares]
+        testres: []
+         limits: [2x7 mdadata]
+         method: 'svd'
+```
+```matlab
+show(mcv.cvres.variance)
+```
+```
+Variance:
+
+            Variance
+        Expvar  Cumexpvar
+       ------- ----------
+Comp 1    41.6       41.6
+Comp 2    18.6       60.2
+Comp 3    17.5       77.6
+Comp 4    12.4         90
+Comp 5    3.88       93.9
+Comp 6   0.308       94.2
+Comp 7    1.94       96.1
+```
+
+The cross-validated results have only one difference from the calibration and test set results — the object do not have scores values.  
 
 ## Exploring the models 
 
