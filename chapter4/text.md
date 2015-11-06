@@ -84,9 +84,9 @@ As one can see, the variable `m` is an object of `mdapca` class with many proper
 |`cvres`|An object with PCA results for cross-validation (if used).|
 |`testres`|An object with PCA results for test set (if provided).|
 
-## Plots
+## Exploring the object
 
-## Tuning the method
+## Exploring the results
 
 ## Validation
 
