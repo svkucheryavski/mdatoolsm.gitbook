@@ -137,7 +137,7 @@ Comp 5    2.57       96.9
 ```
 
 
-## Exploring the object
+## Exploring the objects
 
 ## Exploring the results
 
