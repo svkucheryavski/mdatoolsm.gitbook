@@ -144,7 +144,6 @@ The result object is also created every time you apply a model to a new data. To
 
 ```matlab
 res = m.predict(dtest);
-res.info = "Predictons for a new set";
 disp(res)
 ```
 ```
