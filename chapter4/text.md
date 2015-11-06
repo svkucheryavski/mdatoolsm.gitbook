@@ -174,7 +174,9 @@ disp(res)
           Q2: [8x5 mdadata]
 ```          
 
-## Exploring the model 
+## Validation
+
+## Exploring the models 
 
 Any model object in `mdatools` has at least two methods for exploring the model as well as the calibration and validation results. First is `summary` which shows model performance and the second is `plot` which shows a set of plots for a quick overview of the model.
 
@@ -228,10 +230,8 @@ plotloadings(m, 1:3, 'Type', 'bar', 'FaceColor', 'rgb')
 ![Loadings plot with different parameters.](fig3.png)
 
 
-
 ## Exploring the results
 
-## Validation
 
 ## Making preprocessing part of a model
 
