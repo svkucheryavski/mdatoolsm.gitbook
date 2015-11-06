@@ -244,7 +244,9 @@ Comp 6   0.308       94.2
 Comp 7    1.94       96.1
 ```
 
-The cross-validated results have only one difference from the calibration and test set results — the object do not have scores values.  
+The cross-validated results have only one difference from the calibration and test set results — the object do not have scores values. Cross-validation and validation with a test set can be combined:
+
+
 
 ## Exploring the models 
 
