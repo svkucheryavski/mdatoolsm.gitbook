@@ -284,13 +284,21 @@ Comp 4        0.922    7.69       94.3
 Comp 5        0.309    2.57       96.9
 ```
 
-If any validation method was used the `summary` will show the statistics for each type of the available results.
+If any validation method was used, the `summary` will show the statistics for each type of the available results.
 
 
 ```matlab
-summary(mcv)
+summary(mt)
 ```
 ```
+
+        Eigenvalues  Expvar  Cumexpvar  Expvar (Test)  Cumexpvar (Test)
+       ------------ ------- ---------- -------------- -----------------
+Comp 1         6.25    52.1       52.1           60.6              60.6
+Comp 2         2.31    19.2       71.3           11.2              71.8
+Comp 3         1.84    15.3       86.6           10.3              82.1
+Comp 4        0.922    7.69       94.3           10.4              92.5
+Comp 5        0.309    2.57       96.9           2.55              95.1
 ```
 
 The output for summary as well as the plots in the set depends on a model/method. For PCA the set includes scores plot, loadings plot, explained variance plot and the residuals plot. 
