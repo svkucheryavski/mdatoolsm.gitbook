@@ -291,7 +291,6 @@ If any validation method was used, the `summary` will show the statistics for ea
 summary(mt)
 ```
 ```
-
         Eigenvalues  Expvar  Cumexpvar  Expvar (Test)  Cumexpvar (Test)
        ------------ ------- ---------- -------------- -----------------
 Comp 1         6.25    52.1       52.1           60.6              60.6
@@ -321,7 +320,7 @@ plot(m, [1 3], 'Labels', 'off')
 
 Now let us look at each plot closer. First of all, it must be noted, that most of the plots for a model object are group plots. It is assumed that model may have more, than one type of results (e.g. calibration and cross-validation). Therefore, the model plots use colors and legend to differentiate the results visually. 
 
-Besides that, most of the plots can be shown using different ways, e.g. as a scatter, a line, or a bar plot. To switch between them there is a parameter `Type`, which can in general have the following values: `'scatter'`, `'densscatter'`, `'line'`, `'bar'`. Here is an example for the loadings plot:
+Some of the plots (exactly the ones, which either depend on number of components or on the number of results, but not on both) can be shown using different ways, e.g. as a scatter, a line, or a bar plot. To switch between them there is a parameter `Type`, which can in general have the following values: `'scatter'`, `'densscatter'`, `'line'`, `'bar'`. Here is an example for the loadings plot:
 
 ```matlab
 figure
