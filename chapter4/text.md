@@ -267,24 +267,12 @@ disp(mcvt)
          method: 'svd'
 ```
 
-## Exploring the models 
-
+## Exploring the results
 Any model object in `mdatools` has at least two methods for exploring the model as well as the calibration and validation results. First is `summary` which shows model performance and the second is `plot` which shows a set of plots for a quick overview of the model.
 
-```matlab
-summary(m)
-```
-```
-        Eigenvalues  Expvar  Cumexpvar
-       ------------ ------- ----------
-Comp 1         6.25    52.1       52.1
-Comp 2         2.31    19.2       71.3
-Comp 3         1.84    15.3       86.6
-Comp 4        0.922    7.69       94.3
-Comp 5        0.309    2.57       96.9
-```
+## Exploring the models 
 
-If any validation method was used, the `summary` will show the statistics for each type of the available results.
+The model objects have the same plots and the `summary` functions as the result objects, however they work in a slightly different way. Thus `summary` will show the statistics for each type of the available results (e.g. for calibration and validation).
 
 
 ```matlab
@@ -338,7 +326,6 @@ plotloadings(m, 1:3, 'Type', 'bar', 'FaceColor', 'rgb')
 
 The loadings do not depend whether use usedvalidation or not and changing parameters for the loaings plot is as easy as for a usual group plots. The explained variance 
 
-## Exploring the results
 
 
 ## Making preprocessing part of a model
