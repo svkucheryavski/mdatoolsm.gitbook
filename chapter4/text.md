@@ -296,6 +296,7 @@ plot(m.calres)
 
 ![Set of plots for PCA results overview.](fig1.png)
 
+The output for summary as well as the plots in the set depend on a method. For PCA the set includes scores plot, residuals plot, and plots with explained individual and cumulative variances. 
 
 ## Exploring the models 
 
@@ -315,7 +316,7 @@ Comp 4        0.922    7.69       94.3           10.4              92.5
 Comp 5        0.309    2.57       96.9           2.55              95.1
 ```
 
-The output for summary as well as the plots in the set depends on a model/method. For PCA the set includes scores plot, loadings plot, explained variance plot and the residuals plot. 
+
 
 ```matlab
 figure
