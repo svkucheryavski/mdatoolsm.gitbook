@@ -207,7 +207,7 @@ figure
 plot(m, [1 3], 'Labels', 'off')
 ```
 
-![Set of plots for PCA model overview.](fig1.png)
+![Change settings for the PCA default plots.](fig1.png)
 
 
 ## Exploring the results
