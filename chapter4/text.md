@@ -23,7 +23,7 @@ To calibrate a PCA model the following code should be used:
 m = mdapca(data, nComp, 'Param1', value1, 'Param2', value2, ...);
 ```
 
-The full list of parameters and their description is given below: 
+The first parameter `data` is mandatory, the others are optional and have default values. The full list of parameters and their description is given below: 
 
 |Parameter|Description|
 |---------|-----------|
@@ -39,10 +39,13 @@ The full list of parameters and their description is given below:
 Let us see how this works using a simple example — Principal Component Analysis of *People* data. We will first load the dataset and split it into two subsets as following:
 
 ```matlab
-load(people);
+load('people');
 
-dcal = people(1:2:end, :);
-dtest = people(2:2:end, :);
+testRows = 1:4:32;
+
+dcal = copy(people);
+dcal.removecols(testRows);
+dtest = people(testRows, :);
 ```
 So `dcal` is our calibration subset, which we are going to use for creating a PCA model and `dtest` is a subset we will apply the created model to. Now let's build the model and show an information about the model object:
 
