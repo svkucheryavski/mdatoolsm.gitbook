@@ -18,9 +18,11 @@ In *mdatools*, any method for data analysis, such as PCA, PLS regression, SIMCA 
 Each *object* includes properties (e.g. loadings for model, scores and explained variance for result) and provides a number of methods for using the object and exploring its properties).
 
 To calibrate a PCA model the following code should be used:
+
 ```matlab
 m = mdapca(data, ncomp, 'Param1', value1, 'Param2', value2, ...);
 ```
+
 The full list of parameters and their description is given below: 
 
 |Parameter|Description|
