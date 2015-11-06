@@ -200,6 +200,14 @@ plot(m)
 
 ![Set of plots for PCA model overview.](fig1.png)
 
+User can change number of components for the scores and loadings plots as well as turn off the labels on the plots.
+
+```matlab
+
+```
+
+![Set of plots for PCA model overview.](fig1.png)
+
 
 ## Exploring the results
 
