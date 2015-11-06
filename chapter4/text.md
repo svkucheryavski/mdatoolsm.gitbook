@@ -305,6 +305,10 @@ figure
 plot(m.calres, [1 3], 'Labels', 'off')
 ```
 
+![Change settings for the PCA default plots.](fig2.png)
+
+
+
 ## Exploring the models 
 
 The model objects have the same plots and the `summary` functions as the result objects, however they work in a slightly different way. Thus `summary` will show the statistics for each type of the available results (e.g. for calibration and validation).
