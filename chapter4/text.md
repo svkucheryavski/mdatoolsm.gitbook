@@ -246,7 +246,10 @@ Comp 7    1.94       96.1
 
 The cross-validated results have only one difference from the calibration and test set results — the object do not have scores values. Cross-validation and validation with a test set can be combined:
 
-
+```matlab
+mcvt = mdapca(dcal, 7, 'Scale', 'on', 'CV', {'rand', 10}, 'TestSet', dtest);
+disp(mcvt)
+```
 
 ## Exploring the models 
 
