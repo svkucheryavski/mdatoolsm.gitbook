@@ -27,15 +27,14 @@ The full list of parameters and their description is given below:
 
 |Parameter|Description|
 |---------|-----------|
-|`data`|A dataset (object of `mdadata`class)|
-|`nComp`|Number of components (if nor provided, will be calculated automatically)|
-|`'Center'`|Center or not the data values (`'on'`/`'off'`, by default is on)|
-|`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off)|
-|`'Prep'`|A preprocessing object, if provided will be used to transform the data values before creating the model or before applying the model to a new dataset|
-|`'Alpha'`||
-|`'Info'`||
-|`''`||
-|`''`||
+|`data`|A dataset (object of `mdadata`class).|
+|`nComp`|Number of components (if nor provided, will be calculated automatically).|
+|`'Center'`|Center or not the data values (`'on'`/`'off'`, by default is on).|
+|`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off).|
+|`'Prep'`|A preprocessing object, if provided will be used to transform the data values before creating the model or before applying the model to a new dataset.|
+|`'Alpha'`|A significance level used for calculation of statistical limits for residuals plot.|
+|`'CV'`|A cross-validation object (will be explained later in this chapter).|
+|`'TestSet'`|A dataset (object of `mdadata` class) for test set validation.|
 
 Let us see how this works using a simple example — Principal Component Analysis of *People* data. We will first load the dataset and split it into two subsets as following:
 
