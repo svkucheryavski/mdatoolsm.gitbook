@@ -336,6 +336,7 @@ plotloadings(m, 1:3, 'Type', 'bar', 'FaceColor', 'rgb')
 
 ![Loadings plot with different parameters.](fig3.png)
 
+The loadings do not depend whether use usedvalidation or not and changing parameters for the loaings plot is as easy as for a usual group plots. The explained variance 
 
 ## Exploring the results
 
