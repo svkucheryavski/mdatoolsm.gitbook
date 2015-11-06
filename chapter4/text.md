@@ -105,7 +105,17 @@ Shoesize   -0.378  -0.172  -0.0358   -0.024   0.187
 One can also notice that the model object has one particular property, `calres`,  which is in fact an object with PCA results obtained when the model was applied to the calibration set. If we look at the object description we will get the following:
 
 ```matlab
+disp(m.calres)
+```
+```
+  pcares with properties:
 
+        info: 'Results for calibration set'
+      scores: [24x5 mdadata]
+    variance: [5x2 mdadata]
+    modpower: [24x5 mdadata]
+          T2: [24x5 mdadata]
+          Q2: [24x5 mdadata]
 ```
 
 ## Exploring the object
