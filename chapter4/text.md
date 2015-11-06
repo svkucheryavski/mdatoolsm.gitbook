@@ -47,7 +47,7 @@ dcal = copy(people);
 dcal.removecols(testRows);
 dtest = people(testRows, :);
 ```
-So `dcal` is our calibration subset (24 rows), which we are going to use for creating a PCA model and `dtest` is a subset (8 rows) we will apply the created model to. Now let's build the model and show an information about the model object:
+So `dcal` is our calibration subset (24 rows), which we are going to use for creating a PCA model and `dtest` is a subset (8 rows) we will apply the created model to. Now let us build the model and show an information about the model object:
 
 ```matlab
 m = mdapca(dcal, 7, 'Scale', 'on')
