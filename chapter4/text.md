@@ -348,7 +348,7 @@ plotcumexpvar(m.calres, 'Type', 'line', 'Marker', 'o', 'MarkerSize', 10)
 
 ## Exploring the models 
 
-The model objects have the same plots and the `summary` functions as the result objects, however they work in a slightly different way. Thus `summary` will show the statistics for each type of the available results (e.g. for calibration and validation).
+The model objects have the same plots and the `summary` function as the result objects, however they work in a slightly different way. Thus `summary` will show the statistics for each type of the available results (e.g. for calibration and validation).
 
 
 ```matlab
@@ -364,11 +364,11 @@ Comp 4        0.922    7.69       94.3           10.4              92.5
 Comp 5        0.309    2.57       96.9           2.55              95.1
 ```
 
-
+And the plots show the items for each type of the results available in the object.
 
 ```matlab
 figure
-plot(m)
+plot(mt)
 ```
 
 
