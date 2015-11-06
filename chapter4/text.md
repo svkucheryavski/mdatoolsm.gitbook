@@ -310,7 +310,19 @@ plot(m.calres, [1 3], 'Labels', 'off')
 Now let us look at each plot closer. Most of the plots can be shown using different ways, e.g. as a scatter, a line, or a bar plot. To switch between them there is a parameter `Type`, which can in general have the following values: `'scatter'`, `'densscatter'`, `'line'`, `'bar'`. Here is an example for the scatter plot:
 
 ```matlab
+figure
+subplot 211
+plotscores(m.calres, 1:3, 'Type', 'line')
+subplot 212
+plotscores(m.calres, 2, 'Type', 'bar')
 ```
+
+![Change type of plots.](fig3.png)
+
+In this case, second argument for the plotting method should always be the componets to show the scores for. One can also change corresponding plot parameters easily.
+
+
+
 
 ## Exploring the models 
 
