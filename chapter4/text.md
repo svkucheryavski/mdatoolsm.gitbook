@@ -191,14 +191,14 @@ Comp 4        0.922    7.69       94.3
 Comp 5        0.309    2.57       96.9
 ```
 
-The output for summary as well as the plots in the set depends on a model/method.
+The output for summary as well as the plots in the set depends on a model/method. For PCA the set includes scores plot, loadings plot, explained variance plot and the residuals plot. 
 
 ```matlab
 figure
 plot(m)
 ```
 
-
+![Set of plots for PCA model overview.](fig1.png)
 
 
 ## Exploring the results
