@@ -136,12 +136,16 @@ Comp 4    7.69       94.3
 Comp 5    2.57       96.9
 ```
 
+Both model and result objects also have a certain amount of methods, first of all for visualizing various values (e.g. scores plot, loadings plot, etc.). 
 
-## Exploring the objects
+## Applying a model to a new dataset
+
+
+## Exploring the model 
 
 ## Exploring the results
 
-## Cross-validation
+## Validation
 
 ## Making preprocessing part of a model
 
