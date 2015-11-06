@@ -13,7 +13,9 @@ It was decided to put several methods, including ICA (and in future PP) under th
 
 ## Model and result objects
 
+In mdatools, any method for data analysis, such as PCA, PLS regression, SIMCA classification and so on, can create two types of objects — a *model* and a *result*. Every time you build a model you get a *model* object. Every time you apply the model to a dataset you get a *result* object. Thus for PCA, the objects have classes `mdapca` and `pcares` correspondingly.
 
+Each object includes a list with variables (e.g. loadings for model, scores and explained variance for result) and provides a number of methods for investigation.
 ## Plots
 
 ## Tuning the method
