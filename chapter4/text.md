@@ -271,6 +271,30 @@ disp(mcvt)
 
 Any result object in `mdatools` has at least two methods for exploring the results. First is `summary`, which shows statistics on how model performs on a particular data set, and the second is `plot` which shows a set of plots for a quick overview of the results.
 
+```matlab
+summary(m.calres)
+```
+```
+Results for calibration set
+
+Variance:
+
+            Variance
+        Expvar  Cumexpvar
+       ------- ----------
+Comp 1    52.1       52.1
+Comp 2    19.2       71.3
+Comp 3    15.3       86.6
+Comp 4    7.69       94.3
+Comp 5    2.57       96.9
+```
+
+```matlab
+figure
+plot(m.calres)
+```
+
+
 ## Exploring the models 
 
 The model objects have the same plots and the `summary` functions as the result objects, however they work in a slightly different way. Thus `summary` will show the statistics for each type of the available results (e.g. for calibration and validation).
