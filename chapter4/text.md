@@ -250,6 +250,22 @@ The cross-validated results have only one difference from the calibration and te
 mcvt = mdapca(dcal, 7, 'Scale', 'on', 'CV', {'rand', 10}, 'TestSet', dtest);
 disp(mcvt)
 ```
+```
+  mdapca with properties:
+
+           info: []
+          nComp: 7
+       loadings: [12x7 mdadata]
+    eigenvalues: [7x1 mdadata]
+           prep: [1x1 prep]
+          alpha: 0.0500
+             cv: {'rand'  [10]}
+         calres: [1x1 pcares]
+          cvres: [1x1 pcares]
+        testres: [1x1 pcares]
+         limits: [2x7 mdadata]
+         method: 'svd'
+```
 
 ## Exploring the models 
 
