@@ -124,8 +124,18 @@ The properties of the objects are datasets with scores, explained variance (indi
 show(m.calres.variance)
 ```
 ```
+Variance:
 
+            Variance
+        Expvar  Cumexpvar
+       ------- ----------
+Comp 1    52.1       52.1
+Comp 2    19.2       71.3
+Comp 3    15.3       86.6
+Comp 4    7.69       94.3
+Comp 5    2.57       96.9
 ```
+
 
 ## Exploring the object
 
