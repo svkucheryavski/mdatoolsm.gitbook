@@ -209,6 +209,8 @@ plot(m, [1 3], 'Labels', 'off')
 
 ![Change settings for the PCA default plots.](fig1.png)
 
+Now let us look at each plot closer. First of all, it must be noted, that every plot for a model object is a group plot. It is assumed that model may have more, than one type of results (e.g. calibration and cross-validation). Therefore the model plots use colors to differentiate the results visually.
+
 
 ## Exploring the results
 
