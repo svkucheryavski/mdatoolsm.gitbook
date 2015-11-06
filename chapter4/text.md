@@ -207,7 +207,7 @@ figure
 plot(m, [1 3], 'Labels', 'off')
 ```
 
-![Change settings for the PCA default plots.](fig1.png)
+![Change settings for the PCA default plots.](fig2.png)
 
 Now let us look at each plot closer. First of all, it must be noted, that most of the plots for a model object are group plots. It is assumed that model may have more, than one type of results (e.g. calibration and cross-validation). Therefore, the model plots use colors and legend to differentiate the results visually. 
 
@@ -225,7 +225,7 @@ subplot (3, 2, 5:6)
 plotloadings(m, 1:3, 'Type', 'bar', 'FaceColor', 'rgb')
 ```
 
-![Loadings plot with different parameters.](fig1.png)
+![Loadings plot with different parameters.](fig3.png)
 
 
 
