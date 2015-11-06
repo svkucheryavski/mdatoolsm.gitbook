@@ -115,9 +115,17 @@ disp(m.calres)
     variance: [5x2 mdadata]
     modpower: [24x5 mdadata]
           T2: [24x5 mdadata]
-          Q2: [24x5 mdadata]
+           Q: [24x5 mdadata]
 ```
 
+The properties of the objects are datasets with scores, explained variance (individual and cumulative), modeling power, T2 and Q residuals. Here are the values for variance:
+
+```matlab
+show(m.calres.variance)
+```
+```
+
+```
 
 ## Exploring the object
 
