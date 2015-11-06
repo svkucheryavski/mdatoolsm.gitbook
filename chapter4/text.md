@@ -21,7 +21,7 @@ To calibrate a PCA model the following syntax is used:
 ```matlab
 m = mdapca(data, ncomp, 'Param1', value1, 'Param2', value2, ...);
 ```
-The full list of parameters is given below: 
+The full list of parameters and their description is given below: 
 
 |Parameter|Description|
 |---------|-----------|
