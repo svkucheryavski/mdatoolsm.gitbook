@@ -157,6 +157,10 @@ disp(res)
           Q2: [8x5 mdadata]
 ```
 
+The parameter `info` both for model and for result objects can be changed manually after the object is created:
+
+
+
 ## Exploring the model 
 
 ## Exploring the results
