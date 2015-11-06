@@ -307,7 +307,17 @@ plot(m.calres, [1 3], 'Labels', 'off')
 
 ![Change settings for the PCA default plots.](fig2.png)
 
-Now let us look at each plot closer. Most of the plots can be shown using different ways, e.g. as a scatter, a line, or a bar plot. To switch between them there is a parameter `Type`, which can in general have the following values: `'scatter'`, `'densscatter'`, `'line'`, `'bar'`. Here is an example for the scatter plot:
+Now let us look at the plots closer. The list of the plots and corresponding methods for PCA result object is shown below.
+
+|Method|Plot|
+|------|----|
+|`plotscores(m, comp, ...)`|Scores plot|
+|`plotresiduals(m, ncomp, ...)`|Residuals plot (Q vs T2)|
+|`plotexpvar(m, ...)`|Explained variance plot (individual)|
+|`plotcumexpvar(m, ...)`|Cumulative explained variance plot|
+
+
+Most of the plots can be shown using different ways, e.g. as a scatter, a line, or a bar plot. To switch between them there is a parameter `Type`, which can in general have the following values: `'scatter'`, `'densscatter'`, `'line'`, `'bar'`. Here is an example for the scatter plot:
 
 ```matlab
 figure
