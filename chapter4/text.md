@@ -64,15 +64,12 @@ disp(m)
          limits: [2x7 mdadata]
          method: 'svd'
 ```
-As one can see, the variable `m` is an object of `mdapca` class with many properties. The short explanation for each is given below:
+
+As one can see, the variable `m` is an object of `mdapca` class with many properties. Some of the properties, including `nComp`, `alpha`, `info` and `method` contain the values provided by a user or the default values. The other parameters are listed in the table below:
 
 |Property|Description|
 |----|------------------------------------|
-|`info`|A short information about the object (text)|
-|`nComp`|Number of components in the model|
 |`loadings`|A dataset with calculated loadings|
-|`prep`|Preprocessing used to transform the data before model calibration|
-|`alpha`|A significance level for calculation of statistical limits for residuals|
 |``||
 |``||
 |``||
