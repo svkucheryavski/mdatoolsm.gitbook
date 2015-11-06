@@ -298,6 +298,13 @@ plot(m.calres)
 
 The output for summary as well as the plots in the set depend on a method. For PCA the set includes scores plot, residuals plot, and plots with explained individual and cumulative variances. 
 
+User can change number of components for the scores and loadings plots as well as turn off the labels on the plots.
+
+```matlab
+figure
+plot(m.calres, [1 3], 'Labels', 'off')
+```
+
 ## Exploring the models 
 
 The model objects have the same plots and the `summary` functions as the result objects, however they work in a slightly different way. Thus `summary` will show the statistics for each type of the available results (e.g. for calibration and validation).
@@ -323,12 +330,6 @@ figure
 plot(m)
 ```
 
-
-User can change number of components for the scores and loadings plots as well as turn off the labels on the plots.
-
-```matlab
-figure
-plot(m, [1 3], 'Labels', 'off')
 ```
 
 ![Change settings for the PCA default plots.](fig2.png)
