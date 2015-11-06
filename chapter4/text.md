@@ -203,7 +203,8 @@ plot(m)
 User can change number of components for the scores and loadings plots as well as turn off the labels on the plots.
 
 ```matlab
-
+figure
+plot(m, [1 3], 'Labels', 'off')
 ```
 
 ![Set of plots for PCA model overview.](fig1.png)
