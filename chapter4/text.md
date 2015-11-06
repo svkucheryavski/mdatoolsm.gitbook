@@ -88,7 +88,7 @@ As one can see, the variable `m` is an object of `mdapca` class with many proper
 
 ## Exploring the results
 
-## Validation
+## Cross-validation
 
 ## Making preprocessing part of a model
 
