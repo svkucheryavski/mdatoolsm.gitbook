@@ -209,7 +209,9 @@ plot(m, [1 3], 'Labels', 'off')
 
 ![Change settings for the PCA default plots.](fig1.png)
 
-Now let us look at each plot closer. First of all, it must be noted, that every plot for a model object is a group plot. It is assumed that model may have more, than one type of results (e.g. calibration and cross-validation). Therefore the model plots use colors to differentiate the results visually.
+Now let us look at each plot closer. First of all, it must be noted, that every plot for a model object is a group plot. It is assumed that model may have more, than one type of results (e.g. calibration and cross-validation). Therefore, the model plots use colors and legend to differentiate the results visually. Besides that, most of the plots can be shown using different ways, e.g. as a scatter, a line, or a bar plot. To switch between them there is a parameter `Type`, which can in general have the following values: `'scatter'`, `'densscatter'`, `'line'`, `'bar'`. Here is an example for the scores plot:
+
+
 
 
 ## Exploring the results
