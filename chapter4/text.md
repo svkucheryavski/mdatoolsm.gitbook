@@ -321,6 +321,9 @@ plotscores(m.calres, 2, 'Type', 'bar')
 
 In this case, second argument for the plotting method should always be the componets to show the scores for. One can also change corresponding plot parameters easily.
 
+```matlab
+
+```
 
 ![Change parameters for PCA plots.](fig3.png)
 
