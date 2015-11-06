@@ -90,9 +90,23 @@ As you can see there are no scores, explained variance values, residuals and so 
 show(m.loadings(1:5, :))
 ```
 ```
+Loadings:
+
+                         Components
+           Comp 1  Comp 2   Comp 3   Comp 4  Comp 5
+         -------- ------- -------- -------- -------
+  Height   -0.377  -0.179   0.0442  -0.0309   0.135
+  Weight   -0.387  -0.106   0.0239   0.0524   0.204
+Hairleng     0.34   0.118  -0.0643  -0.0208   0.851
+Shoesize   -0.378  -0.172  -0.0358   -0.024   0.187
+     Age  -0.0836  0.0693   -0.695    0.198   0.032
 ```
 
+One can also notice that the model object has one particular property, `calres`,  which is in fact an object with PCA results obtained when the model was applied to the calibration set. If we look at the object description we will get the following:
 
+```matlab
+
+```
 
 ## Exploring the object
 
