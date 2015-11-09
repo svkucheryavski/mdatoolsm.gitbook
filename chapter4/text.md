@@ -343,7 +343,7 @@ subplot 224
 plotcumexpvar(m.calres, 'Type', 'line', 'Marker', 'o', 'MarkerSize', 10)
 ```
 
-![Change parameters for PCA plots.](fig3.png)
+![Change parameters for PCA plots.](fig4.png)
 
 
 ## Exploring the models 
@@ -371,9 +371,11 @@ figure
 plot(mt)
 ```
 
-First of all, it must be noted, that most of the plots for a model object are group plots. It is assumed that model may have more, than one type of results (e.g. calibration and cross-validation). Therefore, the model plots use colors and legend to differentiate the results visually. 
+![Plot overview for PCA model with calibration and test results.](fig5.png)
 
-Some of the plots (exactly the ones, which either depend on number of components or on the number of results, but not on both) can be shown using different ways, e.g. as a scatter, a line, or a bar plot similar to how it works for the result object. 
+First of all, it must be noted, that most of the plots for a model object are group plots. It is assumed that model may have more than one type of results (e.g. calibration and cross-validation). Therefore, the model plots use colors and legend to differentiate the results visually, which reduces a possibility for tuning the model plots. 
+
+Some of the plots (the ones, which either depend on number of components or on the number of results, but not on both), though, can be shown using different ways, e.g. as a scatter, a line, or a bar plot similar to how it works for the result object. 
 
 Let us start with the loadings plot, since it does not depends on number of avaliable results tuning the plot as easy as any other group plot:
 
