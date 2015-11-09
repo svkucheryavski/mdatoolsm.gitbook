@@ -391,7 +391,7 @@ subplot (3, 2, 5:6)
 plotloadings(m, 1:3, 'Type', 'bar', 'FaceColor', 'rgb')
 ```
 
-![Loadings plot with different parameters.](fig3.png)
+![Loadings plot with different parameters.](fig6.png)
 
 The explained variance plot for the model 
 
