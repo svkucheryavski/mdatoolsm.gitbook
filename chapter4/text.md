@@ -407,7 +407,19 @@ subplot 224
 plotcumexpvar(mt, 'Type', 'bar', 'FaceColor', 'rg', 'Labels', 'values')
 ```
 
+The scores and residuals plots depends on both number of results (e.g. objects from calibration and test set have scores and residuals and must be shown on the plots using different colors) as well as on number of components (each plot shows the values for a selected components or number of components in the model). 
 
+```matlab
+figure
+subplot 221
+plotscores(mt)
+subplot 222
+plotscores(mt, 'Marker', {'s', 'd', 'x'}, 'Color', 'rgb')
+subplot 223
+plotresiduals(mt)
+subplot 224
+plotresiduals(mt, 'Marker', {'s', 'd', 'x'}, 'Color', 'rgb')
+```
 
 
 ## Making preprocessing part of a model
