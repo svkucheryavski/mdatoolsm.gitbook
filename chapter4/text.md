@@ -405,6 +405,8 @@ subplot 223
 plotcumexpvar(mt)
 subplot 224
 plotcumexpvar(mt, 'Type', 'bar', 'FaceColor', 'rg', 'Labels', 'values')
+```
+
 
 
 
