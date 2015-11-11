@@ -348,7 +348,7 @@ plotcumexpvar(m.calres, 'Type', 'line', 'Marker', 'o', 'MarkerSize', 10)
 
 ## Exploring the models 
 
-The model objects have the same plots and the `summary` function as the result objects, however they work in a slightly different way. Thus `summary` will show the statistics for each type of the available results (e.g. for calibration and validation).
+The model objects have the same plots (plus loadings plot) and the `summary` function as the result objects, however they work in a slightly different way. Thus `summary` will show the statistics for each type of the available results (e.g. for calibration and validation).
 
 
 ```matlab
@@ -377,7 +377,7 @@ First of all, it must be noted, that most of the plots for a model object are gr
 
 Some of the plots (the ones, which either depend on number of components or on the number of results, but not on both), though, can be shown using different ways, e.g. as a scatter, a line, or a bar plot similar to how it works for the result object. 
 
-Let us start with the loadings plot, since it does not depends on number of avaliable results tuning the plot as easy as any other group plot:
+Let us start with the loadings plot, since it does not depends on number of results tuning the plot as easy as any other group plot:
 
 ```matlab
 figure
@@ -393,7 +393,18 @@ plotloadings(m, 1:3, 'Type', 'bar', 'FaceColor', 'rgb')
 
 ![Loadings plot with different parameters.](fig6.png)
 
-The explained variance plot for the model 
+The explained variance plot for the model depends on the results (explained variance e.g. for calibration and cross-validation is different) but not on the components (since it shows the values for all/each components). So it can be tuned in a similar way (though it makes no sense to have it as a scatter plot).
+
+```matlab
+figure
+subplot 221
+plotexpvar(mt)
+subplot 222
+plotexpvar(mt, 'Type', 'bar', 'FaceColor', 'rg', 'Labels', 'values')
+subplot 223
+plotcumexpvar(mt)
+subplot 224
+plotcumexpvar(mt, 'Type', 'bar', 'FaceColor', 'rg', 'Labels', 'values')
 
 
 
