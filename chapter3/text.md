@@ -459,6 +459,15 @@ p.add('math', @power, 1.5);
 show(p)
 ```
 ```
+Preprocessing ("prep") object
+methods included: 2
+1. math (Mathematical function: log)
+2. math (Mathematical function: power)
+
+Use "obj.add(name, properties)" to add a new method.
+Use "obj.remove(n)" to remove a method from the list.
+
+See "help prep" for list of available methods.
 ```
 
 ```matlab
@@ -468,4 +477,5 @@ y = p.apply(x);
 disp(y)
 ```
 ```
+0    0.5771    1.1515    1.6322    2.0418
 ```
