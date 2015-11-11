@@ -165,6 +165,36 @@ Use "obj.remove(n)" to remove a method from the list.
 See "help prep" for list of available methods.
 ```
 
+A preprocessing object can also be applied to a matrix (not dataset), in this case one has to specify a variable to get the preprocessing results:
+
+```matlab
+x = randn(5, 2) * 2 + 10;
+disp(x)
+```
+```
+    6.1951    6.6305
+   14.7485   10.8263
+    9.5333   11.0035
+   10.8078   10.1661
+   12.3849   10.3156
+```
+
+```matlab
+p = prep();
+p.add('center');
+p.add('scale');
+
+y = p.apply(x);
+disp(y)
+```
+```
+   -1.4196   -1.7553
+    1.2556    0.5769
+   -0.3755    0.6754
+    0.0231    0.2100
+    0.5164    0.2930
+```
+
 ## Parameters of preprocessing
 
 Some of the methods (e.g. scaling, centering, MSC transformation) have one or several parameters, either provided by a user, or calculated automatically when apply a particular method for the first time. After this, the method "remembers" the calculated values and if we apply it again to another data it will use the saved values instead of calculating the new ones. Here is an example of this behavior for centering.
@@ -409,3 +439,14 @@ title('Smoothing and 1st derivative')
 ```
 
 ![Original and noisy spectra (top) and results of SG preprocessing (bottom).](fig6.png)
+
+
+## Mathematical functions
+
+Any math function, such as for example power or logarithm can also become a part of a preprocessing object. The general syntax is following:
+
+```matlab
+obj.add('math', @fun, param1, param2, ...)
+```
+
+where `@fun` is a function handle and all parameters are optional. Here is an example for 
