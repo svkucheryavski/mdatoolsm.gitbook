@@ -428,4 +428,8 @@ plotresiduals(mt, 'Marker', {'s', 'd', 'x'}, 'Color', 'rgb')
 
 ## Making preprocessing part of a model
 
+Data preprocessing  is a very important step for, among other reasons, getting better (more efficient, better intepretable, etc.) model. On calibration step it is important to play with preprocessing methods, see how they change original data structure etc. However, when we create a final model, it is always a good idea to make the selected preprocessed steps as a part of the model. In this case, when model is applied to a new data, the preprocessing steps will be carried out authomatically, so model can be applied to a raw data.  
+
+
+
 
