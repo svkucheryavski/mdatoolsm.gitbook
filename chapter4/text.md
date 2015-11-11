@@ -430,6 +430,30 @@ plotresiduals(mt, 'Marker', {'s', 'd', 'x'}, 'Color', 'rgb')
 
 Data preprocessing  is a very important step for, among other reasons, getting better (more efficient, better intepretable, etc.) model. On calibration step it is important to play with preprocessing methods, see how they change original data structure etc. However, when we create a final model, it is always a good idea to make the selected preprocessed steps as a part of the model. In this case, when model is applied to a new data, the preprocessing steps will be carried out authomatically, so model can be applied to a raw data.  
 
+Any model in *mdatools* has a parameter where preprocessing object can be kept. In this parameter is not empty even if no preprocessing object is provided by a user. Since in most of the models data is centered (and sometimes standardized) this operations are kept in this object. To provide the other preprocessing methods one has to simply specify an `Prep` parameter when creates a model. In the example below we use PCA for *People* data and instead of setting parameter `'Scale'` to `'on'` we create a preprocessing object with standardization and provide it to the model.
+
+```matlab
+
+load('People');
+
+p = prep();
+p.add('scale');
+
+m = mdapca(people, 5, 'Prep', p);
+
+figure
+plot(m)
+```
+
+As one can see the result is the same. Now we can make prediction for a new object providing a raw data.
+
+```matlab
+```
+
+
+
+
+
 
 
 
