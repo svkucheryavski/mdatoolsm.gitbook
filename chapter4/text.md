@@ -425,6 +425,7 @@ plotresiduals(mt, 'Marker', {'s', 'd', 'x'}, 'Color', 'rgb')
 
 ![Scores and residuals plots for a model object.](fig8.png)
 
+
 ## Making preprocessing part of a model
 
 
