@@ -11,5 +11,6 @@
     * [Factors and groups](chapter2/section6/text.md)
     * [Group plots](chapter2/section7/text.md)
 * [Data preprocessing](chapter3/text.md)
+* [Principal Component Analysis](chapter3/text.md)
 
 
