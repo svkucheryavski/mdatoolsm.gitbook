@@ -165,7 +165,7 @@ Use "obj.remove(n)" to remove a method from the list.
 See "help prep" for list of available methods.
 ```
 
-A preprocessing object can also be applied to a matrix (not dataset), in this case one has to specify a variable to get the preprocessing results:
+A preprocessing object can also be applied to an ordinary MATLAB matrix (not dataset), in this case one has to specify a variable to get the preprocessing results:
 
 ```matlab
 x = randn(5, 2) * 2 + 10;
