@@ -407,7 +407,7 @@ subplot 224
 plotcumexpvar(mt, 'Type', 'bar', 'FaceColor', 'rg', 'Labels', 'values')
 ```
 
-![Explained variance plots for a model object.](fig6.png)
+![Explained variance plots for a model object.](fig7.png)
 
 The scores and residuals plots depends on both number of results (e.g. objects from calibration and test set have scores and residuals and must be shown on the plots using different colors) as well as on number of components (each plot shows the values for a selected components or number of components in the model). 
 
@@ -423,6 +423,7 @@ subplot 224
 plotresiduals(mt, 'Marker', {'s', 'd', 'x'}, 'Color', 'rgb')
 ```
 
+![Scores and residuals plots for a model object.](fig8.png)
 
 ## Making preprocessing part of a model
 
