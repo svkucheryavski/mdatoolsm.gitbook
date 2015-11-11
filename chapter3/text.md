@@ -449,7 +449,7 @@ Any math function, such as for example power or logarithm can also become a part
 obj.add('math', @fun, param1, param2, ...)
 ```
 
-where `@fun` is a function handle and all parameters are optional. Here is a simple example:
+Here `@fun` is a function handle and all parameters are optional. Here is a simple example:
 
 ```matlab
 p = prep();
