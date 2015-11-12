@@ -157,13 +157,8 @@ p.add('scale');
 
 m = mdapca(people, 5, 'Prep', p);
 
-nfig = 9;
-
 figure
 plot(m)
-
-printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
-
 
 
 v = [180 85 -1 44 39 32000 300 120 -1 95 -1 120];
@@ -175,7 +170,7 @@ show(p)
 
 res = m.predict(p);
 
-nfig = 10;
+nfig = 9;
 
 figure
 
