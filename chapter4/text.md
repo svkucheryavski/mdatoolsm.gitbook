@@ -322,7 +322,7 @@ Now let us look at the plots closer. The list of the plots and corresponding met
 |`plotcumexpvar(m, ...)`|Cumulative explained variance plot|
 
 
-Most of the plots can be shown using different ways, e.g. as a scatter, a line, or a bar plot. To switch between them there is a parameter `Type`, which can in general have the following values: `'scatter'`, `'densscatter'`, `'line'`, `'bar'`. Here is an example for the scatter plot:
+Most of the plots can be shown using different ways, e.g. as a scatter, a line, or a bar plot. To switch between them there is a parameter `'Type'`, which can in general have the following values: `'scatter'`, `'densscatter'`, `'line'`, `'bar'`. Here is an example for the scatter plot:
 
 ```matlab
 figure
