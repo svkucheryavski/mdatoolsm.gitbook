@@ -425,6 +425,7 @@ plotresiduals(mt, 'Marker', {'s', 'd', 'x'}, 'Color', 'rgb')
 
 ![Scores and residuals plots for a model object.](fig8.png)
 
+If you want to change marker symbol, color and similar parameters for scores and residuals plots, it is necessary to provide three values for each (for calibration, cross-validation and test results), like shown in the examples above. Even if one of the results is missing or, as e.g. scores for cross-validation, is not shown. This allows to avoid any confusion when compare results for a PCA model. 
 
 ## Making preprocessing part of a model
 
