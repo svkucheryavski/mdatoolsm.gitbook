@@ -482,6 +482,8 @@ plotresiduals(res, 'Color', 'r', 'Labels', 'names')
 hold off
 ```
 
+![Calibration results and projection of a new object.](fig10.png)
+
 The new person is fitted by the model very well.
 
 
