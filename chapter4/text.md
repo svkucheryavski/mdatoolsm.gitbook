@@ -85,7 +85,7 @@ As one can see, the variable `m` is an object of `mdapca` class with many proper
 |`cvres`|An object with PCA results for cross-validation (if used).|
 |`testres`|An object with PCA results for test set (if provided).|
 
-As you can see there are no scores, explained variance values, residuals and so on. Because they actually are not part of the PCA model, they are results of applying the model to a calibration set. But loadings, eigenvalues, number of calculated components, methods used for data preprocessing, parameters of cross-validation and statistical limits for the residuals are properties of the model. Here is an example on how to look at the loading values (first five rows):
+As you can see there are no scores, explained variance values, residuals and so on. Because they actually are not parts of the PCA model, they are results of applying the model to a calibration set. But loadings, eigenvalues, number of calculated components, methods used for data preprocessing, parameters of cross-validation and statistical limits for the residuals are properties of the model. Here is an example on how to look at the loading values (first five rows):
 
 ```matlab
 show(m.loadings(1:5, :))
