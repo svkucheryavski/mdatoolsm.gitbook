@@ -382,7 +382,7 @@ First of all, it must be noted, that most of the plots for a model object are gr
 
 Some of the plots (the ones, which either depend on number of components or on the number of results, but not on both), though, can be shown using different ways, e.g. as a scatter, a line, or a bar plot similar to how it works for the result object. 
 
-Let us start with the loadings plot, since it does not depends on number of results tuning the plot as easy as any other group plot:
+Let us start with the loadings plot, since it does not depends on number of results, tuning the plot as easy as any other group plot:
 
 ```matlab
 figure
