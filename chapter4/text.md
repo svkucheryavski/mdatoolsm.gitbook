@@ -204,10 +204,10 @@ As one can see now both `calres` and `testres` properties are `pcares` objects, 
 
 To perform cross-validation user needs to specify a cell array with cross-validation settings. The cell array has a following structure: `{'name', nseg, niter}`. Here `name` is a type of cross-validation, which can be `'full'` for full cross-validation, aka "leave-one-out"), `'rand'` is random segmented cross-validation and `'ven'` for systematic cros-validation using "venetian blinds" method. For the last two methods one has also to specify a number of segments, `nseg`. 
 
-For random cross-validation it is also possible to define a number of iterations (repetitions), `niter`. In this case the cross-validation will be performed `niter` times and the results will be averaged.
+For random cross-validation it is also possible to define a number of iterations (repetitions), `niter`. In this case the cross-validation will be performed `niter` times and the results will be averaged. Here is an example for random cross-validation with 10 splits.
+
 
 ```matlab
-% random cross-validation with 10 splits
 mcv = mdapca(dcal, 7, 'Scale', 'on', 'CV', {'rand', 10});
 disp(mcv)
 ```
