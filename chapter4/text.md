@@ -141,7 +141,7 @@ Both model and result objects also have a certain amount of methods, first of al
 
 ## Applying a model to a new dataset
 
-The result object is also created every time you apply a model to a new data. To do this one shall use a method `predict`. The first argument of the method is always an object with a model. The second argument is dataset with new values. Here is a PCA example (assuming we have already built the model above):
+The result object is also created every time you apply a model to a new data. To do this one shall use a method `predict()`. The first argument of the method is always an object with a model, or, alternatively one can call the method using the model object, e.g. `obj.predict()`. The second argument is dataset with new values. Here is a PCA example (assuming we have already built the model above):
 
 ```matlab
 res = m.predict(dtest);
