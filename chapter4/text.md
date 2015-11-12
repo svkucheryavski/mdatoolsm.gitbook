@@ -353,7 +353,7 @@ plotcumexpvar(m.calres, 'Type', 'line', 'Marker', 'o', 'MarkerSize', 10)
 
 ## Exploring the models 
 
-The model objects have the same plots (plus loadings plot) and the `summary` function as the result objects, however they work in a slightly different way. Thus `summary` will show the statistics for each type of the available results (e.g. for calibration and validation).
+The model objects have the same plots (plus loadings plot) and the `summary()` method as the result objects, however they work in a slightly different way. Thus `summary()` will show the statistics for each type of the available results (e.g. for calibration and validation).
 
 
 ```matlab
