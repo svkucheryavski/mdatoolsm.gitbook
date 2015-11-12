@@ -421,14 +421,16 @@ figure
 subplot 221
 plotscores(mt)
 subplot 222
-plotscores(mt, 'Marker', {'s', 'd', 'o'}, 'Color', 'rgb')
+plotscores(mt, [1 2], 'Marker', {'s', 'd', 'o'}, 'Color', 'rgb')
 subplot 223
 plotresiduals(mt)
 subplot 224
-plotresiduals(mt, 'Marker', {'s', 'd', 'o'}, 'Color', 'rgb')
+plotresiduals(mt, 2, 'Marker', {'s', 'd', 'o'}, 'Color', 'rgb')
 ```
 
 ![Scores and residuals plots for a model object.](fig8.png)
+
+If you want to change any parameter for these two plots, you need to specify the second argument first, which is XY components (2 values) for scores and number of components (one value) for residuals.
 
 If you want to change marker symbol, color and similar parameters for scores and residuals plots, it is necessary to provide three values for each (for calibration, cross-validation and test results), like shown in the examples above. Even if one of the results is missing or, as e.g. scores for cross-validation, is not shown. This allows to avoid any confusion when compare results for a PCA model. 
 
