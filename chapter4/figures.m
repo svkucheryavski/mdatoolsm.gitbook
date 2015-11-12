@@ -84,7 +84,7 @@ plotscores(m.calres, [1 2], 'Labels', 'names', 'Marker', 's', 'Color', 'r')
 subplot 222
 plotresiduals(m.calres, 2, 'Marker', '^', 'MarkerSize', 10)
 subplot 223
-plotexpvar(m.calres, 'Type', 'bar', 'FaceColor', 'g')
+plotexpvar(m.calres, 'Type', 'bar', 'FaceColor', 'g', 'Labels', 'values')
 subplot 224
 plotcumexpvar(m.calres, 'Type', 'line', 'Marker', 'o', 'MarkerSize', 10)
 
