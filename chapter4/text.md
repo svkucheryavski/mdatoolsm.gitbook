@@ -35,6 +35,7 @@ The first parameter `data` is mandatory, the others are optional and have defaul
 |`'Alpha'`|A significance level used for calculation of statistical limits for residuals plot.|
 |`'CV'`|A cross-validation object (will be explained later in this chapter).|
 |`'TestSet'`|A dataset (object of `mdadata` class) for test set validation.|
+|`'Method'`|Which method to use for finding new basis (components). The currently avaliable values are `'svd'` (for singular value decomposition, it is a default method), `'nipals'` (for non-linear iterative partial least squares) and `'ica'` for independent component analysis. The first two methods give a solution for PCA|
 
 Let us see how this works using a simple example — Principal Component Analysis of *People* data. We will first load the dataset and split it into two subsets as following:
 
