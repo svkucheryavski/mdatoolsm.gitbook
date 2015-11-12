@@ -78,8 +78,8 @@ As one can see, the variable `m` is an object of `mdapca` class with many proper
 |----|------------------------------------|
 |`loadings`|A dataset with calculated loadings.|
 |`eigenvalues`|A dataset with eigenvalues for each component (if available).|
-|`prep`|The preprocessing object.|
-|`cv`|The cross-validation object provided by user.|
+|`prep`|A preprocessing object.|
+|`cv`|A cross-validation object provided by user.|
 |`limits`|A dataset with calculated limits for Q and T2 residuals.|
 |`calres`|An object with PCA results for calibration data.|
 |`cvres`|An object with PCA results for cross-validation (if used).|
