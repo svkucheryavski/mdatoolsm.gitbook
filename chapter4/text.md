@@ -449,13 +449,23 @@ p.add('scale');
 
 m = mdapca(people, 5, 'Prep', p);
 
-figure
-plot(m)
+show(m.prep)
+```
+```
+Preprocessing ("prep") object
+methods included: 2
+1. scale (standardization)
+2. center (mean centering)
+
+Use "obj.add(name, properties)" to add a new method.
+Use "obj.remove(n)" to remove a method from the list.
+
+See "help prep" for list of available methods.
 ```
 
-![PCA model with preprocessing object.](fig9.png)
+As one can see there are two preprocessing steps in the object. First is standardisation (scale), which we provided to the model, and second is centering, which model has added automatically, as for PCA the parameter `'Center'` is by default `'on'`.
 
-As one can see the result is the same. Now we can make prediction for a new object providing a raw data.
+Now we can make prediction for a new object providing a raw data values.
 
 ```matlab
 v = [180 85 -1 44 26000 300 120 -1 95 -1 120];
@@ -490,7 +500,7 @@ plotresiduals(res, 'Color', 'r', 'Labels', 'names')
 hold off
 ```
 
-![Calibration results and projection of a new object.](fig10.png)
+![Calibration results and projection of a new object.](fig9.png)
 
 The new person is fitted by the model very well.
 
