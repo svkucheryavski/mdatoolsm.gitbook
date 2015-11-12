@@ -270,6 +270,8 @@ disp(mcvt)
          method: 'svd'
 ```
 
+Now the model object has all three results as `pcares` objects.
+
 ## Exploring the results
 
 Any result object in `mdatools` has at least two methods for exploring the results. First is `summary`, which shows statistics on how model performs on a particular data set, and the second is `plot` which shows a set of plots for a quick overview of the results.
