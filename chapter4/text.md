@@ -456,11 +456,17 @@ p = mdadata(v, {'New person'}, people.colNames);
 show(p)
 ```
 ```
+                                                   Variables
+            Height  Weight  Hairleng  Shoesize      Age  Income  Beer  Wine  Sex  Swim  Region   IQ
+           ------- ------- --------- --------- -------- ------- ----- ----- ---- ----- ------- ----
+New person     180      85        -1        44  2.6e+04     300   120    -1   95    -1      -1  120
 ```
+
 ```matlab
+% apply PCA model to the new object
 res = m.predict(p);
 
-% show scores for calibration set and scores for new result together
+% show scores and residuals for calibration set and for the new result together
 figure
 plotscores(m.calres)
 hold on
