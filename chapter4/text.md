@@ -8,7 +8,7 @@ In terms of PCA, the unit-vectors defining the new coordinate space are called *
 
 There are several other methods, such as *Projection Pursuit* (PP), *Independent Component Analysis* (ICA) and some others,  that work in a similar way and resulting in the data decomposition shown above. The principal difference among the methods is the way they find the orientation of the unit-vectors. Thus, PCA finds them as directions of maximum variance of data points. In addition to that, all PCA loadings are orthogonal to each other. The PP and ICA use other criteria for the orientation of the vectors for basis and e.g. for ICA the vectors are not orthogonal.
 
-It was decided to put several methods, including ICA (and in future PP) under the PCA umbrella. First of all it was done to reduce amount of code, as the interpretation and analysis of the results, the methods return is very similar. In order to select which method (algorithm) to use for the decomposition there is a parameter `method` which can be defined by a user as it will be shown in the examples below.
+It was decided to put several methods, including ICA (and in future PP) under the PCA umbrella. First of all it was done to reduce amount of code, as the interpretation and analysis of the results, the methods return, is very similar. In order to select which method (algorithm) to use for the decomposition there is a parameter `Method` which can be defined by a user as it will be shown in the examples below.
 
 
 ## Model and result objects
