@@ -405,11 +405,11 @@ figure
 subplot 221
 plotexpvar(mt)
 subplot 222
-plotexpvar(mt, 'Type', 'bar', 'FaceColor', 'rg', 'Labels', 'values')
+plotexpvar(mt, 'Type', 'bar', 'FaceColor', 'rg')
 subplot 223
 plotcumexpvar(mt)
 subplot 224
-plotcumexpvar(mt, 'Type', 'bar', 'FaceColor', 'rg', 'Labels', 'values')
+plotcumexpvar(mt, 'Type', 'bar', 'FaceColor', 'rg')
 ```
 
 ![Explained variance plots for a model object.](fig7.png)
