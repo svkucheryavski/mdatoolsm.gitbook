@@ -416,11 +416,11 @@ figure
 subplot 221
 plotscores(mt)
 subplot 222
-plotscores(mt, 'Marker', {'s', 'd', 'x'}, 'Color', 'rgb')
+plotscores(mt, 'Marker', {'s', 'd', 'o'}, 'Color', 'rgb')
 subplot 223
 plotresiduals(mt)
 subplot 224
-plotresiduals(mt, 'Marker', {'s', 'd', 'x'}, 'Color', 'rgb')
+plotresiduals(mt, 'Marker', {'s', 'd', 'o'}, 'Color', 'rgb')
 ```
 
 ![Scores and residuals plots for a model object.](fig8.png)
