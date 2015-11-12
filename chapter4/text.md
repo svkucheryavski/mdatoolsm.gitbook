@@ -301,7 +301,7 @@ plot(m.calres)
 
 ![Set of plots for PCA results overview.](fig1.png)
 
-The output for summary as well as the plots in the set depend on a method. For PCA the set includes scores plot, residuals plot, and plots with explained individual and cumulative variances. 
+The output for summary as well as the plots in the set depends on a method. For PCA the set includes scores plot, residuals plot, and plots with explained individual and cumulative variances. 
 
 User can change number of components for the scores and loadings plots as well as turn off the labels on the plots.
 
