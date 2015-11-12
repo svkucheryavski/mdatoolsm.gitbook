@@ -468,12 +468,21 @@ res = m.predict(p);
 
 % show scores and residuals for calibration set and for the new result together
 figure
+
+subplot 121
 plotscores(m.calres)
 hold on
-plotscores(res, 'Color', 'r', 'Labels', 'on')
+plotscores(res, 'Color', 'r', 'Labels', 'names')
+hold off
+
+subplot 122
+plotresiduals(m.calres)
+hold on
+plotresiduals(res, 'Color', 'r', 'Labels', 'names')
 hold off
 ```
 
+The new person is fitted by the model very well.
 
 
 
