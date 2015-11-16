@@ -533,6 +533,10 @@ Apparently the person with name `'Lars'` is not there. Now let us look at the hi
 m.calres.scores.showexcludedrows()
 ```
 ```
+Excluded rows: 
+ Num	                   Names
+----	------------------------
+   1	                  'Lars'
 ```
 
 The the scores (as well as Q and T2 residuals) for `'Lars'` were calculated and hidden. It is possible to make them visible on the plots by using a property `'ShowExcluded'` set to `'on'`. Actually it works on normal and group plots as well.
