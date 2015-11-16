@@ -545,6 +545,8 @@ scatter(m, 'Labels', 'names', 'ShowExcluded', 'on')
 
 ![Scores plot and scatter plot with excluded object shown.](fig11.png)
 
+The excluded rows are shown using light gray color.
+
 
 
 
