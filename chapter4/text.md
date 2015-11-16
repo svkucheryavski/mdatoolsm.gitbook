@@ -527,7 +527,7 @@ plotscores(m, 'Labels', 'names');
 ```
 ![Scores plot with excluded object hidden.](fig10.png)
 
-Apparently the person with name `'Lars'` is not there. Now let us look at the hidden rows for the scores of calibration set.
+Apparently the person with name `'Lars'` is not there. Now let us look if there are any hidden rows in the scores for calibration set.
 
 ```matlab
 m.calres.scores.showexcludedrows()
