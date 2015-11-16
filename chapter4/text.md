@@ -539,7 +539,7 @@ Excluded rows:
    1	                  'Lars'
 ```
 
-The the scores (as well as Q and T2 residuals) for `'Lars'` were calculated and hidden. It is possible to make them visible on the plots by using a property `'ShowExcluded'` set to `'on'`. Actually it works on normal and group plots as well.
+The scores (as well as Q and T2 residuals) for `'Lars'` were calculated and hidden. It is possible to make them visible on the plots by using a property `'ShowExcluded'` set to `'on'`. Actually it works on normal and group plots as well.
 
 ```matlab
 figure
@@ -551,7 +551,7 @@ scatter(people, 'Labels', 'names', 'ShowExcluded', 'on')
 
 ![Scores plot and scatter plot with excluded object shown.](fig11.png)
 
-The excluded rows are shown using light gray color.
+The objects, which correspond to the excluded rows, are shown using light gray color.
 
 
 
