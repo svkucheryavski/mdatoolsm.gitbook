@@ -551,7 +551,7 @@ scatter(people, 'Labels', 'names', 'ShowExcluded', 'on')
 
 ![Scores plot and scatter plot with excluded object shown.](fig11.png)
 
-The objects, which correspond to the excluded rows, are shown using light gray color.
+The objects, which correspond to the excluded rows, are shown using light grey color.
 
 
 
