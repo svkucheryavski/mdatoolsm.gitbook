@@ -533,6 +533,27 @@ m.calres.scores.showexcludedrows()
 ```
 ```
 
+The the scores (as well as Q and T2 residuals) for `'Lars'` were calculated and hidden. It is possible to make them visible on the plots by using a property `'ShowExcluded'` set to `'on'`. Actually it works on normal and group plots as well.
+
+```matlab
+figure
+subplot 121
+plotscores(m, 1:2, 'Labels', 'names', 'ShowExcluded', 'on')
+subplot 122
+scatter(m, 'Labels', 'names', 'ShowExcluded', 'on')
+```
+
+![Scores plot and scatter plot with excluded object shown.](fig11.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
