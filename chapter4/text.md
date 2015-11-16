@@ -504,6 +504,11 @@ hold off
 
 The new person is fitted by the model very well.
 
+## Models, results and hidden rows in data
+
+If one hides (exclude) one or several rows in a dataset and then use this dataset to make a new model or apply an existent one, the hidden rows a treated in a special way. First of all they are not (which is of course expected) used for any calibration, calculation of preprocessing properties, etc. For example if we create a PCA model with centering, the vector of mean values will be calculated using only unhidden rows. As well as the loadings will be found using only the visible (non hidden) rows. However when model is applied to a dataset the scores, residuals and other results are calculated for the excluded ows as well.   
+
+
 
 
 
