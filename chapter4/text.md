@@ -540,7 +540,7 @@ figure
 subplot 121
 plotscores(m, 1:2, 'Labels', 'names', 'ShowExcluded', 'on')
 subplot 122
-scatter(m, 'Labels', 'names', 'ShowExcluded', 'on')
+scatter(people, 'Labels', 'names', 'ShowExcluded', 'on')
 ```
 
 ![Scores plot and scatter plot with excluded object shown.](fig11.png)
