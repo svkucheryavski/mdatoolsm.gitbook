@@ -521,6 +521,8 @@ Now let us make a PCA model and show scores plot.
 
 ```matlab
 m = mdapca(people, 5, 'Scale', 'on');
+
+figure
 plotscores(m, 'Labels', 'names');
 ```
 ![Scores plot with excluded object hidden.](fig10.png)
