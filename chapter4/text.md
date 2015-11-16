@@ -506,7 +506,33 @@ The new person is fitted by the model very well.
 
 ## Models, results and hidden rows in data
 
-If one hides (exclude) one or several rows in a dataset and then use this dataset to make a new model or apply an existent one, the hidden rows are treated in a special way. First of all, they are not (which is, of course, expected) used for any calibration, calculation of preprocessing properties, etc. For example, if we create a PCA model with centering, the vector of mean values will be calculated using only unhidden rows. As well as the loadings will be found using only the visible (non hidden) rows/objects. However when model is applied to a dataset the scores, residuals and other results are calculated for the excluded ows as well.   
+If one hides (exclude) one or several rows in a dataset and then use this dataset to make a new model or apply an existent one, the hidden rows are treated in a special way. First of all, they are not (which is, of course, expected) used for any calibration, calculation of preprocessing properties, etc. For example, if we create a PCA model with centering, the vector of mean values will be calculated using only unhidden rows. As well as the loadings will be found using only the visible (non hidden) rows/objects. 
+
+However, when model is applied to a dataset, the scores, residuals and other results are calculated for the excluded rows as well and then the rows with calculated values will be hidden. The calculated values will not be taken into account when model or result computes the performance, e.g. explained variance. 
+
+Here is an example. We use the same *People* dataset and exclude the first row (which correspond to a person with name '`Lars`'):
+
+```matlab
+load('people');
+people.excluderows('Lars');
+```
+
+Now let us make a PCA model and show scores plot.
+
+```matlab
+m = mdapca(people, 5, 'Scale', 'on');
+plotscores(m, 'Labels', 'names');
+```
+![Scores plot with excluded object hidden.](fig10.png)
+
+Apparently the person with name `'Lars'` is not there. Now let us look at the hidden rows for the scores of calibration set.
+
+```matlab
+m.calres.scores.showexcludedrows()
+```
+```
+```
+
 
 
 
