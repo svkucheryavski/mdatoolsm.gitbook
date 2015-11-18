@@ -438,7 +438,7 @@ By the way, one can clearly notice that the only predictor which significantly d
 
 ## Predictions
 
-Finally any regression model can be applied to a new dataset using method *predict()*. In this case there are two possibilities. If only **X** values are provided, the model will calculate predictions but of course will not be able to compute statistics and residuals. 
+Finally any regression model can be applied to a new dataset using method `predict()`. In this case there are two possibilities. If only **X** values are provided, the model will calculate predictions but of course will not be able to compute statistics and residuals. 
 
 ```matlab
 res = mcv.predict(Xt);
@@ -462,7 +462,7 @@ Alessandro  42.9
 summary(res)
 ```
 ```
-No summary statistics is available.
+No summary statistics are available.
 ```
 
 And the predicted values are plotted against the number of object in provided data.
