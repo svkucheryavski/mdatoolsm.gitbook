@@ -350,6 +350,56 @@ The last two parameters are calculated using [Jack-Knife](https://en.wikipedia.o
 disp(m.regcoeffs.pvalues)
 ```
 ```
+p-values are not available.
+```
+```matlab
+disp(mcv.regcoeffs.pvalues)
+```
+```
+  5x1 mdadata array with properties:
+
+            name: 'P-values for regression coefficients'
+            info: []
+        dimNames: {'Variables'  'Responses'}
+          values: [5x1 double]
+           nCols: 1
+           nRows: 5
+        nFactors: 0
+        rowNames: {'Height'  'Income'  'Age'  'Beer'  'IQ'}
+        colNames: {'Shoesize'}
+    rowFullNames: {'Height'  'Income'  'Age'  'Beer'  'IQ'}
+    colFullNames: {'Shoesize'}
+```
+```matlab
+show(mcv.regcoeffs.ce)
+```
+```
+
+P-values for regression coefficients:
+        Shoesize
+       ---------
+Height  5.01e-06
+Income    0.0306
+   Age    0.0441
+  Beer     0.181
+    IQ     0.521
+```
+
+If confidence intervals and p-values are available, one can get an overview of all of them using method `summary()`.
+
+```matlab
+summary(mcv.regcoeffs)
+```
+```
+Summary statistics for regression coefficients:
+             Lo   Value       Up   p-value
+       -------- ------- -------- ---------
+Height    0.732   0.909     1.08  5.01e-06
+Income   -0.662  -0.346  -0.0439    0.0306
+   Age   0.0124   0.344    0.693    0.0441
+  Beer  -0.0799    0.13     0.35     0.181
+    IQ   -0.125  -0.031   0.0695     0.521
+```
 
 
 
