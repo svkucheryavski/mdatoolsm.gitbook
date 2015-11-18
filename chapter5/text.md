@@ -228,12 +228,27 @@ For test set validation (again, similar to PCA) one has to provide values for th
 
 ```matlab
 mt = mdamlr(Xc, yc, 'Scale', 'on', 'TestSet', {Xt, yt});
-disp(mt)
-```
-```
 ```
 
+And, of course, both validation methods can be combined.
 
+```matlab
+mcvt = mdamlr(Xc, yc, 'Scale', 'on', 'CV', {'rand', 8, 4}, 'TesetSet', {Xt, yt});
+disp(mcvt)
+```
+```
+  mdamlr with properties:
+
+         info: []
+         prep: {[1x1 prep]  [1x1 prep]}
+           cv: {'rand'  [8]  [4]}
+    regcoeffs: [1x1 regcoeffs]
+       calres: [1x1 mlrres]
+        cvres: [1x1 mlrres]
+      testres: [1x1 mlrres]
+        alpha: 0.0500
+        nComp: 1
+```
 
 ## Exploring MLR model
 
