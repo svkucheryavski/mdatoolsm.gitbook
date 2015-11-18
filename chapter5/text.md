@@ -197,7 +197,29 @@ mcv = mdamlr(Xc, yc, 'Scale', 'on', 'CV', {'rand', 8, 4});
 disp(mcv)
 ```
 ```
+  mdamlr with properties:
+
+         info: []
+         prep: {[1x1 prep]  [1x1 prep]}
+           cv: {'rand'  [8]  [4]}
+    regcoeffs: [1x1 regcoeffs]
+       calres: [1x1 mlrres]
+        cvres: [1x1 mlrres]
+      testres: []
+        alpha: 0.0500
+        nComp: 1
 ```
+
+As one can notice the parameters `cv` and `cvres` are not empty anymore. 
+
+```matlab
+summary(mcv.cvres)
+```
+```
+```
+
+
+
 
 ## Exploring MLR model
 
