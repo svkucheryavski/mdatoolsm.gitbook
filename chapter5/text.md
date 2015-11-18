@@ -55,9 +55,103 @@ If there is no need to preprocess e.g. **y** values, then an empty preprocessing
 
 ## Exploring MLR results
 
-## Exploring MLR model
+Let us look at the calibration results for the model we created in the last code section.
+
+```matlab
+disp(m.calres)
+```
+```
+  32x1 mlrres array with properties:
+
+    info: 'Results for calibration set'
+    yref: [32x1 mdadata]
+    stat: [1x1 struct]
+```
+
+The result object has three properties: `info`, which is just a text with information about the object, `yref` - a dataset with reference (provided by a user) response values and `stat` - a structure with performance statistics. Actually there is one more, hidden property, `ypred`, with a dataset where predicted response values are stored.
+
+```matlab
+disp(m.calres.ypred)
+```
+```
+  32x1 mdadata array with properties:
+
+            name: 'Predicted values'
+            info: []
+        dimNames: {'Objects'  'Responses'}
+          values: [32x1 double]
+           nCols: 1
+           nRows: 32
+        nFactors: 0
+        rowNames: {32x1 cell}
+        colNames: {'Shoesize'}
+    rowFullNames: {32x1 cell}
+    colFullNames: {'Shoesize'}
+```
+
+So we can look at the reference and predicted values:
+
+```matlab
+show([m.calres.yref m.calres.ypred])
+```
+```
+                 Variables
+            Shoesize  VShoesize
+           --------- ----------
+      Lars        48       49.1
+     Peter        44       43.4
+    Rasmus        44       43.3
+      Lene        36       37.3
+     Mette        38       38.6
+     Gitte        39       39.2
+      Jens        42       43.6
+      Erik        43         43
+     Lotte        36       37.7
+     Heidi        37       37.8
+       Kaj        42       43.3
+     Gerda        36       33.7
+      Anne        38       37.1
+    Britta        37       36.3
+    Magnus        44       42.9
+    Casper        44       42.8
+      Luka        45       44.2
+  Federico        46         45
+      Dona        37       38.8
+  Fabrizia        36       36.6
+      Lisa        34       34.5
+    Benito        41       40.8
+    Franko        43       42.8
+Alessandro        43       42.8
+   Leonora        36       35.5
+  Giuliana        36       35.3
+  Giovanni        42       41.6
+  Leonardo        42       41.6
+     Marta        36       36.8
+   Rosetta        35       35.5
+     Romeo        42         41
+    Romina        35       35.1
+```
+
+Because column name in both datasets is `'Shoesize'` a letter `'V'` was added to the second column when datasets were binded.
+
+The `stat` combines datasets with performance statistics, which include the coefficient of determination (R2), the root mean squared error (RMSE), bias and slope as well as the ratio of standard error of prediciton to sample standard deviation (RPD).
+
+```matlab
+disp(m.calres.stat)
+```
+```
+     rmse: [1x1 mdadata]
+     bias: [1x1 mdadata]
+    slope: [1x1 mdadata]
+       r2: [1x1 mdadata]
+      rpd: [1x1 mdadata]
+```
+
 
 ## Validation
+
+## Exploring MLR model
+
 
 ## Confidence intervals for coefficients
 
