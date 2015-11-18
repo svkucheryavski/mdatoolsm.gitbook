@@ -425,7 +425,10 @@ If type of the plot is not specified, the object select it automatically dependi
 
 ```matlab
 figure
+subplot 121
 plotregcoeffs(m1, 'CI', 'off')
+subplot 122
+plotregcoeffs(m1, 'Type', 'line', 'CI', 'off')
 ```
 
 ![Regression coefficients plots without confidence intervals]("fig6.png")
