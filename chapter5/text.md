@@ -35,7 +35,7 @@ disp(m)
         nComp: 1
 ```
 
-The main properties of the model object are following. First of all one can notice three properties related to results, similar to what was in PCA model, — `calres`, `cvres`, and `testres`. Because we did not use any validation in this case, the last two properties are empty and `calres` is an object of `mlrres` class.
+The main properties of the model object are the following. First of all, one can notice three properties related to results, similar to what was in PCA model, — `calres`, `cvres`, and `testres`. Because we did not use any validation in this case, the last two properties are empty and `calres` is an object of `mlrres` (MLR results) class.
 
 Parameters `info` and `cv` has the same meaning as for PCA. Parameter `nComp` is number of components in a model and since MLR does not use any components it is always set to one. The parameter is needed for compatibility with other regression methods. Parameter `alpha` for regression models is a significance level for calculation of confidence intervals for regression coefficients (will be discussed later in this chapter).
 
