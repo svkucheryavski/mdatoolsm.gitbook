@@ -78,6 +78,15 @@ m = mdamlr(Xc, yc, 'Prep', {px, py});
 
 If there is no need to preprocess e.g. **y** values, then an empty preprocessing object should be provided. It can be created using method `prep()` as above, just do not add any preprocessing methods to it.
 
+```matlab
+px = prep();
+px.add('scale');
+
+py = prep();
+
+m = mdamlr(Xc, yc, 'Prep', {px, py});
+```
+
 ## Exploring MLR results
 
 Let us look at the calibration results for the model we created in the last code section.
