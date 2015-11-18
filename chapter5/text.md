@@ -158,9 +158,9 @@ summary(m.calres)
 Results for calibration set
 
 Prediction performance for Shoesize:
-   RMSE      Bias  Slope     R2   RPD
- ------ --------- ------ ------ -----
-  0.976  2.22e-16  0.937  0.937  3.99
+   RMSE      Bias  Slope     R2  RPD
+ ------ --------- ------ ------ ----
+  0.899  3.26e-15  0.948  0.948  4.4
 ```
 
 As well as two plots. One with predicted and reference response values and one with residuals (difference between predicted and reference values) against the reference values.
