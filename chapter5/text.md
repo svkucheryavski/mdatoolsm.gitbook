@@ -186,7 +186,6 @@ plotyresiduals(m.calres, 'Color', 'c', 'Labels', 'names')
 ![Tuning pltos for MLR results]("chapter5/fig1.png")
 
 
-
 ## Validation
 
 
