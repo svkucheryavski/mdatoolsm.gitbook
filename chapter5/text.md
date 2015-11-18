@@ -328,7 +328,7 @@ plotyresiduals(mcvt, 'Marker', {'s', 'd', 'o'}, 'MarkerSize', [10 20 30])
 
 MLR model has one more important parameter — an object with regression coefficients. If one looks at the model object info, it can be noticed that this is not a dataset, but an object of `regcoeffs` class. Let us have a closer look to the object.
 
-The object has several hidden properties (which are not shown when use `disp()` method), including `values` with actual values for the coefficients, `ci` for confidence intervals and `pvalues` a set of p-values for testing can a particular regression coefficient be equal to zero in a population. 
+The object has several hidden properties (which are not shown when use `disp()` method), including `values` with actual values for the coefficients, `ci` for confidence intervals and `pvalues` — a set of p-values for testing can a particular regression coefficient be equal to zero in a population. 
 
 ```matlab
 show(m.regcoeffs.values)
