@@ -33,7 +33,7 @@ The first parameter `data` is mandatory, the others are optional and have defaul
 |`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off).|
 |`'Prep'`|A preprocessing object, if provided will be used to transform the data values before creating the model or before applying the model to a new dataset.|
 |`'Alpha'`|A significance level used for calculation of statistical limits for residuals plot.|
-|`'CV'`|A cross-validation object (will be explained later in this chapter).|
+|`'CV'`|A cell array with cross-validation parameters (will be explained later in this chapter).|
 |`'TestSet'`|A dataset (object of `mdadata` class) for test set validation.|
 |`'Method'`|Which method to use for finding new basis (components). The currently avaliable values are `'svd'` (for singular value decomposition, it is a default method), `'nipals'` (for non-linear iterative partial least squares) and `'ica'` for independent component analysis. The first two methods give a solution for PCA|
 
