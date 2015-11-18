@@ -324,7 +324,7 @@ plotyresiduals(mcvt, 'Marker', {'s', 'd', 'o'}, 'MarkerSize', [10 20 30])
 ![Tuning of MLR model plots]("fig4.png")
 
 
-### Regression coefficients
+## Regression coefficients
 
 MLR model has one more important parameter — a regression coefficients. If one looks at the model object info, it can be noticed that this is not a dataset, but an object of `refcoeffs` class. Let us have a closer look to the object.
 
