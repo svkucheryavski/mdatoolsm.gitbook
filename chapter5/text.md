@@ -71,10 +71,10 @@ Let us look at the calibration results for the model we created in the last code
 disp(m.calres)
 ```
 ```
-  32x1 mlrres array with properties:
+  24x1 mlrres array with properties:
 
     info: 'Results for calibration set'
-    yref: [32x1 mdadata]
+    yref: [24x1 mdadata]
     stat: [1x1 struct]
 ```
 
