@@ -269,6 +269,39 @@ Now all types of results are available in the model.
 
 ## Exploring MLR model
 
+The MLR model has the same `summary()` method as well as the two plots as the MLR results. However in this case `summary()` shows statistics for each type of the available results separately.
+
+```matlab
+summary(mcvt)
+```
+```
+Results for calibration set
+
+Prediction performance for Shoesize:
+   RMSE       Bias  Slope     R2  RPD
+ ------ ---------- ------ ------ ----
+  0.899  -1.18e-15  0.948  0.948  4.4
+
+
+Results for cross-validation
+
+Prediction performance for Shoesize:
+  RMSE    Bias  Slope     R2   RPD
+ ----- ------- ------ ------ -----
+  1.26  -0.012  0.946  0.901  3.14
+
+
+Results for test set
+
+Prediction performance for Shoesize:
+  RMSE    Bias  Slope     R2   RPD
+ ----- ------- ------ ------ -----
+  1.43  -0.541  0.969  0.895  2.97
+```
+
+And the plots group points according to the results.
+
+
 
 ## Confidence intervals for coefficients
 
