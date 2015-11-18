@@ -462,10 +462,13 @@ Alessandro  42.9
 summary(res)
 ```
 ```
+No summary statistics is available.
 ```
 
+And the predicted values are plotted against the number of object in provided data.
+
 ```matlab
-plot(res)
+plotpredictions(res)
 ```
 
 If both **X** and **y** values are provided then all methods described above for the MLR results will work.
