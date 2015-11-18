@@ -472,6 +472,8 @@ figure
 plotpredictions(res)
 ```
 
+![Predictions plot for results without reference values](fig7.png)
+
 If both **X** and **y** values are provided then all methods described above for the MLR results will work.
 
 
