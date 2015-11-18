@@ -401,7 +401,7 @@ Income   -0.662  -0.346  -0.0439    0.0306
     IQ   -0.125  -0.031   0.0695     0.521
 ```
 
-Any regression model has a method for showing the regression coefficients graphically, `plotregcoeffs()`. The plot can be of a line or a bar type. If confidence intervals are available they are shown on the plot as errorbars (if bar plot is used) or lines (if line plot is used). In the example below we create two models with full cross-validation and use different significant levels for calculation of confidence intervals. Then show the regression coefficients plots using different plot types.
+Any regression model has a method for showing the regression coefficients graphically, `plotregcoeffs()`. The plot can be of a line or a bar type. If confidence intervals are available they are shown on the plot as errorbars (if bar plot is used) or lines (if line plot is used). In the example below we create two models with full cross-validation and use different significance levels for calculation of confidence intervals. Then show the regression coefficients plots using different plot types.
 
 
 ```matlab
