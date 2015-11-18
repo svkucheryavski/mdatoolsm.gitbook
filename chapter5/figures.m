@@ -147,3 +147,21 @@ plotregcoeffs(m1, 'Type', 'line', 'CI', 'off')
 
 printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
 
+%% predictions
+
+res = mcv.predict(Xt);
+show(res.ypred)
+
+summary(res)
+
+nfig = 7;
+
+figure
+subplot 121
+plotpredictions(res)
+
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
+
+
+res = mcv.predict(Xt, yt);
+summary(res)
