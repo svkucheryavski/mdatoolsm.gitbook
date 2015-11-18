@@ -321,7 +321,7 @@ subplot 122
 plotyresiduals(mcvt, 'Marker', {'s', 'd', 'o'}, 'MarkerSize', [10 20 30])
 ```
 
-![Tuning of MLR model plots]("fig4.png")
+![Tuning of MLR model plots](fig4.png)
 
 
 ## Regression coefficients
@@ -419,7 +419,7 @@ subplot 224
 plotregcoeffs(m2, 'Type', 'line')
 ```
 
-![Regression coefficients plots with confidence intervals]("fig5.png")
+![Regression coefficients plots with confidence intervals](fig5.png)
 
 If type of the plot is not specified, the object select it automatically depending on number of predictors in the dataset (more than 12 — line plot, otherwise - bar plot). The confidence intervals can be hidden by setting a parameter `'CI'` to `'off'`.   
 
@@ -431,7 +431,7 @@ subplot 122
 plotregcoeffs(m1, 'Type', 'line', 'CI', 'off')
 ```
 
-![Regression coefficients plots without confidence intervals]("fig6.png")
+![Regression coefficients plots without confidence intervals](fig6.png)
 
 
 
