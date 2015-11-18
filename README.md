@@ -1,4 +1,4 @@
-This is a user guide for [*mdatoolsm*](https://github.com/svkucheryavski/mdatoolsm) — a free and open source MATLAB toolbox for analysis of spectral and other kind of experimental data based on methods widespread in Chemometrics. 
+This is a user guide for [*mdatoolsm*](https://github.com/svkucheryavski/mdatoolsm) — a free and open source MATLAB toolbox for analysis of spectral and other kind of experimental data based on methods widespread in Chemometrics. The tutorial, though,  does not describe the methods, it is assumed that the reader is already acquainted with theory.
 
 This is a pre-release version and I am still working on it. Also when new version of the toolbox is released, there will be some changes/additions to the tutorial as well. You can track main changes [here](NEWS.md). 
 
