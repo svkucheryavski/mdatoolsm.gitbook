@@ -42,7 +42,7 @@ yc.removerows(tind);
 Xt = people(tind, {'Height', 'Income', 'Age', 'Beer', 'IQ'});
 yt = people(tind, 'Shoesize');
 
-% create a model and show the object info
+% create a model object and show the object info
 m = mdamlr(Xc, yc);
 disp(m)
 ```
