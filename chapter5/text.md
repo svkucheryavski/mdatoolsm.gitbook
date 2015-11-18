@@ -26,9 +26,7 @@ m = mdamlr(X, y, 'Param1', value1, 'Param2', value2, ...);
 |`'CV'`|A cell array with cross-validation parameters.|
 |`'TestSet'`|A cell array with two dataset (X and y, both objects of `mdadata` class) for test set validation.|
 
-We will use a reduces *People* data for all examples in this chapter trying to predict *Shoe size* using *Height*, *Income*, *Age*, *Beer* and *IQ* values. 
-
-We will also split the values into a calibration and a test set.
+We will use a reduced *People* data for all examples in this chapter trying to predict *Shoesize* using *Height*, *Income*, *Age*, *Beer* and *IQ* values. We will also split the values into a calibration and a test set.
 
 ```matlab
 load('people');
