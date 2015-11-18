@@ -476,7 +476,16 @@ plotpredictions(res)
 
 If both **X** and **y** values are provided then all methods described above for the MLR results will work.
 
-
+```matlab
+res = mcv.predict(Xt, yt);
+summary(res)
+```
+```
+Prediction performance for Shoesize:
+  RMSE    Bias  Slope     R2   RPD
+ ----- ------- ------ ------ -----
+  1.43  -0.541  0.969  0.895  2.97
+```
 
 
 
