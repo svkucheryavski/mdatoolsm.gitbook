@@ -188,7 +188,7 @@ subplot 122
 plotyresiduals(m.calres)
 ```
 
-![Main plots for MLR results]("chapter5/fig1.png")
+![Main plots for MLR results]("fig1.png")
 
 The plots can be tuned as any conventional plot for the `mdadata` object.
 
@@ -200,7 +200,7 @@ subplot 122
 plotyresiduals(m.calres, 'Color', 'c', 'Labels', 'names')
 ```
 
-![Tuning pltos for MLR results]("chapter5/fig1.png")
+![Tuning pltos for MLR results]("fig2.png")
 
 
 ## Validation
