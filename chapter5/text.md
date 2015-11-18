@@ -105,41 +105,34 @@ So we can look at the reference and predicted values:
 show([m.calres.yref m.calres.ypred])
 ```
 ```
-                 Variables
-            Shoesize  VShoesize
-           --------- ----------
-      Lars        48       49.1
-     Peter        44       43.4
-    Rasmus        44       43.3
-      Lene        36       37.3
-     Mette        38       38.6
-     Gitte        39       39.2
-      Jens        42       43.6
-      Erik        43         43
-     Lotte        36       37.7
-     Heidi        37       37.8
-       Kaj        42       43.3
-     Gerda        36       33.7
-      Anne        38       37.1
-    Britta        37       36.3
-    Magnus        44       42.9
-    Casper        44       42.8
-      Luka        45       44.2
-  Federico        46         45
-      Dona        37       38.8
-  Fabrizia        36       36.6
-      Lisa        34       34.5
-    Benito        41       40.8
-    Franko        43       42.8
-Alessandro        43       42.8
-   Leonora        36       35.5
-  Giuliana        36       35.3
-  Giovanni        42       41.6
-  Leonardo        42       41.6
-     Marta        36       36.8
-   Rosetta        35       35.5
-     Romeo        42         41
-    Romina        35       35.1
+
+               Variables
+          Shoesize  VShoesize
+         --------- ----------
+    Lars        48         49
+   Peter        44         43
+  Rasmus        44       42.9
+   Mette        38       38.5
+   Gitte        39       39.1
+    Jens        42       43.2
+   Lotte        36       37.6
+   Heidi        37       37.7
+     Kaj        42       43.1
+    Anne        38       36.7
+  Britta        37       35.9
+  Magnus        44       42.7
+    Luka        45       44.7
+Federico        46       45.4
+    Dona        37       38.5
+    Lisa        34       34.5
+  Benito        41         41
+  Franko        43       43.2
+ Leonora        36       35.8
+Giuliana        36       35.3
+Giovanni        42       41.7
+   Marta        36       36.5
+ Rosetta        35       35.1
+   Romeo        42         41
 ```
 
 Because column name in both datasets is `'Shoesize'` a letter `'V'` was added to the second column when datasets were binded.
