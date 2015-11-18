@@ -216,6 +216,12 @@ As one can notice the parameters `cv` and `cvres` are not empty anymore.
 summary(mcv.cvres)
 ```
 ```
+Results for cross-validation
+
+Prediction performance for Shoesize:
+  RMSE    Bias  Slope     R2   RPD
+ ----- ------- ------ ------ -----
+  1.26  0.0599  0.945  0.901  3.14
 ```
 
 
