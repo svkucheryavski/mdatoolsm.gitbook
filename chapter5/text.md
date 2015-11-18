@@ -23,7 +23,7 @@ m = mdamlr(X, y, 'Param1', value1, 'Param2', value2, ...);
 |`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off).|
 |`'Prep'`|A cell array with two preprocessing objects (first for X and second for y).|
 |`'Alpha'`|A significance level used for calculation of confidence intervals for regression coefficients.|
-|`'CV'`|A cross-validation object (will be explained later in this chapter).|
+|`'CV'`|A cross-validation object.|
 |`'TestSet'`|A dataset (object of `mdadata` class) for test set validation.|
 |`'Method'`|Which method to use for finding new basis (components). The currently avaliable values ```
 
