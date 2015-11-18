@@ -16,8 +16,7 @@ We will also split the values into a calibration and a test set.
 ```matlab
 load('people');
 
-% split data to subsets
-
+% split data into subsets
 tind = 4:4:32;
 
 Xc = people(:, {'Height', 'Income', 'Age', 'Beer', 'IQ'});
@@ -26,8 +25,9 @@ yc = people(:, 'Shoesize');
 yc.removerows(tind);
 
 Xt = people(tind, {'Height', 'Income', 'Age', 'Beer', 'IQ'});
-yt = people(tinf, 'Shoesize');
+yt = people(tind, 'Shoesize');
 
+% create a model and show the object info
 m = mdamlr(Xc, yc);
 disp(m)
 ```
@@ -58,7 +58,7 @@ px.add('scale');
 py = prep();
 py.add('scale');
 
-m = mdamlr(X, y, 'Prep', {px, py});
+m = mdamlr(Xc, yc, 'Prep', {px, py});
 ```
 
 If there is no need to preprocess e.g. **y** values, then an empty preprocessing object should be provided. It can be created using method `prep()` as above, just do not add any preprocessing methods to it.
