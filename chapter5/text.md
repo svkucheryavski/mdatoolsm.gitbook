@@ -344,8 +344,7 @@ Income    -0.346
     IQ    -0.031
 ```
 
-
-The last two parameters are calculated using Jack-Knife approach and available only if cross-validation was used. Moreover it is recommended to use cross-validation with many segments (more than 10) or full cross-validation for proper calculation of these two statistics.
+The last two parameters are calculated using [Jack-Knife](https://en.wikipedia.org/wiki/Jackknife_resampling) method and available only if cross-validation was used. Moreover, it is recommended to use cross-validation with relatively large number of segments (more than 6) or full cross-validation for proper calculation of these two statistics.
 
 ```matlab
 disp(m.regcoeffs.pvalues)
