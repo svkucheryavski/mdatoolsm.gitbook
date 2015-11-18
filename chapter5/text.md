@@ -301,6 +301,13 @@ Prediction performance for Shoesize:
 
 And the plots group points according to the results.
 
+```matlab
+figure
+subplot 121
+plotpredictions(mcvt)
+subplot 122
+plotyresiduals(mcvt)
+
 
 
 ## Confidence intervals for coefficients
