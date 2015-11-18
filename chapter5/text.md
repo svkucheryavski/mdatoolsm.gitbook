@@ -180,7 +180,7 @@ figure
 subplot 121
 plotpredictions(m.calres, 'Marker', 's', 'Colorby', m.calres.yref)
 subplot 122
-plotyresiduals(m.calres, 'Type', 'bar', 'FaceColor', 'c', 'Labels', 'values')
+plotyresiduals(m.calres, 'Color', 'c', 'Labels', 'names')
 ```
 
 
