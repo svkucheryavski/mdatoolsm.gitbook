@@ -307,6 +307,9 @@ subplot 121
 plotpredictions(mcvt)
 subplot 122
 plotyresiduals(mcvt)
+```
+
+![Predictions and residuals plots for the MLR model](
 
 
 
