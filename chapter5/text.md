@@ -311,6 +311,17 @@ plotyresiduals(mcvt)
 
 ![Predictions and residuals plots for the MLR model]("fig3.png")
 
+The plots can be tuned as any other group plot for `mdadata` object.
+
+```matlab
+figure
+subplot 121
+plotpredictions(mcvt, 'Color', 'rgb')
+subplot 122
+plotyresiduals(mcvt, 'Marker', {'s', 'd', 'o'}, 'MarkerSize', [10 20 30])
+```
+
+![Tuning of MLR model plots]("fig4.png")
 
 
 
