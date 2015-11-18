@@ -434,7 +434,7 @@ plotregcoeffs(m1, 'Type', 'line', 'CI', 'off')
 ![Regression coefficients plots without confidence intervals](fig6.png)
 
 
-By the way, one can clearly notice that the only predictor which significantly different from zero (and therefore is important for prediction of *Shoesize*) is *Height*, which is quite reasonable. The variable *Beer*, which correlates both with *Height* and *Shoesize* is not important in this model as MLR performs badly with correlated predictors.
+By the way, one can clearly notice that the only predictor which significantly different from zero (and therefore is important for prediction of *Shoesize*) is *Height*, which is quite reasonable. The variable *Beer*, which correlates both with *Height* and *Shoesize*, is not important in this model as MLR performs badly with correlated predictors.
 
 ## Predictions
 
