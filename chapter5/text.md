@@ -3,7 +3,7 @@
 Multiple linear regression (MLR) is a simplest method, which can be used for relating a multivariate dataset **X** with a vector of response values **y** as a linear combination: $$y_i = b_0 + b_1x_{i1} + b_2x_{i2} + ... + b_nx_{in}$$. In its simplest form (meaning without constraints, penalties, etc.) the solution can be found by using one line of MATLAB code (we assume that matrix X already has a column of ones here).
 
 ```matlab
-b = X \ y
+b = X \ y;
 ```
 However, besides just obtaining the vector with regression coefficients, one can do a lot of other things, including computing of performance statistics (prediction quality), model validation (cross-validation and test set validation), calculation of confidence intervals for the regression coefficients and, of course, graphical representation of all calculations. Moreover, other regression methods, such as Projection on Latent Structures (PLS) can be represented using MLR results as a basis. Therefore it was decided to include this method to the toolbox and in this chapter we will show how to work with the regression results and model. All methods and plots we are going to consider here are also available for other methods, e.g. PLS.
 
@@ -433,6 +433,42 @@ plotregcoeffs(m1, 'Type', 'line', 'CI', 'off')
 
 ![Regression coefficients plots without confidence intervals](fig6.png)
 
+
+By the way, one can clearly notice that the only predictor which significantly different from zero (and therefore is important for prediction of *Shoesize*) is *Height*, which is quite reasonable. The variable *Beer* which correlates both with *Height* and *Shoesize* is not important in this model as MLR performs badly with correlated predictors.
+
+## Predictions
+
+Finally any model can be applied to a new dataset using method *predict()*. In this case there are two possibilities. If only **X** values are provided, the model will calculate predictions but of course will not be able to compute statistics and residuals. 
+
+```matlab
+res = mcv.predict(Xt);
+show(res.ypred)
+```
+```
+Predicted values:
+               1
+           -----
+      Lene    37
+      Erik  42.7
+     Gerda  32.9
+    Casper  42.4
+  Fabrizia  36.7
+Alessandro  42.9
+  Leonardo  41.6
+    Romina  34.6
+```
+
+```matlab
+summary(res)
+```
+```
+```
+
+```matlab
+plot(res)
+```
+
+If both **X** and **y** values are provided then all methods described above for the MLR results will work.
 
 
 
