@@ -9,7 +9,7 @@ However, besides just obtaining the vector with regression coefficients, one can
 
 ## Calibrating an MLR model
 
-The idea is absolutely the same as with PCA — a method creates two kinds of objects, a *model* object, which contains all model properties, and one or several *result* objects with results of applying the model to a particular dataset. To calibrate a model one has to provide just two datasets — with **X** and **y** values as well as several optional parameters. The syntax and short description of the parameters are shown below.
+The idea is absolutely the same as with PCA — a method creates two kinds of objects, a *model* object, which contains all model properties, and one or several *result* objects with results of applying the model to a particular dataset. To calibrate a model one has to provide just two datasets, with **X** and **y** values, as well as several optional parameters. The syntax and short description of the parameters are shown below.
 
 ```matlab
 m = mdamlr(X, y, 'Param1', value1, 'Param2', value2, ...);
