@@ -93,7 +93,7 @@ disp(m.calres)
     stat: [1x1 struct]
 ```
 
-The result object has three properties: `info`, which is just a text with information about the object, `yref` - a dataset with reference (provided by a user) response values and `stat` — a structure with performance statistics. Actually there is one more, hidden property, `ypred`, with a dataset where predicted response values are stored.
+The result object has three properties: `info`, which is just a text with information about the object, `yref` — a dataset with reference (provided by a user) response values and `stat` — a structure with performance statistics. Actually there is one more, hidden property, `ypred`, with a dataset where predicted response values are stored.
 
 ```matlab
 disp(m.calres.ypred)
