@@ -114,7 +114,7 @@ disp(m.calres.ypred)
     colFullNames: {'Shoesize'}
 ```
 
-So we can look at the reference and predicted values:
+So we can for example look at the reference and predicted values:
 
 ```matlab
 show([m.calres.yref m.calres.ypred])
