@@ -80,7 +80,7 @@ If there is no need to preprocess e.g. **y** values, then an empty preprocessing
 
 ## Exploring MLR results
 
-Let us look at the calibration results for the model we created in the last code section.
+Let us look at the calibration results for the model we created in the last section.
 
 ```matlab
 disp(m.calres)
