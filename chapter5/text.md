@@ -25,10 +25,6 @@ m = mdamlr(X, y, 'Param1', value1, 'Param2', value2, ...);
 |`'Alpha'`|A significance level used for calculation of confidence intervals for regression coefficients.|
 |`'CV'`|A cell array with cross-validation parameters.|
 |`'TestSet'`|A cell array with two dataset (X and y, both objects of `mdadata` class) for test set validation.|
-```
-
-
-
 
 We will use a reduces *People* data for all examples in this chapter trying to predict *Shoe size* using *Height*, *Income*, *Age*, *Beer* and *IQ* values. 
 
