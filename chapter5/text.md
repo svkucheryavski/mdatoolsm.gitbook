@@ -12,7 +12,20 @@ However, besides just obtaining the vector with regression coefficients, one can
 The idea is absolutely the same as with PCA — a method creates two kinds of objects, a *model* object, which contains all model properties, and one or several *result* objects with results of applying the model to a particular dataset. To calibrate a model one has to provide just two datasets — with **X** and **y** values as well as several optional parameters. The syntax and short description of the parameters are shown below.
 
 ```matlab
+m = mdamlr(X, y, 'Param1', value1, 'Param2', value2, ...);
 ```
+
+|Parameter|Description|
+|---------|-----------|
+|`X`|A dataset (object of `mdadata`class) with predictors.|
+|`y`|A dataset (object of `mdadata`class) with responses.|
+|`'Center'`|Center or not the data values (`'on'`/`'off'`, by default is on).|
+|`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off).|
+|`'Prep'`|A cell array with two preprocessing objects (first for X and second for y).|
+|`'Alpha'`|A significance level used for calculation of confidence intervals for regression coefficients.|
+|`'CV'`|A cross-validation object (will be explained later in this chapter).|
+|`'TestSet'`|A dataset (object of `mdadata` class) for test set validation.|
+|`'Method'`|Which method to use for finding new basis (components). The currently avaliable values ```
 
 
 
