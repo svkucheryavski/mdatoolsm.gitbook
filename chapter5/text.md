@@ -5,7 +5,7 @@ Multiple linear regression (MLR) is a simplest method, which can be used for rel
 ```matlab
 b = X \ y;
 ```
-However, besides just obtaining the vector with regression coefficients, one can do a lot of other things in MLR, including computing of performance statistics (prediction quality), model validation (cross-validation and test set validation), calculation of confidence intervals for the regression coefficients and, of course, graphical representation of all calculations. Moreover, other regression methods, such as Projection on Latent Structures (PLS), can be represented using MLR model and results as a basis. Therefore, it was decided to include this method to the toolbox and in this chapter we will show how to work with the linear regression results and models in general. All methods and plots we are going to consider here are also available for other methods, e.g. PLS.
+However, besides just obtaining the vector with regression coefficients, one can do a lot of other things in MLR, including computing of performance statistics (prediction quality), model validation (cross-validation and test set validation), calculation of confidence intervals for the regression coefficients and, of course, graphical representation of all calculations. Moreover, other regression methods, such as Projection on Latent Structures (PLS), can be represented using MLR model and results as a basis. Therefore, it was decided to include this method to the toolbox and in this chapter we will show how to work with the linear regression results and models in general. All methods and plots we are going to consider here are also available in other methods, e.g. PLS.
 
 ## Calibrating an MLR model
 
