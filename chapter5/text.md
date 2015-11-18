@@ -334,6 +334,14 @@ The object has several hidden properties (which are not shown when use `disp()` 
 show(m.regcoeffs.values)
 ```
 ```
+Regression coefficients:
+        Shoesize
+       ---------
+Height     0.909
+Income    -0.346
+   Age     0.344
+  Beer      0.13
+    IQ    -0.031
 ```
 
 
