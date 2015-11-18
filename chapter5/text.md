@@ -269,7 +269,7 @@ Now all types of results are available in the model.
 
 ## Exploring MLR model
 
-The MLR model has the same `summary()` method as well as the two plots as the MLR results. However, in this case `summary()` shows statistics for each type of the available results separately.
+The MLR model has the same `summary()` method as well as the two plots as the MLR results. However, in this case, `summary()` shows statistics for each type of the available results separately.
 
 ```matlab
 summary(mcvt)
