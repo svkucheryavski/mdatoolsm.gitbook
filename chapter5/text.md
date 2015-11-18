@@ -421,11 +421,14 @@ plotregcoeffs(m2, 'Type', 'line')
 
 ![Regression coefficients plots with confidence intervals]("fig5.png")
 
+If type of the plot is not specified, the object select it automatically depending on number of predictors in the dataset (more than 12 — line plot, otherwise - bar plot). The confidence intervals can be hidden by setting a parameter `'CI'` to `'off'`.   
 
-
+```matlab
 figure
 plotregcoeffs(m1, 'CI', 'off')
+```
 
+![Regression coefficients plots without confidence intervals]("fig6.png")
 
 
 
