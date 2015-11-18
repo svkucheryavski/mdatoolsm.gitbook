@@ -210,7 +210,7 @@ disp(mcv)
         nComp: 1
 ```
 
-As one can notice the parameters `cv` and `cvres` are not empty anymore. 
+As one can notice, the parameters `cv` and `cvres` are not empty anymore. 
 
 ```matlab
 summary(mcv.cvres)
