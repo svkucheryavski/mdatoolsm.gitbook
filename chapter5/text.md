@@ -170,7 +170,8 @@ plotpredictions(m.calres)
 subplot 122
 plotyresiduals(m.calres)
 ```
-[Main plots for the MLR results]("chapter5/fig1.png")
+
+![Main plots for the MLR results]("chapter5/fig1.png")
 
 
 
