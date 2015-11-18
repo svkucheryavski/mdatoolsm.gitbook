@@ -105,7 +105,6 @@ So we can look at the reference and predicted values:
 show([m.calres.yref m.calres.ypred])
 ```
 ```
-
                Variables
           Shoesize  VShoesize
          --------- ----------
