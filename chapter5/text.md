@@ -468,6 +468,7 @@ No summary statistics is available.
 And the predicted values are plotted against the number of object in provided data.
 
 ```matlab
+figure
 plotpredictions(res)
 ```
 
