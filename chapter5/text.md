@@ -173,6 +173,15 @@ plotyresiduals(m.calres)
 
 ![Main plots for MLR results]("chapter5/fig1.png")
 
+The plots can be tuned as any conventional plot for the `mdadata` object.
+
+```matlab
+figure
+subplot 121
+plotpredictions(m.calres, 'Marker', 's', 'Colorby', m.calres.yref)
+subplot 122
+plotyresiduals(m.calres, 'Type', 'bar', 'FaceColor', 'c', 'Labels', 'values')
+```
 
 
 
