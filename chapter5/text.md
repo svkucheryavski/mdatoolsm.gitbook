@@ -84,18 +84,18 @@ The result object has three properties: `info`, which is just a text with inform
 disp(m.calres.ypred)
 ```
 ```
-  32x1 mdadata array with properties:
+  24x1 mdadata array with properties:
 
             name: 'Predicted values'
             info: []
         dimNames: {'Objects'  'Responses'}
-          values: [32x1 double]
+          values: [24x1 double]
            nCols: 1
-           nRows: 32
+           nRows: 24
         nFactors: 0
-        rowNames: {32x1 cell}
+        rowNames: {24x1 cell}
         colNames: {'Shoesize'}
-    rowFullNames: {32x1 cell}
+    rowFullNames: {24x1 cell}
     colFullNames: {'Shoesize'}
 ```
 
