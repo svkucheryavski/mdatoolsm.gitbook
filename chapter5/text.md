@@ -417,6 +417,14 @@ subplot 223
 plotregcoeffs(m1, 'Type', 'line')
 subplot 224
 plotregcoeffs(m2, 'Type', 'line')
+```
+
+![Regression coefficients plots with confidence intervals]("fig5.png")
+
+
+
+figure
+plotregcoeffs(m1, 'CI', 'off')
 
 
 
