@@ -190,7 +190,7 @@ plotyresiduals(m.calres, 'Color', 'c', 'Labels', 'names')
 
 ## Validation
 
-Any MLR (as well as any other regression model) can be validated using cross-validation or validation with a test set. The procedure is very similar to what we did with PCA. For cross-validation one has to specify a cell array with main parameters. In this case we will use random cross-validation with 8 segments and 4 repetitions.
+Any MLR (as well as any other regression model) can be validated using cross-validation or validation with a test set. The procedure is very similar to what we did with PCA. For cross-validation one has to specify a cell array with main parameters. In this case we will use random cross-validation with 8 segments and 4 repetitions. Also, to make the code shorter, we will use parameter `'Scale'` for scaling instead of providing preprocessing objects as we did before.
 
 ```matlab
 mcv = mdamlr(Xc, yc, 'Scale', 'on', 'CV', {'rand', 8, 4});
@@ -224,6 +224,14 @@ Prediction performance for Shoesize:
   1.26  0.0599  0.945  0.901  3.14
 ```
 
+For test set validation (again, similar to PCA) one has to provide values for the parameter `TestSet`. Since for regression we need two datasets, they should be combined using a cell array.
+
+```matlab
+mt = mdamlr(Xc, yc, 'Scale', 'on', 'TestSet', {Xt, yt});
+disp(mt)
+```
+```
+```
 
 
 
