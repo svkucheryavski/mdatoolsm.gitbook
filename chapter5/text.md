@@ -328,7 +328,22 @@ plotyresiduals(mcvt, 'Marker', {'s', 'd', 'o'}, 'MarkerSize', [10 20 30])
 
 MLR model has one more important parameter — a regression coefficients. If one looks at the model object info, it can be noticed that this is not a dataset, but an object of `refcoeffs` class. Let us have a closer look to the object.
 
-The object has several hidden properties (which are not shown when use `disp()` method), including `values` with actual values for the coefficients, `ci` for confidence intervals and `pvalues` a set of p-values for testing can a particular regression coefficient be equal to zero in a population. The last two parameters are calculated using Jack-Knife approach and available only if cross-validation was used. Moreover it is recommended to use cross-validation with many segments (more than 10) or full cross-validation for proper calculation of these two statistics.
+The object has several hidden properties (which are not shown when use `disp()` method), including `values` with actual values for the coefficients, `ci` for confidence intervals and `pvalues` a set of p-values for testing can a particular regression coefficient be equal to zero in a population. 
+
+```matlab
+show(m.regcoeffs.values)
+```
+```
+```
+
+
+The last two parameters are calculated using Jack-Knife approach and available only if cross-validation was used. Moreover it is recommended to use cross-validation with many segments (more than 10) or full cross-validation for proper calculation of these two statistics.
+
+```matlab
+disp(m.regcoeffs.pvalues)
+```
+```
+
 
 
 
