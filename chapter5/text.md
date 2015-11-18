@@ -134,7 +134,7 @@ Alessandro        43       42.8
 
 Because column name in both datasets is `'Shoesize'` a letter `'V'` was added to the second column when datasets were binded.
 
-The `stat` combines datasets with performance statistics, which include the coefficient of determination (R2), the root mean squared error (RMSE), bias and slope as well as the ratio of standard error of prediciton to sample standard deviation (RPD).
+The parameter `stat` combines datasets with performance statistics based on the predicted and reference values, which include the coefficient of determination (R<sup>2</sup>), the root mean squared error (RMSE), bias, slope, as well as the ratio of standard error of prediciton to sample standard deviation (RPD).
 
 ```matlab
 disp(m.calres.stat)
@@ -147,8 +147,9 @@ disp(m.calres.stat)
       rpd: [1x1 mdadata]
 ```
 
-
 ## Validation
+
+
 
 ## Exploring MLR model
 
