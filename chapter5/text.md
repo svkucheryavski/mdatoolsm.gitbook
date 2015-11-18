@@ -147,6 +147,25 @@ disp(m.calres.stat)
       rpd: [1x1 mdadata]
 ```
 
+The MLR results also have a couple of methods for quick overview of the predictions results. First of all it is already known `summary()`, which, in this case, shows the mentioned above statistics for predictions.
+
+```matlab
+summary(m.calres)
+```
+```
+Results for calibration set
+
+Prediction performance for Shoesize:
+   RMSE      Bias  Slope     R2   RPD
+ ------ --------- ------ ------ -----
+  0.976  2.22e-16  0.937  0.937  3.99
+```
+
+As well as two plots. One with predicted and reference response values and one with residuals (difference between predicted and reference values) for every object.
+
+
+
+
 ## Validation
 
 
