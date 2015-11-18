@@ -161,7 +161,15 @@ Prediction performance for Shoesize:
   0.976  2.22e-16  0.937  0.937  3.99
 ```
 
-As well as two plots. One with predicted and reference response values and one with residuals (difference between predicted and reference values) for every object.
+As well as two plots. One with predicted and reference response values and one with residuals (difference between predicted and reference values) against the reference values.
+
+```matlab
+figure
+subplot 121
+plotpredictions(m.calres)
+subplot 122
+plotyresiduals(m.calres)
+```
 
 
 
