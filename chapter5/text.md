@@ -164,7 +164,7 @@ disp(m.calres.stat)
       rpd: [1x1 mdadata]
 ```
 
-The MLR results also have a couple of methods for quick overview of the predictions results. First of all it is already known `summary()`, which, in this case, shows the mentioned above statistics for predictions.
+The MLR results also have a couple of methods for quick overview of the prediction results. First of all, it is already known `summary()`, which, in this case, shows the mentioned above statistics for predictions.
 
 ```matlab
 summary(m.calres)
