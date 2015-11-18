@@ -474,7 +474,7 @@ plotpredictions(res)
 
 ![Predictions plot for results without reference values](fig7.png)
 
-If both **X** and **y** values are provided then all methods described above for the MLR results will work.
+If both **X** and **y** values are provided, then all methods described above for the MLR results will work normally.
 
 ```matlab
 res = mcv.predict(Xt, yt);
