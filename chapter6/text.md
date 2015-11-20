@@ -277,7 +277,7 @@ Comp 5      10.8    0.0997  0.377  1.18e-15  0.991  0.991  10.5
 
 ## Exploring PLS-models
 
-All plots available for PLS results are also available for PLS model. Similar to PCA and MLR, the plots are group plots, showing values for each type of result available in the model (calibration, cross-validation and test-set validation) and discriminate the results using colors. 
+All plots available for PLS results are also available for PLS model. Similar to PCA and MLR, the plots are group plots, they show values for each type of result available in the model (calibration, cross-validation and test-set validation) and discriminate the results using colors. 
 
 ```matlab
 m = mdapls(Xc, yc, 5, 'Scale', 'on', 'CV', {'full'}, 'TestSet', {Xt, yt});
