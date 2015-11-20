@@ -187,4 +187,50 @@ plotresiduals(res, 'Color', 'r', 'Labels', 'names')
 hold off
 printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
 
+%% excluded objects
 
+load('people');
+people.excluderows('Lars');
+
+m = mdapca(people, 5, 'Scale', 'on');
+
+nfig = 10;
+
+figure
+subplot 121
+plotscores(m, 1:2, 'Labels', 'names');
+subplot 122
+scatter(people, 'Labels', 'names')
+
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
+
+
+m.calres.scores.showexcludedrows()
+
+
+nfig = 11;
+
+figure
+subplot 121
+plotscores(m, 1:2, 'Labels', 'names', 'ShowExcluded', 'on')
+subplot 122
+scatter(people, 'Labels', 'names', 'ShowExcluded', 'on')
+
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
+
+
+%% biplot
+
+nfig = 12;
+
+figure
+subplot 221
+biplot(m)
+subplot 222
+biplot(m, 1:2, 'Labels', 'names', 'Marker', 's')
+subplot 223
+biplot(m, 1:2, 'Labels', 'names', 'ScoresColor', 'b', 'LoadingsColor', 'r')
+subplot 224
+biplot(m, 1:2, 'Labels', 'numbers', 'ScoresTextColor', 'c', 'LoadingsTextColor', 'm')
+
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
