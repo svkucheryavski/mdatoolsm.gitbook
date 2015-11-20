@@ -314,7 +314,7 @@ Comp 2      19.5      1.65  0.857  -0.0725  0.886  0.958   4.6
 Comp 3      4.05    -0.381  0.892   -0.214  0.892  0.956  4.53
 ```
 
-![Graphical overview of a PLS-model](fig4.png)
+![Graphical overview of a PLS-model.](fig4.png)
 
 Similar to the prediction and y-residuals plots, the plot with regression coefficients can be shown for particular y-variable and for selected number of components.
 
