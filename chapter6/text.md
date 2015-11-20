@@ -349,6 +349,6 @@ The list of other plots (in addition to the ones shown for PLS results and for M
 |`plotselratio(m, comp, ...)`|Selectivity ratio plot.|
 |`plotvipscores(m, ncomp, ...)`|VIP scores plot.|
 
-
+Below is an example with several plots for loadings and weights.
 
 
