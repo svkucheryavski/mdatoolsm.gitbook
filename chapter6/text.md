@@ -318,6 +318,26 @@ Comp 3      4.05    -0.381  0.892   -0.214  0.892  0.956  4.53
 
 Similar to the prediction and y-residuals plots, the plot with regression coefficients can be shown for particular y-variable and for selected number of components.
 
+```matlab
+figure
+
+% default
+subplot 221
+plotregcoeffs(m)
+
+% for the first y-variable
+subplot 222
+plotregcoeffs(m, 1)
+
+% for the first y-variable and two components
+subplot 223
+plotregcoeffs(m, 1, 2)
+
+% for y-variable 'Showsize' and two components + extra settings
+subplot 224
+plotregcoeffs(m, 'Shoesize', 2, 'Marker', 's', 'Color', 'r')
+
+```
 
 
 
