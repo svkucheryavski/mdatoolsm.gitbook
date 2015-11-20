@@ -17,3 +17,4 @@ The final PLS regression model is actually similar to MLR model and is represent
 
 ## Calibration of a PLS model
 
+The general syntax for calibration is very similar to the MLR method, however in this case user can provide one more important parameter — number of components to be used in the decomposition of $$X$$ and $$Y$$ spaces. The general syntax and short description of main parameters are shown below.
