@@ -57,9 +57,25 @@ m = mdapls(Xc, yc, 5);
 disp(m)
 ```
 ```
+  mdapls with properties:
+
+    xloadings: [12x5 mdadata]
+    yloadings: [1x5 mdadata]
+      weights: [12x5 mdadata]
+    vipscores: [12x1 mdadata]
+     selratio: [12x1 mdadata]
+         info: []
+         prep: {[1x1 prep]  [1x1 prep]}
+           cv: []
+    regcoeffs: [1x1 regcoeffs]
+       calres: [1x1 plsres]
+        cvres: []
+      testres: []
+        alpha: 0.0500
+        nComp: 5
 ```
 
-We will skip explanation of the model parameters that are similar to MLR. In addition to them there are
+We will skip the explanation of the model parameters that are similar to MLR. In addition to them there are loadings for X-space (`xloadings`), loadings for Y-space (`yloadings`), weights (in some literature they are called as “loading-weights”, `weights`), VIP scores (`vipscores`) and selectivity ratio (`selratio`). The last two parameters are statistics, which can be used to indentify variables, most important for prediction, and will be discussed in a separate chapter. 
 
+## Exploring PLS results
 
-The main properties of the model object are the following. First of all, one can notice three properties related to results, similar to what was in PCA model, — `calres`, `cvres`, and `testres`. Because we did not use any validation in this case, the last two properties are empty and `calres` is an object of `mlrres` (MLR results) class.
