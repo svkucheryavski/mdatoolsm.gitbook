@@ -230,7 +230,7 @@ subplot 224
 plotpredictions(m, 'Shoesize', 2, 'Marker', 's', 'Color', 'r')
 ```
 
-![Predictions plot for PLS-results](fig2.png)
+![Predictions plot for PLS-results.](fig2.png)
 
 One can also see that if number of components is smaller than used in the model by default, this value is reflected in the plot title.
 
