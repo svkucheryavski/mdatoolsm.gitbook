@@ -140,16 +140,70 @@ In fact, `ypred` is not actually a property, but a method that gives an access t
 show(m.calres.ypred)
 ```
 ```
+Predicted values (Shoesize):
 
+                        Components
+          Comp 1  Comp 2  Comp 3  Comp 4  Comp 5
+         ------- ------- ------- ------- -------
+    Lars    47.6    47.3    47.8    48.1      48
+   Peter    44.5    44.2    43.8      44    44.1
+  Rasmus    44.3    43.9    43.6    43.6    43.7
+   Mette    38.2    37.8    38.2    38.2    38.4
+   Gitte    38.7    38.4    38.9    38.9      39
+    Jens    43.6    42.9    42.1    42.2    42.3
+   Lotte      37    36.6    36.9    36.6    36.6
+   Heidi    37.3    36.8    37.1    36.9    36.9
+     Kaj      44    43.2      43    42.5    42.4
+    Anne    37.4    36.9    37.3    37.6    37.5
+  Britta    37.1    36.4    36.6    36.8    36.8
+  Magnus    44.2    43.6    43.5    43.4    43.4
+    Luka    43.7    44.7    45.1    45.1    45.2
+Federico    44.3    45.4    45.6    45.8    45.9
+    Dona      37    36.9    36.6    37.2    37.1
+    Lisa    34.4    34.4    34.1    33.8    33.8
+  Benito    41.1    41.8    41.5    41.2    41.2
+  Franko    42.1    42.9    42.8    42.8    42.8
+ Leonora    35.3    35.8      36    35.7    35.7
+Giuliana    35.1    35.6    35.2    35.3    35.5
+Giovanni    41.8    42.2    42.3    42.1    41.7
+   Marta      36    36.1    35.7    35.8    35.8
+ Rosetta    35.7    35.9    35.9    36.2      36
+   Romeo    41.5    42.4    42.3    42.3    42.2
 ```
 
-In the example below we show reference y-values and predicted values obtained using one and three components in PLS-model. Note, that even though we have only one y-variable, we have to specify its index anyway.
+In the example below we show reference y-values and predicted values obtained using one and three components in the PLS model. Note, that even though we have only one y-variable in our example, we have to specify its index anyway.
 
 ```matlab
 show([m.calres.yref  m.calres.ypred(1:end, 1, [1 3]);
 ```
 ```
-
+                 Variables
+          Shoesize  Comp 1  Comp 3
+         --------- ------- -------
+    Lars        48    47.6    47.8
+   Peter        44    44.5    43.8
+  Rasmus        44    44.3    43.6
+   Mette        38    38.2    38.2
+   Gitte        39    38.7    38.9
+    Jens        42    43.6    42.1
+   Lotte        36      37    36.9
+   Heidi        37    37.3    37.1
+     Kaj        42      44      43
+    Anne        38    37.4    37.3
+  Britta        37    37.1    36.6
+  Magnus        44    44.2    43.5
+    Luka        45    43.7    45.1
+Federico        46    44.3    45.6
+    Dona        37      37    36.6
+    Lisa        34    34.4    34.1
+  Benito        41    41.1    41.5
+  Franko        43    42.1    42.8
+ Leonora        36    35.3      36
+Giuliana        36    35.1    35.2
+Giovanni        42    41.8    42.3
+   Marta        36      36    35.7
+ Rosetta        35    35.7    35.9
+   Romeo        42    41.5    42.3
 ```
 
 Also from MATLAB 2015b one can not use `:` in methods and therefore we had to specify for which objects we want to see the predictions as `1:end`.
