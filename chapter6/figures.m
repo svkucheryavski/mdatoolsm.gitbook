@@ -79,12 +79,25 @@ plotpredictions(m, 'Shoesize', 2, 'Marker', 's', 'Color', 'r')
 
 printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
 
+nfig = 3;
+
+figure
+subplot 221
+plotxyscores(m.calres, 1, 'Labels', 'names')
+subplot 222
+plotxyscores(m.calres, 2, 'Labels', 'names')
+subplot 223
+plotxyscores(m.calres, 3, 'Labels', 'names')
+subplot 224
+plotxyscores(m.calres, 4, 'Labels', 'names')
+
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
 
 %% results (3)
 
 summary(m.calres)
 
-nfig = 3;
+nfig = 4;
 
 figure
 plot(m.calres)
@@ -98,7 +111,7 @@ printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], '
 m = mdapls(Xc, yc, 3, 'Scale', 'on', 'CV', {'full'}, 'TestSet', {Xt, yt});
 summary(m)
 
-nfig = 4;
+nfig = 5;
 
 figure
 plot(m)
@@ -107,7 +120,7 @@ printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], '
 
 %% model (2)
 
-nfig = 5;
+nfig = 6;
 
 figure
 
@@ -131,7 +144,7 @@ printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], '
 
 %% model (3)
 
-nfig = 6;
+nfig = 7;
 
 figure
 subplot 221
