@@ -174,7 +174,7 @@ Giovanni    41.8    42.2    42.3    42.1    41.7
    Romeo    41.5    42.4    42.3    42.3    42.2
 ```
 
-In the example below we show reference y-values and predicted values obtained using one and three components in the PLS model. Note, that even though we have only one y-variable in our example, we have to specify its index anyway.
+In the example below we will show reference y-values and predicted values obtained using one and three components in the PLS model. Note, that even though we have only one y-variable in our example, we have to specify its index anyway.
 
 ```matlab
 show([m.calres.yref  m.calres.ypred(1:end, 1, [1 3]);
