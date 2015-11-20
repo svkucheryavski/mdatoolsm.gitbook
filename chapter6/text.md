@@ -289,7 +289,7 @@ Comp 4      5.33     0.446  0.397  8.88e-16   0.99   0.99  9.95
 Comp 5      10.8    0.0997  0.377  1.18e-15  0.991  0.991  10.5
 ```
 
-![Graphical overview of PLS-results.](fig3.png)
+![Graphical overview of PLS-results.](fig4.png)
 
 ## Exploring PLS-models
 
@@ -333,7 +333,7 @@ Comp 2      19.5      1.65  0.857  -0.0725  0.886  0.958   4.6
 Comp 3      4.05    -0.381  0.892   -0.214  0.892  0.956  4.53
 ```
 
-![Graphical overview of a PLS-model.](fig4.png)
+![Graphical overview of a PLS-model.](fig5.png)
 
 Similar to the predictions and y-residuals plots, the plot with regression coefficients can be shown for a particular y-variable and for number of components specified by a user.
 
@@ -358,7 +358,7 @@ plotregcoeffs(m, 'Shoesize', 2, 'Type', 'line', 'Color', 'r')
 
 ```
 
-![Regression coefficients plot for PLS-model.](fig5.png)
+![Regression coefficients plot for PLS-model.](fig6.png)
 
 The list of other plots (in addition to the ones shown for PLS results and for MLR) available for `mdapls` is shown below.
 
@@ -384,6 +384,6 @@ subplot 224
 plotweights(m, [1 2], 'Type', 'bar', 'FaceColor', 'rg')
 ```
 
-![Plots with loadings and weights.](fig6.png)
+![Plots with loadings and weights.](fig7.png)
 
 
