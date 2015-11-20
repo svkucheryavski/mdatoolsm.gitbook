@@ -118,10 +118,14 @@ One can use all methods from PCA-results (e.g. scores, residuals and variance pl
 
 ```matlab
 figure
+
 subplot 121
-plotexpvar(m.calres.xdecomp)
+plotexpvar(m.calres.xdecomp, 'Type', 'bar')
+title('Explained variance for X')
+
 subplot 122
-plotexpvar(m.calres.ydecomp)
+plotexpvar(m.calres.ydecomp, 'Type', 'bar')
+title('Explained variance for Y')
 ```
 
 ![Explained variance for decomposition of X and Y spaces](fig1.png)
