@@ -252,7 +252,7 @@ Below a list with a brief information about the other plots available for `plsre
 |`plotrmse(m, ...)`|RMSE vs. number of components.|
 
 
-And of course the methods `summary()` and `plot()` are also available for the object with PLS-results.
+And, of course, the methods `summary()` and `plot()` are also available for the object with PLS-results.
 
 ```matlab
 summary(m.calres)
