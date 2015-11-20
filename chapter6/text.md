@@ -237,7 +237,7 @@ plotpredictions(m, 'Shoesize', 2, 'Marker', 's', 'Color', 'r')
 
 One can also see that if number of components is smaller than the one the model was calibrated with, the user specific value is reflected in the plot title.
 
-Below a list with a brief information of other plots available for `plsres` is shown.
+Below a list with a brief information about the other plots available for `plsres` is shown.
 
 
 |Method|Plot|
