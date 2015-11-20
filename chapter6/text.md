@@ -283,6 +283,38 @@ summary(m)
 figure
 plot(m)
 ```
+```
+Results for calibration set
+
+Prediction performance for Shoesize:
+        X expvar  Y expvar   RMSE      Bias  Slope     R2   RPD
+       --------- --------- ------ --------- ------ ------ -----
+Comp 1        54      95.6  0.834  1.48e-15  0.956  0.956  4.74
+Comp 2      19.5      2.23  0.589  5.92e-16  0.978  0.978  6.71
+Comp 3      7.94     0.763  0.477  5.92e-16  0.985  0.985  8.29
+
+
+Results for cross-validation
+
+Prediction performance for Shoesize:
+        X expvar  Y expvar   RMSE      Bias  Slope     R2   RPD
+       --------- --------- ------ --------- ------ ------ -----
+Comp 1        43        94  0.963  -0.00869  0.918  0.941  4.11
+Comp 2      21.2      2.51  0.736   0.00528  0.958  0.965  5.37
+Comp 3      9.16     0.792  0.651   0.00443  0.985  0.973  6.07
+
+
+Results for test set
+
+Prediction performance for Shoesize:
+        X expvar  Y expvar   RMSE     Bias  Slope     R2   RPD
+       --------- --------- ------ -------- ------ ------ -----
+Comp 1      43.8      93.8  0.999    0.048  0.907  0.936  3.93
+Comp 2      19.5      1.65  0.857  -0.0725  0.886  0.958   4.6
+Comp 3      4.05    -0.381  0.892   -0.214  0.892  0.956  4.53
+```
+
+![Graphical overview of a PLS-model]()
 
 Similar to prediction and y-residuals plots, the plot with regression coefficients can be shown for particular y-variable and for selected number of components.
 
