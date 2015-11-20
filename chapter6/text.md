@@ -211,7 +211,7 @@ Giovanni        42    41.8    42.3
 
 Also from MATLAB 2015b one can not use `:` in methods and therefore we had to specify that we want to see the predictions for all objects as `1:end`.
 
-Now let us look at the plots. The plots for y-residuals and predicted vs. measured values are similar to the ones for MLR-results. However in the case of PLS one can also specify an index or a name of y-variable, a number of components to show the predictions for, or both. The example below shows how to specify these options for predictions plot, but for plot with y-residuals the syntax is identical. 
+Now let us look at the plots. The plots for y-residuals and predictions are similar to the ones for MLR-results. However in the case of PLS one can also specify an index or a name of y-variable, a number of components to show the predictions for, or both. The example below shows how to specify these options for predictions plot, but for plot with y-residuals the syntax is identical. 
 
 ```matlab
 figure
