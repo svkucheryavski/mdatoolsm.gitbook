@@ -15,4 +15,5 @@ So there is a set of loadings $$(P,Q)$$, scores $$(T,U)$$ and residuals for each
 
 The final PLS regression model is actually similar to MLR model and is represented by a set of regression coefficients (and its confidence intervals if they were calculated). So all plots and methods discussed in the previous section for MLR method will work similarly with PLS. But PLS has a lot of additional properties and tools for exploring the both datasets and for optimizing the prediction performance, which we are going to discuss in this section.
 
-## 
+## Calibration of a PLS model
+
