@@ -45,11 +45,14 @@ load('people');
 tind = 4:4:32;
 
 Xc = copy(people);
+Xc.removecols('Shoesize')
 Xc.removerows(tind);
+
 yc = people(:, 'Shoesize');
 yc.removerows(tind);
 
 Xt = people(tind, :);
+Xt.removecols('Shoesize')
 yt = people(tind, 'Shoesize');
 
 % create a model object and show the object info
