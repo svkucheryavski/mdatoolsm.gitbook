@@ -275,7 +275,7 @@ Comp 5      10.8    0.0997  0.377  1.18e-15  0.991  0.991  10.5
 
 ![Graphical overview of PLS-results.](fig3.png)
 
-## Exploring PLS-model
+## Exploring PLS-models
 
 All plots available for PLS results are available for PLS model. Similar to PCA and MLR plots for the model are group plots, showing values for each result available (calibration, cross-validation and test-set validation) and discriminate the results using colors. 
 
