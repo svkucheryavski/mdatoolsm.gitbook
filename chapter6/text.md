@@ -82,4 +82,12 @@ Validation of a PLS-model as well as providing preprocessing objects can be carr
 
 ## Exploring PLS results
 
+Let us first look at the ctructure of PLS results.
+
+```matlab
+disp(m.calres)
+```
+```
+
+```
 
