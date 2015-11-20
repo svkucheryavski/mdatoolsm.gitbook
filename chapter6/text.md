@@ -339,10 +339,15 @@ plotregcoeffs(m, 'Shoesize', 2, 'Type', 'line', 'Color', 'r')
 
 ```
 
-The list of other plots available for `mdapls` is shown below.
+The list of other plots (in addition to the ones shown for PLS results and for MLR) available for `mdapls` is shown below.
 
-
-
+|Method|Plot|
+|------|----|
+|`plotxloadings(m, ncomp, ...)`|Loadings plot for X-space.|
+|`plotxyloadings(m, ncomp, ...)`|Loadings plot for X- and Y-space (P vs. Q).|
+|`plotweights(m, ncomp, ...)`|Plot with PLS weights.|
+|`plotselratio(m, comp, ...)`|X-scores plot (similar to scores plot in PCA).|
+|`plotvipscores(m, ncomp, ...)`|XY-scores plot (T vs. U) for a particular component.|
 
 
 
