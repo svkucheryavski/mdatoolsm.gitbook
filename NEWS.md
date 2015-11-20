@@ -3,7 +3,7 @@
 ## 20.11.2015
 * Description of new method, `biplot()` is added to the PCA chapter.
 * New chapter — “[Projection on latent structures](chapter6/text.md)”.
-* Small improvements in the text
+* Small improvements in the tutorial's text
 
 ## 18.11.2015
 * From this version onward a change log will be available in this file.
