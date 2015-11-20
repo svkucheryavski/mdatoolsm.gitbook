@@ -253,15 +253,36 @@ And of course the methods `summary()` and `plot()` are also available for the ob
 
 ```matlab
 summary(m.calres)
+
+figure
 plot(m.calres)
 ```
 ```
+Results for calibration set
 
+Prediction performance for Shoesize:
+        X expvar  Y expvar   RMSE      Bias  Slope     R2   RPD
+       --------- --------- ------ --------- ------ ------ -----
+Comp 1        54      95.6  0.834  1.48e-15  0.956  0.956  4.74
+Comp 2      19.5      2.23  0.589  5.92e-16  0.978  0.978  6.71
+Comp 3      7.94     0.763  0.477  5.92e-16  0.985  0.985  8.29
+Comp 4      5.33     0.446  0.397  8.88e-16   0.99   0.99  9.95
+Comp 5      10.8    0.0997  0.377  1.18e-15  0.991  0.991  10.5
 ```
 
 ![Graphical overview of PLS-results](fig3.png)
 
 ## Exploring PLS-model
+
+All plots available for PLS results are available for PLS model. Similar to PCA and MLR plots for the model are group plots, showing values for each result available (calibration, cross-validation and test-set validation) and discriminate the results using colors. 
+
+```matlab
+m = mdapls(Xc, yc, 5, 'Scale', 'on', 'CV', {'full'}, 'TestSet', {Xt, yt});
+summary(m)
+
+figure
+plot(m)
+```
 
 
 
