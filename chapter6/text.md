@@ -30,7 +30,7 @@ m = mdapls(X, Y, nComp, 'Param1', value1, 'Param2', value2, ...);
 |`nComp`|A number of PLS components to be used in the model.|
 |`'Center'`|Center or not the data values (`'on'`/`'off'`, by default is on).|
 |`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off).|
-|`'Prep'`|A cell array with two preprocessing objects (first for X and second for y).|
+|`'Prep'`|A cell array with two preprocessing objects (first for X and second for Y).|
 |`'Alpha'`|A significance level used for calculation of confidence intervals for regression coefficients.|
 |`'CV'`|A cell array with cross-validation parameters.|
 |`'TestSet'`|A cell array with two dataset (X and y, both objects of `mdadata` class) for test set validation.|
