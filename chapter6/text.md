@@ -81,7 +81,7 @@ disp(m)
 We will skip the explanation of the model parameters that are similar to MLR. In addition to them, there are also loadings for X-space (`xloadings`), loadings for Y-space (`yloadings`), weights (in some literature they are called as “loading-weights”, `weights`), VIP scores (`vipscores`) and selectivity ratio (`selratio`). The last two parameters are statistics, which can be used to indentify variables, most important for prediction, and will be discussed in a separate chapter. 
 
 
-Validation of a PLS-model as well as providing preprocessing objects can be carried out similar to MLR.
+Validation of a PLS-model as well as providing preprocessing objects for predictors and responses can be carried out similar to MLR.
 
 ## Exploring PLS results
 
