@@ -335,9 +335,12 @@ plotregcoeffs(m, 1, 2)
 
 % for y-variable 'Showsize' and two components + extra settings
 subplot 224
-plotregcoeffs(m, 'Shoesize', 2, 'Marker', 's', 'Color', 'r')
+plotregcoeffs(m, 'Shoesize', 2, 'Type', 'line', 'Color', 'r')
 
 ```
+
+The list of other plots available for `mdapls` is shown below.
+
 
 
 
