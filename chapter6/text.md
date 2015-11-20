@@ -252,6 +252,22 @@ Below a list with a brief information about the other plots available for `plsre
 |`plotrmse(m, ...)`|RMSE vs. number of components.|
 
 
+For example investigating XY-scores for different number of components one can identify which component(s) is most important for capturing X-Y relationship (shows largest covariance between X and Y scores). It als help to detect outliers — objects, which deviate from a common trend.
+
+```matlab
+figure
+subplot 221
+plotxyscores(m, 1)
+subplot 222
+plotxyscores(m, 2)
+subplot 223
+plotxyscores(m, 3)
+subplot 224
+plotxyscores(m, 4)
+````
+
+![Predictions plot for PLS-results.](fig3.png)
+
 And, of course, the methods `summary()` and `plot()` are also available for the object with PLS-results.
 
 ```matlab
