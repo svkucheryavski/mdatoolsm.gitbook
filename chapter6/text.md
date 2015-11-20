@@ -100,7 +100,7 @@ disp(m.calres)
        stat: [1x1 struct]
 ```
 
-As one can note it looks similar to the MLR results, however there are two new properties — `xdecomp` and `ydecomp`. These are objects containing the decomposition of X- and Y-space as defined in the beginning of this chapter. The objects are identical to objects, representing PCA-results.
+As one can note it looks similar to the MLR results, however there are two new properties — `xdecomp` and `ydecomp`. These are objects containing the decomposition of X- and Y-space as defined in the beginning of this chapter. The objects are identical to the objects, representing PCA-results.
 
 ```matlab
 disp(m.calres.xdecomp)
