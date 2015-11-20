@@ -17,7 +17,7 @@ The final PLS regression model is actually similar to MLR model and is represent
 
 ## Calibration of a PLS model
 
-The general syntax for calibration is very similar to the MLR, however in this case user can provide one more parameter — number of components to be used in the decomposition of $$X$$ and $$Y$$ spaces. The general syntax and short description of main parameters are shown below.
+The general syntax for calibration is very similar to the MLR, however, in this case, user can provide one more parameter — number of components to be used in the decomposition of $$X$$ and $$Y$$ spaces. The general syntax and short description of main parameters are shown below.
 
 ```matlab
 m = mdapls(X, y, nComp, 'Param1', value1, 'Param2', value2, ...);
