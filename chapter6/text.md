@@ -242,10 +242,11 @@ Below a list with a brief information of other plots available for `plsres` is s
 |`plotxscores(m, comp, ...)`|X-scores plot.|
 |`plotxyscores(m, ncomp, ...)`|XY-scores plot (T vs. U) for a particular component.|
 |`plotxresiduals(m, ncomp, ...)`|Residuals plot (Q vs T2) for X-space.|
-|`plotxexpvar(m, ...)`|Explained variance plot (individual) for X-space|
-|`plotxcumexpvar(m, ...)`|Cumulative explained variance plot for X-space|
-|`plotyexpvar(m, ...)`|Explained variance plot (individual) for Y-space|
-|`plotycumexpvar(m, ...)`|Cumulative explained variance plot for Y-space|
+|`plotxexpvar(m, ...)`|Explained variance plot (individual) for X-space.|
+|`plotxcumexpvar(m, ...)`|Cumulative explained variance plot for X-space.|
+|`plotyexpvar(m, ...)`|Explained variance plot (individual) for Y-space.|
+|`plotycumexpvar(m, ...)`|Cumulative explained variance plot for Y-space.|
+|`plotrmse(m, ...)`|RMSE vs. number of components.|
 
 
 And of course the methods `summary()` and `plot()` are also available for the object with PLS-results.
