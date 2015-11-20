@@ -53,21 +53,13 @@ Xt = people(tind, :);
 yt = people(tind, 'Shoesize');
 
 % create a model object and show the object info
-m = mdamlr(Xc, yc);
+m = mdapls(Xc, yc, 5);
 disp(m)
 ```
 ```
-  mdamlr with properties:
-
-         info: []
-         prep: {[1x1 prep]  [1x1 prep]}
-           cv: []
-    regcoeffs: [1x1 regcoeffs]
-       calres: [1x1 mlrres]
-        cvres: []
-      testres: []
-        alpha: 0.0500
-        nComp: 1
 ```
+
+We will skip explanation of the model parameters that are similar to MLR. In addition to them there are
+
 
 The main properties of the model object are the following. First of all, one can notice three properties related to results, similar to what was in PCA model, — `calres`, `cvres`, and `testres`. Because we did not use any validation in this case, the last two properties are empty and `calres` is an object of `mlrres` (MLR results) class.
