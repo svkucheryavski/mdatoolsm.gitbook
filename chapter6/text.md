@@ -27,6 +27,7 @@ m = mdapls(X, y, nComp, 'Param1', value1, 'Param2', value2, ...);
 |---------|-----------|
 |`X`|A dataset (object of `mdadata`class) with predictors.|
 |`y`|A dataset (object of `mdadata`class) with responses.|
+|`nComp`|A number of PLS components to be used in the model.|
 |`'Center'`|Center or not the data values (`'on'`/`'off'`, by default is on).|
 |`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off).|
 |`'Prep'`|A cell array with two preprocessing objects (first for X and second for y).|
