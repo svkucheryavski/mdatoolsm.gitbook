@@ -559,6 +559,9 @@ The objects, which correspond to the excluded rows, are shown using light grey c
 
 The [biplot](https://en.wikipedia.org/wiki/Biplot) is a way to show scores and loadings value simultaneously. It became available in *mdatools* from version *0.1.3*. The plot shows the loadings as vectors (lines) and the scores for calibration data as markers. User can specify for which pair of components the plot should be shown, marker symbol for the scores values as well as color for markers (scores) and lines (loadings) and corresponding labels. See an example below for some details.  
 
+```matlab
+```
+
 ![Biplots.](fig12.png)
 
 
