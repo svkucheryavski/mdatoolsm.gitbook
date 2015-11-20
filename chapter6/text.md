@@ -1,6 +1,6 @@
 # Projection on Latent Structures
 
-[Projection on Latent Structures](https://en.wikipedia.org/wiki/Partial_least_squares_regression) (PLS) also known as Partial Least Squares is a linear regression method introduced and developed by Herman and Svante Wold for dealing with multivariate data. The method aims, among others, at overcome the drawbacks of MLR and allows to create a linear regression model when number of objects is smaller than the number of variables and when there is a high degree of collinearity.
+[Projection on Latent Structures](https://en.wikipedia.org/wiki/Partial_least_squares_regression) (PLS) also known as Partial Least Squares is a linear regression method introduced and developed by Herman and Svante Wold for dealing with multivariate data. The method aims, among others, at overcome the drawbacks of MLR and allows to create a linear regression model when number of objects is smaller than the number of variables and when there is a high degree of collinearity in the data.
 
 PLS decomposes both $$X$$ and $$Y$$ space by projecting data points to a set of latent variables (PLS components or just components) similar to PCA decomposition:
 
