@@ -284,6 +284,10 @@ figure
 plot(m)
 ```
 
+Similar to prediction and y-residuals plots, the plot with regression coefficients can be shown for particular y-variable and for selected number of components.
+
+
+
 
 
 
