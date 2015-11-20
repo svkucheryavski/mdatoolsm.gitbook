@@ -257,13 +257,13 @@ For example investigating XY-scores for different number of components one can i
 ```matlab
 figure
 subplot 221
-plotxyscores(m, 1)
+plotxyscores(m, 1, 'Labels', 'names')
 subplot 222
-plotxyscores(m, 2)
+plotxyscores(m, 2, 'Labels', 'names')
 subplot 223
-plotxyscores(m, 3)
+plotxyscores(m, 3, 'Labels', 'names')
 subplot 224
-plotxyscores(m, 4)
+plotxyscores(m, 4, 'Labels', 'names')
 ````
 
 ![XY-scores plots.](fig3.png)
