@@ -259,7 +259,7 @@ plot(m.calres)
 
 ```
 
-![Graphical overview of PLS-results]()
+![Graphical overview of PLS-results](fig3.png)
 
 ## Exploring PLS-model
 
