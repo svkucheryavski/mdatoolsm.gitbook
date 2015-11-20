@@ -270,7 +270,7 @@ Comp 4      5.33     0.446  0.397  8.88e-16   0.99   0.99  9.95
 Comp 5      10.8    0.0997  0.377  1.18e-15  0.991  0.991  10.5
 ```
 
-![Graphical overview of PLS-results](fig3.png)
+![Graphical overview of PLS-results.](fig3.png)
 
 ## Exploring PLS-model
 
