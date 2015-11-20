@@ -237,6 +237,15 @@ One can also see that if number of components is smaller than used in the model 
 Below a list with a brief information of other plots available for `plsres` is shown.
 
 
+|Method|Plot|
+|------|----|
+|`plotxscores(m, comp, ...)`|X-scores plot.|
+|`plotxyscores(m, ncomp, ...)`|XY-scores plot (T vs. U) for a particular component.|
+|`plotxresiduals(m, ncomp, ...)`|Residuals plot (Q vs T2) for X-space.|
+|`plotxexpvar(m, ...)`|Explained variance plot (individual) for X-space|
+|`plotxcumexpvar(m, ...)`|Cumulative explained variance plot for X-space|
+|`plotyexpvar(m, ...)`|Explained variance plot (individual) for Y-space|
+|`plotycumexpvar(m, ...)`|Cumulative explained variance plot for Y-space|
 
 
 And of course the methods `summary()` and `plot()` are also available for the object with PLS-results.
