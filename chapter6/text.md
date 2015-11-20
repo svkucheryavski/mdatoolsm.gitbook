@@ -126,6 +126,8 @@ plotexpvar(m.calres.ydecomp)
 
 ![Explained variance for decomposition of X and Y spaces](fig1.png)
 
+The plot shows that even though the second PLS-component explains about 20% of data variation in X-space, it does not explain a lot of variation in Y-space, so we can expect that one component should be enough for getting good prediction performance in the model
+
 
 
 
