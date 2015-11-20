@@ -137,7 +137,23 @@ Another difference is a structure of the hidden `ypred` property with y-values, 
 In fact, `ypred` is not actually a property, but a method that gives an access to the predicted values (and this is why it is hidden when we look at the result object structure). The method always return values as an `mdadata` object, so we can use e.g. `show()` to see them. By default it returns predicted values for the first y-variable and all components.
 
 ```matlab
+show(m.calres.ypred)
 ```
+```
+
+```
+
+In the example below we show reference y-values and predicted values obtained using one and three components in PLS-model. Note, that even though we have only one y-variable, we have to specify its index anyway.
+
+```matlab
+show([m.calres.yref  m.calres.ypred(1:end, 1, [1 3]);
+```
+```
+```
+
+Also from MATLAB 2015b one can not use `:` in methods and therefore we had to specify for which objects we want to see the predictions as `1:end`.
+
+
 
 
 
