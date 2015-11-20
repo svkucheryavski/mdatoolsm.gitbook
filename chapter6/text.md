@@ -18,3 +18,18 @@ The final PLS regression model is actually similar to MLR model and is represent
 ## Calibration of a PLS model
 
 The general syntax for calibration is very similar to the MLR method, however in this case user can provide one more important parameter — number of components to be used in the decomposition of $$X$$ and $$Y$$ spaces. The general syntax and short description of main parameters are shown below.
+
+```matlab
+m = mdapls(X, y, nComp, 'Param1', value1, 'Param2', value2, ...);
+```
+
+|Parameter|Description|
+|---------|-----------|
+|`X`|A dataset (object of `mdadata`class) with predictors.|
+|`y`|A dataset (object of `mdadata`class) with responses.|
+|`'Center'`|Center or not the data values (`'on'`/`'off'`, by default is on).|
+|`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off).|
+|`'Prep'`|A cell array with two preprocessing objects (first for X and second for y).|
+|`'Alpha'`|A significance level used for calculation of confidence intervals for regression coefficients.|
+|`'CV'`|A cell array with cross-validation parameters.|
+|`'TestSet'`|A cell array with two dataset (X and y, both objects of `mdadata` class) for test set validation.|
