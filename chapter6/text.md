@@ -134,7 +134,7 @@ The plot shows that even though the second PLS-component explains about 20% of d
 
 Another difference is a structure of the hidden `ypred` property with y-values, predicted by the model. In object with PLS-results, the predicted values are organized as a 3-way array. First of all, because PLS can deal with several y-variables simultaneously, predictions for each of them are stored. Second reason is that the predicted values are calculated for all components in the model. So this gives three dimensions (ways): *objects* &times; *predictors*  &times;  *components*.
 
-In fact, `ypred` is not actually a property, but a method that gives an access to the predicted values (and this is why it is hidden when we look at the result object structure). The method always return values as an `mdadata` object, so we can use e.g. `show()` to see the values. By default it returns predicted values for the first y-variable and all components.
+In fact, `ypred` is not actually a property, but a method that gives an access to the predicted values (and this is why it is hidden when we look at the result object structure). The method always return values as an `mdadata` object, so we can use e.g. `show()` to see them. By default it returns predicted values for the first y-variable and all components.
 
 ```matlab
 ```
