@@ -34,7 +34,7 @@ m = mdapls(X, y, nComp, 'Param1', value1, 'Param2', value2, ...);
 |`'Alpha'`|A significance level used for calculation of confidence intervals for regression coefficients.|
 |`'CV'`|A cell array with cross-validation parameters.|
 |`'TestSet'`|A cell array with two dataset (X and y, both objects of `mdadata` class) for test set validation.|
-|`'Method'`|PLS algorithm, so far only `''` is available.| 
+|`'Method'`|PLS algorithm, so far only `'simpls'` is available.| 
 
 We will use a reduced *People* data for all examples in this chapter trying to predict *Shoesize* using *Height*, *Income*, *Age*, *Beer* and *IQ* values. We will also split the values into a calibration and a test set.
 
