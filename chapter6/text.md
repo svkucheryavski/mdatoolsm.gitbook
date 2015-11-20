@@ -149,6 +149,7 @@ In the example below we show reference y-values and predicted values obtained us
 show([m.calres.yref  m.calres.ypred(1:end, 1, [1 3]);
 ```
 ```
+
 ```
 
 Also from MATLAB 2015b one can not use `:` in methods and therefore we had to specify for which objects we want to see the predictions as `1:end`.
