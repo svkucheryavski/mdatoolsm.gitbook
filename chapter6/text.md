@@ -132,7 +132,7 @@ title('Explained variance for Y')
 
 The plot shows that even though the second PLS-component explains about 20% of data variation in X-space, it does not explain a lot of variation in Y-space, so we can expect that one component should be enough for getting good prediction performance in the model
 
-Another difference is a structure of the hidden `ypred` property with y-values, predicted by the model. In object with PLS-results, the predicted values are organized as a 3-way array. First of all, because PLS can deal with several y-variables simultaneously, predictions for each of them are stored. Second reason is that the predicted values are calculated for all components in the model. 
+Another difference is a structure of the hidden `ypred` property with y-values, predicted by the model. In object with PLS-results, the predicted values are organized as a 3-way array. First of all, because PLS can deal with several y-variables simultaneously, predictions for each of them are stored. Second reason is that the predicted values are calculated for all components in the model. So this gives three dimensions (ways): objects &times; predictors x components.
 
 In fact, `ypred` is not a property, but a method that gives an access to the values of corresponding property. The method always return values as an `mdadata` object, so we can use e.g. `show()` to see the values. By default it returns predicted values for the first y-variable and all components.
 
