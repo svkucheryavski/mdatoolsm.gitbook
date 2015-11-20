@@ -239,9 +239,9 @@ Below a list with a brief information of other plots available for `plsres` is s
 
 |Method|Plot|
 |------|----|
-|`plotxscores(m, comp, ...)`|X-scores plot.|
+|`plotxscores(m, comp, ...)`|X-scores plot (similar to scores plot in PCA).|
 |`plotxyscores(m, ncomp, ...)`|XY-scores plot (T vs. U) for a particular component.|
-|`plotxresiduals(m, ncomp, ...)`|Residuals plot (Q vs T2) for X-space.|
+|`plotxresiduals(m, ncomp, ...)`|Residuals plot (Q vs T<sup>2</sup>) for X-space.|
 |`plotxexpvar(m, ...)`|Explained variance plot (individual) for X-space.|
 |`plotxcumexpvar(m, ...)`|Cumulative explained variance plot for X-space.|
 |`plotyexpvar(m, ...)`|Explained variance plot (individual) for Y-space.|
@@ -256,9 +256,10 @@ summary(m.calres)
 plot(m.calres)
 ```
 ```
+
 ```
 
-![]()
+![Graphical overview of PLS-results]()
 
 ## Exploring PLS-model
 
