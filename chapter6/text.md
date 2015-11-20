@@ -20,13 +20,13 @@ The final PLS regression model is actually similar to MLR model and is represent
 The general syntax for calibration is very similar to the MLR, however, in this case, user can provide one more parameter — number of components to be used for the decomposition of $$X$$ and $$Y$$ spaces. The general syntax and short description of main parameters are shown below.
 
 ```matlab
-m = mdapls(X, y, nComp, 'Param1', value1, 'Param2', value2, ...);
+m = mdapls(X, Y, nComp, 'Param1', value1, 'Param2', value2, ...);
 ```
 
 |Parameter|Description|
 |---------|-----------|
 |`X`|A dataset (object of `mdadata`class) with predictors.|
-|`y`|A dataset (object of `mdadata`class) with responses.|
+|`Y`|A dataset (object of `mdadata`class) with responses.|
 |`nComp`|A number of PLS components to be used in the model.|
 |`'Center'`|Center or not the data values (`'on'`/`'off'`, by default is on).|
 |`'Scale'`|Standardize or not the data values (`'on'`/`'off'`, by default is off).|
