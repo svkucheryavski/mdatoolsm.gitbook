@@ -345,8 +345,8 @@ The list of other plots (in addition to the ones shown for PLS results and for M
 |------|----|
 |`plotxloadings(m, comp, ...)`|Loadings plot for X-space.|
 |`plotxyloadings(m, comp, ...)`|Loadings plot for X- and Y-space (P vs. Q).|
-|`plotweights(m, ncomp, ...)`|Plot with PLS weights.|
-|`plotselratio(m, comp, ...)`|Selectivity ratio plot.|
+|`plotweights(m, comp, ...)`|Plot with PLS weights.|
+|`plotselratio(m, ncomp, ...)`|Selectivity ratio plot.|
 |`plotvipscores(m, ncomp, ...)`|VIP scores plot.|
 
 Below is an example with several plots for loadings and weights.
