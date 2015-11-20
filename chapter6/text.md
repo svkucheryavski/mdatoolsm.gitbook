@@ -234,8 +234,23 @@ plotpredictions(m, 'Shoesize', 2, 'Marker', 's', 'Color', 'r')
 
 One can also see that if number of components is smaller than used in the model by default, this value is reflected in the plot title.
 
+Below a list with a brief information of other plots available for `plsres` is shown.
 
 
+
+
+And of course the methods `summary()` and `plot()` are also available for the object with PLS-results.
+
+```matlab
+summary(m.calres)
+plot(m.calres)
+```
+```
+```
+
+![]()
+
+## Exploring PLS-model
 
 
 
