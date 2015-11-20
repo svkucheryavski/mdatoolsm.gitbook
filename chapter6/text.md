@@ -266,7 +266,7 @@ subplot 224
 plotxyscores(m, 4)
 ````
 
-![Predictions plot for PLS-results.](fig3.png)
+![XY-scores plots.](fig3.png)
 
 And, of course, the methods `summary()` and `plot()` are also available for the object with PLS-results.
 
