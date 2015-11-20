@@ -17,7 +17,7 @@ The final PLS regression model is actually similar to MLR model and is represent
 
 ## Calibration of a PLS model
 
-The general syntax for calibration is very similar to the MLR method, however in this case user can provide one more important parameter — number of components to be used in the decomposition of $$X$$ and $$Y$$ spaces. The general syntax and short description of main parameters are shown below.
+The general syntax for calibration is very similar to the MLR method, however in this case user can provide one more parameter — number of components to be used in the decomposition of $$X$$ and $$Y$$ spaces. The general syntax and short description of main parameters are shown below.
 
 ```matlab
 m = mdapls(X, y, nComp, 'Param1', value1, 'Param2', value2, ...);
@@ -34,3 +34,40 @@ m = mdapls(X, y, nComp, 'Param1', value1, 'Param2', value2, ...);
 |`'Alpha'`|A significance level used for calculation of confidence intervals for regression coefficients.|
 |`'CV'`|A cell array with cross-validation parameters.|
 |`'TestSet'`|A cell array with two dataset (X and y, both objects of `mdadata` class) for test set validation.|
+|`'Method'`|PLS algorithm, so far only `''` is available.| 
+
+We will use a reduced *People* data for all examples in this chapter trying to predict *Shoesize* using *Height*, *Income*, *Age*, *Beer* and *IQ* values. We will also split the values into a calibration and a test set.
+
+```matlab
+load('people');
+
+% split data into subsets
+tind = 4:4:32;
+
+Xc = people(:, {'Height', 'Income', 'Age', 'Beer', 'IQ'});
+Xc.removerows(tind);
+yc = people(:, 'Shoesize');
+yc.removerows(tind);
+
+Xt = people(tind, {'Height', 'Income', 'Age', 'Beer', 'IQ'});
+yt = people(tind, 'Shoesize');
+
+% create a model object and show the object info
+m = mdamlr(Xc, yc);
+disp(m)
+```
+```
+  mdamlr with properties:
+
+         info: []
+         prep: {[1x1 prep]  [1x1 prep]}
+           cv: []
+    regcoeffs: [1x1 regcoeffs]
+       calres: [1x1 mlrres]
+        cvres: []
+      testres: []
+        alpha: 0.0500
+        nComp: 1
+```
+
+The main properties of the model object are the following. First of all, one can notice three properties related to results, similar to what was in PCA model, — `calres`, `cvres`, and `testres`. Because we did not use any validation in this case, the last two properties are empty and `calres` is an object of `mlrres` (MLR results) class.
