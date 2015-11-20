@@ -36,7 +36,7 @@ m = mdapls(X, Y, nComp, 'Param1', value1, 'Param2', value2, ...);
 |`'TestSet'`|A cell array with two dataset (X and Y, both objects of `mdadata` class) for test set validation.|
 |`'Method'`|PLS algorithm, so far only `'simpls'` is available.| 
 
-We will use similar example as for MLR chapter but in this case we will use all variables from the *People* data trying to predict *Shoesize*. We will also split the values into a calibration and a test set.
+We will use similar example as for MLR chapter but in this case we will use all variables from the *People* data trying to predict *Shoesize*. 
 
 ```matlab
 load('people');
