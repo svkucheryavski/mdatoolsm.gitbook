@@ -339,6 +339,8 @@ plotregcoeffs(m, 'Shoesize', 2, 'Type', 'line', 'Color', 'r')
 
 ```
 
+![Regression coefficients plot for PLS-model.](fig5.png)
+
 The list of other plots (in addition to the ones shown for PLS results and for MLR) available for `mdapls` is shown below.
 
 |Method|Plot|
@@ -349,6 +351,20 @@ The list of other plots (in addition to the ones shown for PLS results and for M
 |`plotselratio(m, ncomp, ...)`|Selectivity ratio plot.|
 |`plotvipscores(m, ncomp, ...)`|VIP scores plot.|
 
-Below is an example with several plots for loadings and weights.
+Below is an example with several plots for the loadings and weights.
+
+```matlab
+figure
+subplot 221
+plotxyloadings(m, [1 2], 'Labels', 'names', 'Color', 'br')
+subplot 222
+plotxloadings(m, [1 2], 'Labels', 'names', 'Color', 'g')
+subplot 223
+plotxloadings(m, [1 2], 'Type', 'bar')
+subplot 224
+plotweights(m, [1 2], 'Type', 'bar', 'FaceColor', 'rg')
+```
+
+![Plots with loadings and weights.](fig6.png)
 
 
