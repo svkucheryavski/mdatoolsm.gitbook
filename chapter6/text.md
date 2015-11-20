@@ -88,6 +88,46 @@ Let us first look at the ctructure of PLS results.
 disp(m.calres)
 ```
 ```
+  24x5 plsres array with properties:
 
+    xdecomp: [1x1 ldecomp]
+    ydecomp: [1x1 ldecomp]
+       info: 'Results for calibration set'
+       yref: [24x1 mdadata]
+       stat: [1x1 struct]
 ```
+
+As one can note it looks similar to the MLR results, however there are two new properties — `xdecomp` and `ydecomp`. These are objects containing the decomposition of X- and Y-space as defined in the beginning of this chapter. The objects are identical to objects, representing PCA-results.
+
+```matlab
+disp(m.calres.xdecomp)
+```
+```
+  ldecomp with properties:
+
+         info: []
+       scores: [24x5 mdadata]
+    residuals: [24x12 mdadata]
+     variance: [5x2 mdadata]
+     modpower: [24x5 mdadata]
+           T2: [24x5 mdadata]
+            Q: [24x5 mdadata]
+```
+
+One can use all methods from PCA-results (e.g. scores, residuals and variance plots) with these two objects. In the example below we show a figure with two plots — explained variance for X-space and explained variance for Y-space.
+
+```matlab
+figure
+subplot 121
+plotexpvar(m.calres.xdecomp)
+subplot 122
+plotexpvar(m.calres.ydecomp)
+```
+
+![Explained variance for decomposition of X and Y spaces](fig1.png)
+
+
+
+
+
 
