@@ -53,7 +53,7 @@ Xt = people(tind, :);
 yt = people(tind, 'Shoesize');
 
 % create a model object and show the object info
-m = mdapls(Xc, yc, 5);
+m = mdapls(Xc, yc, 5, 'Scale', 'on');
 disp(m)
 ```
 ```
