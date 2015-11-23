@@ -35,7 +35,7 @@ And here how to do the same using logical values.
 X = copy(people);
 X.removecols('Region');
 
-c = people('Region') == -1;
+c = people(:, 'Region') == -1;
 
 m1 = mdaplsda(X, c, 'A', 3, 'Scale', 'on');
 ```
