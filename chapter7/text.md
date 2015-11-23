@@ -138,9 +138,14 @@ Comp 3      12.7      2.04   0   0      1      1      0
 
 So one can see that with two components the classification performance for calibration set was already good enough.
 
-There are also several additional plots for PLS-DA results.
+There are also several additional plots for PLS-DA results (and actually for any other object containg result from a classification method).
 
-
+|Method|Description|
+|------|-----------|
+|`plotclassification(obj, ...)`|Shows a classification plot.|
+|`plotmisclassified(obj, ...)`|Show a ratio of misclassified objects vs. number of components.|
+|`plotsensitivity(obj, ...)`|Show sensitivity vs. number of components.|
+|`plotspecificity(obj, ...)`|Show specificity vs. number of components.|
 
 
 
