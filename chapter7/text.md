@@ -213,7 +213,7 @@ plotclassification(m)
 ![Classification plot for PLS-DA model](fig4.png)
 
 
-## Make new predictions
+## Classification of new objects
 
 Making predictions for new objects works similar to PLS.
 
