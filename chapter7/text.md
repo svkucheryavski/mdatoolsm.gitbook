@@ -49,8 +49,14 @@ As it was mentioned already, both model and result object have all methods and p
 The performance statistics of any classification model is based on the following values:
 
 |Name|Description|
-------------------
-|FN| Number of false negatives (class members that were rejected by a model).|
+|----|-----------|
+|FN| Number of false negatives (class members that were incorrectly rejected by a model).|
+|TN| Number of true negatives (class non-members that were correctly rejected by a model).|
+|FP| Number of false positives (class non-members that were incorrectly accepted by a model).|
+|TP| Number of true positives (class members that were correctly accepted by a model).|
+|Sensitivity| .|
+|Specificity| .|
+|Misclassified| .|
 
 
 
