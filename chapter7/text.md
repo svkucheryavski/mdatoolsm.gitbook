@@ -56,7 +56,7 @@ The performance statistics of any classification model is based on the following
 |TP| Number of true positives (class members that were correctly accepted by a model).|
 |Sensitivity| .|
 |Specificity| .|
-|Misclassified| .|
+|Misclassified| (FN + FP) / (FN + TN + FP + TP).|
 
 
 
