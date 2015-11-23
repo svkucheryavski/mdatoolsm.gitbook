@@ -151,3 +151,58 @@ subplot 121
 gscatter(data, groups, 'Marker', 'ssoo', 'MarkerFaceColor', 'rbrb', 'Labels', 'names')
 
 printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh], 'png', '-r150')
+
+%% new plots
+
+load('people');
+
+data = people(:, {'Height', 'Weight', 'Wine', 'Beer'});
+groups = people(:, {'Sex', 'Region'});
+groups.factor('Sex', {'Male', 'Female'});
+groups.factor('Region', {'A', 'B'});
+
+nfig = 13;
+
+figure
+
+% conventional line plot without groups
+subplot 221
+plot(data)
+
+% conventional line plot with usual parameters
+subplot 222
+plot(data, 'Color', 'r', 'LineStyle', '--')
+
+% turning the line plot to group line plot
+subplot 223
+plot(data, 'Groupby', groups)
+
+% tuning the line plot with groupby option
+subplot 224
+plot(data, 'Groupby', groups, 'Color', 'rgbc', 'LineStyle', {'-', '-', ':', ':'})
+
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
+
+
+
+nfig = 14;
+
+figure
+
+% conventional scatter plot
+subplot 221
+scatter(data)
+
+% conventional scatter plot with extra options and contour
+subplot 222
+scatter(data, 'Marker', 's', 'Color', 'r', 'ShowContour', 'on')
+
+% turning scatter plot to group plot
+subplot 223
+scatter(data, 'Groupby', groups)
+
+% changing parameters and showing contour of clusters
+subplot 224
+scatter(data, 'Groupby', groups, 'Color', 'rgbc', 'ShowContour', 'on')
+
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
