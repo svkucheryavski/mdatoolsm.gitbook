@@ -101,7 +101,47 @@ As one can see all negative predictions were classified as –1 and all positive
 |Specificity| TN / (FP + TN).|
 |Misclassified| (FN + FP) / (FN + TN + FP + TP).|
 
-All statistics as well 
+All statistics are stored in the same structure as for PLS.
+
+```matlab
+disp(m1.calres.stat)
+```
+```
+             rmse: [3x1 mdadata]
+             bias: [3x1 mdadata]
+            slope: [3x1 mdadata]
+               r2: [3x1 mdadata]
+              rpd: [3x1 mdadata]
+               fp: [3x1 mdadata]
+               fn: [3x1 mdadata]
+               tp: [3x1 mdadata]
+      sensitivity: [3x1 mdadata]
+      specificity: [3x1 mdadata]
+    misclassified: [3x1 mdadata]
+```
+
+And these values complement the conventional PLS performance statistics, such as RMSE, bias and so on. The function `summary()` shows most of them for the all components used in the model.
+
+```matlab
+summary(m1)
+```
+```
+Results for calibration set
+
+Classification performance for A:
+        X expvar  Y expvar  FN  FP   Sens   Spec    Mis
+       --------- --------- --- --- ------ ------ ------
+Comp 1        44        55   3   2  0.812  0.867  0.156
+Comp 2      26.3      34.2   0   0      1      1      0
+Comp 3      12.7      2.04   0   0      1      1      0
+```
+
+So one can see that with two components the classification performance for calibration set was already good enough.
+
+There are also several additional plots for PLS-DA results.
+
+
+
 
 
 
