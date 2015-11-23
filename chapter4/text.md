@@ -577,9 +577,32 @@ biplot(m, 1:2, 'Labels', 'numbers', 'ScoresTextColor', 'c', 'LoadingsTextColor',
 ![Biplots.](fig12.png)
 
 
-## Using groups and contours on scores plot
+## Showing groups and contours on scores plot
 
-This is a new feature, introduced in v.0.1.4, please first read details in last part of [section 2.7](chapter2/section7/text.md). Since any conventional plot now can be turned into a group plot, this can be used to show groups 
+This is a new feature, introduced in v.0.1.4, please first read details in last part of [section 2.7](chapter2/section7/text.md). Since any conventional plot now can be turned into a group plot, this can be used to show groups on e.g. scatter plot for PCA results (this will work on PLS, etc) as well as to draw contours for the groups. Below is a short example showing the procedure. We assume that *People* data is already loaded.
+
+```matlab
+groups = people(:, {'Sex', 'Region'});
+groups.factor(1, {'M', 'F'});
+groups.factor(2, {'A', 'B'});
+
+m = mdapca(people, 5, 'Scale', 'on');
+
+figure
+
+% normal scores plot for results
+subplot 221
+plotscores(m.calres)
+
+% scores plot with groups and contours
+subplot 222
+plotscores(m.calres, 'Groupby', groups, 'ShowContour', 'on')
+```
+
+![Scores plot with groups.](fig13.png)
+
+
+
 
 
 
