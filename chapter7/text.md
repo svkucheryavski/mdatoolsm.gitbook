@@ -162,7 +162,7 @@ plotclassification(m1.calres, 'Color', 'rg', 'Marker', 'ds')
 ![Classification plors for PLS-DA model](fig1.png)
 
 
-The other three plots show the corresponding statistics depending on number of components in PLS-DA model, similar to e.g. `plotrmse()` in PLS. As it is already mentioned and shown in an example below the PLS plots are also available.
+The other three plots show the corresponding statistics depending on number of components in PLS-DA model, similar to e.g. `plotrmse()` in PLS. As it was already mentioned and shown in an example below the PLS plots are also available.
 
 ```matlab
 figure
@@ -174,6 +174,7 @@ subplot 223
 plotmisclassified(m1.classres)
 subplot 224
 plotrmse(m1.classres)
+```
 
 
 
