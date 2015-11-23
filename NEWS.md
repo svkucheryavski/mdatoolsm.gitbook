@@ -1,9 +1,8 @@
 # What is new
 
 ## 23.11.2015
-* Description of a new option `'Groupby'` for `scatter()` and `plot()` methods as well as a new option `'ShowContour'`for method has been added to the section on [Group plots](chapter2/section7/text.md) (last subsection). See also how to use these 
-
-* 
+* Description of a new option `'Groupby'` for `scatter()` and `plot()` methods as well as a new option `'ShowContour'`for `scatter()` and `gscatter()` have been added to the section [Group plots](chapter2/section7/text.md) (see last part of the section). 
+* Description on how these new properties can be used with PCA scores plot can be found at the end of the [PCA chapter](chapter4/text.md).
 
 ## 20.11.2015
 * Description of new method, `biplot()` is added to the [PCA chapter](chapter4/text.md).
