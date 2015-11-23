@@ -12,4 +12,4 @@ It must be noted that PLS-DA in general supports multiclass classification, when
 
 ## Calibration of PLS-DA model
 
-The biggest difference with PLS here is how to provide proper values for responses. There are two possibilities. First, is to use a dataset with single factor column and specify either a level number or a label for the level as a class name. 
+The biggest difference with PLS here is how to provide proper values for responses. There are two possibilities. First, is to use a dataset with single factor column and specify either a level number or a label for the level as a class name. Second is to provide a vector with logical values (true for class members and false for strangers) and a class name. In the code below we create PLS-DA models for discrimination between scandinavians and medditerenneans in the *People* data. 
