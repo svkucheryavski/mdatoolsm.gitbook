@@ -1,5 +1,9 @@
 # What is new
 
+## 23.11.2015
+* Description of a new option `'Groupby'` for `scatter()` and `plot()` methods has been added to the section on [Group plots](chapter2/scetion7/text.md) (see last part).
+* 
+
 ## 20.11.2015
 * Description of new method, `biplot()` is added to the [PCA chapter](chapter4/text.md).
 * New chapter — “[Projection on latent structures](chapter6/text.md)”.
