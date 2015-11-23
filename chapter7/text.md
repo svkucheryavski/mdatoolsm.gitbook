@@ -12,4 +12,29 @@ It must be noted that PLS-DA in general supports multiclass classification, when
 
 ## Calibration of PLS-DA model
 
-The biggest difference with PLS here is how to provide proper values for responses. There are two possibilities. First, is to use a dataset with single factor column and specify either a level number or a label for the level as a class name. Second is to provide a vector with logical values (true for class members and false for strangers) and a class name. In the code below we create PLS-DA models for discrimination between scandinavians and medditerenneans in the *People* data. 
+The biggest difference with PLS here is how to provide proper values for responses. There are two possibilities. First, is to use a dataset with single factor column and specify either a level number or a label for the level as a class name. Second is to provide a vector with logical values (true for class members and false for strangers) and a class name. In the code below we create PLS-DA models for discrimination between Scandinavians and the others (in our case Mediterraneans, since we do not have any other regions) in the *People* data. 
+
+Here is how to create the model using factors
+```matlab
+load('people')
+
+X = copy(people);
+X.removecols('Region);
+
+c = people('Region');
+c.factor(1, {'A', 'B'});
+
+m1 = mdaplsda(X, c, 'A', 3, 'Scale', 'on');
+```
+
+And here how to do the same using logical values.
+```matlab
+load('people')
+
+X = copy(people);
+X.removecols('Region);
+
+c = people('Region') == -1;
+
+m1 = mdaplsda(X, c, 'A', 3, 'Scale', 'on');
+```
