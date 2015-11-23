@@ -44,4 +44,29 @@ The result will be absolutely the same. It makes sense to use the first way if a
 
 ## Exploring PLS-DA results
 
+As it was mentioned already, both model and result object have all methods and properties inherited from corresponding PLS object and then a bit on top of it. Let us look at the differences for the result object first.
+
+The performance statistics of any classification model is based on the following values:
+
+|Name|Description|
+------------------
+|FN| Number of false negatives (class members that were rejected by a model).|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
