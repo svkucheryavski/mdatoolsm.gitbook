@@ -204,10 +204,24 @@ There is however one difference. Since the color grouping is already used on cla
 
 ## Make new predictions
 
+Making predictions for new objects works similar to PLS.
 
+```matlab
 
+% define values for two "new" persons
+p1 = [];
+p2 = []
 
+% create a dataset
+p = mdadata([p1; p2], {'P1', 'P2'}, people.colNames);
 
+% make predictions and show results
+res = m.predict(p);
+
+figure
+plotclassification(res)
+
+```
 
 
 
