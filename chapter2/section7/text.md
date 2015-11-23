@@ -232,8 +232,9 @@ scatter(data, 'Groupby', groups)
 suplot 224
 scatter(data, 'Groupby', groups, 'Color', 'rgbc', 'ShowContour', 'on')
 
-
 ```
+
+![Turning a scatter plot to a group plot.](fig14.png)
 
 
 
