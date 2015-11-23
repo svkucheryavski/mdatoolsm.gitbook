@@ -49,7 +49,7 @@ As it was mentioned already, both model and result object have all methods and p
 In addition to an array with predicted response valyes, `ypred`, in PLS-DA result object there is also an array with predicted class values, `cpred`. In the example below we show both for the case when three components were used in the model (we will use `m1` calculated using the code above). As well as reference y- and c-values.
 
 ```matlab
-show([m.calres.ypred(1:end, 1, 3) m.calres.cpred(1:end, 1, 3) m.calres.cref])
+show([m.calres.ypred(1:end, 1, 3) m.calres.cpred(1:end, 1, 3) m.calres.yref m.calres.cref])
 ```
 ```
 Responses
