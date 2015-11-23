@@ -180,9 +180,9 @@ subplot 224
 plotrmse(m1.classres)
 ```
 
-## Exploring PLS-DA model
+## Exploring PLS-DA models
 
-
+Again similar to PLS, the plots and method for PLS-DA model just show values, statistics and plots for each of the results available (calibration, cross-validation and test set). as for the PLS-DA 
 
 
 
