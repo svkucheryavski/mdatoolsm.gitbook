@@ -147,7 +147,7 @@ There are also several additional plots for PLS-DA results (and actually for any
 |`plotsensitivity(obj, ...)`|Show sensitivity vs. number of components.|
 |`plotspecificity(obj, ...)`|Show specificity vs. number of components.|
 
-
+The classification plot shows 
 
 
 
