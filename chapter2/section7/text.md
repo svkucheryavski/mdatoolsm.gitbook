@@ -206,11 +206,36 @@ plot(data, 'Groupby', groups)
 % tuning the line plot with groupby option
 subplot 224
 plot(data, 'Groupby', groups, 'Color', 'rgbc', 'LineStyle', {'-', '-', ':', ':'})
+```
+
+![Turning a line plot to group plot.](fig13.png)
+
+Now some examples also for method `scatter()`. It must be also noted that from this version, method `scatter()` supports one more option, which can be turned on and off by a parameter `'ShowContour'`. If the parameter is set to `'on'` the method shows a contour for data points by using the most outer points (convex hull). The parameter can also be used together with `'Groupby'` for showing clusters on scatter plots.
+
+```matlab 
+
+figure
+
+% conventional scatter plot
+suplot 221
+scatter(data)
+
+% conventional scatter plot with extra options and contour
+suplot 222
+scatter(data, 'Marker', 's', 'Color', 'r', 'ShowContour', 'on')
+
+% turning scatter plot to group plot
+suplot 223
+scatter(data, 'Groupby', groups)
+
+% changing parameters and showing contour of clusters
+suplot 224
+scatter(data, 'Groupby', groups, 'Color', 'rgbc', 'ShowContour', 'on')
 
 
 ```
 
-From this version, method 
+
 
 
 
