@@ -217,19 +217,19 @@ Now some examples also for method `scatter()`. It must be also noted that from t
 figure
 
 % conventional scatter plot
-suplot 221
+subplot 221
 scatter(data)
 
 % conventional scatter plot with extra options and contour
-suplot 222
+subplot 222
 scatter(data, 'Marker', 's', 'Color', 'r', 'ShowContour', 'on')
 
 % turning scatter plot to group plot
-suplot 223
+subplot 223
 scatter(data, 'Groupby', groups)
 
 % changing parameters and showing contour of clusters
-suplot 224
+subplot 224
 scatter(data, 'Groupby', groups, 'Color', 'rgbc', 'ShowContour', 'on')
 
 ```
