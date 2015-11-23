@@ -22,7 +22,7 @@ load('people')
 Here is how to create the model using factors
 ```matlab
 X = copy(people);
-X.removecols('Region');
+X.removecols(:, 'Region');
 
 c = people('Region');
 c.factor(1, {'A', 'B'});
