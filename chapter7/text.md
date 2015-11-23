@@ -38,3 +38,5 @@ c = people('Region') == -1;
 
 m1 = mdaplsda(X, c, 'A', 3, 'Scale', 'on');
 ```
+
+The result will be absolutely the same.
