@@ -19,7 +19,7 @@ Here is how to create the model using factors
 load('people')
 
 X = copy(people);
-X.removecols('Region);
+X.removecols('Region');
 
 c = people('Region');
 c.factor(1, {'A', 'B'});
@@ -32,7 +32,7 @@ And here how to do the same using logical values.
 load('people')
 
 X = copy(people);
-X.removecols('Region);
+X.removecols('Region');
 
 c = people('Region') == -1;
 
