@@ -46,15 +46,50 @@ The result will be absolutely the same. It makes sense to use the first way if a
 
 As it was mentioned already, both model and result object have all methods and properties inherited from corresponding PLS object and then a bit on top of it. Let us look at the differences for the result object first.
 
-In addition to an array with predicted response valyes, `ypred`, in PLS-DA result object there is also an array with predicted class values, `cpred`. In the example below we show both for the case when three components were used in the model (we will use `m1` calculated using the code above).
+In addition to an array with predicted response valyes, `ypred`, in PLS-DA result object there is also an array with predicted class values, `cpred`. In the example below we show both for the case when three components were used in the model (we will use `m1` calculated using the code above). As well as reference y- and c-values.
 
 ```matlab
-show([m.calres.ypred(1:end, 1, 3) m.calres.cpred(1:end, 1, 3)])
+show([m.calres.ypred(1:end, 1, 3) m.calres.cpred(1:end, 1, 3) m.calres.cref])
 ```
 ```
+Responses
+                 A  VA
+           ------- ---
+      Lars    1.07   1
+     Peter   0.676   1
+    Rasmus    0.51   1
+      Lene   0.939   1
+     Mette    1.01   1
+     Gitte    1.12   1
+      Jens    1.19   1
+      Erik    1.18   1
+     Lotte   0.886   1
+     Heidi   0.921   1
+       Kaj    1.35   1
+     Gerda   0.772   1
+      Anne   0.445   1
+    Britta   0.609   1
+    Magnus    0.95   1
+    Casper   0.972   1
+      Luka  -0.695  -1
+  Federico  -0.716  -1
+      Dona  -0.653  -1
+  Fabrizia   -1.59  -1
+      Lisa  -0.488  -1
+    Benito  -0.927  -1
+    Franko   -1.03  -1
+Alessandro  -0.915  -1
+   Leonora  -0.449  -1
+  Giuliana  -0.769  -1
+  Giovanni   -1.02  -1
+  Leonardo   -1.14  -1
+     Marta  -0.539  -1
+   Rosetta   -1.13  -1
+     Romeo   -1.38  -1
+    Romina   -1.17  -1
 ```
 
-The performance statistics of any classification model is based on the following values:
+As one can see all negative predictions were classified as –1 and all positives as +1. The performance statistics of any classification model is based on the following values:
 
 |Name|Description|
 |----|-----------|
