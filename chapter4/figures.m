@@ -234,3 +234,26 @@ subplot 224
 biplot(m, 1:2, 'Labels', 'numbers', 'ScoresTextColor', 'c', 'LoadingsTextColor', 'm')
 
 printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
+
+%% groups
+
+
+groups = people(:, {'Sex', 'Region'});
+groups.factor(1, {'M', 'F'});
+groups.factor(2, {'A', 'B'});
+
+m = mdapca(people, 5, 'Scale', 'on');
+
+nfig = 13;
+
+figure
+
+% normal scores plot for results
+subplot 121
+plotscores(m.calres)
+
+% scores plot with groups and contours
+subplot 122
+plotscores(m.calres, 'Groupby', groups, 'ShowContour', 'on')
+
+printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
