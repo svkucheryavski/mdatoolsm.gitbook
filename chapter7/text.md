@@ -219,17 +219,17 @@ Making predictions for new objects works similar to PLS.
 
 ```matlab
 % define values for two "new" persons
-p1 = [];
-p2 = []
+p1 = [181 82 -1 42 35 35000 320 100 -1 90 120];
+p2 = [179 76 -1 42 43 19000 185 180 -1 85 120];
 
 % create a dataset
-p = mdadata([p1; p2], {'P1', 'P2'}, people.colNames);
+p = mdadata([p1; p2], {'P1', 'P2'}, X.colNames);
 
 % make predictions and show results
 res = m.predict(p);
 
 figure
-plotclassification(res)
+plotclassification(res, 'Labels', 'names')
 ```
 
 ![Classification of new data](fig5.png)
