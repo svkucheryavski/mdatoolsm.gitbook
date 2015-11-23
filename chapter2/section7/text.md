@@ -177,7 +177,7 @@ gscatter(data, groups, 'Marker', 'ssoo', 'MarkerFaceColor', 'rbrb', 'Labels', 'n
 
 ## Make group plots with conventional methods
 
-From version 0.1.4 one can also make the scatter and line group plots, described above, using methods `scatter()` and `plot()`. To make this possible a special parameter `'Groupby'` has been added to the methods. The parameter value should be a dataset with one or several factors, exactly as the second argument for methods `gscatter()` and `gplot()`. One can just thing that this parameter “turns” e.g. `scatter()` to `gscatter()`. If this parameter is used, all rules regarding tuning the group plots described above will also work.
+From version 0.1.4 one can also make the scatter and line group plots, described above, using methods `scatter()` and `plot()`. To make this possible a special parameter `'Groupby'` has been added to the methods. The parameter value should be a dataset with one or several factors, exactly as the second argument for methods `gscatter()` and `gplot()`. One can just thing that this parameter turns e.g. `scatter()` to `gscatter()`. If this parameter is used, all rules regarding tuning the group plots described above will also work.
 
 
 
