@@ -19,5 +19,6 @@
 * [Variable selection in regression](chapter8/text.md)
 * [One class classification with SIMCA](chapter9/text.md)
 * [Multiple classes classification with SIMCA](chapter10/text.md)
+* [Multivariate Image Analysis](chapter11/text.md)
 
 
