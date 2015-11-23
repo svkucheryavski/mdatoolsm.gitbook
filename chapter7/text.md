@@ -166,7 +166,7 @@ line(xlim(), [0 0], 'Color', 'k')
 
 The bottom right plot in the figure above is a normal PLS predictions plot with added horizontal line, which correspond to the threshold used for classification.
 
-The other three plots show the corresponding statistics depending on number of components in PLS-DA model, similar to e.g. `plotrmse()` in PLS. As it was already mentioned and also shown in the example below, the conventional PLS plots are also available.
+The other three plots mentioned in the table, show the corresponding statistics depending on number of components in PLS-DA model, similar to e.g. `plotrmse()` in PLS. As it was already mentioned and also shown in the example below, the conventional PLS plots are also available.
 
 ```matlab
 figure
