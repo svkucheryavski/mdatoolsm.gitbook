@@ -162,7 +162,7 @@ plotpredictions(m1.calres)
 line(xlim(), [0 0], 'Color', 'k')
 ```
 
-![Classification plors for PLS-DA results](fig1.png)
+![Classification plots for PLS-DA results](fig1.png)
 
 The bottom right plot in the figure above is a normal PLS predictions plot with added horizontal line, which correspond to the threshold used for classification.
 
@@ -180,7 +180,7 @@ subplot 224
 plotrmse(m1.classres)
 ```
 
-![Classification plors for PLS-DA model](fig1.png)
+![Performance plots for PLS-DA results](fig2.png)
 
 ## Exploring PLS-DA models
 
