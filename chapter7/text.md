@@ -205,6 +205,13 @@ plotrmse(m)
 
 There is however one difference. Since the color grouping is already used on classification plot to show difference between class members and non-members. The classification plot for PLS-DA model is represented by several separate plots for each of the available results.
 
+```matlab
+figure
+plotclassification(m)
+```
+
+![Classification plot for PLS-DA model](fig4.png)
+
 
 ## Make new predictions
 
@@ -225,7 +232,7 @@ figure
 plotclassification(res)
 ```
 
-![Classification of new data](fig4.png)
+![Classification of new data](fig5.png)
 
 
 
