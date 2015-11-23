@@ -180,6 +180,8 @@ subplot 224
 plotrmse(m1.classres)
 ```
 
+## Exploring PLS-DA model
+
 
 
 
