@@ -46,6 +46,14 @@ The result will be absolutely the same. It makes sense to use the first way if a
 
 As it was mentioned already, both model and result object have all methods and properties inherited from corresponding PLS object and then a bit on top of it. Let us look at the differences for the result object first.
 
+In addition to an array with predicted response valyes, `ypred`, in PLS-DA result object there is also an array with predicted class values, `cpred`. In the example below we show both for the case when three components were used in the model (we will use `m1` calculated using the code above).
+
+```matlab
+show([m.calres.ypred(1:end, 1, 3) m.calres.cpred(1:end, 1, 3)])
+```
+```
+```
+
 The performance statistics of any classification model is based on the following values:
 
 |Name|Description|
@@ -54,11 +62,11 @@ The performance statistics of any classification model is based on the following
 |TN| Number of true negatives (class non-members that were correctly rejected by a model).|
 |FP| Number of false positives (class non-members that were incorrectly accepted by a model).|
 |TP| Number of true positives (class members that were correctly accepted by a model).|
-|Sensitivity| .|
-|Specificity| .|
+|Sensitivity| TP / (TP + FN).|
+|Specificity| TN / (FP + TN).|
 |Misclassified| (FN + FP) / (FN + TN + FP + TP).|
 
-
+All statistics as well 
 
 
 
