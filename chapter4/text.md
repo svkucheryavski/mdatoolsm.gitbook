@@ -602,7 +602,6 @@ plotscores(m.calres, 'Groupby', groups, 'ShowContour', 'on')
 ![Scores plot with groups.](fig13.png)
 
 
-## Working with images
 
 
 
