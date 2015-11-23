@@ -151,16 +151,20 @@ The classification plot shows results of classification using color grouped scat
 
 ```matlab
 figure
-subplot 311
+subplot 221
 plotclassification(m1.calres)
-subplot 312
+subplot 222
 plotclassification(m1.calres, 1, 1)
-subplot 313
+subplot 223
 plotclassification(m1.calres, 'Color', 'rg', 'Marker', 'ds')
+subplot 224
+plotpredictions(m1.calres)
+line(xlim(), [0 0], 'Color', 'k')
 ```
 
 ![Classification plors for PLS-DA model](fig1.png)
 
+The bottom right plot in the figure above is a normal PLS predictions plot with added horizontal line, which correspond to the threshold used for classification.
 
 The other three plots show the corresponding statistics depending on number of components in PLS-DA model, similar to e.g. `plotrmse()` in PLS. As it was already mentioned and also shown in the example below, the conventional PLS plots are also available.
 
