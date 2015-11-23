@@ -201,6 +201,8 @@ subplot 224
 plotrmse(m)
 ```
 
+![Performance plots for PLS-DA model](fig3.png)
+
 There is however one difference. Since the color grouping is already used on classification plot to show difference between class members and non-members. The classification plot for PLS-DA model is represented by several separate plots for each of the available results.
 
 
