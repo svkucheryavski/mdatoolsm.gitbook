@@ -46,10 +46,10 @@ The result will be absolutely the same. It makes sense to use the first way if a
 
 As it was mentioned already, both model and result object have all methods and properties inherited from corresponding PLS object and then a bit on top of it. Let us look at the differences for the result object first.
 
-In addition to an array with predicted response valyes, `ypred`, in PLS-DA result object there is also an array with predicted class values, `cpred`. In the example below we show both for the case when three components were used in the model (we will use `m1` calculated using the code above). As well as reference y- and c-values.
+In addition to an array with predicted response valyes, `ypred`, in PLS-DA result object there is also an array with predicted class values, `cpred`. In the example below we show both for the case when three components were used in the model (we will use `m1` calculated using the code above).
 
 ```matlab
-show([m.calres.ypred(1:end, 1, 3) m.calres.cpred(1:end, 1, 3) m.calres.yref m.calres.cref])
+show([m1.calres.ypred(1:end, 1, 3) m1.calres.cpred(1:end, 1, 3)])
 ```
 ```
 Responses
