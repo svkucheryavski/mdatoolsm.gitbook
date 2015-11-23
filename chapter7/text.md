@@ -225,6 +225,7 @@ figure
 plotclassification(res)
 ```
 
+![Classification of new data](fig4.png)
 
 
 
