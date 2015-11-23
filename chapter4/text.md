@@ -579,7 +579,7 @@ biplot(m, 1:2, 'Labels', 'numbers', 'ScoresTextColor', 'c', 'LoadingsTextColor',
 
 ## Using groups and contours on scores plot
 
-This is a new feature, introduced in v.0.1.4, please first read details in last part of [section 3.7](chapter3/section7/text.md). Since any conventional plot now can be turned into a group plot, this can be used to show groups 
+This is a new feature, introduced in v.0.1.4, please first read details in last part of [section 2.7](chapter2/section7/text.md). Since any conventional plot now can be turned into a group plot, this can be used to show groups 
 
 
 
