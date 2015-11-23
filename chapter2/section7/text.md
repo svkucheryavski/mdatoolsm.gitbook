@@ -179,7 +179,38 @@ gscatter(data, groups, 'Marker', 'ssoo', 'MarkerFaceColor', 'rbrb', 'Labels', 'n
 
 From version 0.1.4 one can also make the scatter and line group plots, described above, using methods `scatter()` and `plot()`. To make this possible a special parameter `'Groupby'` has been added to the methods. The parameter value should be a dataset with one or several factors, exactly as the second argument for methods `gscatter()` and `gplot()`. One can just thing that this parameter turns e.g. `scatter()` to `gscatter()`. If this parameter is used, all rules regarding tuning the group plots described above will also work.
 
+Here are some several examples for line plot.
 
+```matlab
+load('people');
+
+data = people(:, {'Height', 'Weight', 'Wine', 'Beer'});
+groups = people(:, {'Sex', 'Region'});
+groups.factor('Sex', {'Male', 'Female'});
+groups.factor('Region', {'A', 'B'});
+
+figure
+
+% conventional line plot without groups
+subplot 221
+plot(data)
+
+% conventional line plot with usual parameters
+subplot 222
+plot(data, 'Color', 'r', 'LineStyle', '--')
+
+% turning the line plot to group line plot
+subplot 223
+plot(data, 'Groupby', groups)
+
+% tuning the line plot with groupby option
+subplot 224
+plot(data, 'Groupby', groups, 'Color', 'rgbc', 'LineStyle', {'-', '-', ':', ':'})
+
+
+```
+
+From this version, method 
 
 
 
