@@ -147,7 +147,7 @@ There are also several additional plots for PLS-DA results (and actually for any
 |`plotsensitivity(obj, ...)`|Show sensitivity vs. number of components.|
 |`plotspecificity(obj, ...)`|Show specificity vs. number of components.|
 
-The classification plot shows results of classification using color grouped scatter plot and can be tuned correspondingly. Similar to the `plotprediction()` one can specify the number of response variable (in this case always 1) and number of components to show the plot for. Here are some examples.
+The classification plot shows results of classification using color grouped scatter plot and can be tuned correspondingly. Similar to the `plotprediction()` one can specify number of response variable (in this case always 1 as we have one class classifier) and number of components to show the classification results for. Here are some examples.
 
 ```matlab
 figure
