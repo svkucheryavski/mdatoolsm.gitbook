@@ -93,6 +93,8 @@ qqplot(people(:, 'Height'), people(:, {'Sex'}));
 
 The basic conventional plots `scatter()`, `plot()` and `bar()` also can work with factors and groups. However in contrast to statistical plots here it was decided to use separate methods in order to extend their functionality. The methods for group plots have a leading `'g'` in the function name: `gscatter()`, `gplot()` and `gbar()`. One can think about group plots as following: if a plot needs a legend, it is a group plot.
 
+In fact, from version 0.1.4, one can also use the `scatter()` and `plot()` methods with a special parameter `'Groupby'` to make the group plots. See a desctiption and examples at the end of this section.
+
 The groups on these plots are separated first of all using different colors. Because of that, color gradient (option `Colorby`) is not available for group plots. Besides that, one can change marker and line properties for each group. However in this case you need to specify as many values, as many groups you have. Let's look at some examples.
 
 The bar plot is a specific one, the only possibility to make a group bar plot is to provide a dataset with several rows. While `bar()` makes separate plot for each row, the `gbar()` method will make a single plot with several bar series separated by colors as it is shown below.
