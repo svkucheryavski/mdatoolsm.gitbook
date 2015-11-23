@@ -207,7 +207,6 @@ There is however one difference. Since the color grouping is already used on cla
 Making predictions for new objects works similar to PLS.
 
 ```matlab
-
 % define values for two "new" persons
 p1 = [];
 p2 = []
@@ -220,8 +219,8 @@ res = m.predict(p);
 
 figure
 plotclassification(res)
-
 ```
+
 
 
 
