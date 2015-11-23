@@ -182,7 +182,24 @@ plotrmse(m1.classres)
 
 ## Exploring PLS-DA models
 
-Again similar to PLS, the plots and method for PLS-DA model just show values, statistics and plots for each of the results available (calibration, cross-validation and test set). as for the PLS-DA 
+Again, similar to PLS, the methods for PLS-DA model just show values, statistics and plots for each of the results available (calibration, cross-validation and test set). Let us calculate a model with full cross-validation and make some plots as an example.
+
+```matlab
+
+m = mdaplsda(X, c, 'A', 3, 'Scale', 'on', 'CV', {'full'}); 
+
+figure
+subplot 221
+plotsensitivity(m)
+subplot 222
+plotspecificity(m1)
+subplot 223
+plotmisclassified(m)
+subplot 224
+plotrmse(m)
+```
+
+There is however one difference. Since the color grouping is already used on classification plot to show difference between class members and non-members. The classification plot for PLS-DA model is represented by several separate plots for each of the available results.
 
 
 
