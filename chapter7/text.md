@@ -234,11 +234,18 @@ p2 = [179 76 -1 42 43 19000 185 180 -1 85 120];
 % create a dataset
 p = mdadata([p1; p2], {'P1', 'P2'}, X.colNames);
 
-% make predictions and show results
-res = m.predict(p);
+% make predictions without reference values
+res1 = m.predict(p);
 
+% make predictions with reference values
+res2 = m.predict(p, [true; false]);
+
+% show results
 figure
-plotclassification(res, 'Labels', 'names')
+subplot 121
+plotclassification(res1, 'Labels', 'names')
+subplot 122
+plotclassification(res2, 'Labels', 'names')
 ```
 
 ![Classification of new data](fig5.png)
