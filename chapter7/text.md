@@ -89,7 +89,7 @@ Alessandro  -0.915  -1
     Romina   -1.17  -1
 ```
 
-As one can see all negative predictions were classified as –1 and all positive as +1. The performance statistics of any classification model is based on the following values:
+As one can see all negative predictions were classified as –1 and all positive as +1. The performance statistics of any classification model is including on the following values:
 
 |Name|Description|
 |----|-----------|
