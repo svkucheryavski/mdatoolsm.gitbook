@@ -37,7 +37,7 @@ X.removecols('Region');
 
 c = people(:, 'Region') == -1;
 
-m1 = mdaplsda(X, c, 'A', 3, 'Scale', 'on');
+m2 = mdaplsda(X, c, 'A', 3, 'Scale', 'on');
 ```
 
 The result will be absolutely the same. It makes sense to use the first way if a factor is already exists and contains several levels (and level names). In this case it is important that the provided class name is identical to one of the level names.
