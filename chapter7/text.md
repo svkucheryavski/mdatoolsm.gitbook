@@ -142,10 +142,10 @@ There are also several additional plots for PLS-DA results (and actually for any
 
 |Method|Description|
 |------|-----------|
-|`plotclassification(obj, ...)`|Shows a classification plot.|
-|`plotmisclassified(obj, ...)`|Show a ratio of misclassified objects vs. number of components.|
-|`plotsensitivity(obj, ...)`|Show sensitivity vs. number of components.|
-|`plotspecificity(obj, ...)`|Show specificity vs. number of components.|
+|`plotclassification(obj, ...)`|Classification plot.|
+|`plotmisclassified(obj, ...)`|Ratio of misclassified objects vs. number of components.|
+|`plotsensitivity(obj, ...)`|Sensitivity vs. number of components.|
+|`plotspecificity(obj, ...)`|Specificity vs. number of components.|
 
 The classification plot shows results of classification using color grouped scatter plot and can be tuned correspondingly. Similar to the `plotprediction()` one can specify number of response variable (in this case always 1 as we have one class classifier) and number of components to show the classification results for. Here are some examples.
 
