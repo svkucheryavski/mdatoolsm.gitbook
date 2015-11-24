@@ -6,7 +6,7 @@ The PLS regression method, described in the [previous chapter](chapter6/text.md)
 2. Create a PLS-regression model as usual, using the response values defined above.
 3. Make predictions. If a predicted response value is above or equal to 0, the corresponding object is considered to be a member of the class. If not, the object is rejected as a non-member.
 
-So, in fact, PLS-DA is a PLS with an extra step — classification by using a threshold for predicted y-values. It means that a PLS-DA model as well as PLS-DA results inherit all methods and properties from the conventional PLS objects. In this chapter we will thefroe focusing on the extra options and methods, available exclusively for PLS-DA.
+So, in fact, PLS-DA is a PLS with an extra step — classification by using a threshold for predicted y-values. It means that a PLS-DA model as well as PLS-DA results inherit all methods and properties from the conventional PLS objects. In this chapter we will therefore focusing on the extra options and methods, available exclusively for PLS-DA.
 
 It must be noted that PLS-DA in general supports multiclass classification, when one provide the binary values in several columns (one for each class). However it is not recommended to do it (see e.g. explanation here) and better create several one-class PLS-DA models instead of one for multiple classes. 
 
