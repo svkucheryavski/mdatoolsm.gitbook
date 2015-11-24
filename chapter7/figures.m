@@ -92,6 +92,38 @@ plotclassification(m)
 
 printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 2], 'png', '-r150')
 
+%% exploring model (test set validation)
+
+tind = 1:4:32;
+
+Xc = copy(people);
+Xc.removecols('Region');
+Xc.removerows(tind);
+
+cc = people(:, 'Region');
+cc.removerows(tind);
+cc.factor(1, {'A', 'B'});
+
+Xt = people(tind, :);
+Xt.removecols('Region');
+
+ct = people(tind, 'Region');
+ct.factor(1, {'A', 'B'});
+
+m1 = mdaplsda(Xc, cc, 'A', 2, 'Scale', 'on', 'CV', {'full'}, 'TestSet', {Xt, ct});
+
+cc = people(:, 'Region') == -1;
+cc(tind) = [];
+
+ct = people(tind, 'Region') == -1;
+
+m2 = mdaplsda(Xc, cc, 'A', 2, 'Scale', 'on', 'CV', {'full'}, 'TestSet', {Xt, ct});
+
+figure
+plotclassification(m1)
+
+figure
+plotclassification(m2)
 
 %% predictions
 
@@ -113,6 +145,13 @@ plotclassification(res, 'Labels', 'names')
 printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
 
 
+% make predictions and show results
+res = m.predict(p, [true; false]);
+
+figure
+subplot 121
+plotclassification(res, 'Labels', 'names')
 
 
+summary(res)
 
