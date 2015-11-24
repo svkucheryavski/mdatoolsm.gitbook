@@ -44,7 +44,7 @@ The result will be absolutely the same. It makes sense to use the first way if a
 
 ## Exploring PLS-DA results
 
-As it was mentioned already, both model and result object have all methods and properties inherited from corresponding PLS object and then a bit on top of it. Let us look at the differences for the result object first.
+As it was mentioned already, both model and result objects have all methods and properties inherited from corresponding PLS object and then a bit on top of it. Let us look at the differences for the result object first.
 
 In addition to an array with predicted response valyes, `ypred`, in PLS-DA result object there is also an array with predicted class values, `cpred`. In the example below we show both for the case when three components were used in the model (we will use `m1` calculated using the code above).
 
