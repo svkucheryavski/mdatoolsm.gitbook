@@ -134,24 +134,20 @@ p2 = [179 76 -1 42 43 19000 185 180 -1 85 120];
 % create a dataset
 p = mdadata([p1; p2], {'P1', 'P2'}, X.colNames);
 
-% make predictions and show results
-res = m.predict(p);
+% make predictions without reference values
+res1 = m.predict(p);
+
+% make predictions with reference values
+res2 = m.predict(p, [true; false]);
 
 nfig = 5;
+% show results
 figure
 subplot 121
-plotclassification(res, 'Labels', 'names')
-
+plotclassification(res1, 'Labels', 'names')
+subplot 122
+plotclassification(res2, 'Labels', 'names')
 printplot(gcf, sprintf('%s/fig%d.png', figfolder, nfig), [figw * 2, figh * 1], 'png', '-r150')
 
 
-% make predictions and show results
-res = m.predict(p, [true; false]);
-
-figure
-subplot 121
-plotclassification(res, 'Labels', 'names')
-
-
-summary(res)
 
