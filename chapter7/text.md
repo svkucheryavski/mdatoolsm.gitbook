@@ -151,12 +151,20 @@ The classification plot shows results of classification using color grouped scat
 
 ```matlab
 figure
+
+% default
 subplot 221
 plotclassification(m1.calres)
+
+% for first response (class) and first component
 subplot 222
 plotclassification(m1.calres, 1, 1)
+
+% with additional settings
 subplot 223
 plotclassification(m1.calres, 'Color', 'rg', 'Marker', 'ds')
+
+% PLS predictions
 subplot 224
 plotpredictions(m1.calres)
 line(xlim(), [0 0], 'Color', 'k')
