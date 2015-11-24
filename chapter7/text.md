@@ -8,7 +8,7 @@ The PLS regression method, described in the [previous chapter](chapter6/text.md)
 
 So, in fact, PLS-DA is a PLS with an extra step — classification by using a threshold for predicted y-values. It means that a PLS-DA model as well as PLS-DA results inherit all methods and properties from the conventional PLS objects. In this chapter we will therefore focus on the extra options and methods, available exclusively for PLS-DA. Most of them are actually available for any other classification method (e.g. SIMCA).
 
-It must be noted that PLS-DA in general supports multiclass classification, when one provide the binary values in several columns (one for each class). However it is not recommended to do it (see e.g. explanation here) and better create several one-class PLS-DA models instead of one for multiple classes. 
+It must be noted that PLS-DA in general supports multiclass classification, when one provides the binary values in several columns (one for each class). However it is not recommended to do it (see e.g. explanation here) and better create several one-class PLS-DA models instead of one for multiple classes. 
 
 ## Calibration of PLS-DA model
 
