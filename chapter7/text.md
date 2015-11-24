@@ -120,7 +120,7 @@ disp(m1.calres.stat)
     misclassified: [3x1 mdadata]
 ```
 
-And these values complement the conventional PLS performance statistics, such as RMSE, bias and so on. The function `summary()` shows most of them for the all components used in the model.
+And these values complement the conventional PLS performance statistics, such as RMSE, bias and so on. The function `summary()` shows the classification statistics for all components used in the model.
 
 ```matlab
 summary(m1)
