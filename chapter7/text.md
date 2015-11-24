@@ -94,8 +94,8 @@ As one can see all negative predictions were classified as –1 and all positive
 |Name|Description|
 |----|-----------|
 |FN| Number of false negatives (class members that were incorrectly rejected by a model).|
-|TN| Number of true negatives (class non-members that were correctly rejected by a model).|
-|FP| Number of false positives (class non-members that were incorrectly accepted by a model).|
+|TN| Number of true negatives (non-members that were correctly rejected by a model).|
+|FP| Number of false positives (non-members that were incorrectly accepted by a model).|
 |TP| Number of true positives (class members that were correctly accepted by a model).|
 |Sensitivity| TP / (TP + FN).|
 |Specificity| TN / (FP + TN).|
