@@ -220,7 +220,7 @@ plotclassification(m)
 
 ![Classification plot for PLS-DA model](fig4.png)
 
-The test set validation works similar to the PLS, one just have to provide a factor or a vector with logical values as response value for `'TestSet'` parameter.
+The test set validation works similar to the PLS, one just have to provide a factor or a vector with logical values as response value for `'TestSet'` parameter (similar to what we did in the beginning of this chapter for calibration set).
 
 ## Classification of new objects
 
