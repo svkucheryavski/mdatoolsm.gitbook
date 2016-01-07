@@ -1,5 +1,8 @@
 # What is new
 
+## 07.01.2016
+* Changes in [Quantitative statistics](chapter2/section4/text.md) explaining new behaviour of statistical methods (which now calculates statistics for each column of a dataset both for normal mode and when factors are used to group the data rows).
+ 
 ## 23.11.2015
 * Description of a new option `'Groupby'` for `scatter()` and `plot()` methods as well as a new option `'ShowContour'`for `scatter()` and `gscatter()` methods has been added to the section [Group plots](chapter2/section7/text.md) (see last part of the section). 
 * Examples on how these new properties can be used with PCA scores plot can be found at the end of the [PCA chapter](chapter4/text.md).
