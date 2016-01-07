@@ -163,7 +163,8 @@ Rasmus            1              0             0
 
 The `getgroups()` is widely used in statistic and graphical methods. Here we will show how to use groups for calculation of quantitative statistics and in the next section graphical methods will be discussed.
 
-The idea is rather simple, if one provide a dataset with one or several factors as a second argument of any statistical method, the statistics will be calculated for first column of original data and the values from this column will be split into the groups according to combination of the factor levels. Here is an example:
+## Quantitative statistics 
+The idea is rather simple, if one provide a dataset with one or several factors as a second argument of any statistical method, the statistics will be calculated for all columns of the data but separately for rows belonging to each group. Here is an example:
 
 
 ```matlab
@@ -196,51 +197,48 @@ Fabrizia     166      49         1        36   21   1.4e+04   150   245  Female 
 
 ```matlab
 % just a normal use of mean for a column
-m = mean(d(:, 'Height'));
+m = mean(d);
 show(m)
+```
+```
+People:
 
+                                      Variables
+      Height  Weight  Hairleng  Shoesize   Age    Income  Beer  Wine  Swim   IQ
+     ------- ------- --------- --------- ----- --------- ----- ----- ----- ----
+Mean     173    64.5    0.0769      40.1  34.5  2.85e+04   279   121  81.8  114
+```
+```matlab
 % grouping factors are provided
-m = mean(d(:, 'Height'), d(:, {'Sex'}));
+m = mean(d, d(:, {'Sex'}));
 show(m)
 ```
 ```
+Mean for People:
 
-      Height
-     -------
-Mean     173
-
-
-
-Height:
-
-      Groups (Sex)
-      Male  Female
-     ----- -------
-Mean   182     165
+                                        Variables
+        Height  Weight  Hairleng  Shoesize   Age    Income  Beer  Wine  Swim   IQ
+       ------- ------- --------- --------- ----- --------- ----- ----- ----- ----
+  Male     182    81.7        -1        44  35.8  2.94e+04   341   106  89.2  114
+Female     165    49.7         1      36.7  33.4  2.78e+04   226   133  75.4  113```
 ```
 
 If a method requires additional parameters, they should be specified after dataset with factors.
 
 ```matlab
-p = percentile(d(:, 'Height'), 25);
-show(p)
-
-p = percentile(d(:, 'Height'), d(:, 'Sex'), 25);
+p = percentile(d, d(:, 'Sex'), 25);
 show(p)
 ```
 ```
-Percentiles:
-     Height
-    -------
-25%     165
+Percentiles for People:
 
-
-Percentiles for Height:
-
-     Groups (Sex)
-     Male  Female
-    ----- -------
-25%   180     162
+                                            Variables
+            Height  Weight  Hairleng  Shoesize   Age    Income  Beer  Wine  Swim   IQ
+           ------- ------- --------- --------- ----- --------- ----- ----- ----- ----
+  25% Male     180    80.5        -1      42.5  26.5  1.62e+04   297    54    85  107
+  75% Male     186      83        -1      45.5  44.5  3.95e+04   375   179  93.5  124
+25% Female     162      49         1        36    24   2.3e+04   170    89    75  100
+75% Female     168      51         1        37    41   3.4e+04   260   162    78  127
 ```
 
 Several factors can be used at the same time.
