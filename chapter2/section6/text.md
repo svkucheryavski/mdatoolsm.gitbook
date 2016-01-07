@@ -265,17 +265,23 @@ Upper Female, B     180    55.9         1      42.9   213   1.51e+05   287   731
 
 
 ```matlab
-s = ci(d(:, 'Height'), d(:, {'Sex', 'Region'}), 0.10);
+s = ci(d, d(:, {'Sex', 'Region'}), 0.10);
 show(s)
 ```
 ```
-Confidence intervals (90%) for Height:
+Confidence intervals (90%) for People:
 
-                Groups (Sex, Region)
-       Male, A  Male, B  Female, A  Female, B
-      -------- -------- ---------- ----------
-Lower      179      180        159        161
-Upper      183      192        169        173
+                                                   Variables
+                 Height  Weight  Hairleng  Shoesize    Age     Income  Beer   Wine  Swim    IQ
+                ------- ------- --------- --------- ------ ---------- ----- ------ ----- -----
+  Lower Male, A     179      80        -1      42.1   34.9   3.02e+04   341   46.3    84   102
+  Upper Male, A     183      82        -1      44.4   46.1   4.18e+04   384   93.7    90   126
+  Lower Male, B     180    76.7        -1      42.3   23.3   1.47e+04   284    173    84  82.4
+  Upper Male, B     192    89.3        -1      48.7   29.7   1.78e+04   310    185   103   146
+Lower Female, A     159      48         1        36   25.6    2.4e+04   242   83.7  72.3  95.5
+Upper Female, A     169    51.6         1      37.6     40   3.46e+04   264    126  78.5   118
+Lower Female, B     161    46.3         1      33.3  -53.4  -3.91e+04  96.9  -58.5  72.3  91.1
+Upper Female, B     173    52.7         1      39.7    123   8.71e+04   223    466  78.7   167
 ```
 
 ## Qualitative statistics
