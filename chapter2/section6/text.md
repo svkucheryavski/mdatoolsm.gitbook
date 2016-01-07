@@ -220,7 +220,7 @@ Mean for People:
         Height  Weight  Hairleng  Shoesize   Age    Income  Beer  Wine  Swim   IQ
        ------- ------- --------- --------- ----- --------- ----- ----- ----- ----
   Male     182    81.7        -1        44  35.8  2.94e+04   341   106  89.2  114
-Female     165    49.7         1      36.7  33.4  2.78e+04   226   133  75.4  113```
+Female     165    49.7         1      36.7  33.4  2.78e+04   226   133  75.4  113
 ```
 
 If a method requires additional parameters, they should be specified after dataset with factors.
@@ -244,17 +244,23 @@ Percentiles for People:
 Several factors can be used at the same time.
 
 ```matlab
-s = ci(d(:, 'Height'), d(:, {'Sex', 'Region'}));
+s = ci(d, d(:, {'Sex', 'Region'}));
 show(s)
 ```
 ```
-Confidence intervals (95%) for Height:
+Confidence intervals (95%) for People:
 
-                Groups (Sex, Region)
-       Male, A  Male, B  Female, A  Female, B
-      -------- -------- ---------- ----------
-Lower      178      173        158        154
-Upper      183      199        170        180
+                                                  Variables
+                 Height  Weight  Hairleng  Shoesize   Age     Income  Beer  Wine  Swim    IQ
+                ------- ------- --------- --------- ----- ---------- ----- ----- ----- -----
+  Lower Male, A     178    79.7        -1      41.7  32.9   2.81e+04   333  37.9  82.9  97.3
+  Upper Male, A     183    82.3        -1      44.8  48.1   4.39e+04   392   102  91.1   131
+  Lower Male, B     173    70.3        -1      39.1  20.1   1.31e+04   272   166  74.4  50.5
+  Upper Male, B     199    95.7        -1      51.9  32.9   1.94e+04   322   192   113   178
+Lower Female, A     158    47.4         1      35.8  23.4   2.24e+04   239  77.3  71.3    92
+Upper Female, A     170    52.2         1      37.8  42.2   3.62e+04   267   133  79.5   122
+Lower Female, B     154    43.1         1      30.1  -143  -1.03e+05  32.9  -324  69.1  52.8
+Upper Female, B     180    55.9         1      42.9   213   1.51e+05   287   731  81.9   205
 ```
 
 
